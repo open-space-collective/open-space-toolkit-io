@@ -21,15 +21,15 @@ ARG cpu_count=1
 ## Library :: Core [master]
 
 RUN pushd /tmp > /dev/null \
- && git clone https://github.com/open-space-collective/library-core.git \
- && cd library-core \
- && mkdir build \
- && cd build \
- && cmake -DBUILD_UNIT_TESTS=OFF .. \
- && make -j ${cpu_count} \
- && make install \
- && rm -rf /tmp/library-core \
- && popd > /dev/null
+    && git clone https://github.com/open-space-collective/library-core.git \
+    && cd library-core \
+    && mkdir build \
+    && cd build \
+    && cmake -DBUILD_UNIT_TESTS=OFF .. \
+    && make -j ${cpu_count} \
+    && make install \
+    && rm -rf /tmp/library-core \
+    && popd > /dev/null
 
 # Labels
 

@@ -3,7 +3,7 @@
 ################################################################################################################################################################
 
 # @project        Library/IO
-# @file           tools/docker/environment/helplers/clean.sh
+# @file           tools/development/helpers/clean.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 

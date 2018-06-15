@@ -3,7 +3,7 @@
 ################################################################################################################################################################
 
 # @project        Library/IO
-# @file           tools/docker/environment/helplers/build.sh
+# @file           tools/development/helpers/build.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
