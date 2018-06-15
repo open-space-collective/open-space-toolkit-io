@@ -3,7 +3,7 @@
 ################################################################################################################################################################
 
 # @project        Library/IO
-# @file           tools/docker/environment/helplers/test.sh
+# @file           tools/development/helpers/test.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 

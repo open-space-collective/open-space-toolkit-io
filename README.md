@@ -2,7 +2,7 @@
 
 Addressing, networking, database connectors.
 
-[![Build Status](https://travis-ci.org/open-space-collective/library-io.svg?branch=master)](https://travis-ci.org/open-space-collective/library-io)
+[![Build Status](https://travis-ci.com/open-space-collective/library-io.svg?branch=master)](https://travis-ci.com/open-space-collective/library-io)
 [![Code Coverage](https://codecov.io/gh/open-space-collective/library-io/branch/master/graph/badge.svg)](https://codecov.io/gh/open-space-collective/library-io)
 [![Documentation](https://readthedocs.org/projects/docs/badge/?version=latest)](https://open-space-collective.github.io/library-io)
 
@@ -84,7 +84,7 @@ From the development environment:
 Manually:
 
 ```bash
-./bin/library-core.test
+./bin/library-io.test
 ```
 
 ## Dependencies

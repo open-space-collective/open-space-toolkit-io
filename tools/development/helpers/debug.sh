@@ -3,7 +3,7 @@
 ################################################################################################################################################################
 
 # @project        Library/IO
-# @file           tools/docker/environment/helplers/debug.sh
+# @file           tools/development/helpers/debug.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 

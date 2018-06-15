@@ -1,7 +1,7 @@
 ################################################################################################################################################################
 
 # @project        Library/IO
-# @file           tools/cmake/Library/IOConfig.cmake.in
+# @file           tools/cmake/LibraryIOConfig.cmake.in
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
