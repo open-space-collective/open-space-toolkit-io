@@ -1,0 +1,860 @@
+\hypertarget{classlibrary_1_1io_1_1_u_r_l}{}\section{library\+:\+:io\+:\+:U\+RL Class Reference}
+\label{classlibrary_1_1io_1_1_u_r_l}\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+
+
+Uniform Resource Locator (\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL})  
+
+
+
+
+{\ttfamily \#include $<$U\+R\+L.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{U\+RL} ()=delete
+\begin{DoxyCompactList}\small\item\em Default constructor (disabled) \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a9ea51e79794584e9feb34a679913b091}{U\+RL} (const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+Scheme, const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+Host, const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+Path=String\+::\+Empty(), const \hyperlink{namespacelibrary_1_1io_a0a929bf9e177597c2e92073d200dda53}{Integer} \&a\+Port=Integer\+::\+Undefined(), const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+User=String\+::\+Empty(), const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+Password=String\+::\+Empty(), const \hyperlink{namespacelibrary_1_1io_a39ebaf2265de78ba79eb5347f2af61b3}{Query} \&a\+Query=\hyperlink{classlibrary_1_1io_1_1url_1_1_query_acea48a0bfba96773f6db11d1a904a520}{Query\+::\+Undefined}(), const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+Fragment=String\+::\+Empty())
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1_u_r_l_a4a3011126a94a48d022edda036560be1}{operator==} (const \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} \&a\+U\+RL) const
+\begin{DoxyCompactList}\small\item\em Equal to operator. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1_u_r_l_a821743d11216826fa475d9b87f37e6cb}{operator!=} (const \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} \&a\+U\+RL) const
+\begin{DoxyCompactList}\small\item\em Not equal to operator. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} \hyperlink{classlibrary_1_1io_1_1_u_r_l_a2c82adf72f893fed983610e4cba0b42f}{operator+} (const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+Path\+Element) const
+\begin{DoxyCompactList}\small\item\em Addition operator. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} \& \hyperlink{classlibrary_1_1io_1_1_u_r_l_ab93de936ef4e87658902051638d9f0a9}{operator+=} (const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+Path\+Element)
+\begin{DoxyCompactList}\small\item\em Addition assignment operator. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1_u_r_l_af0f1c5720acae0e2bd71404a35199546}{is\+Defined} () const
+\begin{DoxyCompactList}\small\item\em Check if \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} is defined. \end{DoxyCompactList}\item 
+const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \& \hyperlink{classlibrary_1_1io_1_1_u_r_l_a017a872b7f1617d67b0e9f032be24173}{access\+Scheme} () const
+\begin{DoxyCompactList}\small\item\em Get reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} scheme. \end{DoxyCompactList}\item 
+const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \& \hyperlink{classlibrary_1_1io_1_1_u_r_l_a14d80cd2a42f1337bdaf68cfcb84d8cf}{access\+Host} () const
+\begin{DoxyCompactList}\small\item\em Get reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} host. \end{DoxyCompactList}\item 
+const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \& \hyperlink{classlibrary_1_1io_1_1_u_r_l_af96de0a8db715a3c1a09f9466db974b2}{access\+Path} () const
+\begin{DoxyCompactList}\small\item\em Get reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} path. \end{DoxyCompactList}\item 
+const \hyperlink{namespacelibrary_1_1io_a0a929bf9e177597c2e92073d200dda53}{Integer} \& \hyperlink{classlibrary_1_1io_1_1_u_r_l_aabb9d2750f3c51c103bd68f899821eba}{access\+Port} () const
+\begin{DoxyCompactList}\small\item\em Get reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} port. \end{DoxyCompactList}\item 
+const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \& \hyperlink{classlibrary_1_1io_1_1_u_r_l_ab8ef76cb7d42d6d584be8a3278fbb96d}{access\+User} () const
+\begin{DoxyCompactList}\small\item\em Get reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} user. \end{DoxyCompactList}\item 
+const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \& \hyperlink{classlibrary_1_1io_1_1_u_r_l_a23e9f7bc4564d7d37d5804e13abcfb92}{access\+Password} () const
+\begin{DoxyCompactList}\small\item\em Get reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} password. \end{DoxyCompactList}\item 
+const \hyperlink{namespacelibrary_1_1io_a39ebaf2265de78ba79eb5347f2af61b3}{Query} \& \hyperlink{classlibrary_1_1io_1_1_u_r_l_a8eb98ee64442ec3e0ab9fc28881b8e84}{access\+Query} () const
+\begin{DoxyCompactList}\small\item\em Get reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} query. \end{DoxyCompactList}\item 
+const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \& \hyperlink{classlibrary_1_1io_1_1_u_r_l_a0c6771c1586d334938aef21506707023}{access\+Fragment} () const
+\begin{DoxyCompactList}\small\item\em Get reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} fragment. \end{DoxyCompactList}\item 
+\hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \hyperlink{classlibrary_1_1io_1_1_u_r_l_ab36d8bd486f69fc44cfd5aa4e337e3b2}{get\+Scheme} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} scheme. \end{DoxyCompactList}\item 
+\hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \hyperlink{classlibrary_1_1io_1_1_u_r_l_a044ced19c2b73656c52d79a434cea560}{get\+Host} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} host. \end{DoxyCompactList}\item 
+\hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \hyperlink{classlibrary_1_1io_1_1_u_r_l_ae5c4c8332a16e048fef051ab1c70c980}{get\+Path} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} path. \end{DoxyCompactList}\item 
+\hyperlink{namespacelibrary_1_1io_a0a929bf9e177597c2e92073d200dda53}{Integer} \hyperlink{classlibrary_1_1io_1_1_u_r_l_aa74b35304944c4686800eef65e464afd}{get\+Port} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} port. \end{DoxyCompactList}\item 
+\hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \hyperlink{classlibrary_1_1io_1_1_u_r_l_a1671af07f30ce9ce7a316437c5a731f7}{get\+User} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} user. \end{DoxyCompactList}\item 
+\hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \hyperlink{classlibrary_1_1io_1_1_u_r_l_a5d8c1d85b26f35d95153a2ed1f45e578}{get\+Password} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} password. \end{DoxyCompactList}\item 
+\hyperlink{namespacelibrary_1_1io_a39ebaf2265de78ba79eb5347f2af61b3}{Query} \hyperlink{classlibrary_1_1io_1_1_u_r_l_a9e2dfc922d148118443d8247679a28c1}{get\+Query} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} query. \end{DoxyCompactList}\item 
+\hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \hyperlink{classlibrary_1_1io_1_1_u_r_l_acf491cea3422f7dc8576fff7431c3a0b}{get\+Fragment} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} fragment. \end{DoxyCompactList}\item 
+\hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \hyperlink{classlibrary_1_1io_1_1_u_r_l_ae79c849e58c983a0991c7c75bb565596}{get\+String} () const
+\begin{DoxyCompactList}\small\item\em Get serialized \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL}. \end{DoxyCompactList}\item 
+void \hyperlink{classlibrary_1_1io_1_1_u_r_l_a8905d2ff07fe8aeebaaee71621a0f6f2}{set\+Scheme} (const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+Scheme)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} scheme. \end{DoxyCompactList}\item 
+void \hyperlink{classlibrary_1_1io_1_1_u_r_l_ab11ded07b47b35dbc0bb6907c0cfd5c5}{set\+Host} (const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+Host)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} host. \end{DoxyCompactList}\item 
+void \hyperlink{classlibrary_1_1io_1_1_u_r_l_ab7f4c0962a64eb3feb5b293c57f7f142}{set\+Path} (const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+Path)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} path. \end{DoxyCompactList}\item 
+void \hyperlink{classlibrary_1_1io_1_1_u_r_l_ae2be028e95ac8a5d50735e090619fce2}{set\+Port} (const \hyperlink{namespacelibrary_1_1io_a0a929bf9e177597c2e92073d200dda53}{Integer} \&a\+Port)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} port. \end{DoxyCompactList}\item 
+void \hyperlink{classlibrary_1_1io_1_1_u_r_l_a5da0891706e5d52243d28f4956a57943}{set\+User} (const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+User)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} user. \end{DoxyCompactList}\item 
+void \hyperlink{classlibrary_1_1io_1_1_u_r_l_a43360d356d992c5357117cd93b4eab06}{set\+Password} (const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+Password)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} password. \end{DoxyCompactList}\item 
+void \hyperlink{classlibrary_1_1io_1_1_u_r_l_aaff5008a336303ac208f97fbb33d0e94}{set\+Query} (const \hyperlink{namespacelibrary_1_1io_a39ebaf2265de78ba79eb5347f2af61b3}{Query} \&a\+Query)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} query. \end{DoxyCompactList}\item 
+void \hyperlink{classlibrary_1_1io_1_1_u_r_l_a0ae406ca81b40b02761918ad953a4255}{set\+Fragment} (const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+Fragment)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} fragment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} \hyperlink{classlibrary_1_1io_1_1_u_r_l_a10de2711247d54ec4dbaf317a0b2ab2c}{Undefined} ()
+\begin{DoxyCompactList}\small\item\em Constructs an undefined \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL}. \end{DoxyCompactList}\item 
+static \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{Parse} (const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+String)
+\begin{DoxyCompactList}\small\item\em Constructs \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} from a given string. \end{DoxyCompactList}\item 
+static \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \hyperlink{classlibrary_1_1io_1_1_u_r_l_a92ff8302358b5f42c08e5b879062730d}{Encode\+String} (const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+String)
+\begin{DoxyCompactList}\small\item\em Encode string. \end{DoxyCompactList}\item 
+static \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \hyperlink{classlibrary_1_1io_1_1_u_r_l_a53663c78171412c2b3f6378911437720}{Decode\+String} (const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+String)
+\begin{DoxyCompactList}\small\item\em Decode string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98ed4737303253c4105846425180fc30}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} \&a\+U\+RL)
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Uniform Resource Locator (\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL}) 
+
+https\+://en.wikipedia.\+org/wiki/\+U\+RL 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}\label{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!U\+RL@{U\+RL}}
+\index{U\+RL@{U\+RL}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{U\+R\+L()}{URL()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily library\+::io\+::\+U\+R\+L\+::\+U\+RL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Default constructor (disabled) 
+
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a9ea51e79794584e9feb34a679913b091}\label{classlibrary_1_1io_1_1_u_r_l_a9ea51e79794584e9feb34a679913b091}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!U\+RL@{U\+RL}}
+\index{U\+RL@{U\+RL}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{U\+R\+L()}{URL()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily library\+::io\+::\+U\+R\+L\+::\+U\+RL (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+Scheme,  }\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+Host,  }\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+Path = {\ttfamily String\+:\+:Empty()},  }\item[{const \hyperlink{namespacelibrary_1_1io_a0a929bf9e177597c2e92073d200dda53}{Integer} \&}]{a\+Port = {\ttfamily Integer\+:\+:Undefined()},  }\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+User = {\ttfamily String\+:\+:Empty()},  }\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+Password = {\ttfamily String\+:\+:Empty()},  }\item[{const \hyperlink{namespacelibrary_1_1io_a39ebaf2265de78ba79eb5347f2af61b3}{Query} \&}]{a\+Query = {\ttfamily \hyperlink{classlibrary_1_1io_1_1url_1_1_query_acea48a0bfba96773f6db11d1a904a520}{Query\+::\+Undefined}()},  }\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+Fragment = {\ttfamily String\+:\+:Empty()} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}, \textcolor{stringliteral}{"/path/to/page.html"}, 80) ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Scheme} & A scheme \\
+\hline
+\mbox{\tt in}  & {\em a\+Host} & A host \\
+\hline
+\mbox{\tt in}  & {\em a\+Path} & A path \\
+\hline
+\mbox{\tt in}  & {\em a\+Port} & A port \\
+\hline
+\mbox{\tt in}  & {\em a\+User} & A user \\
+\hline
+\mbox{\tt in}  & {\em a\+Password} & A password \\
+\hline
+\mbox{\tt in}  & {\em a\+Query} & A query \\
+\hline
+\mbox{\tt in}  & {\em a\+Fragment} & A fragment \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a0c6771c1586d334938aef21506707023}\label{classlibrary_1_1io_1_1_u_r_l_a0c6771c1586d334938aef21506707023}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!access\+Fragment@{access\+Fragment}}
+\index{access\+Fragment@{access\+Fragment}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{access\+Fragment()}{accessFragment()}}
+{\footnotesize\ttfamily const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String}\& library\+::io\+::\+U\+R\+L\+::access\+Fragment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} fragment. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://server.org#fragment"}) ;
+url.accessFragment() ; \textcolor{comment}{// &"fragment"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} fragment 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a14d80cd2a42f1337bdaf68cfcb84d8cf}\label{classlibrary_1_1io_1_1_u_r_l_a14d80cd2a42f1337bdaf68cfcb84d8cf}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!access\+Host@{access\+Host}}
+\index{access\+Host@{access\+Host}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{access\+Host()}{accessHost()}}
+{\footnotesize\ttfamily const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String}\& library\+::io\+::\+U\+R\+L\+::access\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} host. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://server.org"}) ;
+url.accessHost() ; \textcolor{comment}{// &"server.org"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} host 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a23e9f7bc4564d7d37d5804e13abcfb92}\label{classlibrary_1_1io_1_1_u_r_l_a23e9f7bc4564d7d37d5804e13abcfb92}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!access\+Password@{access\+Password}}
+\index{access\+Password@{access\+Password}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{access\+Password()}{accessPassword()}}
+{\footnotesize\ttfamily const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String}\& library\+::io\+::\+U\+R\+L\+::access\+Password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} password. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://user:password@server.org"}) ;
+url.accessPassword() ; \textcolor{comment}{// &"password"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} password 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_af96de0a8db715a3c1a09f9466db974b2}\label{classlibrary_1_1io_1_1_u_r_l_af96de0a8db715a3c1a09f9466db974b2}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!access\+Path@{access\+Path}}
+\index{access\+Path@{access\+Path}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{access\+Path()}{accessPath()}}
+{\footnotesize\ttfamily const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String}\& library\+::io\+::\+U\+R\+L\+::access\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} path. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://server.org/path/to/index.html"}) ;
+url.accessPath() ; \textcolor{comment}{// &"/path/to/index.html"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_aabb9d2750f3c51c103bd68f899821eba}\label{classlibrary_1_1io_1_1_u_r_l_aabb9d2750f3c51c103bd68f899821eba}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!access\+Port@{access\+Port}}
+\index{access\+Port@{access\+Port}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{access\+Port()}{accessPort()}}
+{\footnotesize\ttfamily const \hyperlink{namespacelibrary_1_1io_a0a929bf9e177597c2e92073d200dda53}{Integer}\& library\+::io\+::\+U\+R\+L\+::access\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} port. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://server.org:80"}) ;
+url.accessPort() ; \textcolor{comment}{// &80}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} port 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a8eb98ee64442ec3e0ab9fc28881b8e84}\label{classlibrary_1_1io_1_1_u_r_l_a8eb98ee64442ec3e0ab9fc28881b8e84}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!access\+Query@{access\+Query}}
+\index{access\+Query@{access\+Query}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{access\+Query()}{accessQuery()}}
+{\footnotesize\ttfamily const \hyperlink{namespacelibrary_1_1io_a39ebaf2265de78ba79eb5347f2af61b3}{Query}\& library\+::io\+::\+U\+R\+L\+::access\+Query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} query. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://server.org?key=value"}) ;
+url.accessQuery() ; \textcolor{comment}{// &"key=value"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} query 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a017a872b7f1617d67b0e9f032be24173}\label{classlibrary_1_1io_1_1_u_r_l_a017a872b7f1617d67b0e9f032be24173}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!access\+Scheme@{access\+Scheme}}
+\index{access\+Scheme@{access\+Scheme}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{access\+Scheme()}{accessScheme()}}
+{\footnotesize\ttfamily const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String}\& library\+::io\+::\+U\+R\+L\+::access\+Scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} scheme. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://server.org"}) ;
+url.accessScheme() ; \textcolor{comment}{// &"http"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} scheme 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_ab8ef76cb7d42d6d584be8a3278fbb96d}\label{classlibrary_1_1io_1_1_u_r_l_ab8ef76cb7d42d6d584be8a3278fbb96d}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!access\+User@{access\+User}}
+\index{access\+User@{access\+User}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{access\+User()}{accessUser()}}
+{\footnotesize\ttfamily const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String}\& library\+::io\+::\+U\+R\+L\+::access\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} user. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://user:password@server.org"}) ;
+url.accessUser() ; \textcolor{comment}{// &"user"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} user 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a53663c78171412c2b3f6378911437720}\label{classlibrary_1_1io_1_1_u_r_l_a53663c78171412c2b3f6378911437720}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!Decode\+String@{Decode\+String}}
+\index{Decode\+String@{Decode\+String}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{Decode\+String()}{DecodeString()}}
+{\footnotesize\ttfamily static \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} library\+::io\+::\+U\+R\+L\+::\+Decode\+String (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Decode string. 
+
+
+\begin{DoxyCode}
+\hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} decodedString = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a53663c78171412c2b3f6378911437720}{URL::DecodeString}(\textcolor{stringliteral}{"key%3Da\_b\_c"}) ; \textcolor{comment}{// "key=a\_b\_c"}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+String} & A string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a92ff8302358b5f42c08e5b879062730d}\label{classlibrary_1_1io_1_1_u_r_l_a92ff8302358b5f42c08e5b879062730d}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!Encode\+String@{Encode\+String}}
+\index{Encode\+String@{Encode\+String}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{Encode\+String()}{EncodeString()}}
+{\footnotesize\ttfamily static \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} library\+::io\+::\+U\+R\+L\+::\+Encode\+String (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Encode string. 
+
+
+\begin{DoxyCode}
+\hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} encodedString = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a92ff8302358b5f42c08e5b879062730d}{URL::EncodeString}(\textcolor{stringliteral}{"key=a\_b\_c"}) ; \textcolor{comment}{// "key%3Da\_b\_c"}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+String} & A string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_acf491cea3422f7dc8576fff7431c3a0b}\label{classlibrary_1_1io_1_1_u_r_l_acf491cea3422f7dc8576fff7431c3a0b}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!get\+Fragment@{get\+Fragment}}
+\index{get\+Fragment@{get\+Fragment}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+Fragment()}{getFragment()}}
+{\footnotesize\ttfamily \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} library\+::io\+::\+U\+R\+L\+::get\+Fragment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} fragment. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://server.org#fragment"}) ;
+url.getFragment() ; \textcolor{comment}{// "fragment"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} fragment 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a044ced19c2b73656c52d79a434cea560}\label{classlibrary_1_1io_1_1_u_r_l_a044ced19c2b73656c52d79a434cea560}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!get\+Host@{get\+Host}}
+\index{get\+Host@{get\+Host}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+Host()}{getHost()}}
+{\footnotesize\ttfamily \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} library\+::io\+::\+U\+R\+L\+::get\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} host. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://server.org"}) ;
+url.getHost() ; \textcolor{comment}{// "server.org"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} host 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a5d8c1d85b26f35d95153a2ed1f45e578}\label{classlibrary_1_1io_1_1_u_r_l_a5d8c1d85b26f35d95153a2ed1f45e578}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!get\+Password@{get\+Password}}
+\index{get\+Password@{get\+Password}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+Password()}{getPassword()}}
+{\footnotesize\ttfamily \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} library\+::io\+::\+U\+R\+L\+::get\+Password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} password. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://user:password@server.org"}) ;
+url.getPassword() ; \textcolor{comment}{// "password"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} password 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_ae5c4c8332a16e048fef051ab1c70c980}\label{classlibrary_1_1io_1_1_u_r_l_ae5c4c8332a16e048fef051ab1c70c980}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!get\+Path@{get\+Path}}
+\index{get\+Path@{get\+Path}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+Path()}{getPath()}}
+{\footnotesize\ttfamily \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} library\+::io\+::\+U\+R\+L\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} path. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://server.org/path/to/index.html"}) ;
+url.getPath() ; \textcolor{comment}{// "/path/to/index.html"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_aa74b35304944c4686800eef65e464afd}\label{classlibrary_1_1io_1_1_u_r_l_aa74b35304944c4686800eef65e464afd}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!get\+Port@{get\+Port}}
+\index{get\+Port@{get\+Port}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+Port()}{getPort()}}
+{\footnotesize\ttfamily \hyperlink{namespacelibrary_1_1io_a0a929bf9e177597c2e92073d200dda53}{Integer} library\+::io\+::\+U\+R\+L\+::get\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} port. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://server.org:80"}) ;
+url.getPort() ; \textcolor{comment}{// 80}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} port 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a9e2dfc922d148118443d8247679a28c1}\label{classlibrary_1_1io_1_1_u_r_l_a9e2dfc922d148118443d8247679a28c1}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!get\+Query@{get\+Query}}
+\index{get\+Query@{get\+Query}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+Query()}{getQuery()}}
+{\footnotesize\ttfamily \hyperlink{namespacelibrary_1_1io_a39ebaf2265de78ba79eb5347f2af61b3}{Query} library\+::io\+::\+U\+R\+L\+::get\+Query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} query. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://server.org?key=value"}) ;
+url.getQuery() ; \textcolor{comment}{// "key=value"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} query 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_ab36d8bd486f69fc44cfd5aa4e337e3b2}\label{classlibrary_1_1io_1_1_u_r_l_ab36d8bd486f69fc44cfd5aa4e337e3b2}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!get\+Scheme@{get\+Scheme}}
+\index{get\+Scheme@{get\+Scheme}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+Scheme()}{getScheme()}}
+{\footnotesize\ttfamily \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} library\+::io\+::\+U\+R\+L\+::get\+Scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} scheme. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://server.org"}) ;
+url.getScheme() ; \textcolor{comment}{// "http"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} scheme 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_ae79c849e58c983a0991c7c75bb565596}\label{classlibrary_1_1io_1_1_u_r_l_ae79c849e58c983a0991c7c75bb565596}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} library\+::io\+::\+U\+R\+L\+::get\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get serialized \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL}. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}, \textcolor{stringliteral}{"/path/to/page.html"}, 80) ;
+url.getString() ; \textcolor{comment}{// "http://server.org:80/path/to/page.html"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Serialized \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a1671af07f30ce9ce7a316437c5a731f7}\label{classlibrary_1_1io_1_1_u_r_l_a1671af07f30ce9ce7a316437c5a731f7}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!get\+User@{get\+User}}
+\index{get\+User@{get\+User}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+User()}{getUser()}}
+{\footnotesize\ttfamily \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} library\+::io\+::\+U\+R\+L\+::get\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} user. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://user:password@server.org"}) ;
+url.getUser() ; \textcolor{comment}{// "user"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} user 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_af0f1c5720acae0e2bd71404a35199546}\label{classlibrary_1_1io_1_1_u_r_l_af0f1c5720acae0e2bd71404a35199546}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!is\+Defined@{is\+Defined}}
+\index{is\+Defined@{is\+Defined}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{is\+Defined()}{isDefined()}}
+{\footnotesize\ttfamily bool library\+::io\+::\+U\+R\+L\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} is defined. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"http://server.org"}) ;
+url.isDefined() ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} is defined 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a821743d11216826fa475d9b87f37e6cb}\label{classlibrary_1_1io_1_1_u_r_l_a821743d11216826fa475d9b87f37e6cb}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool library\+::io\+::\+U\+R\+L\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} \&}]{a\+U\+RL }\end{DoxyParamCaption}) const}
+
+
+
+Not equal to operator. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL}(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}) != \hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL}(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.com"}) ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+U\+RL} & A \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if U\+R\+Ls are not equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a2c82adf72f893fed983610e4cba0b42f}\label{classlibrary_1_1io_1_1_u_r_l_a2c82adf72f893fed983610e4cba0b42f}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!operator+@{operator+}}
+\index{operator+@{operator+}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} library\+::io\+::\+U\+R\+L\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+Path\+Element }\end{DoxyParamCaption}) const}
+
+
+
+Addition operator. 
+
+Append element to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} path
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}) ; \textcolor{comment}{// http://server.org}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} newUrl = url + \textcolor{stringliteral}{"/page.html"} \textcolor{comment}{// http://server.org/page.html}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Path\+Element} & A path element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_ab93de936ef4e87658902051638d9f0a9}\label{classlibrary_1_1io_1_1_u_r_l_ab93de936ef4e87658902051638d9f0a9}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL}\& library\+::io\+::\+U\+R\+L\+::operator+= (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+Path\+Element }\end{DoxyParamCaption})}
+
+
+
+Addition assignment operator. 
+
+Append element to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} path
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}) ; \textcolor{comment}{// http://server.org}
+url += \textcolor{stringliteral}{"/page.html"} \textcolor{comment}{// http://server.org/page.html}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Path\+Element} & A path element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a4a3011126a94a48d022edda036560be1}\label{classlibrary_1_1io_1_1_u_r_l_a4a3011126a94a48d022edda036560be1}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!operator==@{operator==}}
+\index{operator==@{operator==}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool library\+::io\+::\+U\+R\+L\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} \&}]{a\+U\+RL }\end{DoxyParamCaption}) const}
+
+
+
+Equal to operator. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL}(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}) == \hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL}(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}) ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+U\+RL} & A \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if U\+R\+Ls are equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}\label{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!Parse@{Parse}}
+\index{Parse@{Parse}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{Parse()}{Parse()}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} library\+::io\+::\+U\+R\+L\+::\+Parse (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} from a given string. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a98cf42141cf75e1dd5362eb208a1e2bd}{URL::Parse}(\textcolor{stringliteral}{"https://www.google.com"}) ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+String} & A string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a0ae406ca81b40b02761918ad953a4255}\label{classlibrary_1_1io_1_1_u_r_l_a0ae406ca81b40b02761918ad953a4255}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!set\+Fragment@{set\+Fragment}}
+\index{set\+Fragment@{set\+Fragment}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{set\+Fragment()}{setFragment()}}
+{\footnotesize\ttfamily void library\+::io\+::\+U\+R\+L\+::set\+Fragment (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+Fragment }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} fragment. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Fragment} & A fragment \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_ab11ded07b47b35dbc0bb6907c0cfd5c5}\label{classlibrary_1_1io_1_1_u_r_l_ab11ded07b47b35dbc0bb6907c0cfd5c5}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!set\+Host@{set\+Host}}
+\index{set\+Host@{set\+Host}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{set\+Host()}{setHost()}}
+{\footnotesize\ttfamily void library\+::io\+::\+U\+R\+L\+::set\+Host (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+Host }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} host. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Host} & A host \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a43360d356d992c5357117cd93b4eab06}\label{classlibrary_1_1io_1_1_u_r_l_a43360d356d992c5357117cd93b4eab06}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!set\+Password@{set\+Password}}
+\index{set\+Password@{set\+Password}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{set\+Password()}{setPassword()}}
+{\footnotesize\ttfamily void library\+::io\+::\+U\+R\+L\+::set\+Password (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+Password }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} password. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Password} & A password \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_ab7f4c0962a64eb3feb5b293c57f7f142}\label{classlibrary_1_1io_1_1_u_r_l_ab7f4c0962a64eb3feb5b293c57f7f142}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!set\+Path@{set\+Path}}
+\index{set\+Path@{set\+Path}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{set\+Path()}{setPath()}}
+{\footnotesize\ttfamily void library\+::io\+::\+U\+R\+L\+::set\+Path (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+Path }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} path. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Path} & A path \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_ae2be028e95ac8a5d50735e090619fce2}\label{classlibrary_1_1io_1_1_u_r_l_ae2be028e95ac8a5d50735e090619fce2}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!set\+Port@{set\+Port}}
+\index{set\+Port@{set\+Port}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{set\+Port()}{setPort()}}
+{\footnotesize\ttfamily void library\+::io\+::\+U\+R\+L\+::set\+Port (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_a0a929bf9e177597c2e92073d200dda53}{Integer} \&}]{a\+Port }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} port. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Port} & A port \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_aaff5008a336303ac208f97fbb33d0e94}\label{classlibrary_1_1io_1_1_u_r_l_aaff5008a336303ac208f97fbb33d0e94}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!set\+Query@{set\+Query}}
+\index{set\+Query@{set\+Query}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{set\+Query()}{setQuery()}}
+{\footnotesize\ttfamily void library\+::io\+::\+U\+R\+L\+::set\+Query (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_a39ebaf2265de78ba79eb5347f2af61b3}{Query} \&}]{a\+Query }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} query. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Query} & A query \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a8905d2ff07fe8aeebaaee71621a0f6f2}\label{classlibrary_1_1io_1_1_u_r_l_a8905d2ff07fe8aeebaaee71621a0f6f2}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!set\+Scheme@{set\+Scheme}}
+\index{set\+Scheme@{set\+Scheme}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{set\+Scheme()}{setScheme()}}
+{\footnotesize\ttfamily void library\+::io\+::\+U\+R\+L\+::set\+Scheme (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+Scheme }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} scheme. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Scheme} & A scheme \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a5da0891706e5d52243d28f4956a57943}\label{classlibrary_1_1io_1_1_u_r_l_a5da0891706e5d52243d28f4956a57943}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!set\+User@{set\+User}}
+\index{set\+User@{set\+User}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{set\+User()}{setUser()}}
+{\footnotesize\ttfamily void library\+::io\+::\+U\+R\+L\+::set\+User (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+User }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} user. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+User} & A user \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a10de2711247d54ec4dbaf317a0b2ab2c}\label{classlibrary_1_1io_1_1_u_r_l_a10de2711247d54ec4dbaf317a0b2ab2c}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!Undefined@{Undefined}}
+\index{Undefined@{Undefined}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{Undefined()}{Undefined()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} library\+::io\+::\+U\+R\+L\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs an undefined \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL}. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url = \hyperlink{classlibrary_1_1io_1_1_u_r_l_a10de2711247d54ec4dbaf317a0b2ab2c}{URL::Undefined}() ;
+url.isDefined() ; \textcolor{comment}{// False}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Undefined \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1_u_r_l_a98ed4737303253c4105846425180fc30}\label{classlibrary_1_1io_1_1_u_r_l_a98ed4737303253c4105846425180fc30}} 
+\index{library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!library\+::io\+::\+U\+RL@{library\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} \&}]{a\+U\+RL }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1_u_r_l_a7e9c070138a6dbd000ffb10b7cd8a5c4}{URL} url(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}) ;
+std::cout << url ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\tt in}  & {\em a\+U\+RL} & A \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An output stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Library/\+I\+O/\hyperlink{_u_r_l_8hpp}{U\+R\+L.\+hpp}\item 
+src/\+Library/\+I\+O/\hyperlink{_u_r_l_8cpp}{U\+R\+L.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,710 @@
+\hypertarget{classlibrary_1_1io_1_1ip_1_1_address}{}\section{library\+:\+:io\+:\+:ip\+:\+:Address Class Reference}
+\label{classlibrary_1_1io_1_1ip_1_1_address}\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+
+
+Internet Protocol (IP) address.  
+
+
+
+
+{\ttfamily \#include $<$Address.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225af}{Type} \{ \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225afaec0fc0100c4fc1ce4eea230c3dc10360}{Type\+::\+Undefined}, 
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225afa42a9137a05a60eb752dcdf982e717626}{Type\+::\+I\+Pv4}, 
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225afafdb7cb8f657426e7c409bfd6d1a36ce4}{Type\+::\+I\+Pv6}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ab968d468b8bc2ba8f48fd2b6784832fe}{Address} ()=delete
+\begin{DoxyCompactList}\small\item\em Default constructor (disabled) \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a222cb11723f00e1949560cd6cb6586d0}{Address} (const \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \&an\+Address)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a430e600e721374368c5bbc0a6351e094}{$\sim$\+Address} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \& \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ad399ad8624416bc52c75aa1319eeb2dc}{operator=} (const \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \&an\+Address)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_aa471d7c4d4df06e473e5390a49b20b6e}{operator==} (const \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \&an\+Address) const
+\begin{DoxyCompactList}\small\item\em Equal to operator. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a56dec93d614ec71b02d57377fe687029}{operator!=} (const \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \&an\+Address) const
+\begin{DoxyCompactList}\small\item\em Not equal to operator. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_adb0cb92c138c3aa983ce007318cca1a8}{is\+Defined} () const
+\begin{DoxyCompactList}\small\item\em Check if address is defined. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_abd441207de67b876bafecca7ac1e70b1}{is\+Loopback} () const
+\begin{DoxyCompactList}\small\item\em Returns true if address is loopback. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a228663b61e067424cceedc640ae44bb8}{is\+Wildcard} () const
+\begin{DoxyCompactList}\small\item\em Returns true if address is wildcard (all zero) \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a871a9947ce8e5e84a8e3e26e80f7ddec}{is\+Link\+Local} () const
+\begin{DoxyCompactList}\small\item\em Returns true if address is link local unicast. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ac82a4af0af42e2ddc02fe2fc7c9593e5}{is\+Broadcast} () const
+\begin{DoxyCompactList}\small\item\em Returns true if IP address is broadcast. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af01a1e2adfd5233077ca1031ed289806}{is\+Unicast} () const
+\begin{DoxyCompactList}\small\item\em Returns true if address is unicast. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a4571470091447ac28652f072708a2cea}{is\+Multicast} () const
+\begin{DoxyCompactList}\small\item\em Returns true if address is multicast. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a5e6c384bba26c666b0922be94c41eb0c}{is\+Global\+Multicast} () const
+\begin{DoxyCompactList}\small\item\em Returns true if address is global multicast. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a921a8995f53b38385f17d7bc2dd0809a}{is\+Link\+Local\+Multicast} () const
+\begin{DoxyCompactList}\small\item\em Returns true if address is link-\/local multicast. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ac2991f8db5e979f2f167b56a149bc010}{is\+Node\+Local\+Multicast} () const
+\begin{DoxyCompactList}\small\item\em Returns true if address is node-\/local multicast. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a3507475aa3a97c63dfe0065eff2307ad}{is\+Org\+Local\+Multicast} () const
+\begin{DoxyCompactList}\small\item\em Returns true if address is organization-\/local multicast. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_aeb2f2c318f7144c1d74c2035be3d4eab}{is\+Site\+Local} () const
+\begin{DoxyCompactList}\small\item\em Returns true if address is site local unicast. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a14420f343bc580c0689611670cfd1eaa}{is\+Site\+Local\+Multicast} () const
+\begin{DoxyCompactList}\small\item\em Returns true if address is site-\/local multicast. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a4720a52b340f77fcecab4963a6e773b5}{is\+Well\+Known\+Multicast} () const
+\begin{DoxyCompactList}\small\item\em Returns true if address is well-\/known multicast. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a47df4ff73e75b42155cb59f327064c56}{is\+I\+Pv4\+Compatible} () const
+\begin{DoxyCompactList}\small\item\em Returns true if address is I\+Pv4 compatible. \end{DoxyCompactList}\item 
+bool \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ae995e64ad459196faf3b0b1e2379eb38}{is\+I\+Pv4\+Mapped} () const
+\begin{DoxyCompactList}\small\item\em Returns true if address is an I\+Pv4 mapped I\+Pv6 address. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225af}{Address\+::\+Type} \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_abd4d3f82370ea5882822a85876f670d8}{get\+Type} () const
+\begin{DoxyCompactList}\small\item\em Get address type. \end{DoxyCompactList}\item 
+\hyperlink{namespacelibrary_1_1io_1_1ip_a2ac70ed8dfa9969304e09cead6a39459}{String} \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_aaa3c07764609a34d9f80df26981cad45}{get\+String} () const
+\begin{DoxyCompactList}\small\item\em Get address string representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a6f567a698faa544fb27b52f02b3c52b6}{Undefined} ()
+\begin{DoxyCompactList}\small\item\em Constructs an undefined address. \end{DoxyCompactList}\item 
+static \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a79cb92d3917c101f3908ce6f251fffd7}{Loopback} (const \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225af}{Address\+::\+Type} \&a\+Type)
+\begin{DoxyCompactList}\small\item\em Constructs a loopback address. \end{DoxyCompactList}\item 
+static \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af08e4f162c4e91922edff360e0a1e198}{Broadcast} ()
+\begin{DoxyCompactList}\small\item\em Constructs a broadcast address. \end{DoxyCompactList}\item 
+static \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a046ddcc0011c0301e2d52f2aaf2e4bca}{I\+Pv4} (const uint8\+\_\+t \&a\+First\+Group, const uint8\+\_\+t \&a\+Second\+Group, const uint8\+\_\+t \&a\+Third\+Group, const uint8\+\_\+t \&a\+Fourth\+Group)
+\begin{DoxyCompactList}\small\item\em Constructs an I\+Pv4 address. \end{DoxyCompactList}\item 
+static \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a464ce60b6c4412f1b6515b4c0cb8d43d}{I\+Pv4} (const uint32\+\_\+t \&an\+Address)
+\begin{DoxyCompactList}\small\item\em Constructs an I\+Pv4 address. \end{DoxyCompactList}\item 
+static \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_aa89db4931003a16ebfaea376308164ab}{I\+Pv6} (const uint16\+\_\+t \&a\+First\+Group, const uint16\+\_\+t \&a\+Second\+Group, const uint16\+\_\+t \&a\+Third\+Group, const uint16\+\_\+t \&a\+Fourth\+Group, const uint16\+\_\+t \&a\+Fifth\+Group, const uint16\+\_\+t \&a\+Sixth\+Group, const uint16\+\_\+t \&a\+Seventh\+Group, const uint16\+\_\+t \&an\+Eighth\+Group)
+\begin{DoxyCompactList}\small\item\em Constructs an I\+Pv6 address. \end{DoxyCompactList}\item 
+static \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Parse} (const \hyperlink{namespacelibrary_1_1io_1_1ip_a2ac70ed8dfa9969304e09cead6a39459}{String} \&a\+String)
+\begin{DoxyCompactList}\small\item\em Constructs an address from a given string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_acb0766764bb037acde8e0acdfdecadd0}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \&an\+Address)
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Internet Protocol (IP) address. 
+
+https\+://en.wikipedia.\+org/wiki/\+I\+P\+\_\+address 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225af}\label{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225af}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!Type@{Type}}
+\index{Type@{Type}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225af}{library\+::io\+::ip\+::\+Address\+::\+Type}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Undefined@{Undefined}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!Undefined@{Undefined}}}\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225afaec0fc0100c4fc1ce4eea230c3dc10360}\label{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225afaec0fc0100c4fc1ce4eea230c3dc10360}} 
+Undefined&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+Pv4@{I\+Pv4}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!I\+Pv4@{I\+Pv4}}}\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225afa42a9137a05a60eb752dcdf982e717626}\label{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225afa42a9137a05a60eb752dcdf982e717626}} 
+I\+Pv4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+Pv6@{I\+Pv6}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!I\+Pv6@{I\+Pv6}}}\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225afafdb7cb8f657426e7c409bfd6d1a36ce4}\label{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225afafdb7cb8f657426e7c409bfd6d1a36ce4}} 
+I\+Pv6&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_ab968d468b8bc2ba8f48fd2b6784832fe}\label{classlibrary_1_1io_1_1ip_1_1_address_ab968d468b8bc2ba8f48fd2b6784832fe}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!Address@{Address}}
+\index{Address@{Address}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{Address()}{Address()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily library\+::io\+::ip\+::\+Address\+::\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Default constructor (disabled) 
+
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a222cb11723f00e1949560cd6cb6586d0}\label{classlibrary_1_1io_1_1ip_1_1_address_a222cb11723f00e1949560cd6cb6586d0}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!Address@{Address}}
+\index{Address@{Address}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{Address()}{Address()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily library\+::io\+::ip\+::\+Address\+::\+Address (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \&}]{an\+Address }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Address} & An IP address \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a430e600e721374368c5bbc0a6351e094}\label{classlibrary_1_1io_1_1ip_1_1_address_a430e600e721374368c5bbc0a6351e094}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!````~Address@{$\sim$\+Address}}
+\index{````~Address@{$\sim$\+Address}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{$\sim$\+Address()}{~Address()}}
+{\footnotesize\ttfamily library\+::io\+::ip\+::\+Address\+::$\sim$\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_af08e4f162c4e91922edff360e0a1e198}\label{classlibrary_1_1io_1_1ip_1_1_address_af08e4f162c4e91922edff360e0a1e198}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!Broadcast@{Broadcast}}
+\index{Broadcast@{Broadcast}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{Broadcast()}{Broadcast()}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} library\+::io\+::ip\+::\+Address\+::\+Broadcast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a broadcast address. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ab968d468b8bc2ba8f48fd2b6784832fe}{Address} address = \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af08e4f162c4e91922edff360e0a1e198}{Address::Broadcast}() ;
+address.getString() ; \textcolor{comment}{// "255.255.255.255"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Broadcast address 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_aaa3c07764609a34d9f80df26981cad45}\label{classlibrary_1_1io_1_1ip_1_1_address_aaa3c07764609a34d9f80df26981cad45}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily \hyperlink{namespacelibrary_1_1io_1_1ip_a2ac70ed8dfa9969304e09cead6a39459}{String} library\+::io\+::ip\+::\+Address\+::get\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get address string representation. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"1.2.3.4"}).\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_aaa3c07764609a34d9f80df26981cad45}{getString}() ; \textcolor{comment}{// "1.2.3.4"}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"::"}).\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_aaa3c07764609a34d9f80df26981cad45}{getString}() ; \textcolor{comment}{// "::"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} string representation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_abd4d3f82370ea5882822a85876f670d8}\label{classlibrary_1_1io_1_1ip_1_1_address_abd4d3f82370ea5882822a85876f670d8}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225af}{Address\+::\+Type} library\+::io\+::ip\+::\+Address\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get address type. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"0.0.0.0"}).\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_abd4d3f82370ea5882822a85876f670d8}{getType}() ; \textcolor{comment}{// Address::Type::IPv4}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"::"}).\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_abd4d3f82370ea5882822a85876f670d8}{getType}() ; \textcolor{comment}{// Address::Type::IPv6}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a046ddcc0011c0301e2d52f2aaf2e4bca}\label{classlibrary_1_1io_1_1ip_1_1_address_a046ddcc0011c0301e2d52f2aaf2e4bca}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!I\+Pv4@{I\+Pv4}}
+\index{I\+Pv4@{I\+Pv4}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{I\+Pv4()}{IPv4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} library\+::io\+::ip\+::\+Address\+::\+I\+Pv4 (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \&}]{a\+First\+Group,  }\item[{const uint8\+\_\+t \&}]{a\+Second\+Group,  }\item[{const uint8\+\_\+t \&}]{a\+Third\+Group,  }\item[{const uint8\+\_\+t \&}]{a\+Fourth\+Group }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs an I\+Pv4 address. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ab968d468b8bc2ba8f48fd2b6784832fe}{Address} address = \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a046ddcc0011c0301e2d52f2aaf2e4bca}{Address::IPv4}(1, 2, 3, 4) ;
+address.getString() ; \textcolor{comment}{// "1.2.3.4"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+I\+Pv4 address 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a464ce60b6c4412f1b6515b4c0cb8d43d}\label{classlibrary_1_1io_1_1ip_1_1_address_a464ce60b6c4412f1b6515b4c0cb8d43d}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!I\+Pv4@{I\+Pv4}}
+\index{I\+Pv4@{I\+Pv4}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{I\+Pv4()}{IPv4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} library\+::io\+::ip\+::\+Address\+::\+I\+Pv4 (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t \&}]{an\+Address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs an I\+Pv4 address. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ab968d468b8bc2ba8f48fd2b6784832fe}{Address} address = \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a046ddcc0011c0301e2d52f2aaf2e4bca}{Address::IPv4}(0) ;
+address.getString() ; \textcolor{comment}{// "0.0.0.0"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+I\+Pv4 address 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_aa89db4931003a16ebfaea376308164ab}\label{classlibrary_1_1io_1_1ip_1_1_address_aa89db4931003a16ebfaea376308164ab}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!I\+Pv6@{I\+Pv6}}
+\index{I\+Pv6@{I\+Pv6}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{I\+Pv6()}{IPv6()}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} library\+::io\+::ip\+::\+Address\+::\+I\+Pv6 (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t \&}]{a\+First\+Group,  }\item[{const uint16\+\_\+t \&}]{a\+Second\+Group,  }\item[{const uint16\+\_\+t \&}]{a\+Third\+Group,  }\item[{const uint16\+\_\+t \&}]{a\+Fourth\+Group,  }\item[{const uint16\+\_\+t \&}]{a\+Fifth\+Group,  }\item[{const uint16\+\_\+t \&}]{a\+Sixth\+Group,  }\item[{const uint16\+\_\+t \&}]{a\+Seventh\+Group,  }\item[{const uint16\+\_\+t \&}]{an\+Eighth\+Group }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs an I\+Pv6 address. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ab968d468b8bc2ba8f48fd2b6784832fe}{Address} address = \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_aa89db4931003a16ebfaea376308164ab}{Address::IPv6}(0, 0, 0, 0, 0, 0, 0, 0) ;
+address.getString() ; \textcolor{comment}{// "::"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+I\+Pv6 address 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_ac82a4af0af42e2ddc02fe2fc7c9593e5}\label{classlibrary_1_1io_1_1ip_1_1_address_ac82a4af0af42e2ddc02fe2fc7c9593e5}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!is\+Broadcast@{is\+Broadcast}}
+\index{is\+Broadcast@{is\+Broadcast}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{is\+Broadcast()}{isBroadcast()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::is\+Broadcast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if IP address is broadcast. 
+
+Only I\+Pv4 addresses can be broadcast addresses. In a broadcast address, all bits are one. For an I\+Pv6 address, returns always false.
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"255.255.255.255"}).\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ac82a4af0af42e2ddc02fe2fc7c9593e5}{isBroadcast}() ; \textcolor{comment}{// True}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"::"}).\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ac82a4af0af42e2ddc02fe2fc7c9593e5}{isBroadcast}() ; \textcolor{comment}{// False}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if address is broadcast 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_adb0cb92c138c3aa983ce007318cca1a8}\label{classlibrary_1_1io_1_1ip_1_1_address_adb0cb92c138c3aa983ce007318cca1a8}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!is\+Defined@{is\+Defined}}
+\index{is\+Defined@{is\+Defined}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{is\+Defined()}{isDefined()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if address is defined. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ab968d468b8bc2ba8f48fd2b6784832fe}{Address} address = \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"0.0.0.0"}) ;
+address.isDefined() ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if address is defined 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a5e6c384bba26c666b0922be94c41eb0c}\label{classlibrary_1_1io_1_1ip_1_1_address_a5e6c384bba26c666b0922be94c41eb0c}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!is\+Global\+Multicast@{is\+Global\+Multicast}}
+\index{is\+Global\+Multicast@{is\+Global\+Multicast}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{is\+Global\+Multicast()}{isGlobalMulticast()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::is\+Global\+Multicast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if address is global multicast. 
+
+For I\+Pv4, global multicast addresses are in the 224.\+0.\+1.\+0 to 238.\+255.\+255.\+255 range. For I\+Pv6, global multicast addresses are in the F\+Fx\+F\+:x\+:x\+:x\+:x\+:x\+:x\+:x range.
+
+\begin{DoxyReturn}{Returns}
+True if address is global multicast 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a47df4ff73e75b42155cb59f327064c56}\label{classlibrary_1_1io_1_1ip_1_1_address_a47df4ff73e75b42155cb59f327064c56}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!is\+I\+Pv4\+Compatible@{is\+I\+Pv4\+Compatible}}
+\index{is\+I\+Pv4\+Compatible@{is\+I\+Pv4\+Compatible}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{is\+I\+Pv4\+Compatible()}{isIPv4Compatible()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::is\+I\+Pv4\+Compatible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if address is I\+Pv4 compatible. 
+
+For I\+Pv4 addresses, this is always true. For I\+Pv6, the address must be in the \+::x\+:x range (the first 96 bits are zero).
+
+\begin{DoxyReturn}{Returns}
+True if address is I\+Pv4 compatible 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_ae995e64ad459196faf3b0b1e2379eb38}\label{classlibrary_1_1io_1_1ip_1_1_address_ae995e64ad459196faf3b0b1e2379eb38}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!is\+I\+Pv4\+Mapped@{is\+I\+Pv4\+Mapped}}
+\index{is\+I\+Pv4\+Mapped@{is\+I\+Pv4\+Mapped}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{is\+I\+Pv4\+Mapped()}{isIPv4Mapped()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::is\+I\+Pv4\+Mapped (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if address is an I\+Pv4 mapped I\+Pv6 address. 
+
+For I\+Pv4 addresses, this is always true. For I\+Pv6, the address must be in the \+::\+F\+F\+F\+F\+:x\+:x range.
+
+\begin{DoxyReturn}{Returns}
+True if address is an I\+Pv4 mapped I\+Pv6 address. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a871a9947ce8e5e84a8e3e26e80f7ddec}\label{classlibrary_1_1io_1_1ip_1_1_address_a871a9947ce8e5e84a8e3e26e80f7ddec}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!is\+Link\+Local@{is\+Link\+Local}}
+\index{is\+Link\+Local@{is\+Link\+Local}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{is\+Link\+Local()}{isLinkLocal()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::is\+Link\+Local (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if address is link local unicast. 
+
+I\+Pv4 link local addresses are in the 169.\+254.\+0.\+0/16 range, according to R\+FC 3927. I\+Pv6 link local addresses have 1111 1110 10 as the first 10 bits, followed by 54 zeros.
+
+\begin{DoxyReturn}{Returns}
+True if address is link local unicast 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a921a8995f53b38385f17d7bc2dd0809a}\label{classlibrary_1_1io_1_1ip_1_1_address_a921a8995f53b38385f17d7bc2dd0809a}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!is\+Link\+Local\+Multicast@{is\+Link\+Local\+Multicast}}
+\index{is\+Link\+Local\+Multicast@{is\+Link\+Local\+Multicast}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{is\+Link\+Local\+Multicast()}{isLinkLocalMulticast()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::is\+Link\+Local\+Multicast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if address is link-\/local multicast. 
+
+For I\+Pv4, link-\/local multicast addresses are in the 224.\+0.\+0.\+0/24 range. For I\+Pv6, link-\/local multicast addresses are in the F\+Fx2\+:x\+:x\+:x\+:x\+:x\+:x\+:x range.
+
+\begin{DoxyReturn}{Returns}
+True if address is link-\/local multicast 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_abd441207de67b876bafecca7ac1e70b1}\label{classlibrary_1_1io_1_1ip_1_1_address_abd441207de67b876bafecca7ac1e70b1}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!is\+Loopback@{is\+Loopback}}
+\index{is\+Loopback@{is\+Loopback}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{is\+Loopback()}{isLoopback()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::is\+Loopback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if address is loopback. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"127.0.0.1"}).\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_abd441207de67b876bafecca7ac1e70b1}{isLoopback}() ; \textcolor{comment}{// True}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"::1"}).\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_abd441207de67b876bafecca7ac1e70b1}{isLoopback}() ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if address is loopback 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a4571470091447ac28652f072708a2cea}\label{classlibrary_1_1io_1_1ip_1_1_address_a4571470091447ac28652f072708a2cea}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!is\+Multicast@{is\+Multicast}}
+\index{is\+Multicast@{is\+Multicast}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{is\+Multicast()}{isMulticast()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::is\+Multicast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if address is multicast. 
+
+I\+Pv4 multicast addresses are in the 224.\+0.\+0.\+0 to 239.\+255.\+255.\+255 range (the first four bits have the value 1110). I\+Pv6 multicast addresses are in the F\+Fxx\+:x\+:x\+:x\+:x\+:x\+:x\+:x range.
+
+\begin{DoxyReturn}{Returns}
+True if address is multicast 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_ac2991f8db5e979f2f167b56a149bc010}\label{classlibrary_1_1io_1_1ip_1_1_address_ac2991f8db5e979f2f167b56a149bc010}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!is\+Node\+Local\+Multicast@{is\+Node\+Local\+Multicast}}
+\index{is\+Node\+Local\+Multicast@{is\+Node\+Local\+Multicast}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{is\+Node\+Local\+Multicast()}{isNodeLocalMulticast()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::is\+Node\+Local\+Multicast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if address is node-\/local multicast. 
+
+I\+Pv4 does not support node-\/local addresses, thus the result is always false for an I\+Pv4 address. For I\+Pv6, node-\/local multicast addresses are in the F\+Fx1\+:x\+:x\+:x\+:x\+:x\+:x\+:x range.
+
+\begin{DoxyReturn}{Returns}
+True if address is node-\/local multicast 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a3507475aa3a97c63dfe0065eff2307ad}\label{classlibrary_1_1io_1_1ip_1_1_address_a3507475aa3a97c63dfe0065eff2307ad}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!is\+Org\+Local\+Multicast@{is\+Org\+Local\+Multicast}}
+\index{is\+Org\+Local\+Multicast@{is\+Org\+Local\+Multicast}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{is\+Org\+Local\+Multicast()}{isOrgLocalMulticast()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::is\+Org\+Local\+Multicast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if address is organization-\/local multicast. 
+
+For I\+Pv4, organization-\/local multicast addresses are in the 239.\+192.\+0.\+0/16 range. For I\+Pv6, organization-\/local multicast addresses are in the F\+Fx8\+:x\+:x\+:x\+:x\+:x\+:x\+:x range.
+
+\begin{DoxyReturn}{Returns}
+True if address is organization-\/local multicast 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_aeb2f2c318f7144c1d74c2035be3d4eab}\label{classlibrary_1_1io_1_1ip_1_1_address_aeb2f2c318f7144c1d74c2035be3d4eab}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!is\+Site\+Local@{is\+Site\+Local}}
+\index{is\+Site\+Local@{is\+Site\+Local}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{is\+Site\+Local()}{isSiteLocal()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::is\+Site\+Local (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if address is site local unicast. 
+
+I\+Pv4 site local addresses are in on of the 10.\+0.\+0.\+0/24, 192.\+168.\+0.\+0/16 or 172.\+16.\+0.\+0 to 172.\+31.\+255.\+255 ranges. Originally, I\+Pv6 site-\/local addresses had F\+E\+C0/10 (1111 1110 11) prefix (R\+FC 4291), followed by 38 zeros. Interfaces using this mask are supported, but obsolete; R\+FC 4193 prescribes fc00\+:\+:/7 (1111 110) as local unicast prefix.
+
+\begin{DoxyReturn}{Returns}
+True if address is site local unicast 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a14420f343bc580c0689611670cfd1eaa}\label{classlibrary_1_1io_1_1ip_1_1_address_a14420f343bc580c0689611670cfd1eaa}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!is\+Site\+Local\+Multicast@{is\+Site\+Local\+Multicast}}
+\index{is\+Site\+Local\+Multicast@{is\+Site\+Local\+Multicast}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{is\+Site\+Local\+Multicast()}{isSiteLocalMulticast()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::is\+Site\+Local\+Multicast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if address is site-\/local multicast. 
+
+For I\+Pv4, site local multicast addresses are in the 239.\+255.\+0.\+0/16 range. For I\+Pv6, site-\/local multicast addresses are in the F\+Fx5\+:x\+:x\+:x\+:x\+:x\+:x\+:x range.
+
+\begin{DoxyReturn}{Returns}
+True if address is site-\/local multicast 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_af01a1e2adfd5233077ca1031ed289806}\label{classlibrary_1_1io_1_1ip_1_1_address_af01a1e2adfd5233077ca1031ed289806}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!is\+Unicast@{is\+Unicast}}
+\index{is\+Unicast@{is\+Unicast}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{is\+Unicast()}{isUnicast()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::is\+Unicast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if address is unicast. 
+
+An address is unicast if it is neither a wildcard, broadcast or multicast address.
+
+\begin{DoxyReturn}{Returns}
+True if address is unicast 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a4720a52b340f77fcecab4963a6e773b5}\label{classlibrary_1_1io_1_1ip_1_1_address_a4720a52b340f77fcecab4963a6e773b5}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!is\+Well\+Known\+Multicast@{is\+Well\+Known\+Multicast}}
+\index{is\+Well\+Known\+Multicast@{is\+Well\+Known\+Multicast}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{is\+Well\+Known\+Multicast()}{isWellKnownMulticast()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::is\+Well\+Known\+Multicast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if address is well-\/known multicast. 
+
+For I\+Pv4, well-\/known multicast addresses are in the 224.\+0.\+0.\+0/8 range. For I\+Pv6, well-\/known multicast addresses are in the F\+F0x\+:x\+:x\+:x\+:x\+:x\+:x\+:x range.
+
+\begin{DoxyReturn}{Returns}
+True if address is well-\/known multicast 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a228663b61e067424cceedc640ae44bb8}\label{classlibrary_1_1io_1_1ip_1_1_address_a228663b61e067424cceedc640ae44bb8}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!is\+Wildcard@{is\+Wildcard}}
+\index{is\+Wildcard@{is\+Wildcard}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{is\+Wildcard()}{isWildcard()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::is\+Wildcard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if address is wildcard (all zero) 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"0.0.0.0"}).\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a228663b61e067424cceedc640ae44bb8}{isWildcard}() ; \textcolor{comment}{// True}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"::"}).\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a228663b61e067424cceedc640ae44bb8}{isWildcard}() ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if address is wildcard 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a79cb92d3917c101f3908ce6f251fffd7}\label{classlibrary_1_1io_1_1ip_1_1_address_a79cb92d3917c101f3908ce6f251fffd7}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!Loopback@{Loopback}}
+\index{Loopback@{Loopback}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{Loopback()}{Loopback()}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} library\+::io\+::ip\+::\+Address\+::\+Loopback (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225af}{Address\+::\+Type} \&}]{a\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a loopback address. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ab968d468b8bc2ba8f48fd2b6784832fe}{Address} address = \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a79cb92d3917c101f3908ce6f251fffd7}{Address::Loopback}(\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a1a4f284eb6f5f52b67f2e34a93f225afa42a9137a05a60eb752dcdf982e717626}{Address::Type::IPv4}) ;
+address.getString() ; \textcolor{comment}{// "127.0.0.1"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Loopback address 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a56dec93d614ec71b02d57377fe687029}\label{classlibrary_1_1io_1_1ip_1_1_address_a56dec93d614ec71b02d57377fe687029}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \&}]{an\+Address }\end{DoxyParamCaption}) const}
+
+
+
+Not equal to operator. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"0.0.0.0"}) != \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"0.0.0.1"}) ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Address} & An IP address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if addresses are not equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_ad399ad8624416bc52c75aa1319eeb2dc}\label{classlibrary_1_1io_1_1ip_1_1_address_ad399ad8624416bc52c75aa1319eeb2dc}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!operator=@{operator=}}
+\index{operator=@{operator=}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address}\& library\+::io\+::ip\+::\+Address\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \&}]{an\+Address }\end{DoxyParamCaption})}
+
+
+
+Assignment operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Address} & An IP address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_aa471d7c4d4df06e473e5390a49b20b6e}\label{classlibrary_1_1io_1_1ip_1_1_address_aa471d7c4d4df06e473e5390a49b20b6e}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!operator==@{operator==}}
+\index{operator==@{operator==}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool library\+::io\+::ip\+::\+Address\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \&}]{an\+Address }\end{DoxyParamCaption}) const}
+
+
+
+Equal to operator. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"0.0.0.0"}) == \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"0.0.0.0"}) ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Address} & An IP address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if addresses are equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}\label{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!Parse@{Parse}}
+\index{Parse@{Parse}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{Parse()}{Parse()}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} library\+::io\+::ip\+::\+Address\+::\+Parse (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_1_1ip_a2ac70ed8dfa9969304e09cead6a39459}{String} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs an address from a given string. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ab968d468b8bc2ba8f48fd2b6784832fe}{Address} address = \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"1.2.3.4"}) ; \textcolor{comment}{// IPv4}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ab968d468b8bc2ba8f48fd2b6784832fe}{Address} address = \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"::"}) ; \textcolor{comment}{// IPv6}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+String} & A string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_a6f567a698faa544fb27b52f02b3c52b6}\label{classlibrary_1_1io_1_1ip_1_1_address_a6f567a698faa544fb27b52f02b3c52b6}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!Undefined@{Undefined}}
+\index{Undefined@{Undefined}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{Undefined()}{Undefined()}}
+{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} library\+::io\+::ip\+::\+Address\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs an undefined address. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ab968d468b8bc2ba8f48fd2b6784832fe}{Address} address = \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_a6f567a698faa544fb27b52f02b3c52b6}{Address::Undefined}() ;
+address.isDefined() ; \textcolor{comment}{// False}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Undefined address 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1ip_1_1_address_acb0766764bb037acde8e0acdfdecadd0}\label{classlibrary_1_1io_1_1ip_1_1_address_acb0766764bb037acde8e0acdfdecadd0}} 
+\index{library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!library\+::io\+::ip\+::\+Address@{library\+::io\+::ip\+::\+Address}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classlibrary_1_1io_1_1ip_1_1_address}{Address} \&}]{an\+Address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1ip_1_1_address_ab968d468b8bc2ba8f48fd2b6784832fe}{Address} address = \hyperlink{classlibrary_1_1io_1_1ip_1_1_address_af8ab0e365de3c00109b456ee94e2590b}{Address::Parse}(\textcolor{stringliteral}{"0.0.0.0"}) ;
+std::cout << address ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\tt in}  & {\em an\+Address} & An IP address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An output stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Library/\+I\+O/\+I\+P/\hyperlink{_address_8hpp}{Address.\+hpp}\item 
+src/\+Library/\+I\+O/\+I\+P/\hyperlink{_address_8cpp}{Address.\+cpp}\end{DoxyCompactItemize}
