@@ -84,7 +84,7 @@ From the development environment:
 Manually:
 
 ```bash
-./bin/library-core.test
+./bin/library-io.test
 ```
 
 ## Dependencies
