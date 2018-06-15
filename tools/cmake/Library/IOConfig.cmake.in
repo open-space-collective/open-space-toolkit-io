@@ -1,0 +1,29 @@
+################################################################################################################################################################
+
+# @project        Library/IO
+# @file           tools/cmake/Library/IOConfig.cmake.in
+# @author         Lucas Brémond <lucas@loftorbital.com>
+# @license        TBD
+
+################################################################################################################################################################
+
+SET (LibraryIO_ROOT_DIR ${LibraryIO_ROOT_DIR} @CMAKE_INSTALL_PREFIX@)
+
+FIND_PATH (LibraryIO_INCLUDE_DIR "Library/IO/Utilities/Version.hpp" PATHS ${LibraryIO_ROOT_DIR} PATH_SUFFIXES "include" NO_DEFAULT_PATH)
+FIND_LIBRARY (LibraryIO_LIBRARY NAMES "liblibrary-io.so" PATHS ${LibraryIO_ROOT_DIR} PATH_SUFFIXES "lib" NO_DEFAULT_PATH)
+
+# MESSAGE (STATUS "LibraryIO_ROOT_DIR = ${LibraryIO_ROOT_DIR}")
+# MESSAGE (STATUS "LibraryIO_INCLUDE_DIR = ${LibraryIO_INCLUDE_DIR}")
+# MESSAGE (STATUS "LibraryIO_LIBRARY = ${LibraryIO_LIBRARY}")
+# MESSAGE (STATUS "LibraryIO_FIND_VERSION = ${LibraryIO_FIND_VERSION}")
+
+IF (LibraryIO_INCLUDE_DIR)
+
+    SET (LibraryIO_INCLUDE_DIRS ${LibraryIO_INCLUDE_DIR} ${LibraryIO_INCLUDE_DIR}/Library/IO)
+    SET (LibraryIO_LIBRARIES ${LibraryIO_LIBRARY})
+
+    SET (LibraryIO_FOUND TRUE)
+
+ENDIF ()
+
+################################################################################################################################################################
