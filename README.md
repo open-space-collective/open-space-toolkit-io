@@ -1,4 +1,5 @@
-# Library :: IO
+Library :: IO
+=============
 
 Addressing, networking, database connectors.
 

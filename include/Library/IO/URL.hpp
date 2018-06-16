@@ -387,7 +387,7 @@ class URL
 
         static URL              Undefined                                   ( ) ;
 
-        /// @brief              Constructs URL from a given string
+        /// @brief              Constructs a URL from a given string
         ///
         /// @code
         ///                     URL url = URL::Parse("https://www.google.com") ;
