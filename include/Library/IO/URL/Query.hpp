@@ -80,6 +80,12 @@ class Query
 
                 bool            operator !=                                 (   const   Parameter&                  aParameter                                  ) const ;
 
+                /// @brief      Return true is parameter is defined
+                ///
+                /// @return     True if parameter is defined
+
+                bool            isDefined                                   ( ) const ;
+
                 /// @brief      Access parameter name
                 ///
                 /// @code
@@ -130,6 +136,8 @@ class Query
                 Parameter::Value value_ ;
 
         } ;
+
+        typedef                 Array<Query::Parameter>::ConstIterator          ConstIterator ;
 
         /// @brief              Constructor
         ///
@@ -198,12 +206,24 @@ class Query
         /// @brief              Get serialized query
         ///
         /// @code
-        ///                     Query({{"Key", "Value"}}).getString() ; // "?Key=Value"
+        ///                     Query({{"Key", "Value"}}).toString() ; // "?Key=Value"
         /// @endcode
         ///
         /// @return             Serialized query
 
-        String                  getString                                   ( ) const ;
+        String                  toString                                    ( ) const ;
+
+        /// @brief              Get begin const iterator
+        ///
+        /// @return             Begin const iterator
+
+        Query::ConstIterator    begin                                       ( ) const ;
+
+        /// @brief              Get end const iterator
+        ///
+        /// @return             End const iterator
+
+        Query::ConstIterator    end                                         ( ) const ;
 
         /// @brief              Add parameter to query
         ///

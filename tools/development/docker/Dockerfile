@@ -17,6 +17,21 @@ ARG cpu_count=1
 
 # Dependencies
 
+## C++ Network Library [0.13.0]
+
+RUN pushd /tmp > /dev/null \
+ && git clone --branch 0.13-release --depth 1 https://github.com/cpp-netlib/cpp-netlib \
+ && cd cpp-netlib \
+ && git submodule init \
+ && git submodule update \
+ && mkdir build \
+ && cd build \
+ && cmake -DCMAKE_POSITION_INDEPENDENT_CODE=ON .. \
+ && make -j ${cpu_count} \
+ && make install \
+ && popd > /dev/null \
+ && rm -rf /tmp/cppnetlib
+
 ## Library ▸ Core [0.1.17]
 
 RUN mkdir -p /tmp/library-core \
