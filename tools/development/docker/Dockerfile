@@ -7,31 +7,29 @@
 
 ################################################################################################################################################################
 
-FROM openspacecollective/library-core:latest
+FROM openspacecollective/library-core:0.1.7
 
 LABEL maintainer="lucas@loftorbital.com"
 
 # Arguments
 
-ARG version
 ARG cpu_count=1
 
 # Dependencies
 
-## Library :: Core [master]
+## Library ▸ Core [0.1.17]
 
-RUN pushd /tmp > /dev/null \
-    && git clone https://github.com/open-space-collective/library-core.git \
-    && cd library-core \
-    && mkdir build \
-    && cd build \
-    && cmake -DBUILD_UNIT_TESTS=OFF .. \
-    && make -j ${cpu_count} \
-    && make install \
-    && rm -rf /tmp/library-core \
-    && popd > /dev/null
+RUN mkdir -p /tmp/library-core \
+ && pushd /tmp/library-core > /dev/null \
+ && wget --quiet https://github.com/open-space-collective/library-core/releases/download/0.1.17/library-core-0.1.17-1.x86_64-runtime.rpm \
+ && wget --quiet https://github.com/open-space-collective/library-core/releases/download/0.1.17/library-core-0.1.17-1.x86_64-devel.rpm \
+ && dnf install -y ./*.rpm \
+ && rm -rf /tmp/library-core \
+ && popd > /dev/null
 
 # Labels
+
+ARG version
 
 ENV version ${version}
 

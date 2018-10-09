@@ -3,22 +3,25 @@
 ################################################################################################################################################################
 
 # @project        Library/IO
-# @file           tools/development/helpers/build.sh
+# @file           tools/python/docker/run.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
 ################################################################################################################################################################
 
-if [[ ! -z $1 ]] && [[ $1 == "--debug" ]]; then
+script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-    cmake -DCMAKE_BUILD_TYPE=Debug ..
+pushd ${script_directory} > /dev/null
 
-else
+source "../../.env"
 
-    cmake ..
+docker run \
+--name="${container_name}-python" \
+-it \
+--rm \
+"${repository_name}/${project_name}-python" \
+/bin/bash
 
-fi
-
-make -j ${cpu_count:-1}
+popd > /dev/null
 
 ################################################################################################################################################################

@@ -1,11 +1,13 @@
-Library :: IO
+Library ▸ I/O
 =============
 
 Addressing, networking, database connectors.
 
 [![Build Status](https://travis-ci.com/open-space-collective/library-io.svg?branch=master)](https://travis-ci.com/open-space-collective/library-io)
 [![Code Coverage](https://codecov.io/gh/open-space-collective/library-io/branch/master/graph/badge.svg)](https://codecov.io/gh/open-space-collective/library-io)
-[![Documentation](https://readthedocs.org/projects/docs/badge/?version=latest)](https://open-space-collective.github.io/library-io)
+[![Documentation](https://media.readthedocs.org/static/projects/badges/passing-flat.svg)](https://open-space-collective.github.io/library-io)
+[![GitHub version](https://badge.fury.io/gh/open-space-collective%2Flibrary-io.svg)](https://badge.fury.io/gh/open-space-collective%2Flibrary-io)
+[![PyPI version](https://badge.fury.io/py/LibraryIOPy.svg)](https://badge.fury.io/py/LibraryIOPy)
 
 ## Warning
 
@@ -36,7 +38,17 @@ The **IO** library exhibits the following structure:
 
 ## Documentation
 
-The documentation can be found [here](https://open-space-collective.github.io/library-io).
+The documentation can be found here:
+
+- [C++](https://open-space-collective.github.io/library-io)
+- [Python](./bindings/python/docs)
+
+## Tutorials
+
+Various tutorials are available here:
+
+- [C++](./tutorials/cpp)
+- [Python](./tutorials/python)
 
 ## Setup
 
@@ -52,7 +64,7 @@ Start the development environment:
 ./tools/development/start.sh
 ```
 
-This will also build the `openspacecollective/library-io:latest` Docker image, if not present already.
+This will also build the `openspacecollective/library-io:latest` Docker image, if not already.
 
 If installing Docker is not an option, please manually install the development tools (GCC, CMake) and the dependencies.
 The procedure should be similar to the one described in the [Dockerfile](./tools/development/docker/Dockerfile).
