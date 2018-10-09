@@ -1,7 +1,7 @@
 var searchData=
 [
   ['http',['http',['../namespacelibrary_1_1io_1_1ip_1_1tcp_1_1http.html',1,'library::io::ip::tcp']]],
-  ['library_20_3a_3a_20io',['Library :: IO',['../index.html',1,'']]],
+  ['library_20▸_20i_2fo',['Library ▸ I/O',['../index.html',1,'']]],
   ['io',['io',['../namespacelibrary_1_1io.html',1,'library']]],
   ['ip',['ip',['../namespacelibrary_1_1io_1_1ip.html',1,'library::io']]],
   ['library',['library',['../namespacelibrary.html',1,'']]],
