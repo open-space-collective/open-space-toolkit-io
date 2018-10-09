@@ -3,22 +3,26 @@
 ################################################################################################################################################################
 
 # @project        Library/IO
-# @file           tools/development/helpers/build.sh
+# @file           tools/python/helpers/debug.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
 ################################################################################################################################################################
 
-if [[ ! -z $1 ]] && [[ $1 == "--debug" ]]; then
+script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-    cmake -DCMAKE_BUILD_TYPE=Debug ..
+pushd "${script_directory}" > /dev/null
 
-else
+gdb `which python`
+# gdb `which python3`
 
-    cmake ..
+# gdb `which python` --args /home/jovyan/notebooks/A.py
 
-fi
+# set args /home/jovyan/notebooks/A.py
+# set args /app/bindings/python/test/Library/IO/Geometry.py
+# set args /app/bindings/python/test/Library/IO/Geometry/D2/Objects/Point.py
+# set args /app/bindings/python/test/test.py
 
-make -j ${cpu_count:-1}
+popd > /dev/null
 
 ################################################################################################################################################################
