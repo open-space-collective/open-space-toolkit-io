@@ -97,10 +97,10 @@ class URL
         ///                     URL newUrl = url + "/page.html" // http://server.org/page.html
         /// @endcode
         ///
-        /// @param              [in] aPathElement A path element
+        /// @param              [in] aUrlElement A path element
         /// @return             URL
 
-        URL                     operator +                                  (   const   String&                     aPathElement                                ) const ;
+        URL                     operator +                                  (   const   String&                     aUrlElement                                 ) const ;
 
         /// @brief              Addition assignment operator
         ///
@@ -111,10 +111,10 @@ class URL
         ///                     url += "/page.html" // http://server.org/page.html
         /// @endcode
         ///
-        /// @param              [in] aPathElement A path element
+        /// @param              [in] aUrlElement A path element
         /// @return             Reference to URL
 
-        URL&                    operator +=                                 (   const   String&                     aPathElement                                ) ;
+        URL&                    operator +=                                 (   const   String&                     aUrlElement                                 ) ;
 
         /// @brief              Output stream operator
         ///
@@ -321,12 +321,13 @@ class URL
         ///
         /// @code
         ///                     URL url("http", "server.org", "/path/to/page.html", 80) ;
-        ///                     url.getString() ; // "http://server.org:80/path/to/page.html"
+        ///                     url.toString() ; // "http://server.org:80/path/to/page.html"
         /// @endcode
         ///
+        /// @param              [in] optional doSanitize If true, sanitize URL
         /// @return             Serialized URL
 
-        String                  getString                                   ( ) const ;
+        String                  toString                                    (   const   bool                        doSanitize                                  =   false ) const ;
 
         /// @brief              Set URL scheme
         ///
