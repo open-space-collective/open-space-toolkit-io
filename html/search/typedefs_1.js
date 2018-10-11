@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name',['Name',['../classlibrary_1_1io_1_1url_1_1_query_1_1_parameter.html#a7edf5fb8a4ae57aed1ce5dfa2405c981',1,'library::io::url::Query::Parameter']]]
+  ['integer',['Integer',['../namespacelibrary_1_1io.html#a0a929bf9e177597c2e92073d200dda53',1,'library::io']]]
 ];

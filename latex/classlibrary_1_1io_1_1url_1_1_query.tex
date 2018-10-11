@@ -14,6 +14,11 @@ Uniform Resource Locator (\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL}) query
 \item 
 class \hyperlink{classlibrary_1_1io_1_1url_1_1_query_1_1_parameter}{Parameter}
 \begin{DoxyCompactList}\small\item\em Uniform Resource Locator (\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL}) query parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Array$<$ \hyperlink{classlibrary_1_1io_1_1url_1_1_query_1_1_parameter}{Query\+::\+Parameter} $>$\+::\hyperlink{classlibrary_1_1io_1_1url_1_1_query_a244b3517cf5a3d1abf7e8c8d9d40cf04}{Const\+Iterator} \hyperlink{classlibrary_1_1io_1_1url_1_1_query_a244b3517cf5a3d1abf7e8c8d9d40cf04}{Const\+Iterator}
+\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,8 +34,12 @@ bool \hyperlink{classlibrary_1_1io_1_1url_1_1_query_a19b51e7e6dca5e76284ddf5b62d
 \begin{DoxyCompactList}\small\item\em Check if query has parameter with a given name. \end{DoxyCompactList}\item 
 \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \hyperlink{classlibrary_1_1io_1_1url_1_1_query_a5d279ba3f21372fb4768d32a74492b85}{get\+Parameter\+With\+Name} (const \hyperlink{classlibrary_1_1io_1_1url_1_1_query_1_1_parameter_a7edf5fb8a4ae57aed1ce5dfa2405c981}{Query\+::\+Parameter\+::\+Name} \&a\+Name) const
 \begin{DoxyCompactList}\small\item\em Get parameter with a given name. \end{DoxyCompactList}\item 
-\hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \hyperlink{classlibrary_1_1io_1_1url_1_1_query_a64def65d3297fd007265f23f49c8d27b}{get\+String} () const
+\hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \hyperlink{classlibrary_1_1io_1_1url_1_1_query_af38369d995520735ef60f28a949f1d6d}{to\+String} () const
 \begin{DoxyCompactList}\small\item\em Get serialized query. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1io_1_1url_1_1_query_a244b3517cf5a3d1abf7e8c8d9d40cf04}{Query\+::\+Const\+Iterator} \hyperlink{classlibrary_1_1io_1_1url_1_1_query_a598fb9d455508308210e5cd12bca0d01}{begin} () const
+\begin{DoxyCompactList}\small\item\em Get begin const iterator. \end{DoxyCompactList}\item 
+\hyperlink{classlibrary_1_1io_1_1url_1_1_query_a244b3517cf5a3d1abf7e8c8d9d40cf04}{Query\+::\+Const\+Iterator} \hyperlink{classlibrary_1_1io_1_1url_1_1_query_ac88e26c91e0d31da540933d0892145d5}{end} () const
+\begin{DoxyCompactList}\small\item\em Get end const iterator. \end{DoxyCompactList}\item 
 void \hyperlink{classlibrary_1_1io_1_1url_1_1_query_aaaae1184a15d06b061dc38e779fb834e}{add\+Parameter} (const \hyperlink{classlibrary_1_1io_1_1url_1_1_query_1_1_parameter}{Query\+::\+Parameter} \&a\+Parameter)
 \begin{DoxyCompactList}\small\item\em Add parameter to query. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
@@ -38,12 +47,21 @@ void \hyperlink{classlibrary_1_1io_1_1url_1_1_query_aaaae1184a15d06b061dc38e779f
 \item 
 static \hyperlink{classlibrary_1_1io_1_1url_1_1_query}{Query} \hyperlink{classlibrary_1_1io_1_1url_1_1_query_acea48a0bfba96773f6db11d1a904a520}{Undefined} ()
 \begin{DoxyCompactList}\small\item\em Constructs an undefined query. \end{DoxyCompactList}\item 
-static \hyperlink{classlibrary_1_1io_1_1url_1_1_query}{Query} \hyperlink{classlibrary_1_1io_1_1url_1_1_query_aaff385aed5f4af758033066e4f7c70a2}{Parse} (const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+String)
+static \hyperlink{classlibrary_1_1io_1_1url_1_1_query}{Query} \hyperlink{classlibrary_1_1io_1_1url_1_1_query_a52a7b884fbf52bb9bc449e5f314c3199}{Parse} (const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&a\+String)
 \begin{DoxyCompactList}\small\item\em Constructs query from a given string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Uniform Resource Locator (\hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL}) query. 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1url_1_1_query_a244b3517cf5a3d1abf7e8c8d9d40cf04}\label{classlibrary_1_1io_1_1url_1_1_query_a244b3517cf5a3d1abf7e8c8d9d40cf04}} 
+\index{library\+::io\+::url\+::\+Query@{library\+::io\+::url\+::\+Query}!Const\+Iterator@{Const\+Iterator}}
+\index{Const\+Iterator@{Const\+Iterator}!library\+::io\+::url\+::\+Query@{library\+::io\+::url\+::\+Query}}
+\subsubsection{\texorpdfstring{Const\+Iterator}{ConstIterator}}
+{\footnotesize\ttfamily typedef Array$<$\hyperlink{classlibrary_1_1io_1_1url_1_1_query_1_1_parameter}{Query\+::\+Parameter}$>$\+::\hyperlink{classlibrary_1_1io_1_1url_1_1_query_a244b3517cf5a3d1abf7e8c8d9d40cf04}{Const\+Iterator} \hyperlink{classlibrary_1_1io_1_1url_1_1_query_a244b3517cf5a3d1abf7e8c8d9d40cf04}{library\+::io\+::url\+::\+Query\+::\+Const\+Iterator}}
+
+
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classlibrary_1_1io_1_1url_1_1_query_a6781de8f7b7251f8e17c191434b08039}\label{classlibrary_1_1io_1_1url_1_1_query_a6781de8f7b7251f8e17c191434b08039}} 
@@ -92,6 +110,32 @@ query.addParameter(\{\textcolor{stringliteral}{"Key B"}, \textcolor{stringlitera
 \mbox{\tt in}  & {\em a\+Parameter} & A parameter \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1url_1_1_query_a598fb9d455508308210e5cd12bca0d01}\label{classlibrary_1_1io_1_1url_1_1_query_a598fb9d455508308210e5cd12bca0d01}} 
+\index{library\+::io\+::url\+::\+Query@{library\+::io\+::url\+::\+Query}!begin@{begin}}
+\index{begin@{begin}!library\+::io\+::url\+::\+Query@{library\+::io\+::url\+::\+Query}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1io_1_1url_1_1_query_a244b3517cf5a3d1abf7e8c8d9d40cf04}{Query\+::\+Const\+Iterator} library\+::io\+::url\+::\+Query\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get begin const iterator. 
+
+\begin{DoxyReturn}{Returns}
+Begin const iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1url_1_1_query_ac88e26c91e0d31da540933d0892145d5}\label{classlibrary_1_1io_1_1url_1_1_query_ac88e26c91e0d31da540933d0892145d5}} 
+\index{library\+::io\+::url\+::\+Query@{library\+::io\+::url\+::\+Query}!end@{end}}
+\index{end@{end}!library\+::io\+::url\+::\+Query@{library\+::io\+::url\+::\+Query}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1io_1_1url_1_1_query_a244b3517cf5a3d1abf7e8c8d9d40cf04}{Query\+::\+Const\+Iterator} library\+::io\+::url\+::\+Query\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get end const iterator. 
+
+\begin{DoxyReturn}{Returns}
+End const iterator 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classlibrary_1_1io_1_1url_1_1_query_a5d279ba3f21372fb4768d32a74492b85}\label{classlibrary_1_1io_1_1url_1_1_query_a5d279ba3f21372fb4768d32a74492b85}} 
 \index{library\+::io\+::url\+::\+Query@{library\+::io\+::url\+::\+Query}!get\+Parameter\+With\+Name@{get\+Parameter\+With\+Name}}
 \index{get\+Parameter\+With\+Name@{get\+Parameter\+With\+Name}!library\+::io\+::url\+::\+Query@{library\+::io\+::url\+::\+Query}}
@@ -115,25 +159,6 @@ Get parameter with a given name.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 \hyperlink{classlibrary_1_1io_1_1url_1_1_query_1_1_parameter}{Parameter} 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classlibrary_1_1io_1_1url_1_1_query_a64def65d3297fd007265f23f49c8d27b}\label{classlibrary_1_1io_1_1url_1_1_query_a64def65d3297fd007265f23f49c8d27b}} 
-\index{library\+::io\+::url\+::\+Query@{library\+::io\+::url\+::\+Query}!get\+String@{get\+String}}
-\index{get\+String@{get\+String}!library\+::io\+::url\+::\+Query@{library\+::io\+::url\+::\+Query}}
-\subsubsection{\texorpdfstring{get\+String()}{getString()}}
-{\footnotesize\ttfamily \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} library\+::io\+::url\+::\+Query\+::get\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Get serialized query. 
-
-
-\begin{DoxyCode}
-\hyperlink{classlibrary_1_1io_1_1url_1_1_query_a6781de8f7b7251f8e17c191434b08039}{Query}(\{\{\textcolor{stringliteral}{"Key"}, \textcolor{stringliteral}{"Value"}\}\}).\hyperlink{classlibrary_1_1io_1_1url_1_1_query_a64def65d3297fd007265f23f49c8d27b}{getString}() ; \textcolor{comment}{// "?Key=Value"}
-\end{DoxyCode}
-
-
-\begin{DoxyReturn}{Returns}
-Serialized query 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classlibrary_1_1io_1_1url_1_1_query_a19b51e7e6dca5e76284ddf5b62dd4f7f}\label{classlibrary_1_1io_1_1url_1_1_query_a19b51e7e6dca5e76284ddf5b62dd4f7f}} 
 \index{library\+::io\+::url\+::\+Query@{library\+::io\+::url\+::\+Query}!has\+Parameter\+With\+Name@{has\+Parameter\+With\+Name}}
@@ -228,11 +253,11 @@ Equal to operator.
 \begin{DoxyReturn}{Returns}
 True if queries are equal 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classlibrary_1_1io_1_1url_1_1_query_aaff385aed5f4af758033066e4f7c70a2}\label{classlibrary_1_1io_1_1url_1_1_query_aaff385aed5f4af758033066e4f7c70a2}} 
+\mbox{\Hypertarget{classlibrary_1_1io_1_1url_1_1_query_a52a7b884fbf52bb9bc449e5f314c3199}\label{classlibrary_1_1io_1_1url_1_1_query_a52a7b884fbf52bb9bc449e5f314c3199}} 
 \index{library\+::io\+::url\+::\+Query@{library\+::io\+::url\+::\+Query}!Parse@{Parse}}
 \index{Parse@{Parse}!library\+::io\+::url\+::\+Query@{library\+::io\+::url\+::\+Query}}
 \subsubsection{\texorpdfstring{Parse()}{Parse()}}
-{\footnotesize\ttfamily static \hyperlink{classlibrary_1_1io_1_1url_1_1_query}{Query} library\+::io\+::url\+::\+Query\+::\+Parse (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \hyperlink{classlibrary_1_1io_1_1url_1_1_query}{Query} library\+::io\+::url\+::\+Query\+::\+Parse (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -240,7 +265,7 @@ Constructs query from a given string.
 
 
 \begin{DoxyCode}
-\hyperlink{classlibrary_1_1io_1_1url_1_1_query_a6781de8f7b7251f8e17c191434b08039}{Query} query = \hyperlink{classlibrary_1_1io_1_1url_1_1_query_aaff385aed5f4af758033066e4f7c70a2}{Query::Parse}(\textcolor{stringliteral}{"key\_A=value\_A&key\_B=value\_B"}) ;
+\hyperlink{classlibrary_1_1io_1_1url_1_1_query_a6781de8f7b7251f8e17c191434b08039}{Query} query = \hyperlink{classlibrary_1_1io_1_1url_1_1_query_a52a7b884fbf52bb9bc449e5f314c3199}{Query::Parse}(\textcolor{stringliteral}{"key\_A=value\_A&key\_B=value\_B"}) ;
 \end{DoxyCode}
 
 
@@ -251,6 +276,25 @@ Constructs query from a given string.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 \hyperlink{classlibrary_1_1io_1_1url_1_1_query}{Query} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlibrary_1_1io_1_1url_1_1_query_af38369d995520735ef60f28a949f1d6d}\label{classlibrary_1_1io_1_1url_1_1_query_af38369d995520735ef60f28a949f1d6d}} 
+\index{library\+::io\+::url\+::\+Query@{library\+::io\+::url\+::\+Query}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!library\+::io\+::url\+::\+Query@{library\+::io\+::url\+::\+Query}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{String} library\+::io\+::url\+::\+Query\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get serialized query. 
+
+
+\begin{DoxyCode}
+\hyperlink{classlibrary_1_1io_1_1url_1_1_query_a6781de8f7b7251f8e17c191434b08039}{Query}(\{\{\textcolor{stringliteral}{"Key"}, \textcolor{stringliteral}{"Value"}\}\}).\hyperlink{classlibrary_1_1io_1_1url_1_1_query_af38369d995520735ef60f28a949f1d6d}{toString}() ; \textcolor{comment}{// "?Key=Value"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Serialized query 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classlibrary_1_1io_1_1url_1_1_query_acea48a0bfba96773f6db11d1a904a520}\label{classlibrary_1_1io_1_1url_1_1_query_acea48a0bfba96773f6db11d1a904a520}} 
 \index{library\+::io\+::url\+::\+Query@{library\+::io\+::url\+::\+Query}!Undefined@{Undefined}}

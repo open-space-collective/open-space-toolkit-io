@@ -21,6 +21,11 @@ using \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{Strin
 \item 
 using \hyperlink{namespacelibrary_1_1io_a39ebaf2265de78ba79eb5347f2af61b3}{Query} = \hyperlink{classlibrary_1_1io_1_1url_1_1_query}{library\+::io\+::url\+::\+Query}
 \end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{namespacelibrary_1_1io_a36e00c0130e6908cc64fe2f7941f2652}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} \&a\+U\+RL)
+\end{DoxyCompactItemize}
 
 
 \subsection{Typedef Documentation}
@@ -42,3 +47,29 @@ using \hyperlink{namespacelibrary_1_1io_a39ebaf2265de78ba79eb5347f2af61b3}{Query
 \subsubsection{\texorpdfstring{String}{String}}
 {\footnotesize\ttfamily using \hyperlink{namespacelibrary_1_1io_a7469b45835a4421045db344d6a5a1f85}{library\+::io\+::\+String} = typedef library\+::core\+::types\+::\+String}
 
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacelibrary_1_1io_a36e00c0130e6908cc64fe2f7941f2652}\label{namespacelibrary_1_1io_a36e00c0130e6908cc64fe2f7941f2652}} 
+\index{library\+::io@{library\+::io}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!library\+::io@{library\+::io}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& library\+::io\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} \&}]{a\+U\+RL }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+URL url(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}) ;
+std::cout << url ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\tt in}  & {\em a\+U\+RL} & A \hyperlink{classlibrary_1_1io_1_1_u_r_l}{U\+RL} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An output stream 
+\end{DoxyReturn}

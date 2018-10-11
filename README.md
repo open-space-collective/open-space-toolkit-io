@@ -104,11 +104,12 @@ Manually:
 
 The **IO** library internally uses the following dependencies:
 
-| Name        | Version | License                | Link                                                                                                   |
-|-------------|---------|------------------------|--------------------------------------------------------------------------------------------------------|
-| Boost       | 1.67.0  | Boost Software License | [boost.org](https://www.boost.org)                                                                     |
-| Pistache    | master  | Apache License 2.0     | [pistache.io](http://pistache.io)                                                                      |
-| Core        | master  | TBD                    | [github.com/open-space-collective/library-core](https://github.com/open-space-collective/library-core) |
+| Name                | Version | License                | Link                                                                                                   |
+|---------------------|---------|------------------------|--------------------------------------------------------------------------------------------------------|
+| Boost               | 1.67.0  | BSL-1.0                | [boost.org](https://www.boost.org)                                                                     |
+| C++ Network Library | 0.13.0  | BSL-1.0                | [cpp-netlib.org](https://cpp-netlib.org)                                                               |
+| Pistache            | master  | Apache License 2.0     | [pistache.io](http://pistache.io)                                                                      |
+| Core                | master  | TBD                    | [github.com/open-space-collective/library-core](https://github.com/open-space-collective/library-core) |
 
 ## Contribution
 

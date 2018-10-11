@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ipv4',['IPv4',['../classlibrary_1_1io_1_1ip_1_1_address.html#a1a4f284eb6f5f52b67f2e34a93f225afa42a9137a05a60eb752dcdf982e717626',1,'library::io::ip::Address']]],
-  ['ipv6',['IPv6',['../classlibrary_1_1io_1_1ip_1_1_address.html#a1a4f284eb6f5f52b67f2e34a93f225afafdb7cb8f657426e7c409bfd6d1a36ce4',1,'library::io::ip::Address']]]
+  ['accepted',['Accepted',['../classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html#aa6406ad2157079c939b37c94806069f0a382ab522931673c11e398ead1b7b1678',1,'library::io::ip::tcp::http::Response']]],
+  ['alreadyreported',['AlreadyReported',['../classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html#aa6406ad2157079c939b37c94806069f0ac549fc73e09b412a8451b1648820acf2',1,'library::io::ip::tcp::http::Response']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['integer',['Integer',['../namespacelibrary_1_1io.html#a0a929bf9e177597c2e92073d200dda53',1,'library::io']]]
+  ['constiterator',['ConstIterator',['../classlibrary_1_1io_1_1url_1_1_query.html#a244b3517cf5a3d1abf7e8c8d9d40cf04',1,'library::io::url::Query']]]
 ];

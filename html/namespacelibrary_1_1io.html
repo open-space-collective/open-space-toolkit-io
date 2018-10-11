@@ -80,7 +80,8 @@ $(document).ready(function(){initNavTree('namespacelibrary_1_1io.html','');});
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">library::io Namespace Reference</div>  </div>
 </div><!--header-->
@@ -107,6 +108,11 @@ Typedefs</h2></td></tr>
 <tr class="separator:a7469b45835a4421045db344d6a5a1f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39ebaf2265de78ba79eb5347f2af61b3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelibrary_1_1io.html#a39ebaf2265de78ba79eb5347f2af61b3">Query</a> = <a class="el" href="classlibrary_1_1io_1_1url_1_1_query.html">library::io::url::Query</a></td></tr>
 <tr class="separator:a39ebaf2265de78ba79eb5347f2af61b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a36e00c0130e6908cc64fe2f7941f2652"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelibrary_1_1io.html#a36e00c0130e6908cc64fe2f7941f2652">operator&lt;&lt;</a> (std::ostream &amp;anOutputStream, const <a class="el" href="classlibrary_1_1io_1_1_u_r_l.html">URL</a> &amp;aURL)</td></tr>
+<tr class="separator:a36e00c0130e6908cc64fe2f7941f2652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a0a929bf9e177597c2e92073d200dda53"></a>
@@ -148,6 +154,43 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a36e00c0130e6908cc64fe2f7941f2652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36e00c0130e6908cc64fe2f7941f2652">&#9670;&nbsp;</a></span>operator<<()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; library::io::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>anOutputStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlibrary_1_1io_1_1_u_r_l.html">URL</a> &amp;&#160;</td>
+          <td class="paramname"><em>aURL</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line">URL url(<span class="stringliteral">&quot;http&quot;</span>, <span class="stringliteral">&quot;server.org&quot;</span>) ;</div><div class="line">std::cout &lt;&lt; url ;</div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">anOutputStream</td><td>An output stream </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aURL</td><td>A <a class="el" href="classlibrary_1_1io_1_1_u_r_l.html" title="Uniform Resource Locator (URL) ">URL</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An output stream </dd></dl>
 
 </div>
 </div>
