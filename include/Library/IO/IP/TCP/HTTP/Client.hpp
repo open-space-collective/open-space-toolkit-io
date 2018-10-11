@@ -10,7 +10,12 @@
 #ifndef __Library_IO_IP_TCP_HTTP_Client__
 #define __Library_IO_IP_TCP_HTTP_Client__
 
-#include <Library/Core/Types/String.hpp>
+#include <Library/IO/IP/TCP/HTTP/Response.hpp>
+#include <Library/IO/IP/TCP/HTTP/Request.hpp>
+#include <Library/IO/URL.hpp>
+
+#include <Library/Core/FileSystem/Directory.hpp>
+#include <Library/Core/FileSystem/File.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -27,22 +32,32 @@ namespace http
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-using String = library::core::types::String ;
+using library::core::fs::File ;
+using library::core::fs::Directory ;
+
+using library::io::URL ;
+using library::io::ip::tcp::http::Request ;
+using library::io::ip::tcp::http::Response ;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @brief                      
+/// @brief                      Hypertext Transfer Protocol (HTTP) client
+///
+/// @ref                        https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
 
 class Client
 {
 
     public:
 
-        
+                                Client                                      ( ) = delete ;
 
-    private:
+        static Response         Send                                        (   const   Request&                    aRequest                                    ) ;
 
-        // [TBI]
+        static Response         Get                                         (   const   URL&                        aUrl                                        ) ;
+
+        static File             Fetch                                       (   const   URL&                        aUrl,
+                                                                                const   Directory&                  aDirectory                                  ) ;
 
 } ;
 

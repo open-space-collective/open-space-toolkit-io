@@ -324,9 +324,10 @@ class URL
         ///                     url.toString() ; // "http://server.org:80/path/to/page.html"
         /// @endcode
         ///
+        /// @param              [in] optional doSanitize If true, sanitize URL
         /// @return             Serialized URL
 
-        String                  toString                                    ( ) const ;
+        String                  toString                                    (   const   bool                        doSanitize                                  =   false ) const ;
 
         /// @brief              Set URL scheme
         ///

@@ -201,6 +201,37 @@ TEST (Library_IO_URL, AdditionAssignmentOperator)
 
 }
 
+TEST (Library_IO_URL, StreamOperator)
+{
+
+    using library::core::types::Integer ;
+    using library::core::types::String ;
+    using library::io::URL ;
+    using library::io::url::Query ;
+
+    {
+
+        const String scheme = "https" ;
+        const String host = "domain.org" ;
+        const String path = "/path/to/page" ;
+        const Integer port = 443 ;
+        const String user = "user" ;
+        const String password = "password" ;
+        const Query query = { { { "key", "value" } } } ;
+        const String fragment = "fragment" ;
+
+        const URL url = { scheme, host, path, port, user, password, query, fragment } ;
+
+        testing::internal::CaptureStdout() ;
+
+        EXPECT_NO_THROW(std::cout << url << std::endl) ;
+
+        EXPECT_FALSE(testing::internal::GetCapturedStdout().empty()) ;
+
+    }
+
+}
+
 TEST (Library_IO_URL, IsDefined)
 {
 
@@ -695,6 +726,23 @@ TEST (Library_IO_URL, ToString)
         const URL url = { scheme, host, path, port, user, password, query, fragment } ;
 
         EXPECT_EQ("https://user:password@domain.org:443/path/to/page?key_A=value_1&key_B=value_2#fragment", url.toString()) << url.toString() ;
+
+    }
+
+    {
+
+        const String scheme = "https" ;
+        const String host = "domain.org" ;
+        const String path = "/path/to/page" ;
+        const Integer port = 443 ;
+        const String user = "user" ;
+        const String password = "password" ;
+        const Query query = { { { "key_A", "value 1" }, { "key_B", "value 2" } } } ;
+        const String fragment = "fragment A" ;
+
+        const URL url = { scheme, host, path, port, user, password, query, fragment } ;
+
+        EXPECT_EQ("https://user:password@domain.org:443/path/to/page?key_A=value%201&key_B=value%202#fragment%20A", url.toString(true)) << url.toString(true) ;
 
     }
 

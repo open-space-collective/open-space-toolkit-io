@@ -13,6 +13,7 @@
 #include <Library/Core/Utilities.hpp>
 
 #include <boost/network/uri.hpp>
+#include <boost/algorithm/string/replace.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -99,7 +100,7 @@ std::ostream&                   operator <<                                 (   
                                                                                 const   URL&                        aURL                                        )
 {
 
-    library::core::utils::Print::Header(anOutputStream, "Object") ;
+    library::core::utils::Print::Header(anOutputStream, "URL") ;
 
     library::core::utils::Print::Line(anOutputStream) << "Scheme"               << (!aURL.scheme_.isEmpty() ? aURL.scheme_ : "Undefined") ;
     library::core::utils::Print::Line(anOutputStream) << "User"                 << (!aURL.user_.isEmpty() ? aURL.user_ : "Undefined") ;
@@ -201,7 +202,7 @@ String                          URL::getFragment                            ( ) 
     return fragment_ ;
 }
 
-String                          URL::toString                               ( ) const
+String                          URL::toString                               (   const   bool                        doSanitize                                  ) const
 {
 
     if (!this->isDefined())
@@ -240,6 +241,11 @@ String                          URL::toString                               ( ) 
     if (!fragment_.isEmpty())
     {
         urlString += String::Format("#{}", fragment_) ;
+    }
+
+    if (doSanitize)
+    {
+        boost::replace_all(urlString, " ", "%20") ;
     }
     
     return urlString ;

@@ -17,9 +17,18 @@ ARG cpu_count=1
 
 # Dependencies
 
+## libcurl
+
+RUN dnf update -y \
+ && dnf install -y libcurl-devel \
+ && dnf clean all
+
 ## C++ Network Library [0.13.0]
 
 RUN pushd /tmp > /dev/null \
+ && dnf update -y \
+ && dnf install -y openssl-static \
+ && dnf clean all \
  && git clone --branch 0.13-release --depth 1 https://github.com/cpp-netlib/cpp-netlib \
  && cd cpp-netlib \
  && git submodule init \
