@@ -32,6 +32,12 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Send)
 
     }
 
+    {
+
+        EXPECT_ANY_THROW(Client::Send(Request::Undefined())) ;
+
+    }
+
 }
 
 TEST (Library_IO_IP_TCP_HTTP_Client, Get)
@@ -89,6 +95,12 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Get)
 
     }
 
+    {
+
+        EXPECT_ANY_THROW(Client::Get(URL::Undefined())) ;
+
+    }
+
 }
 
 TEST (Library_IO_IP_TCP_HTTP_Client, Fetch)
@@ -111,6 +123,18 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Fetch)
 
         EXPECT_TRUE(file.exists()) ;
         EXPECT_EQ("googlelogo_color_272x92dp.png", file.getName()) ;
+
+    }
+
+    {
+
+        const URL url = URL::Parse("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png") ;
+
+        const Directory directory = Directory::Path(Path::Parse("/tmp")) ;
+
+        EXPECT_ANY_THROW(Client::Fetch(url, Directory::Undefined())) ;
+        EXPECT_ANY_THROW(Client::Fetch(URL::Undefined(), directory)) ;
+        EXPECT_ANY_THROW(Client::Fetch(URL::Undefined(), Directory::Undefined())) ;
 
     }
 

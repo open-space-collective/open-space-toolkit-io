@@ -16,67 +16,50 @@ inline void						LibraryIOPy_URL								( )
 	
 	using namespace boost::python ;
 
+	using library::core::types::Integer ;
+	using library::core::types::String ;
+
 	using library::io::URL ;
+	using library::io::url::Query ;
 
-	// class_<URL>("URL", init<int>())
-	// class_<URL>("URL")
+	scope in_URL = class_<URL>("URL", init<const String&, const String&, const String&, const Integer&, const String&, const String&, const Query&, const String&>())
 
-		// .def(int_(self))
+		.def(self == self)
+        .def(self != self)
 
-		// .def(self == self)
-		// .def(self != self)
-		// .def(self < self)
-		// .def(self <= self)
-		// .def(self > self)
-		// .def(self >= self)
+        .def(self + String())
+        .def(self += String())
 
-		// .def(self + self)
-		// .def(self += self)
-		// .def(self - self)
-		// .def(self -= self)
-		// .def(self * self)
-		// .def(self *= self)
-		// .def(self / self)
-		// .def(self /= self)
+        .def(self_ns::str(self_ns::self))
+        
+		.def("__repr__", +[] (const URL& aUrl) -> std::string { return aUrl.toString() ; })
 
-		// .def(self + int())
-		// .def(self += int())
-		// .def(self - int())
-		// .def(self -= int())
-		// .def(self * int())
-		// .def(self *= int())
-		// .def(self / int())
-		// .def(self /= int())
+		.def("isDefined", &URL::isDefined)
+		
+		.def("getScheme", &URL::getScheme)
+		.def("getHost", &URL::getHost)
+		.def("getPath", &URL::getPath)
+		.def("getPort", &URL::getPort)
+		.def("getUser", &URL::getUser)
+		.def("getPassword", &URL::getPassword)
+		.def("getQuery", &URL::getQuery)
+		.def("getFragment", &URL::getFragment)
+		.def("toString", &URL::toString)
+		.def("setScheme", &URL::setScheme)
+		.def("setHost", &URL::setHost)
+		.def("setPath", &URL::setPath)
+		.def("setPort", &URL::setPort)
+		.def("setUser", &URL::setUser)
+		.def("setPassword", &URL::setPassword)
+		.def("setQuery", &URL::setQuery)
+		.def("setFragment", &URL::setFragment)
 
-		// .def(int() + self)
-		// .def(int() - self)
-		// .def(int() * self)
-		// .def(int() / self)
+		.def("Undefined", &URL::Undefined).staticmethod("Undefined")
+		.def("Parse", &URL::Parse).staticmethod("Parse")
+		// .def("EncodeString", &URL::EncodeString).staticmethod("EncodeString")
+		// .def("DecodeString", &URL::DecodeString).staticmethod("DecodeString")
 
-		// .def("__str__", +[] (const library::io::Integer& anInteger) -> std::string { return anInteger.getString() ; })
-		// .def("__repr__", +[] (const library::io::Integer& anInteger) -> std::string { return anInteger.getString() ; })
-
-		// .def("isDefined", &Integer::isDefined)
-		// .def("isZero", &Integer::isZero)
-		// .def("isPositive", &Integer::isPositive)
-		// .def("isNegative", &Integer::isNegative)
-		// .def("isStrictlyPositive", &Integer::isStrictlyPositive)
-		// .def("isStrictlyNegative", &Integer::isStrictlyNegative)
-		// .def("isInfinity", &Integer::isInfinity)
-		// .def("isPositiveInfinity", &Integer::isPositiveInfinity)
-		// .def("isNegativeInfinity", &Integer::isNegativeInfinity)
-		// .def("getSign", &Integer::getSign)
-		// .def("getString", &Integer::getString)
-		// // .def("getObject", &Integer::getObject)
-
-		// .def("Undefined", &Integer::Undefined).staticmethod("Undefined")
-		// .def("Zero", &Integer::Zero).staticmethod("Zero")
-		// .def("PositiveInfinity", &Integer::PositiveInfinity).staticmethod("PositiveInfinity")
-		// .def("NegativeInfinity", &Integer::NegativeInfinity).staticmethod("NegativeInfinity")
-		// .def("String", &Integer::String).staticmethod("String")
-		// // .def("Object", &Integer::Object).staticmethod("Object")
-
-		// ;
+		;
 
 }
 

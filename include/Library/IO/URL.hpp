@@ -11,6 +11,7 @@
 #define __Library_IO_URL__
 
 #include <Library/IO/URL/Query.hpp>
+
 #include <Library/Core/Types/String.hpp>
 #include <Library/Core/Types/Integer.hpp>
 
