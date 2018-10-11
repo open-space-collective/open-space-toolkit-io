@@ -38,6 +38,22 @@ namespace http
 
 }
 
+std::ostream&                   operator <<                                 (           std::ostream&               anOutputStream,
+                                                                                const   Request&                    aRequest                                    )
+{
+
+    library::core::utils::Print::Header(anOutputStream, "Request") ;
+
+    library::core::utils::Print::Line(anOutputStream) << "Method:"              << Request::StringFromMethod(aRequest.method_) ;
+    library::core::utils::Print::Line(anOutputStream) << "URL:"                 << (aRequest.url_.isDefined() ? aRequest.url_.toString() : "Undefined") ;
+    library::core::utils::Print::Line(anOutputStream) << "Body:"                << aRequest.body_ ;
+
+    library::core::utils::Print::Footer(anOutputStream) ;
+
+    return anOutputStream ;
+
+}
+
 bool                            Request::isDefined                          ( ) const
 {
     return (method_ != Request::Method::Undefined) && url_.isDefined() ;
@@ -45,17 +61,38 @@ bool                            Request::isDefined                          ( ) 
 
 Request::Method                 Request::getMethod                          ( ) const
 {
+
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Request") ;
+    }
+    
     return method_ ;
+
 }
 
 URL                             Request::getUrl                             ( ) const
 {
+
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Request") ;
+    }
+    
     return url_ ;
+
 }
 
 String                          Request::getBody                            ( ) const
 {
+
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Request") ;
+    }
+    
     return body_ ;
+
 }
 
 Request                         Request::Undefined                          ( )

@@ -114,6 +114,11 @@ class Response
 
         } ;
 
+        /// @brief              Constructor
+        ///
+        /// @param              [in] aStatusCode A status code
+        /// @param              [in] aBody A body
+
                                 Response                                    (   const   Response::StatusCode&       aStatusCode,
                                                                                 const   String&                     aBody                                       ) ;
 
@@ -126,15 +131,40 @@ class Response
         friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
                                                                                 const   Response&                   aResponse                                   ) ;
 
+        /// @brief              Check if response is defined
+        ///
+        /// @return             True if response is defined
+
         bool                    isDefined                                   ( ) const ;
+
+        /// @brief              Check if response status code is Ok
+        ///
+        /// @return             True if response status code is Ok
 
         bool                    isOk                                        ( ) const ;
 
+        /// @brief              Get response status code
+        ///
+        /// @return             Response status code
+
         Response::StatusCode    getStatusCode                               ( ) const ;
+
+        /// @brief              Get response body
+        ///
+        /// @return             Response body
 
         String                  getBody                                     ( ) const ;
 
+        /// @brief              Constructs an undefined response
+        ///
+        /// @return             Undefined response
+
         static Response         Undefined                                   ( ) ;
+
+        /// @brief              Converts response status code to string
+        ///
+        /// @param              [in] aStatusCode A response status code
+        /// @return             Response status code string
 
         static String           StringFromStatusCode                        (   const   Response::StatusCode&       aStatusCode                                 ) ;
 

@@ -42,8 +42,8 @@ std::ostream&                   operator <<                                 (   
 
     library::core::utils::Print::Header(anOutputStream, "Response") ;
 
-    library::core::utils::Print::Line(anOutputStream) << "Status code"          << String::Format("{} - {}", static_cast<uint>(aResponse.statusCode_), Response::StringFromStatusCode(aResponse.statusCode_)) ;
-    library::core::utils::Print::Line(anOutputStream) << "Body"                 << aResponse.body_ ;
+    library::core::utils::Print::Line(anOutputStream) << "Status code:"         << String::Format("{} - {}", static_cast<uint>(aResponse.statusCode_), Response::StringFromStatusCode(aResponse.statusCode_)) ;
+    library::core::utils::Print::Line(anOutputStream) << "Body:"                << aResponse.body_ ;
 
     library::core::utils::Print::Footer(anOutputStream) ;
 
@@ -58,17 +58,38 @@ bool                            Response::isDefined                         ( ) 
 
 bool                            Response::isOk                              ( ) const
 {
+
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Response") ;
+    }
+
     return statusCode_ == Response::StatusCode::Ok ;
+
 }
 
 Response::StatusCode            Response::getStatusCode                     ( ) const
 {
+
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Response") ;
+    }
+
     return statusCode_ ;
+
 }
 
 String                          Response::getBody                           ( ) const
 {
+
+    if (!this->isDefined())
+    {
+        throw library::core::error::runtime::Undefined("Response") ;
+    }
+
     return body_ ;
+
 }
 
 Response                        Response::Undefined                         ( )
