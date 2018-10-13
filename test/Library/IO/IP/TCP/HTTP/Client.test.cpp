@@ -140,4 +140,51 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Fetch)
 
 }
 
+TEST (Library_IO_IP_TCP_HTTP_Client, List)
+{
+
+    using library::core::fs::Path ;
+    using library::core::fs::File ;
+    using library::core::fs::Directory ;
+    
+    using library::io::URL ;
+    using library::io::ip::tcp::http::Client ;
+
+    {
+
+        const URL url = URL::Parse("ftp://naif.jpl.nasa.gov/pub/naif/generic_kernels/") ;
+
+        File file = File::Path(Path::Parse("/tmp/listing.txt")) ;
+
+        Client::List(url, file, false) ;
+        
+        EXPECT_TRUE(file.exists()) ;
+        EXPECT_EQ("listing.txt", file.getName()) ;
+
+        file.remove() ;
+
+        Client::List(url, file, true) ;
+        
+        EXPECT_TRUE(file.exists()) ;
+        EXPECT_EQ("listing.txt", file.getName()) ;
+        EXPECT_FALSE(file.getContents().isEmpty()) ;
+
+        file.remove() ;
+
+    }
+
+    {
+
+        const URL url = URL::Parse("ftp://naif.jpl.nasa.gov/pub/naif/generic_kernels/") ;
+
+        File file = File::Path(Path::Parse("/tmp/listing.txt")) ;
+
+        EXPECT_ANY_THROW(Client::List(url, File::Undefined())) ;
+        EXPECT_ANY_THROW(Client::List(URL::Undefined(), file)) ;
+        EXPECT_ANY_THROW(Client::List(URL::Undefined(), File::Undefined())) ;
+
+    }
+
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
