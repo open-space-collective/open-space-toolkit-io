@@ -176,6 +176,12 @@ TEST (Library_IO_URL_Query, HasParameterWithName)
 
     }
 
+    {
+
+        EXPECT_ANY_THROW(Query::Undefined().hasParameterWithName("")) ;
+
+    }
+
 }
 
 TEST (Library_IO_URL_Query, GetParameterWithName)
@@ -195,6 +201,9 @@ TEST (Library_IO_URL_Query, GetParameterWithName)
 
     {
 
+        const Query query = { { { "key", "value" } } } ;
+
+        EXPECT_ANY_THROW(query.getParameterWithName("")) ;
         EXPECT_ANY_THROW(Query::Undefined().getParameterWithName("key")) ;
 
     }
@@ -279,6 +288,8 @@ TEST (Library_IO_URL_Query, AddParameter)
         query.addParameter({ "key_B", "value_2" }) ;
 
         EXPECT_EQ("value_2", query.getParameterWithName("key_B")) ;
+
+        EXPECT_ANY_THROW(query.addParameter(Query::Parameter("", ""))) ;
 
     }
 

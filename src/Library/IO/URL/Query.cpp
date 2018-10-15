@@ -92,6 +92,11 @@ bool                            Query::isDefined                            ( ) 
 bool                            Query::hasParameterWithName                 (   const   Query::Parameter::Name&     aName                                       ) const
 {
 
+    if (aName.isEmpty())
+    {
+        throw library::core::error::runtime::Undefined("Name") ;
+    }
+
     for (const auto& parameter : parameters_)
     {
 
@@ -108,6 +113,11 @@ bool                            Query::hasParameterWithName                 (   
 
 String                          Query::getParameterWithName                 (   const   Query::Parameter::Name&     aName                                       ) const
 {
+
+    if (aName.isEmpty())
+    {
+        throw library::core::error::runtime::Undefined("Name") ;
+    }
 
     for (const auto& parameter : parameters_)
     {

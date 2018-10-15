@@ -50,14 +50,42 @@ class Client
 
     public:
 
+        /// @brief              Default constructor (deleted)
+
                                 Client                                      ( ) = delete ;
+
+        /// @brief              Send a HTTP request
+        ///
+        /// @param              [in] aRequest A HTTP request
+        /// @return             A HTTP response
 
         static Response         Send                                        (   const   Request&                    aRequest                                    ) ;
 
+        /// @brief              Send a HTTP GET request
+        ///
+        /// @param              [in] aUrl A URL
+        /// @return             A HTTP response
+
         static Response         Get                                         (   const   URL&                        aUrl                                        ) ;
+
+        /// @brief              Fetch file over HTTP
+        ///
+        /// @param              [in] aUrl A URL
+        /// @param              [in] aDirectory A destination directory
+        /// @return             A file
 
         static File             Fetch                                       (   const   URL&                        aUrl,
                                                                                 const   Directory&                  aDirectory                                  ) ;
+
+        /// @brief              List files
+        ///
+        /// @param              [in] aUrl A URL
+        /// @param              [in] aFile A destination file
+        /// @param              [in] (optional) showNamesOnly If true, only show file names
+
+        static void             List                                        (   const   URL&                        aUrl,
+                                                                                const   File&                       aFile,
+                                                                                const   bool                        showNamesOnly                               =   false ) ;
 
 } ;
 

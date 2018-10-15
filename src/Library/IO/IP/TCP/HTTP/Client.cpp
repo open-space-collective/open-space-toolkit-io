@@ -27,6 +27,10 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// [TBI] curl_easy_setopt(curlPtr, CURLOPT_USERPWD, "username:password") ;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 namespace library
 {
 namespace io
@@ -100,7 +104,7 @@ Response                        Client::Send                                (   
 
     if (curlCode != CURLE_OK)
     {
-        throw library::core::error::RuntimeError(curl_easy_strerror(curlCode)) ;
+        throw library::core::error::RuntimeError("Error using cURL: [{}].", curl_easy_strerror(curlCode)) ;
     }
 
     long responseCode ;
@@ -344,6 +348,11 @@ File                            Client::Fetch                               (   
 
     using library::core::fs::Path ;
 
+    if (!aUrl.isDefined())
+    {
+        throw library::core::error::runtime::Undefined("URL") ;
+    }
+
     if (!aDirectory.isDefined())
     {
         throw library::core::error::runtime::Undefined("Directory") ;
@@ -429,11 +438,108 @@ File                            Client::Fetch                               (   
 
         file = File::Undefined() ;
 
-        throw library::core::error::RuntimeError(curl_easy_strerror(curlCode)) ;
+        throw library::core::error::RuntimeError("Error using cURL to fetch file at URL [{}]: [{}].", aUrl.toString(), curl_easy_strerror(curlCode)) ;
 
     }
 
     return file ;
+
+}
+
+void                            Client::List                                (   const   URL&                        aUrl,
+                                                                                const   File&                       aFile,
+                                                                                const   bool                        showNamesOnly                               )
+{
+
+    using library::core::fs::Path ;
+
+    if (!aUrl.isDefined())
+    {
+        throw library::core::error::runtime::Undefined("URL") ;
+    }
+
+    if (!aFile.isDefined())
+    {
+        throw library::core::error::runtime::Undefined("File") ;
+    }
+
+    if (aFile.exists())
+    {
+        throw library::core::error::RuntimeError("File [{}] already exists.", aFile.toString()) ;
+    }
+
+    // Setup
+
+    CURL* curlPtr = curl_easy_init() ;
+
+    if (curlPtr == nullptr)
+    {
+        throw library::core::error::RuntimeError("Error with cURL setup.") ;
+    }
+
+    // Set URL
+
+    const String urlString = aUrl.toString(true) ;
+
+    curl_easy_setopt(curlPtr, CURLOPT_URL, urlString.data()) ;
+
+    // Set file handler
+
+    FILE* filePtr = fopen(aFile.getPath().toString().data(), "w") ;
+
+    if (!filePtr)
+    {
+        throw library::core::error::RuntimeError("Cannot create file [" + aFile.toString() + "].") ;
+    }
+
+    curl_easy_setopt(curlPtr, CURLOPT_FILE, filePtr) ;
+
+    // Set options
+
+    curl_easy_setopt(curlPtr, CURLOPT_TRANSFERTEXT, 1) ;
+
+    if (showNamesOnly)
+    {
+        curl_easy_setopt(curlPtr, CURLOPT_DIRLISTONLY, 1) ;
+    }
+
+    // Send request
+
+    const CURLcode curlCode = curl_easy_perform(curlPtr) ;
+
+    // Check response
+
+    long responseCode ;
+
+    curl_easy_getinfo(curlPtr, CURLINFO_RESPONSE_CODE, &responseCode) ;
+
+    // Cleanup
+
+    curl_easy_cleanup(curlPtr) ;
+
+    if (filePtr != nullptr)
+    {
+
+        if (fclose(filePtr) == EOF)
+        {
+            throw library::core::error::RuntimeError("Error when closing the file.") ;
+        }
+
+        filePtr = nullptr ;
+
+    }
+
+    if (curlCode != CURLE_OK)
+    {
+
+        if (aFile.exists())
+        {
+            File(aFile).remove() ;
+        }
+
+        throw library::core::error::RuntimeError("Error using cURL to list files at URL [{}]: [{}].", aUrl.toString(), curl_easy_strerror(curlCode)) ;
+
+    }
 
 }
 
