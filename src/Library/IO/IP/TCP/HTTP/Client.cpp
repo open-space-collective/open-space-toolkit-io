@@ -104,7 +104,7 @@ Response                        Client::Send                                (   
 
     if (curlCode != CURLE_OK)
     {
-        throw library::core::error::RuntimeError(curl_easy_strerror(curlCode)) ;
+        throw library::core::error::RuntimeError("Error using cURL: [{}].", curl_easy_strerror(curlCode)) ;
     }
 
     long responseCode ;
@@ -438,7 +438,7 @@ File                            Client::Fetch                               (   
 
         file = File::Undefined() ;
 
-        throw library::core::error::RuntimeError(curl_easy_strerror(curlCode)) ;
+        throw library::core::error::RuntimeError("Error using cURL to fetch file at URL [{}]: [{}].", aUrl.toString(), curl_easy_strerror(curlCode)) ;
 
     }
 
@@ -537,7 +537,7 @@ void                            Client::List                                (   
             File(aFile).remove() ;
         }
 
-        throw library::core::error::RuntimeError(curl_easy_strerror(curlCode)) ;
+        throw library::core::error::RuntimeError("Error using cURL to list files at URL [{}]: [{}].", aUrl.toString(), curl_easy_strerror(curlCode)) ;
 
     }
 
