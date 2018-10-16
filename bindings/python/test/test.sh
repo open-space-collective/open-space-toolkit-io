@@ -1,5 +1,5 @@
 #!/bin/bash
 
-export PYTHONPATH="${PYTHONPATH}:/library-io/lib"
+export PYTHONPATH="${PYTHONPATH}:/app/lib"
 
-python /library-io/share/python/test/Library/IO/Types.test.py
+python3 /app/bindings/python/test/Library/IO/IP.test.py

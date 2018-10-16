@@ -23,7 +23,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, Constructor)
 
     {
 
-        const Request::Method method = Request::Method::GET ;
+        const Request::Method method = Request::Method::Get ;
         const URL url = URL::Parse("https://www.google.com") ;
         const String body = "body" ;
 
@@ -43,7 +43,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, StreamOperator)
 
     {
 
-        const Request::Method method = Request::Method::GET ;
+        const Request::Method method = Request::Method::Get ;
         const URL url = URL::Parse("https://www.google.com") ;
         const String body = "body" ;
 
@@ -69,7 +69,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, IsDefined)
 
     {
 
-        const Request::Method method = Request::Method::GET ;
+        const Request::Method method = Request::Method::Get ;
         const URL url = URL::Parse("https://www.google.com") ;
         const String body = "body" ;
 
@@ -97,7 +97,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, GetMethod)
 
     {
 
-        const Request::Method method = Request::Method::GET ;
+        const Request::Method method = Request::Method::Get ;
         const URL url = URL::Parse("https://www.google.com") ;
         const String body = "body" ;
 
@@ -125,7 +125,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, GetUrl)
 
     {
 
-        const Request::Method method = Request::Method::GET ;
+        const Request::Method method = Request::Method::Get ;
         const URL url = URL::Parse("https://www.google.com") ;
         const String body = "body" ;
 
@@ -153,7 +153,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, GetBody)
 
     {
 
-        const Request::Method method = Request::Method::GET ;
+        const Request::Method method = Request::Method::Get ;
         const URL url = URL::Parse("https://www.google.com") ;
         const String body = "Hello World!" ;
 
@@ -195,7 +195,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, Get)
 
         const URL url = URL::Parse("https://www.google.com") ;
 
-        EXPECT_EQ(Request::Method::GET, Request::Get(url).getMethod()) ;
+        EXPECT_EQ(Request::Method::Get, Request::Get(url).getMethod()) ;
         
     }
 
@@ -209,15 +209,15 @@ TEST (Library_IO_IP_TCP_HTTP_Request, StringFromMethod)
     {
 
         EXPECT_EQ("Undefined", Request::StringFromMethod(Request::Method::Undefined)) ;
-        EXPECT_EQ("GET", Request::StringFromMethod(Request::Method::GET)) ;
-        EXPECT_EQ("HEAD", Request::StringFromMethod(Request::Method::HEAD)) ;
-        EXPECT_EQ("POST", Request::StringFromMethod(Request::Method::POST)) ;
-        EXPECT_EQ("PUT", Request::StringFromMethod(Request::Method::PUT)) ;
-        EXPECT_EQ("DELETE", Request::StringFromMethod(Request::Method::DELETE)) ;
-        EXPECT_EQ("TRACE", Request::StringFromMethod(Request::Method::TRACE)) ;
-        EXPECT_EQ("OPTIONS", Request::StringFromMethod(Request::Method::OPTIONS)) ;
-        EXPECT_EQ("CONNECT", Request::StringFromMethod(Request::Method::CONNECT)) ;
-        EXPECT_EQ("PATCH", Request::StringFromMethod(Request::Method::PATCH)) ;
+        EXPECT_EQ("Get", Request::StringFromMethod(Request::Method::Get)) ;
+        EXPECT_EQ("Head", Request::StringFromMethod(Request::Method::Head)) ;
+        EXPECT_EQ("Post", Request::StringFromMethod(Request::Method::Post)) ;
+        EXPECT_EQ("Put", Request::StringFromMethod(Request::Method::Put)) ;
+        EXPECT_EQ("Delete", Request::StringFromMethod(Request::Method::Delete)) ;
+        EXPECT_EQ("Trace", Request::StringFromMethod(Request::Method::Trace)) ;
+        EXPECT_EQ("Options", Request::StringFromMethod(Request::Method::Options)) ;
+        EXPECT_EQ("Connect", Request::StringFromMethod(Request::Method::Connect)) ;
+        EXPECT_EQ("Patch", Request::StringFromMethod(Request::Method::Patch)) ;
         
     }
 

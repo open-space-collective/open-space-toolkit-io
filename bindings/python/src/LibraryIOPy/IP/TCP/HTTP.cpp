@@ -1,28 +1,30 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Library/IO
-/// @file           Library/IO/LibraryIOPy.hpp
+/// @file           LibraryIOPy/IP/TCP/HTTP.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        TBD
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <boost/python.hpp>
-
-#include <LibraryIOPy/IP.cpp>
-#include <LibraryIOPy/URL.cpp>
+#include <LibraryIOPy/IP/TCP/HTTP/Client.cpp>
+#include <LibraryIOPy/IP/TCP/HTTP/Response.cpp>
+#include <LibraryIOPy/IP/TCP/HTTP/Request.cpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-BOOST_PYTHON_MODULE (LibraryIOPy)
+inline void                     LibraryIOPy_IP_TCP_HTTP                     ( )
 {
-
-	boost::python::object package = boost::python::scope() ;
-	
-	package.attr("__path__") = "Library" ;
-
-	LibraryIOPy_URL() ;
-	LibraryIOPy_IP() ;
+    
+    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("Library.IO.IP.TCP.HTTP")))) ;
+    
+    boost::python::scope().attr("HTTP") = module ;
+    
+    boost::python::scope scope = module ;
+    
+    LibraryIOPy_IP_TCP_HTTP_Request() ;
+    LibraryIOPy_IP_TCP_HTTP_Response() ;
+    LibraryIOPy_IP_TCP_HTTP_Client() ;
 
 }
 

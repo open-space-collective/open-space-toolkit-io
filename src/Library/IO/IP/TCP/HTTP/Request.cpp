@@ -102,7 +102,7 @@ Request                         Request::Undefined                          ( )
 
 Request                         Request::Get                                (   const   URL&                        aUrl                                        )
 {
-    return { Request::Method::GET, aUrl, String::Empty() } ;
+    return { Request::Method::Get, aUrl, String::Empty() } ;
 }
 
 String                          Request::StringFromMethod                   (   const   Request::Method&            aMethod                                     )
@@ -114,15 +114,15 @@ String                          Request::StringFromMethod                   (   
     {
         {
             {  Request::Method::Undefined, "Undefined" },
-            {  Request::Method::GET, "GET" },
-            {  Request::Method::HEAD, "HEAD" },
-            {  Request::Method::POST, "POST" },
-            {  Request::Method::PUT, "PUT" },
-            {  Request::Method::DELETE, "DELETE" },
-            {  Request::Method::TRACE, "TRACE" },
-            {  Request::Method::OPTIONS, "OPTIONS" },
-            {  Request::Method::CONNECT, "CONNECT" },
-            {  Request::Method::PATCH, "PATCH" }
+            {  Request::Method::Get,       "Get" },
+            {  Request::Method::Head,      "Head" },
+            {  Request::Method::Post,      "Post" },
+            {  Request::Method::Put,       "Put" },
+            {  Request::Method::Delete,    "Delete" },
+            {  Request::Method::Trace,     "Trace" },
+            {  Request::Method::Options,   "Options" },
+            {  Request::Method::Connect,   "Connect" },
+            {  Request::Method::Patch,     "Patch" }
         }
     } ;
 

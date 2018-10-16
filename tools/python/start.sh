@@ -15,6 +15,18 @@ pushd "${script_directory}" > /dev/null
 
 source ../.env
 
+# Build Docker image if it does not exist already
+
+if [[ "$(docker images -q ${repository_name}/${project_name}-python 2> /dev/null)" == "" ]]; then
+
+    pushd "${script_directory}/docker" > /dev/null
+
+    ./build.sh
+
+    popd
+
+fi
+
 if [[ ! -z $1 ]] && [[ $1 == "--link" ]]; then
 
     docker run \
@@ -23,6 +35,7 @@ if [[ ! -z $1 ]] && [[ $1 == "--link" ]]; then
     --rm \
     --publish="${python_port}:8888" \
     --user="" \
+    --env="GRANT_SUDO=yes" \
     --env="JUPYTER_ENABLE_LAB=yes" \
     --env="LD_LIBRARY_PATH=/usr/local/lib:/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
     --env="PYTHONPATH=/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
@@ -30,7 +43,7 @@ if [[ ! -z $1 ]] && [[ $1 == "--link" ]]; then
     --volume="${project_directory}/lib:/opt/lib:ro" \
     --volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
     --volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/tutorials" \
-    --volume="${project_directory}/share/data:/app/share/data" \
+    --volume="${project_directory}/share:/var/library-io" \
     --workdir="/home/jovyan" \
     "${repository_name}/${project_name}-python" \
     bash -c "mkdir -p /opt/conda/lib/python3.6/site-packages/Library/Core \
@@ -51,6 +64,7 @@ else
     --rm \
     --publish="${python_port}:8888" \
     --user="" \
+    --env="GRANT_SUDO=yes" \
     --env="JUPYTER_ENABLE_LAB=yes" \
     --env="LD_LIBRARY_PATH=/usr/local/lib:/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
     --env="PYTHONPATH=/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
@@ -58,7 +72,7 @@ else
     --volume="${project_directory}/lib:/opt/lib:ro" \
     --volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
     --volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/tutorials" \
-    --volume="${project_directory}/share/data:/app/share/data" \
+    --volume="${project_directory}/share:/var/library-io" \
     --workdir="/home/jovyan" \
     "${repository_name}/${project_name}-python" \
     bash -c "mkdir -p /opt/conda/lib/python3.6/site-packages/Library/IO \
@@ -66,6 +80,7 @@ else
     && ln -s /opt/lib/LibraryIOPy.so /opt/conda/lib/python3.6/site-packages/Library/IO/LibraryIOPy.so \
     && echo 'from .LibraryIOPy import *' > /opt/conda/lib/python3.6/site-packages/Library/IO/__init__.py \
     && start-notebook.sh --NotebookApp.token=''"
+    # && /bin/bash"
 
 fi
 

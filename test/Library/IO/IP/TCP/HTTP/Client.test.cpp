@@ -27,7 +27,7 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Send)
 
         const Response response = Client::Send(Request::Get(url)) ;
 
-        EXPECT_TRUE(response.isOk()) ;
+        EXPECT_TRUE(response.isOk()) << response ;
         EXPECT_FALSE(response.getBody().isEmpty()) ;
 
     }
@@ -53,7 +53,7 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Get)
 
         const Response response = Client::Get(url) ;
 
-        EXPECT_TRUE(response.isOk()) ;
+        EXPECT_TRUE(response.isOk()) << response ;
         EXPECT_FALSE(response.getBody().isEmpty()) ;
 
     }
@@ -64,7 +64,7 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Get)
 
         const Response response = Client::Get(url) ;
 
-        EXPECT_TRUE(response.isOk()) ;
+        EXPECT_TRUE(response.isOk()) << response ;
         EXPECT_FALSE(response.getBody().isEmpty()) ;
 
     }
@@ -75,7 +75,7 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Get)
 
         const Response response = Client::Get(url) ;
 
-        EXPECT_EQ(Response::StatusCode::NotFound, response.getStatusCode()) ;
+        EXPECT_EQ(Response::StatusCode::NotFound, response.getStatusCode()) << response ;
 
     }
 

@@ -20,15 +20,28 @@ ARG cpu_count=1
 ## libcurl
 
 RUN dnf update -y \
- && dnf install -y libcurl-devel \
+ && dnf install -y libcurl-devel openssl-devel \
  && dnf clean all
 
 ## C++ Network Library [0.13.0]
 
+# RUN pushd /tmp > /dev/null \
+#  && dnf update -y \
+#  && dnf install -y openssl-static \
+#  && dnf clean all \
+#  && git clone --branch 0.13-release --depth 1 https://github.com/cpp-netlib/cpp-netlib \
+#  && cd cpp-netlib \
+#  && git submodule init \
+#  && git submodule update \
+#  && mkdir build \
+#  && cd build \
+#  && cmake -DCMAKE_POSITION_INDEPENDENT_CODE=ON .. \
+#  && make -j ${cpu_count} \
+#  && make install \
+#  && popd > /dev/null \
+#  && rm -rf /tmp/cppnetlib
+
 RUN pushd /tmp > /dev/null \
- && dnf update -y \
- && dnf install -y openssl-static \
- && dnf clean all \
  && git clone --branch 0.13-release --depth 1 https://github.com/cpp-netlib/cpp-netlib \
  && cd cpp-netlib \
  && git submodule init \

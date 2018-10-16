@@ -3,28 +3,22 @@
 ################################################################################################################################################################
 
 # @project        Library/IO
-# @file           Library/IO/LibraryIOPy/Types.test.py
+# @file           LibraryIOPy/IP.test.py
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        TBD
 
 ################################################################################################################################################################
 
-# Types
+# IP
 
-from LibraryIOPy import Types
+import Library.Core as Core
+import LibraryIOPy as IO
 
-## Integer
+URL = IO.URL
+Request = IO.IP.TCP.HTTP.Request
+Response = IO.IP.TCP.HTTP.Response
+Client = IO.IP.TCP.HTTP.Client
 
-assert Types.Integer(0) == 0
-assert Types.Integer(123) == 123
-assert Types.Integer(+123) == +123
-assert Types.Integer(-123) == -123
-
-assert Types.Integer(0).getString() == "0"
-assert Types.Integer(123).getString() == "123"
-assert Types.Integer(+123).getString() == "123"
-assert Types.Integer(-123).getString() == "-123"
-
-## Real
+response = Client.Get(URL.Parse("https://www.google.com"))
 
 ################################################################################################################################################################
