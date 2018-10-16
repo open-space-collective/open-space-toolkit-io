@@ -15,6 +15,9 @@
 
 #include <curl/curl.h>
 
+// #include <openssl/opensslv.h>
+// #include <openssl/ssl.h>
+
 // #define BOOST_NETWORK_ENABLE_HTTPS
 // #include <boost/network.hpp>
 
@@ -24,6 +27,8 @@
 // #include <boost/asio/ip/tcp.hpp>
 // #include <boost/asio/ssl/error.hpp>
 // #include <boost/asio/ssl/stream.hpp>
+
+#include <boost/algorithm/string.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -44,6 +49,59 @@ namespace http
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+int                             debugHandler                                (           CURL*                       aCurlPtr,
+                                                                                        curl_infotype               aType,
+                                                                                        char*                       aDataset,
+                                                                                        size_t                      aSize,
+                                                                                        void*                       aContext                                    )
+{
+
+    (void) aCurlPtr ;
+    (void) aSize ;
+    (void) aContext ;
+
+    switch (aType)
+    {
+
+        case CURLINFO_TEXT:
+            std::cout << aDataset << std::endl ;
+            break ; 
+        
+        case CURLINFO_HEADER_OUT:
+            std::cout << "=> Send header" << std::endl ;
+            break ;
+
+        case CURLINFO_DATA_OUT:
+            std::cout << "=> Send data" << std::endl ;
+            break ;
+
+        case CURLINFO_SSL_DATA_OUT:
+            std::cout << "=> Send SSL data" << std::endl ;
+            break ;
+
+        case CURLINFO_HEADER_IN:
+            std::cout << "<= Recv header" << std::endl ;
+            break ;
+
+        case CURLINFO_DATA_IN:
+            std::cout << "<= Recv data" << std::endl ;
+            break ;
+
+        case CURLINFO_SSL_DATA_IN:
+            std::cout << "<= Recv SSL data" << std::endl ;
+            break ;
+
+        default:
+            return 0 ;
+
+    }
+    
+    return 0 ;
+
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 Response                        Client::Send                                (   const   Request&                    aRequest                                    )
 {
 
@@ -51,6 +109,12 @@ Response                        Client::Send                                (   
     {
         throw library::core::error::runtime::Undefined("Request") ;
     }
+
+    // std::cout << "curl_global_init(CURL_GLOBAL_SSL)..." << std::endl ;
+
+    // curl_global_init(CURL_GLOBAL_SSL) ;
+
+    // SSL_library_init() ;
 
     // Setup
 
@@ -69,7 +133,7 @@ Response                        Client::Send                                (   
 
     // Set request method
 
-    curl_easy_setopt(curlPtr, CURLOPT_CUSTOMREQUEST, Request::StringFromMethod(aRequest.getMethod()).data()) ;
+    curl_easy_setopt(curlPtr, CURLOPT_CUSTOMREQUEST, boost::to_upper_copy<String>(Request::StringFromMethod(aRequest.getMethod())).data()) ;
 
     // Set request body
 
@@ -95,6 +159,13 @@ Response                        Client::Send                                (   
     } ;
 
     curl_easy_setopt(curlPtr, CURLOPT_WRITEFUNCTION, writeDataFunction) ;
+
+    //
+
+    // curl_easy_setopt(curlPtr, CURLOPT_SSL_CIPHER_LIST, "ecdhe_ecdsa_aes_128_sha") ;
+
+    // curl_easy_setopt(curlPtr, CURLOPT_DEBUGFUNCTION, debugHandler) ;
+    // curl_easy_setopt(curlPtr, CURLOPT_VERBOSE, 1L) ;
 
     // Send request
 

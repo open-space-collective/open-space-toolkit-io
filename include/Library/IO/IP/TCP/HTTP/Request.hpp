@@ -50,15 +50,15 @@ class Request
         {
 
             Undefined,          ///< Undefined request method.
-            GET,                ///< Requests a representation of the specified resource.
-            HEAD,               ///< Asks for a response identical to that of a GET request, but without the response body.
-            POST,               ///< Requests that the server accept the entity enclosed in the request as a new subordinate of the web resource identified by the URI.
-            PUT,                ///< Requests that the enclosed entity be stored under the supplied URI.
-            DELETE,             ///< Deletes the specified resource.
-            TRACE,              ///< Echoes the received request so that a client can see what (if any) changes or additions have been made by intermediate servers.
-            OPTIONS,            ///< Returns the HTTP methods that the server supports for the specified URL.
-            CONNECT,            ///< Converts the request connection to a transparent TCP/IP tunnel.
-            PATCH               ///< Applies partial modifications to a resource.
+            Get,                ///< Requests a representation of the specified resource.
+            Head,               ///< Asks for a response identical to that of a GET request, but without the response body.
+            Post,               ///< Requests that the server accept the entity enclosed in the request as a new subordinate of the web resource identified by the URI.
+            Put,                ///< Requests that the enclosed entity be stored under the supplied URI.
+            Delete,             ///< Deletes the specified resource.
+            Trace,              ///< Echoes the received request so that a client can see what (if any) changes or additions have been made by intermediate servers.
+            Options,            ///< Returns the HTTP methods that the server supports for the specified URL.
+            Connect,            ///< Converts the request connection to a transparent TCP/IP tunnel.
+            Patch               ///< Applies partial modifications to a resource.
 
         } ;
 

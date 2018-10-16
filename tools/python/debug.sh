@@ -25,12 +25,12 @@ if [[ ! -z $1 ]] && [[ $1 == "--link" ]]; then
     --user="" \
     --env="LD_LIBRARY_PATH=/usr/local/lib:/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
     --env="PYTHONPATH=/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
-    --volume="$(pwd)/../../../library-core/lib:/opt/library-core:ro" \
-    --volume="$(pwd)/../../lib:/opt/lib:ro" \
-    --volume="$(pwd)/../../bindings/python/docs:/home/jovyan/docs" \
-    --volume="$(pwd)/../../tutorials/python/notebooks:/home/jovyan/notebooks" \
-    --volume="$(pwd)/helpers:/home/jovyan/notebooks/helpers:ro" \
-    --volume="$(pwd)/../../share/data:/app/share/data" \
+    --volume="${project_directory}/../library-core/lib:/opt/library-core:ro" \
+    --volume="${project_directory}/lib:/opt/lib:ro" \
+    --volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
+    --volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/notebooks" \
+    --volume="${script_directory}/helpers:/home/jovyan/notebooks/helpers:ro" \
+    --volume="${project_directory}/share:/var/library-io" \
     --workdir="/home/jovyan/notebooks" \
     "${repository_name}/${project_name}-python-debug" \
     bash -c "mkdir -p /opt/conda/lib/python3.6/site-packages/Library/Core \
@@ -53,11 +53,11 @@ else
     --user="" \
     --env="LD_LIBRARY_PATH=/usr/local/lib:/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
     --env="PYTHONPATH=/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
-    --volume="$(pwd)/../../lib:/opt/lib:ro" \
-    --volume="$(pwd)/../../bindings/python/docs:/home/jovyan/docs" \
-    --volume="$(pwd)/../../tutorials/python/notebooks:/home/jovyan/notebooks" \
-    --volume="$(pwd)/helpers:/home/jovyan/notebooks/helpers:ro" \
-    --volume="$(pwd)/../../share/data:/app/share/data" \
+    --volume="${project_directory}/lib:/opt/lib:ro" \
+    --volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
+    --volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/notebooks" \
+    --volume="${script_directory}/helpers:/home/jovyan/notebooks/helpers:ro" \
+    --volume="${project_directory}/share:/var/library-io" \
     --workdir="/home/jovyan/notebooks" \
     "${repository_name}/${project_name}-python-debug" \
     bash -c "mkdir -p /opt/conda/lib/python3.6/site-packages/Library/IO \

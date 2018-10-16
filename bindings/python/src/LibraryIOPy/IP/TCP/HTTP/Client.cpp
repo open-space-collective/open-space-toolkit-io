@@ -1,28 +1,31 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Library/IO
-/// @file           Library/IO/LibraryIOPy.hpp
+/// @file           LibraryIOPy/IP/TCP/HTTP/Client.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        TBD
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <boost/python.hpp>
-
-#include <LibraryIOPy/IP.cpp>
-#include <LibraryIOPy/URL.cpp>
+#include <Library/IO/IP/TCP/HTTP/Client.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-BOOST_PYTHON_MODULE (LibraryIOPy)
+inline void                     LibraryIOPy_IP_TCP_HTTP_Client              ( )
 {
+    
+    using namespace boost::python ;
 
-	boost::python::object package = boost::python::scope() ;
-	
-	package.attr("__path__") = "Library" ;
+    using library::io::ip::tcp::http::Client ;
 
-	LibraryIOPy_URL() ;
-	LibraryIOPy_IP() ;
+    scope in_Client = class_<Client>("Client", no_init)
+
+        .def("Send", &Client::Send).staticmethod("Send")
+        .def("Get", &Client::Get).staticmethod("Get")
+        .def("Fetch", &Client::Fetch).staticmethod("Fetch")
+        .def("List", &Client::List).staticmethod("List")
+
+    ;
 
 }
 
