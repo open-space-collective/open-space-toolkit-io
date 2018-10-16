@@ -2,15 +2,15 @@ var classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request =
 [
     [ "Method", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7", [
       [ "Undefined", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7aec0fc0100c4fc1ce4eea230c3dc10360", null ],
-      [ "GET", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7a7528035a93ee69cedb1dbddb2f0bfcc8", null ],
-      [ "HEAD", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7ae15e216fc1c639f787b1231ecdfa1bf8", null ],
-      [ "POST", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7aa02439ec229d8be0e74b0c1602392310", null ],
-      [ "PUT", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7a3e75383a5992a6d15fb81e872e46e256", null ],
-      [ "DELETE", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7a32f68a60cef40faedbc6af20298c1a1e", null ],
-      [ "TRACE", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7a2d3e4144aa384b18849ab9a8abad74d6", null ],
-      [ "OPTIONS", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7a164dd62adb30ca051b5289672a572f9b", null ],
-      [ "CONNECT", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7ab57e2519e26151feacdbe52076bc39ec", null ],
-      [ "PATCH", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7a63bc9a3997d66d835d9f3ec29451407d", null ]
+      [ "Get", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7ac55582518cba2c464f29f5bae1c68def", null ],
+      [ "Head", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7a98921133d10fbdb0fb6dbb7b2648befe", null ],
+      [ "Post", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7a03d947a2158373c3b9d74325850cb8b9", null ],
+      [ "Put", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7ad0bf1810982e9728fcf3ac444a015373", null ],
+      [ "Delete", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7af2a6c498fb90ee345d997f888fce3b18", null ],
+      [ "Trace", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7add4ec0ac4e58f7c32a01244ae91150b1", null ],
+      [ "Options", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7adae8ace18bdcbcc6ae5aece263e14fe8", null ],
+      [ "Connect", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7a49ab28040dfa07f53544970c6d147e1e", null ],
+      [ "Patch", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7a156e10596fdc76ee5300bab931d89c0f", null ]
     ] ],
     [ "Request", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#ab388f80fccab4d282f30afa08ffa0217", null ],
     [ "getBody", "classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a7a4aa551e792113f238a3782ec15bceb", null ],
