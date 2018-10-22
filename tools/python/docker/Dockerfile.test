@@ -30,6 +30,9 @@ COPY ./shortcuts-extension /home/jovyan/.jupyter/lab/user-settings/@jupyterlab/s
 
 RUN chown -R $NB_UID:$NB_UID /home/jovyan/.jupyter
 
+RUN apt-get update -y
+
+
 ####
 
 # Environment
@@ -38,21 +41,31 @@ ENV cpu_count 8
 ENV LD_LIBRARY_PATH /usr/local/lib:${LD_LIBRARY_PATH}
 ENV PYTHONPATH /usr/local/lib:${PYTHONPATH}
 
-RUN apt-get update -y
-
 # Development Tools
 
 ## Compilers
 
-RUN apt-get install -y cmake python3-dev python3-numpy
+RUN apt-get install -y cmake python3-devel python3-numpy
 
 ## Python Tools
 
 RUN python3 -m pip install --user --upgrade setuptools wheel twine
 
+## CMake [3.12.2]
+
+RUN pushd /tmp > /dev/null \
+ && wget --quiet https://cmake.org/files/v3.12/cmake-3.12.2.tar.gz \
+ && tar -xf cmake-3.12.2.tar.gz \
+ && cd cmake-3.12.2 \
+ && ./bootstrap \
+ && make -j ${cpu_count} \
+ && make install \
+ && popd > /dev/null \
+ && rm -rf /tmp/cmake-3.12.2 /tmp/cmake-3.12.2.tar.gz
+
 ## GoogleTest [1.8.1]
 
-RUN cd /tmp > /dev/null \
+RUN pushd /tmp > /dev/null \
  && git clone --branch release-1.8.1 --depth 1 https://github.com/google/googletest.git \
  && cd googletest \
  && mkdir build \
@@ -60,11 +73,12 @@ RUN cd /tmp > /dev/null \
  && cmake .. \
  && make -j ${cpu_count} \
  && make install \
+ && popd > /dev/null \
  && rm -rf /tmp/googletest
 
 ## Boost [1.68.0]
 
-RUN cd /tmp > /dev/null \
+RUN pushd /tmp > /dev/null \
  && wget --quiet http://sourceforge.net/projects/boost/files/boost/1.68.0/boost_1_68_0.tar.gz \
  && tar -xf boost_1_68_0.tar.gz \
  && cd boost_1_68_0 \
@@ -72,11 +86,12 @@ RUN cd /tmp > /dev/null \
  && echo "using python : 3.6 : /usr : /usr/include/python3.6m ;" >> project-config.jam \
  && ./b2 -j ${cpu_count} link=static cxxflags=-fPIC install \
  && ./b2 -j ${cpu_count} --with-python link=shared cxxflags=-fPIC install \
+ && popd > /dev/null \
  && rm -rf /tmp/boost_1_68_0 /tmp/boost_1_68_0.tar.gz
 
 ## RapidJSON [1.1.0]
 
-RUN cd /tmp > /dev/null \
+RUN pushd /tmp > /dev/null \
  && git clone https://github.com/miloyip/rapidjson.git \
  && cd rapidjson \
  && mkdir build \
@@ -84,19 +99,21 @@ RUN cd /tmp > /dev/null \
  && cmake .. \
  && make --silent -j ${cpu_count} \
  && make install \
- && rm -rf /tmp/rapidjson
+ && rm -rf /tmp/rapidjson \
+ && popd > /dev/null
 
 ## ordered-map [0.6.0]
 
-RUN cd /tmp > /dev/null \
+RUN pushd /tmp > /dev/null \
  && git clone --branch v0.6.0 --depth 1 https://github.com/Tessil/ordered-map.git \
  && cd ordered-map \
  && cp -r ./include/tsl /usr/local/include \
- && rm -rf /tmp/ordered-map
+ && rm -rf /tmp/ordered-map \
+ && popd > /dev/null
 
 ## {fmt} [5.2.0]
 
-RUN cd /tmp > /dev/null \
+RUN pushd /tmp > /dev/null \
  && git clone --branch 5.2.0 --depth 1 https://github.com/fmtlib/fmt.git \
  && cd fmt \
  && mkdir build \
@@ -104,18 +121,20 @@ RUN cd /tmp > /dev/null \
  && cmake -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE .. \
  && make --silent -j ${cpu_count} \
  && make install \
- && rm -rf /tmp/fmt
+ && rm -rf /tmp/fmt \
+ && popd > /dev/null
 
 ## Rapidcsv [master]
 
-RUN cd /tmp > /dev/null \
+RUN pushd /tmp > /dev/null \
  && git clone https://github.com/d99kris/rapidcsv.git \
  && cd rapidcsv \
  && mkdir -p /usr/local/include/rapidcsv \
  && cp src/*.h /usr/local/include/rapidcsv/ \
- && rm -rf /tmp/rapidcsv
+ && rm -rf /tmp/rapidcsv \
+ && popd > /dev/null
 
-RUN cd /tmp > /dev/null \
+RUN pushd /tmp > /dev/null \
  && git clone --branch 0.13-release --depth 1 https://github.com/cpp-netlib/cpp-netlib \
  && cd cpp-netlib \
  && git submodule init \
@@ -125,40 +144,17 @@ RUN cd /tmp > /dev/null \
  && cmake -DCMAKE_POSITION_INDEPENDENT_CODE=ON .. \
  && make -j ${cpu_count} \
  && make install \
+ && popd > /dev/null \
  && rm -rf /tmp/cppnetlib
 
 ## Library ▸ Core [0.1.19]
 
-RUN mkdir -p /tmp/library-core \
- && cd /tmp > /dev/null \
- && git clone https://github.com/open-space-collective/library-core.git \
- && cd library-core \
- && mkdir build \
- && cd build \
- && cmake -DBUILD_PYTHON_BINDINGS=OFF .. \
- && make -j ${cpu_count} \
- && make install
-
-RUN apt-get install -y libcurl4-openssl-dev
-
-# RUN ln -s /usr/lib/x86_64-linux-gnu/libssl.so.1.1 /usr/lib/libssl.so
-# RUN ln -s /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1 /usr/lib/libcrypto.so
-
-RUN ln -s /opt/conda/lib/libssl.so /usr/lib/libssl.so
-RUN ln -s /opt/conda/lib/libcrypto.so /usr/lib/libcrypto.so
-
-RUN mkdir -p /tmp/library-io \
- && cd /tmp > /dev/null \
- && git clone https://github.com/open-space-collective/library-io.git \
- && cd library-io \
- && mkdir build \
- && cd build \
- && cmake -DBUILD_PYTHON_BINDINGS=OFF .. \
- && make -j ${cpu_count} \
- && make install
-
-RUN chown -R $NB_UID:$NB_UID /home/jovyan/.local
-
-# USER $NB_UID
+# RUN mkdir -p /tmp/library-core \
+#  && pushd /tmp/library-core > /dev/null \
+#  && wget --quiet https://github.com/open-space-collective/library-core/releases/download/0.1.19/library-core-0.1.19-1.x86_64-runtime.rpm \
+#  && wget --quiet https://github.com/open-space-collective/library-core/releases/download/0.1.19/library-core-0.1.19-1.x86_64-devel.rpm \
+#  && dnf install -y ./*.rpm \
+#  && rm -rf /tmp/library-core \
+#  && popd > /dev/null
 
 ################################################################################################################################################################

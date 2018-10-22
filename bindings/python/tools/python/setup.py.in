@@ -8,7 +8,7 @@ setuptools.setup(
     version="${PROJECT_VERSION_STRING}",
     author="Open Space Collective",
     author_email="contact@open-space-collective.org",
-    description="Fundamental types, containers and utilities.",
+    description="Addressing, networking, database connectors.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url = "https://github.com/open-space-collective/library-io",
@@ -20,5 +20,12 @@ setuptools.setup(
     ),
     keywords="open-space-collective io",
     packages=setuptools.find_packages(),
-    package_data={"": ["${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/LibraryIOPy.so", "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/liblibrary-io.so.0", "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_python36.so.1.68.0", "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_numpy36.so.1.68.0"]}
+    package_data={"": [
+        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/LibraryIOPy.so",
+        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/liblibrary-io.so.0",
+        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_python36.so.1.68.0",
+        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libcurl.so.4",
+        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libssl.so.1.1",
+        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libcrypto.so.1.1"
+    ]}
 )
