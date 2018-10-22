@@ -58,6 +58,30 @@ if [[ ! -z $1 ]] && [[ $1 == "--link" ]]; then
 
 else
 
+    # docker run \
+    # --name="${container_name}-notebook" \
+    # -it \
+    # --rm \
+    # --publish="${python_port}:8888" \
+    # --volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
+    # --volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/tutorials" \
+    # --volume="${project_directory}/share:/var/library-io" \
+    # --workdir="/home/jovyan" \
+    # "jupyter/base-notebook:latest" \
+    # /bin/bash
+
+    # docker run \
+    # --name="${container_name}-notebook" \
+    # -it \
+    # --rm \
+    # --publish="${python_port}:8888" \
+    # --volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
+    # --volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/tutorials" \
+    # --volume="${project_directory}/share:/var/library-io" \
+    # --workdir="/home/jovyan" \
+    # "${repository_name}/${project_name}-python" \
+    # /bin/bash
+
     docker run \
     --name="${container_name}-notebook" \
     -it \
