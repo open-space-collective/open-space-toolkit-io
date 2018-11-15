@@ -3,7 +3,7 @@
 # @project        Library/IO
 # @file           LibraryIOPy/CMakeLists.txt
 # @author         Lucas Brémond <lucas@loftorbital.com>
-# @license        TBD
+# @license        Apache License 2.0
 
 ################################################################################################################################################################
 
@@ -13,7 +13,7 @@ SET (PROJECT_NAME "LibraryIOPy")
 SET (PROJECT_DESCRIPTION "Python bindings for Library / IO.")
 SET (PROJECT_PACKAGE_NAME "LibraryIOPy")
 SET (PROJECT_PATH "Library/IO")
-SET (PROJECT_LICENSE "MIT License")
+SET (PROJECT_LICENSE "Apache License 2.0")
 SET (PROJECT_VENDOR_ID "com.bremond.lucas")
 SET (PROJECT_VENDOR_NAME "Lucas Brémond")
 SET (PROJECT_VENDOR_CONTACT "lucas.bremond@gmail.com")

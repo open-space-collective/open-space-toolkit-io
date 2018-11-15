@@ -4,7 +4,7 @@
     "projectDescription": "I/O library.",
     "projectPath": "Library/IO",
     "projectPackage": "library-io",
-    "projectLicense": "TBD",
+    "projectLicense": "Apache License 2.0",
     "authorName": "Lucas Brémond",
     "authorEmail": "contact@open-space-collective.org",
     "companyName": "Open Space Collective",

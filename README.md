@@ -11,12 +11,11 @@ Addressing, networking, database connectors.
 
 ## Warning
 
-Library **name** and **license** are yet to be defined.
+Library **name** is yet to be defined.
 
 Please check the following projects:
 
 - [Naming Project](https://github.com/orgs/open-space-collective/projects/1)
-- [Licensing Project](https://github.com/orgs/open-space-collective/projects/2)
 
 *⚠ This library is still under heavy development. Do not use!*
 
@@ -109,7 +108,7 @@ The **IO** library internally uses the following dependencies:
 | Boost               | 1.67.0  | BSL-1.0                | [boost.org](https://www.boost.org)                                                                     |
 | C++ Network Library | 0.13.0  | BSL-1.0                | [cpp-netlib.org](https://cpp-netlib.org)                                                               |
 | Pistache            | master  | Apache License 2.0     | [pistache.io](http://pistache.io)                                                                      |
-| Core                | master  | TBD                    | [github.com/open-space-collective/library-core](https://github.com/open-space-collective/library-core) |
+| Core                | master  | Apache License 2.0     | [github.com/open-space-collective/library-core](https://github.com/open-space-collective/library-core) |
 
 ## Contribution
 
@@ -123,4 +122,4 @@ Please read our [contributing guide](CONTRIBUTING.md) to learn about our develop
 
 ## License
 
-*To be defined...*
+Apache License 2.0
