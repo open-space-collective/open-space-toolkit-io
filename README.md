@@ -8,6 +8,7 @@ Addressing, networking, database connectors.
 [![Documentation](https://media.readthedocs.org/static/projects/badges/passing-flat.svg)](https://open-space-collective.github.io/library-io)
 [![GitHub version](https://badge.fury.io/gh/open-space-collective%2Flibrary-io.svg)](https://badge.fury.io/gh/open-space-collective%2Flibrary-io)
 [![PyPI version](https://badge.fury.io/py/LibraryIOPy.svg)](https://badge.fury.io/py/LibraryIOPy)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Warning
 
