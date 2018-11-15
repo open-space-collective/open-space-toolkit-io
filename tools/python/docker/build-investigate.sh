@@ -5,7 +5,7 @@
 # @project        Library/IO
 # @file           tools/python/docker/build-investigate.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
-# @license        TBD
+# @license        Apache License 2.0
 
 ################################################################################################################################################################
 
