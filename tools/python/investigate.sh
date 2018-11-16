@@ -24,7 +24,7 @@ docker run \
 --publish="${python_port}:8888" \
 --volume="${script_directory}/investigate:/investigate" \
 --workdir="/investigate" \
-"${repository_name}/${project_name}-python-investigate" \
+"${image_name}-python-investigate:${image_version}" \
 bash -c "/bin/bash"
 
 popd > /dev/null

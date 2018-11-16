@@ -32,7 +32,7 @@ if [[ ! -z $1 ]] && [[ $1 == "--link" ]]; then
     --volume="${script_directory}/helpers:/home/jovyan/notebooks/helpers:ro" \
     --volume="${project_directory}/share:/var/library-io" \
     --workdir="/home/jovyan/notebooks" \
-    "${repository_name}/${project_name}-python-debug" \
+    "${image_name}-python-debug:${image_version}" \
     bash -c "mkdir -p /opt/conda/lib/python3.6/site-packages/Library/Core \
     && ln -s /opt/library-core/liblibrary-core.so.0 /opt/conda/lib/python3.6/site-packages/Library/Core/liblibrary-core.so.0 \
     && ln -s /opt/library-core/LibraryCorePy.so /opt/conda/lib/python3.6/site-packages/Library/Core/LibraryCorePy.so \
@@ -59,7 +59,7 @@ else
     --volume="${script_directory}/helpers:/home/jovyan/notebooks/helpers:ro" \
     --volume="${project_directory}/share:/var/library-io" \
     --workdir="/home/jovyan/notebooks" \
-    "${repository_name}/${project_name}-python-debug" \
+    "${image_name}-python-debug:${image_version}" \
     bash -c "mkdir -p /opt/conda/lib/python3.6/site-packages/Library/IO \
     && ln -s /opt/lib/liblibrary-io.so.0 /opt/conda/lib/python3.6/site-packages/Library/IO/liblibrary-io.so.0 \
     && ln -s /opt/lib/LibraryIOPy.so /opt/conda/lib/python3.6/site-packages/Library/IO/LibraryIOPy.so \
