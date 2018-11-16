@@ -34,7 +34,6 @@ RUN chown -R $NB_UID:$NB_UID /home/jovyan/.jupyter
 
 # Environment
 
-ENV cpu_count 8
 ENV LD_LIBRARY_PATH /usr/local/lib:${LD_LIBRARY_PATH}
 ENV PYTHONPATH /usr/local/lib:${PYTHONPATH}
 
@@ -58,7 +57,7 @@ RUN cd /tmp > /dev/null \
  && mkdir build \
  && cd build \
  && cmake .. \
- && make -j ${cpu_count} \
+ && make -j $(nproc) \
  && make install \
  && rm -rf /tmp/googletest
 
@@ -70,8 +69,8 @@ RUN cd /tmp > /dev/null \
  && cd boost_1_68_0 \
  && ./bootstrap.sh --with-python=/usr/bin/python3 --with-python-version=3.6 --with-python-root=/usr/lib/python3.6 \
  && echo "using python : 3.6 : /usr : /usr/include/python3.6m ;" >> project-config.jam \
- && ./b2 -j ${cpu_count} link=static cxxflags=-fPIC install \
- && ./b2 -j ${cpu_count} --with-python link=shared cxxflags=-fPIC install \
+ && ./b2 -j $(nproc) link=static cxxflags=-fPIC install \
+ && ./b2 -j $(nproc) --with-python link=shared cxxflags=-fPIC install \
  && rm -rf /tmp/boost_1_68_0 /tmp/boost_1_68_0.tar.gz
 
 ## RapidJSON [1.1.0]
@@ -82,7 +81,7 @@ RUN cd /tmp > /dev/null \
  && mkdir build \
  && cd build \
  && cmake .. \
- && make --silent -j ${cpu_count} \
+ && make --silent -j $(nproc) \
  && make install \
  && rm -rf /tmp/rapidjson
 
@@ -102,7 +101,7 @@ RUN cd /tmp > /dev/null \
  && mkdir build \
  && cd build \
  && cmake -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE .. \
- && make --silent -j ${cpu_count} \
+ && make --silent -j $(nproc) \
  && make install \
  && rm -rf /tmp/fmt
 
@@ -123,7 +122,7 @@ RUN cd /tmp > /dev/null \
  && mkdir build \
  && cd build \
  && cmake -DCMAKE_POSITION_INDEPENDENT_CODE=ON .. \
- && make -j ${cpu_count} \
+ && make -j $(nproc) \
  && make install \
  && rm -rf /tmp/cppnetlib
 
@@ -136,7 +135,7 @@ RUN mkdir -p /tmp/library-core \
  && mkdir build \
  && cd build \
  && cmake -DBUILD_PYTHON_BINDINGS=OFF .. \
- && make -j ${cpu_count} \
+ && make -j $(nproc) \
  && make install
 
 RUN apt-get install -y libcurl4-openssl-dev
@@ -154,7 +153,7 @@ RUN mkdir -p /tmp/library-io \
  && mkdir build \
  && cd build \
  && cmake -DBUILD_PYTHON_BINDINGS=OFF .. \
- && make -j ${cpu_count} \
+ && make -j $(nproc) \
  && make install
 
 RUN chown -R $NB_UID:$NB_UID /home/jovyan/.local

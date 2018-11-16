@@ -16,7 +16,7 @@ pushd ${script_directory} > /dev/null
 source "../../.env"
 
 docker build \
---tag="${repository_name}/${project_name}-python-investigate" \
+--tag="${image_name}-python-investigate:${image_version}" \
 --file="Dockerfile.investigate" \
 .
 
