@@ -8,8 +8,9 @@
 ################################################################################################################################################################
 
 ARG image_name
+ARG image_version
 
-FROM ${image_name}-python:latest
+FROM ${image_name}-python:${image_version}
 
 LABEL maintainer="lucas@loftorbital.com"
 
