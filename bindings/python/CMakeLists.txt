@@ -2,7 +2,7 @@
 
 # @project        Library/IO
 # @file           LibraryIOPy/CMakeLists.txt
-# @author         Lucas Brémond <lucas@loftorbital.com>
+# @author         Lucas Brémond <lucas.bremond@gmail.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
@@ -130,7 +130,6 @@ ADD_CUSTOM_COMMAND (OUTPUT ${OUTPUT}
                     COMMAND mkdir -p "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}"
                     COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/Library/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/Library/__init__.py"
                     COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/__init__.py"
-                    COMMAND cp "/usr/local/lib/libboost_python36.so.1.68.0" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_python36.so.1.68.0"
                     COMMAND cp "/usr/lib64/libcurl.so.4" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libcurl.so.4"
                     COMMAND cp "/usr/lib64/libssl.so.1.1" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libssl.so.1.1"
                     COMMAND cp "/usr/lib64/libcrypto.so.1.1" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libcrypto.so.1.1"

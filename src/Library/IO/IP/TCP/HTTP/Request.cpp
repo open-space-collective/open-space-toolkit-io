@@ -2,7 +2,7 @@
 
 /// @project        Library/IO
 /// @file           Library/IO/IP/TCP/HTTP/Request.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
+/// @author         Lucas Brémond <lucas.bremond@gmail.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

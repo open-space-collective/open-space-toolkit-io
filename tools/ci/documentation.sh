@@ -4,7 +4,7 @@
 
 # @project        Library/IO
 # @file           tools/ci/documentation.sh
-# @author         Lucas Brémond <lucas@loftorbital.com>
+# @author         Lucas Brémond <lucas.bremond@gmail.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
