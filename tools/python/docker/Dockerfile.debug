@@ -2,7 +2,7 @@
 
 # @project        Library/IO
 # @file           tools/python/docker/Dockerfile.debug
-# @author         Lucas Brémond <lucas@loftorbital.com>
+# @author         Lucas Brémond <lucas.bremond@gmail.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
@@ -12,7 +12,7 @@ ARG image_version
 
 FROM ${image_name}-python:${image_version}
 
-LABEL maintainer="lucas@loftorbital.com"
+LABEL maintainer="lucas.bremond@gmail.com"
 
 USER root
 

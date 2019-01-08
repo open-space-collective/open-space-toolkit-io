@@ -1,31 +1,47 @@
+################################################################################################################################################################
+
+# @project        Library/IO
+# @file           tools/python/setup.py.in
+# @author         Lucas Brémond <lucas.bremond@gmail.com>
+# @license        Apache License 2.0
+
+################################################################################################################################################################
+
 import setuptools
 
-with open("${CMAKE_CURRENT_SOURCE_DIR}/README.md", "r") as fh:
+with open('${CMAKE_CURRENT_SOURCE_DIR}/README.md', 'r') as fh:
     long_description = fh.read()
 
+with open('${CMAKE_CURRENT_SOURCE_DIR}/requirements.txt', 'r') as f:
+    requirements = f.read().splitlines()
+
 setuptools.setup(
-    name="LibraryIOPy",
-    version="${PROJECT_VERSION_STRING}",
-    author="Open Space Collective",
-    author_email="contact@open-space-collective.org",
-    description="Addressing, networking, database connectors.",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
-    url = "https://github.com/open-space-collective/library-io",
-    classifiers=(
-        "Development Status :: 3 - Alpha",
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: Apache Software License",
-        "Operating System :: POSIX :: Linux"
+    name = 'LibraryIOPy',
+    version = '${PROJECT_VERSION_STRING}',
+    author = 'Open Space Collective',
+    author_email = 'contact@open-space-collective.org',
+    description = 'Addressing, networking, database connectors.',
+    long_description = long_description,
+    long_description_content_type = 'text/markdown',
+    url = 'https://github.com/open-space-collective/library-io',
+    classifiers = (
+        'Development Status :: 3 - Alpha',
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: Apache Software License',
+        'Operating System :: POSIX :: Linux'
     ),
-    keywords="open-space-collective io",
-    packages=setuptools.find_packages(),
-    package_data={"": [
-        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/LibraryIOPy.so",
-        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/liblibrary-io.so.0",
-        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_python36.so.1.68.0",
-        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libcurl.so.4",
-        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libssl.so.1.1",
-        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libcrypto.so.1.1"
-    ]}
+    keywords = 'open-space-collective library io',
+    packages = setuptools.find_packages(),
+    package_data = {
+        '': [
+            '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/LibraryIOPy.so',
+            '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/liblibrary-io.so.0',
+            '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libcurl.so.4',
+            '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libssl.so.1.1',
+            '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libcrypto.so.1.1'
+        ]
+    },
+    install_requires = requirements
 )
+
+################################################################################################################################################################

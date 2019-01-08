@@ -4,7 +4,7 @@
 
 # @project        Library/IO
 # @file           tools/development/helpers/clean.sh
-# @author         Lucas Brémond <lucas@loftorbital.com>
+# @author         Lucas Brémond <lucas.bremond@gmail.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
