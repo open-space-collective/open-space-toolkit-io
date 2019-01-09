@@ -165,7 +165,7 @@ Response                        Client::Send                                (   
     // curl_easy_setopt(curlPtr, CURLOPT_SSL_CIPHER_LIST, "ecdhe_ecdsa_aes_128_sha") ;
 
     // curl_easy_setopt(curlPtr, CURLOPT_DEBUGFUNCTION, debugHandler) ;
-    curl_easy_setopt(curlPtr, CURLOPT_VERBOSE, 1L) ;
+    // curl_easy_setopt(curlPtr, CURLOPT_VERBOSE, 1L) ;
 
     // Send request
 
@@ -472,6 +472,7 @@ File                            Client::Fetch                               (   
     curl_easy_setopt(curlPtr, CURLOPT_WRITEFUNCTION, writeDataFunction) ;
     
     curl_easy_setopt(curlPtr, CURLOPT_FAILONERROR, true) ;
+    // curl_easy_setopt(curlPtr, CURLOPT_FOLLOWLOCATION, 1L) ;
 
     // Send request
 
