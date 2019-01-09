@@ -2,7 +2,7 @@
 
 # @project        Library
 # @file           Library/__init__.py
-# @author         Lucas Brémond <lucas.bremond@gmail.com>
+# @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################

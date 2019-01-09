@@ -2,7 +2,7 @@
 
 /// @project        Library/IO
 /// @file           Library/IO/IP/TCP/HTTP/Client.cpp
-/// @author         Lucas Brémond <lucas.bremond@gmail.com>
+/// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -165,7 +165,7 @@ Response                        Client::Send                                (   
     // curl_easy_setopt(curlPtr, CURLOPT_SSL_CIPHER_LIST, "ecdhe_ecdsa_aes_128_sha") ;
 
     // curl_easy_setopt(curlPtr, CURLOPT_DEBUGFUNCTION, debugHandler) ;
-    // curl_easy_setopt(curlPtr, CURLOPT_VERBOSE, 1L) ;
+    curl_easy_setopt(curlPtr, CURLOPT_VERBOSE, 1L) ;
 
     // Send request
 
