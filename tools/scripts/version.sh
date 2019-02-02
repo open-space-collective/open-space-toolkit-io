@@ -4,7 +4,7 @@
 
 # @project        Library/IO
 # @file           tools/development/scripts/version.sh
-# @author         Lucas Brémond <lucas.bremond@gmail.com>
+# @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################

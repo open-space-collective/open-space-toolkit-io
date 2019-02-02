@@ -2,7 +2,7 @@
 
 # @project        Library/IO
 # @file           LibraryIOPy/CMakeLists.txt
-# @author         Lucas Brémond <lucas.bremond@gmail.com>
+# @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
@@ -16,7 +16,7 @@ SET (PROJECT_PATH "Library/IO")
 SET (PROJECT_LICENSE "Apache License 2.0")
 SET (PROJECT_VENDOR_ID "com.bremond.lucas")
 SET (PROJECT_VENDOR_NAME "Lucas Brémond")
-SET (PROJECT_VENDOR_CONTACT "lucas.bremond@gmail.com")
+SET (PROJECT_VENDOR_CONTACT "lucas@loftorbital.com")
 SET (PROJECT_VENDOR_URL "lucas.bremond.info")
 
 ################################################################################################################################################################

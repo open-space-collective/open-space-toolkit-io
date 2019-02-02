@@ -2,14 +2,14 @@
 
 # @project        Library/IO
 # @file           tools/python/docker/Dockerfile
-# @author         Lucas Brémond <lucas.bremond@gmail.com>
+# @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
 
 FROM jupyter/scipy-notebook:latest
 
-LABEL maintainer="lucas.bremond@gmail.com"
+LABEL maintainer="lucas@loftorbital.com"
 
 USER root
 

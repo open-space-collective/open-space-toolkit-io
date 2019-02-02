@@ -2,7 +2,7 @@
 
 /// @project        Library/IO
 /// @file           Library/IO/URL/Query.test.cpp
-/// @author         Lucas Brémond <lucas.bremond@gmail.com>
+/// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,13 +1,19 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Library/IO
-/// @file           LibraryIOPy/URL.hpp
-/// @author         Lucas Brémond <lucas.bremond@gmail.com>
+/// @file           LibraryIOPy/URL.cpp
+/// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+#include <LibraryIOPy/URL/Query.cpp>
+
 #include <Library/IO/URL.hpp>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS (LibraryIOPy_URL_toString_overloads, library::io::URL::toString, 0, 1)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -44,7 +50,7 @@ inline void                     LibraryIOPy_URL                             ( )
         .def("getPassword", &URL::getPassword)
         .def("getQuery", &URL::getQuery)
         .def("getFragment", &URL::getFragment)
-        .def("toString", &URL::toString)
+        .def("toString", &URL::toString, LibraryIOPy_URL_toString_overloads())
         .def("setScheme", &URL::setScheme)
         .def("setHost", &URL::setHost)
         .def("setPath", &URL::setPath)
@@ -60,6 +66,8 @@ inline void                     LibraryIOPy_URL                             ( )
         // .def("DecodeString", &URL::DecodeString).staticmethod("DecodeString")
 
     ;
+
+    LibraryIOPy_URL_Query() ;
 
 }
 

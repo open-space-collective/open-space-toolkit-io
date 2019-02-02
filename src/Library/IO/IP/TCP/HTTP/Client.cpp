@@ -2,7 +2,7 @@
 
 /// @project        Library/IO
 /// @file           Library/IO/IP/TCP/HTTP/Client.cpp
-/// @author         Lucas Brémond <lucas.bremond@gmail.com>
+/// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -472,6 +472,7 @@ File                            Client::Fetch                               (   
     curl_easy_setopt(curlPtr, CURLOPT_WRITEFUNCTION, writeDataFunction) ;
     
     curl_easy_setopt(curlPtr, CURLOPT_FAILONERROR, true) ;
+    // curl_easy_setopt(curlPtr, CURLOPT_FOLLOWLOCATION, 1L) ;
 
     // Send request
 
