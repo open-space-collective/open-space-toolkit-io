@@ -13,130 +13,75 @@ script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 pushd "${script_directory}" > /dev/null
 
-source ../.env
+source "../.env"
 
 # Build Docker image if it does not exist already
 
-# if [[ "$(docker images -q ${image_name}-python:${image_version} 2> /dev/null)" == "" ]]; then
+if [[ "$(docker images -q ${image_name}-python:${image_version} 2> /dev/null)" == "" ]]; then
 
-#     pushd "${script_directory}/docker" > /dev/null
+    pushd "${script_directory}/docker" > /dev/null
 
-#     ./build.sh
+    ./build.sh
 
-#     popd
-
-# fi
-
-if [[ ! -z $1 ]] && [[ $1 == "--link" ]]; then
-
-    docker run \
-    --name="${container_name}-notebook" \
-    -it \
-    --rm \
-    --publish="${python_port}:8888" \
-    --user="root" \
-    --env="GRANT_SUDO=yes" \
-    --env="JUPYTER_ENABLE_LAB=yes" \
-    --env="LD_LIBRARY_PATH=/usr/local/lib:/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
-    --env="PYTHONPATH=/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
-    --volume="${library_core_directory}/lib:/opt/library-core:ro" \
-    --volume="${project_directory}/lib:/opt/lib:ro" \
-    --volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
-    --volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/tutorials" \
-    --volume="${project_directory}/share:/var/library-io" \
-    --workdir="/home/jovyan" \
-    "${image_name}-python:${image_version}" \
-    bash -c "mkdir -p /opt/conda/lib/python3.6/site-packages/Library/Core \
-    && ln -s /opt/library-core/liblibrary-core.so.0 /opt/conda/lib/python3.6/site-packages/Library/Core/liblibrary-core.so.0 \
-    && ln -s /opt/library-core/LibraryCorePy.so /opt/conda/lib/python3.6/site-packages/Library/Core/LibraryCorePy.so \
-    && echo 'from .LibraryCorePy import *' > /opt/conda/lib/python3.6/site-packages/Library/Core/__init__.py \
-    && mkdir -p /opt/conda/lib/python3.6/site-packages/Library/IO \
-    && ln -s /opt/lib/liblibrary-io.so.0 /opt/conda/lib/python3.6/site-packages/Library/IO/liblibrary-io.so.0 \
-    && ln -s /opt/lib/LibraryIOPy.so /opt/conda/lib/python3.6/site-packages/Library/IO/LibraryIOPy.so \
-    && echo 'from .LibraryIOPy import *' > /opt/conda/lib/python3.6/site-packages/Library/IO/__init__.py \
-    && start-notebook.sh --NotebookApp.token=''"
-
-else
-
-    # docker run \
-    # --name="${container_name}-notebook" \
-    # -it \
-    # --rm \
-    # --publish="${python_port}:8888" \
-    # --volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
-    # --volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/tutorials" \
-    # --workdir="/home/jovyan" \
-    # "jupyter/scipy-notebook:latest" \
-    # bash -c "start-notebook.sh --NotebookApp.token=''"
-
-    docker run \
-    --name="${container_name}-notebook" \
-    -it \
-    --rm \
-    --publish="${python_port}:8888" \
-    --user="root" \
-    --env="GRANT_SUDO=yes" \
-    --volume="${project_directory}/lib:/opt/lib:ro" \
-    --volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
-    --volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/tutorials" \
-    --workdir="/home/jovyan" \
-    "jupyter/scipy-notebook:latest" \
-    bash -c "pip install --quiet LibraryIOPy \
-    && rm /opt/conda/lib/python3.6/site-packages/Library/IO/liblibrary-io.so.0 \
-    && rm /opt/conda/lib/python3.6/site-packages/Library/IO/LibraryIOPy.so \
-    && ln -s /opt/lib/liblibrary-io.so.0 /opt/conda/lib/python3.6/site-packages/Library/IO/liblibrary-io.so.0 \
-    && ln -s /opt/lib/LibraryIOPy.so /opt/conda/lib/python3.6/site-packages/Library/IO/LibraryIOPy.so \
-    && start-notebook.sh --NotebookApp.token=''"
-
-    # docker run \
-    # --name="${container_name}-notebook" \
-    # -it \
-    # --rm \
-    # --publish="${python_port}:8888" \
-    # --volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
-    # --volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/tutorials" \
-    # --volume="${project_directory}/share:/var/library-io" \
-    # --workdir="/home/jovyan" \
-    # "jupyter/base-notebook:latest" \
-    # /bin/bash
-
-    # docker run \
-    # --name="${container_name}-notebook" \
-    # -it \
-    # --rm \
-    # --publish="${python_port}:8888" \
-    # --volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
-    # --volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/tutorials" \
-    # --volume="${project_directory}/share:/var/library-io" \
-    # --workdir="/home/jovyan" \
-    # "${image_name}-python:${image_version}" \
-    # /bin/bash
-
-    # docker run \
-    # --name="${container_name}-notebook" \
-    # -it \
-    # --rm \
-    # --publish="${python_port}:8888" \
-    # --user="" \
-    # --env="GRANT_SUDO=yes" \
-    # --env="JUPYTER_ENABLE_LAB=yes" \
-    # --env="LD_LIBRARY_PATH=/usr/local/lib:/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
-    # --env="PYTHONPATH=/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib" \
-    # --volume="${library_core_directory}/lib:/opt/library-core:ro" \
-    # --volume="${project_directory}/lib:/opt/lib:ro" \
-    # --volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
-    # --volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/tutorials" \
-    # --volume="${project_directory}/share:/var/library-io" \
-    # --workdir="/home/jovyan" \
-    # "${image_name}-python:${image_version}" \
-    # bash -c "mkdir -p /opt/conda/lib/python3.6/site-packages/Library/IO \
-    # && ln -s /opt/lib/liblibrary-io.so.0 /opt/conda/lib/python3.6/site-packages/Library/IO/liblibrary-io.so.0 \
-    # && ln -s /opt/lib/LibraryIOPy.so /opt/conda/lib/python3.6/site-packages/Library/IO/LibraryIOPy.so \
-    # && echo 'from .LibraryIOPy import *' > /opt/conda/lib/python3.6/site-packages/Library/IO/__init__.py \
-    # && start-notebook.sh --NotebookApp.token=''"
-    # # && /bin/bash"
+    popd
 
 fi
+
+options=""
+command="start-notebook.sh --NotebookApp.token=''"
+
+if [[ ! -z ${1} ]] && [[ ${1} == "--link" ]]; then
+
+    # Library ▸ Core
+
+    options="${options} \
+    --volume=${library_core_directory}:/opt/library-core:ro"
+
+    command="pip install --quiet LibraryCorePy;"
+
+    command="${command} \
+    mkdir -p /opt/conda/lib/python3.6/site-packages/Library/Core; \
+    rm -rf /opt/conda/lib/python3.6/site-packages/Library/Core/liblibrary-core.so.0; \
+    rm -rf /opt/conda/lib/python3.6/site-packages/Library/Core/LibraryCorePy.so; \
+    rm -rf /opt/conda/lib/python3.6/site-packages/Library/Core/__init__.py; \
+    ln -s /opt/library-core/lib/liblibrary-core.so.0 /opt/conda/lib/python3.6/site-packages/Library/Core/liblibrary-core.so.0; \
+    ln -s /opt/library-core/lib/LibraryCorePy.so /opt/conda/lib/python3.6/site-packages/Library/Core/LibraryCorePy.so; \
+    ln -s /opt/library-core/bindings/python/tools/python/Library/Core/__init__.py /opt/conda/lib/python3.6/site-packages/Library/Core/__init__.py;"
+
+    # Library ▸ I/O
+
+    options="${options} \
+    --volume=${library_io_directory}:/opt/library-io:ro"
+
+    command="${command} \
+    mkdir -p /opt/conda/lib/python3.6/site-packages/Library/IO; \
+    rm -rf /opt/conda/lib/python3.6/site-packages/Library/IO/liblibrary-io.so.0; \
+    rm -rf /opt/conda/lib/python3.6/site-packages/Library/IO/LibraryIOPy.so; \
+    rm -rf /opt/conda/lib/python3.6/site-packages/Library/IO/__init__.py; \
+    ln -s /opt/library-io/lib/liblibrary-io.so.0 /opt/conda/lib/python3.6/site-packages/Library/IO/liblibrary-io.so.0; \
+    ln -s /opt/library-io/lib/LibraryIOPy.so /opt/conda/lib/python3.6/site-packages/Library/IO/LibraryIOPy.so; \
+    ln -s /opt/library-io/bindings/python/tools/python/Library/IO/__init__.py /opt/conda/lib/python3.6/site-packages/Library/IO/__init__.py;"
+
+    command="${command} \
+    start-notebook.sh --NotebookApp.token=''"
+
+fi
+
+# Run Docker container
+
+docker run \
+--name="${container_name}-notebook" \
+-it \
+--rm \
+--publish="${python_port}:8888" \
+--env-file="${script_directory}/.env" \
+--volume="${project_directory}/bindings/python/docs:/home/jovyan/docs" \
+--volume="${project_directory}/tutorials/python/notebooks:/home/jovyan/tutorials" \
+--volume="${project_directory}/share:/home/jovyan/.library/io" \
+--workdir="/home/jovyan" \
+${options} \
+"${image_name}-python:${image_version}" \
+/bin/bash -c "${command}"
 
 popd > /dev/null
 
