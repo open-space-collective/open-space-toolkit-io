@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           LibraryIOPy/URL.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -19,7 +19,7 @@ BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS (LibraryIOPy_URL_toString_overloads, libr
 
 inline void                     LibraryIOPy_URL                             ( )
 {
-    
+
     using namespace boost::python ;
 
     using library::core::types::Integer ;

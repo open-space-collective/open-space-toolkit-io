@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           Library/IO/URL/Query.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -233,7 +233,7 @@ class Query
         /// @endcode
         ///
         /// @param              [in] aParameter A parameter
-        
+
         void                    addParameter                                (   const   Query::Parameter&           aParameter                                  ) ;
 
         /// @brief              Constructs an undefined query
@@ -257,7 +257,7 @@ class Query
         /// @return             Query
 
         static Query            Parse                                       (   const   String&                     aString                                     ) ;
-        
+
     private:
 
         Array<Query::Parameter> parameters_ ;

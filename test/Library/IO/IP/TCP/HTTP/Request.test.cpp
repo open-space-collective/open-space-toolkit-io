@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           Library/IO/IP/TCP/HTTP/Request.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -28,7 +28,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, Constructor)
         const String body = "body" ;
 
         EXPECT_NO_THROW(Request request (method, url, body) ;) ;
-        
+
     }
 
 }
@@ -54,7 +54,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, StreamOperator)
         EXPECT_NO_THROW(std::cout << request << std::endl) ;
 
         EXPECT_FALSE(testing::internal::GetCapturedStdout().empty()) ;
-        
+
     }
 
 }
@@ -76,7 +76,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, IsDefined)
         const Request request = { method, url, body } ;
 
         EXPECT_TRUE(request.isDefined()) ;
-        
+
     }
 
     {
@@ -104,7 +104,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, GetMethod)
         const Request request = { method, url, body } ;
 
         EXPECT_EQ(method, request.getMethod()) ;
-        
+
     }
 
     {
@@ -132,7 +132,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, GetUrl)
         const Request request = { method, url, body } ;
 
         EXPECT_EQ(url, request.getUrl()) ;
-        
+
     }
 
     {
@@ -160,7 +160,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, GetBody)
         const Request request = { method, url, body } ;
 
         EXPECT_EQ(body, request.getBody()) ;
-        
+
     }
 
     {
@@ -180,7 +180,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, Undefined)
 
         EXPECT_NO_THROW(Request::Undefined()) ;
         EXPECT_FALSE(Request::Undefined().isDefined()) ;
-        
+
     }
 
 }
@@ -196,7 +196,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, Get)
         const URL url = URL::Parse("https://www.google.com") ;
 
         EXPECT_EQ(Request::Method::Get, Request::Get(url).getMethod()) ;
-        
+
     }
 
 }
@@ -218,7 +218,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, StringFromMethod)
         EXPECT_EQ("Options", Request::StringFromMethod(Request::Method::Options)) ;
         EXPECT_EQ("Connect", Request::StringFromMethod(Request::Method::Connect)) ;
         EXPECT_EQ("Patch", Request::StringFromMethod(Request::Method::Patch)) ;
-        
+
     }
 
 }

@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           LibraryIOPy/URL/Query.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -15,7 +15,7 @@
 
 inline void                     LibraryIOPy_URL_Query                       ( )
 {
-    
+
     using namespace boost::python ;
 
     using library::core::ctnr::Array ;
@@ -58,7 +58,7 @@ inline void                     LibraryIOPy_URL_Query                       ( )
 
         .from_python<Array<Query::Parameter>>()
         .to_python<Array<Query::Parameter>>()
-        
+
     ;
 
 }

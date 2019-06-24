@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           Library/IO/URL/Query.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -28,7 +28,7 @@ namespace url
                                 :   name_(aName),
                                     value_(aValue)
 {
-    
+
 }
 
 bool                            Query::Parameter::operator ==               (   const   Query::Parameter&           aParameter                                  ) const
@@ -147,7 +147,7 @@ String                          Query::toString                             ( ) 
         {
             queryString += "&" ;
         }
-        
+
         queryString += String::Format("{}={}", parameter.accessName(), parameter.accessValue()) ;
 
     }
@@ -173,7 +173,7 @@ void                            Query::addParameter                         (   
     {
         throw library::core::error::runtime::Undefined("Parameter") ;
     }
-    
+
     parameters_.add(aParameter) ;
 
 }

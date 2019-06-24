@@ -1,6 +1,6 @@
 ################################################################################################################################################################
 
-# @project        Library/IO
+# @project        Library ▸ I/O
 # @file           LibraryIOPy/CMakeLists.txt
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0

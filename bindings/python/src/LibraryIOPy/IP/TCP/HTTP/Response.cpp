@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           LibraryIOPy/IP/TCP/HTTP/Response.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -13,11 +13,11 @@
 
 inline void                     LibraryIOPy_IP_TCP_HTTP_Response            ( )
 {
-    
+
     using namespace boost::python ;
 
     using library::core::types::String ;
-    
+
     using library::io::ip::tcp::http::Response ;
 
     scope in_Response = class_<Response>("Response", init<const Response::StatusCode&, const String&>())
@@ -29,7 +29,7 @@ inline void                     LibraryIOPy_IP_TCP_HTTP_Response            ( )
         .def("isOk", &Response::isOk)
         .def("getStatusCode", &Response::getStatusCode)
         .def("getBody", &Response::getBody)
-        
+
         .def("Undefined", &Response::Undefined).staticmethod("Undefined")
         .def("StringFromStatusCode", &Response::StringFromStatusCode).staticmethod("StringFromStatusCode")
 

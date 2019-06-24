@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           Library/IO/IP/TCP/HTTP/Response.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -17,7 +17,7 @@ TEST (Library_IO_IP_TCP_HTTP_Response, Constructor)
 {
 
     using library::core::types::String ;
-    
+
     using library::io::ip::tcp::http::Response ;
 
     {
@@ -26,7 +26,7 @@ TEST (Library_IO_IP_TCP_HTTP_Response, Constructor)
         const String body = "Hello World!" ;
 
         EXPECT_NO_THROW(Response response (statusCode, body) ;) ;
-        
+
     }
 
 }
@@ -50,7 +50,7 @@ TEST (Library_IO_IP_TCP_HTTP_Response, StreamOperator)
         EXPECT_NO_THROW(std::cout << response << std::endl) ;
 
         EXPECT_FALSE(testing::internal::GetCapturedStdout().empty()) ;
-        
+
     }
 
 }
@@ -59,7 +59,7 @@ TEST (Library_IO_IP_TCP_HTTP_Response, IsDefined)
 {
 
     using library::core::types::String ;
-    
+
     using library::io::ip::tcp::http::Response ;
 
     {
@@ -85,7 +85,7 @@ TEST (Library_IO_IP_TCP_HTTP_Response, IsOk)
 {
 
     using library::core::types::String ;
-    
+
     using library::io::ip::tcp::http::Response ;
 
     {
@@ -122,7 +122,7 @@ TEST (Library_IO_IP_TCP_HTTP_Response, GetStatusCode)
 {
 
     using library::core::types::String ;
-    
+
     using library::io::ip::tcp::http::Response ;
 
     {
@@ -133,7 +133,7 @@ TEST (Library_IO_IP_TCP_HTTP_Response, GetStatusCode)
         const Response response = { statusCode, body } ;
 
         EXPECT_EQ(statusCode, response.getStatusCode()) ;
-        
+
     }
 
     {
@@ -148,7 +148,7 @@ TEST (Library_IO_IP_TCP_HTTP_Response, GetBody)
 {
 
     using library::core::types::String ;
-    
+
     using library::io::ip::tcp::http::Response ;
 
     {
@@ -159,7 +159,7 @@ TEST (Library_IO_IP_TCP_HTTP_Response, GetBody)
         const Response response = { statusCode, body } ;
 
         EXPECT_EQ(body, response.getBody()) ;
-        
+
     }
 
     {
@@ -179,7 +179,7 @@ TEST (Library_IO_IP_TCP_HTTP_Response, Undefined)
 
         EXPECT_NO_THROW(Response::Undefined()) ;
         EXPECT_FALSE(Response::Undefined().isDefined()) ;
-        
+
     }
 
 }

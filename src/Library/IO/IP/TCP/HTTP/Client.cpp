@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           Library/IO/IP/TCP/HTTP/Client.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -65,8 +65,8 @@ int                             debugHandler                                (   
 
         case CURLINFO_TEXT:
             std::cout << aDataset << std::endl ;
-            break ; 
-        
+            break ;
+
         case CURLINFO_HEADER_OUT:
             std::cout << "=> Send header" << std::endl ;
             break ;
@@ -95,7 +95,7 @@ int                             debugHandler                                (   
             return 0 ;
 
     }
-    
+
     return 0 ;
 
 }
@@ -149,9 +149,9 @@ Response                        Client::Send                                (   
     {
 
         std::ostringstream* streamPtr = static_cast<std::ostringstream*>(aContextPtr) ;
-        
+
         const size_t count = aSize * aDataSize ;
-        
+
         streamPtr->write(aBuffer, count) ;
 
         return count ;
@@ -199,13 +199,13 @@ Response                        Client::Send                                (   
     //     // cpp-netlib (bug with HTTPS)
 
     //     boost::network::http::client::request request(aUrl.toString()) ;
-    
+
     //     request << boost::network::header("Connection", "close") ;
-        
+
     //     const boost::network::http::client::response response = boost::network::http::client().get(request) ;
 
     //     responseStatusCode = Response::StatusCode(boost::network::http::status(response)) ;
-        
+
     //     responseBody = boost::network::http::body(response) ;
 
     //     Boost.Beast (no straightforward response parsing)
@@ -226,7 +226,7 @@ Response                        Client::Send                                (   
     //     {
     //         target += "#" + aUrl.getFragment() ;
     //     }
-        
+
     //     if (aUrl.getScheme() == "http")
     //     {
 
@@ -235,7 +235,7 @@ Response                        Client::Send                                (   
     //         const int version = 10 ; // [TBM] Param
 
     //         // The io_context is required for all I/O
-        
+
     //         boost::asio::io_context ioc ;
 
     //         // These objects perform our I/O
@@ -244,11 +244,11 @@ Response                        Client::Send                                (   
     //         tcp::socket socket { ioc } ;
 
     //         // Look up the domain name
-            
+
     //         const auto results = resolver.resolve(host, port) ;
 
     //         // Make the connection on the IP address we get from a lookup
-            
+
     //         boost::asio::connect(socket, results.begin(), results.end()) ;
 
     //         // Set up an HTTP GET request message
@@ -267,15 +267,15 @@ Response                        Client::Send                                (   
     //         boost::beast::flat_buffer buffer ;
 
     //         // Declare a container to hold the response
-            
+
     //         http::response<http::dynamic_body> res ;
 
     //         // Receive the HTTP response
-            
+
     //         http::read(socket, buffer, res) ;
 
     //         // Write the message to standard out
-            
+
     //         std::cout << res << std::endl ;
 
     //         [TBI] Response parsing
@@ -286,7 +286,7 @@ Response                        Client::Send                                (   
     //         socket.shutdown(tcp::socket::shutdown_both, ec) ;
 
     //         // not_connected happens sometimes so don't bother reporting it.
-            
+
     //         if (ec && (ec != boost::system::errc::not_connected))
     //         {
     //             throw boost::system::system_error {ec} ;
@@ -301,7 +301,7 @@ Response                        Client::Send                                (   
     //         const int version = 10 ; // [TBM] Param
 
     //         // The io_context is required for all I/O
-        
+
     //         boost::asio::io_context ioc ;
 
     //         // The SSL context is required, and holds certificates
@@ -330,11 +330,11 @@ Response                        Client::Send                                (   
     //         }
 
     //         // Look up the domain name
-            
+
     //         const auto results = resolver.resolve(host, port) ;
 
     //         // Make the connection on the IP address we get from a lookup
-            
+
     //         boost::asio::connect(socket, results.begin(), results.end()) ;
 
     //         // Set up an HTTP GET request message
@@ -353,35 +353,35 @@ Response                        Client::Send                                (   
     //         boost::beast::flat_buffer buffer ;
 
     //         // Declare a container to hold the response
-            
+
     //         http::response<http::dynamic_body> res ;
 
     //         // Receive the HTTP response
-            
+
     //         http::read(socket, buffer, res) ;
 
     //         // Write the message to standard out
-            
+
     //         std::cout << res << std::endl ;
 
     //         [TBI] Response parsing
 
     //         // Make the connection on the IP address we get from a lookup
-            
+
     //         boost::asio::connect(stream.next_layer(), results.begin(), results.end()) ;
 
     //         // Perform the SSL handshake
-            
+
     //         stream.handshake(ssl::stream_base::client) ;
 
     //         // Gracefully close the stream
-            
+
     //         boost::system::error_code ec ;
     //         stream.shutdown(ec) ;
-            
+
     //         if (ec == boost::asio::error::eof)
     //         {
-                
+
     //             // Rationale: http://stackoverflow.com/questions/25587403/boost-asio-ssl-async-shutdown-always-finishes-with-an-error
 
     //             ec.assign(0, ec.category()) ;
@@ -397,7 +397,7 @@ Response                        Client::Send                                (   
     //     {
     //         throw library::core::error::runtime::Wrong("URL scheme", aUrl.getScheme()) ;
     //     }
-    
+
     // }
     // catch (const std::exception& e)
     // {
@@ -461,7 +461,7 @@ File                            Client::Fetch                               (   
     {
         throw library::core::error::RuntimeError("Cannot create file [" + file.toString() + "].") ;
     }
-    
+
     curl_easy_setopt(curlPtr, CURLOPT_WRITEDATA, filePtr) ;
 
     const auto writeDataFunction = +[] (void* aBuffer, size_t aSize, size_t aDataSize, FILE* aFilePtr) -> size_t
@@ -470,7 +470,7 @@ File                            Client::Fetch                               (   
     } ;
 
     curl_easy_setopt(curlPtr, CURLOPT_WRITEFUNCTION, writeDataFunction) ;
-    
+
     curl_easy_setopt(curlPtr, CURLOPT_FAILONERROR, true) ;
     // curl_easy_setopt(curlPtr, CURLOPT_FOLLOWLOCATION, 1L) ;
 

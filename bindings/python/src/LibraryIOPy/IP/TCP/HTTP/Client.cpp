@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           LibraryIOPy/IP/TCP/HTTP/Client.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -13,7 +13,7 @@
 
 inline void                     LibraryIOPy_IP_TCP_HTTP_Client              ( )
 {
-    
+
     using namespace boost::python ;
 
     using library::io::ip::tcp::http::Client ;

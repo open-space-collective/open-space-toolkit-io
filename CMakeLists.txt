@@ -1,6 +1,6 @@
 ################################################################################################################################################################
 
-# @project        Library/IO
+# @project        Library ▸ I/O
 # @file           CMakeLists.txt
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
@@ -77,14 +77,14 @@ IF (COMMAND "GET_GIT_HEAD_REVISION" AND COMMAND "GIT_DESCRIBE")
 
             LIST (GET PROJECT_VERSION_PATCH_TWEAKS 1 PROJECT_VERSION_TWEAK)
 
-        ENDIF ()        
+        ENDIF ()
 
         SET (PROJECT_VERSION_STRING "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}")
 
         IF (DEFINED "PROJECT_VERSION_TWEAK")
 
             SET (PROJECT_VERSION_STRING "${PROJECT_VERSION_STRING}.${PROJECT_VERSION_TWEAK}")
-       
+
         ENDIF ()
 
     ENDIF ()
@@ -135,7 +135,7 @@ IF (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     IF (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 4.8)
 
         MESSAGE (FATAL_ERROR "GCC version must be at least 4.8")
-    
+
     ENDIF ()
 
     SET (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic -Wshadow -Wno-deprecated -Wl,--no-undefined")
@@ -218,7 +218,7 @@ FOREACH (CONFIGINPUT ${CONFIGINPUTS})
 
     STRING (REPLACE ".in.hpp.cmake" ".h" CONFIGOUTPUT1 "${CONFIGINPUT}")
     STRING (REPLACE ".hpp.in.cmake" ".h" CONFIGOUTPUT2 "${CONFIGOUTPUT1}")
-    
+
     CONFIGURE_FILE ("${CONFIGINPUT}" "${CONFIGOUTPUT2}")
 
 ENDFOREACH ()
@@ -353,18 +353,18 @@ IF (BUILD_UNIT_TESTS)
     ADD_EXECUTABLE (${UNIT_TESTS_TARGET} ${TEST_SRCS})
 
     ADD_DEPENDENCIES (${UNIT_TESTS_TARGET} ${SHARED_LIBRARY_TARGET})
-    
+
     FIND_PACKAGE ("GTest" QUIET)
 
     IF (NOT GTEST_FOUND)
-            
+
         ADD_SUBDIRECTORY ("${PROJECT_SOURCE_DIR}/thirdparty/gtest")
 
         ADD_DEPENDENCIES (${UNIT_TESTS_TARGET} "googletest")
 
         LIST (APPEND GTEST_BOTH_LIBRARIES "${GTEST_LIBS_DIR}/libgtest.a")
         LIST (APPEND GTEST_BOTH_LIBRARIES "${GTEST_LIBS_DIR}/libgtest_main.a")
-        
+
     ENDIF ()
 
     TARGET_INCLUDE_DIRECTORIES (${UNIT_TESTS_TARGET} PUBLIC ${GTEST_INCLUDE_DIRS})
@@ -374,15 +374,15 @@ IF (BUILD_UNIT_TESTS)
     # TARGET_LINK_LIBRARIES (${UNIT_TESTS_TARGET} "GTest::GTest" "GTest::Main")
     TARGET_LINK_LIBRARIES (${UNIT_TESTS_TARGET} "${GTEST_BOTH_LIBRARIES}")
     TARGET_LINK_LIBRARIES (${UNIT_TESTS_TARGET} "${SHARED_LIBRARY_TARGET}")
-    
+
     GTEST_DISCOVER_TESTS (${UNIT_TESTS_TARGET})
-    
+
     ADD_TEST (NAME "all" COMMAND ${UNIT_TESTS_TARGET})
-    
+
     SET_TARGET_PROPERTIES (${UNIT_TESTS_TARGET} PROPERTIES VERSION ${PROJECT_VERSION_STRING} OUTPUT_NAME ${UNIT_TESTS_TARGET} CLEAN_DIRECT_OUTPUT 1 INSTALL_RPATH "$ORIGIN/../lib:$ORIGIN/")
 
     INSTALL (TARGETS ${UNIT_TESTS_TARGET} DESTINATION ${INSTALL_TEST} COMPONENT "tests")
-    
+
     #### Code Coverage
 
     IF (BUILD_CODE_COVERAGE)
