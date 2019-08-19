@@ -2,7 +2,7 @@
 
 ################################################################################################################################################################
 
-# @project        Library/IO
+# @project        Library ▸ I/O
 # @file           tools/python/investigate.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0

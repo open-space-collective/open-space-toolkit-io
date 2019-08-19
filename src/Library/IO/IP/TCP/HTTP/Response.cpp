@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           Library/IO/IP/TCP/HTTP/Response.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -102,7 +102,7 @@ String                          Response::StringFromStatusCode              (   
 
     using library::core::ctnr::Map ;
 
-    static const Map<Response::StatusCode, String> statusCodeStringMap = 
+    static const Map<Response::StatusCode, String> statusCodeStringMap =
     {
         {
             { Response::StatusCode::Undefined, "Undefined" },

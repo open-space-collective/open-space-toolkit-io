@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           LibraryIOPy/IP/TCP/HTTP/Request.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -13,11 +13,11 @@
 
 inline void                     LibraryIOPy_IP_TCP_HTTP_Request             ( )
 {
-    
+
     using namespace boost::python ;
 
     using library::core::types::String ;
-    
+
     using library::io::URL ;
     using library::io::ip::tcp::http::Request ;
 

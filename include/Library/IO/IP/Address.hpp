@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           Library/IO/IP/Address.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -244,7 +244,7 @@ class Address
         ///                     For IPv4 addresses, this is always true.
         ///                     For IPv6, the address must be in the ::x:x range (the first 96 bits are zero).
         ///
-        /// @return             True if address is IPv4 compatible            
+        /// @return             True if address is IPv4 compatible
 
         bool                    isIPv4Compatible                            ( ) const ;
 
@@ -276,7 +276,7 @@ class Address
         /// @endcode
         ///
         /// @return             Address string representation
-        
+
         String                  getString                                   ( ) const ;
 
         /// @brief              Constructs an undefined address

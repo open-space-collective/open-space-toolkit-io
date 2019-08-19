@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           Library/IO/IP/TCP/HTTP/Request.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -66,7 +66,7 @@ Request::Method                 Request::getMethod                          ( ) 
     {
         throw library::core::error::runtime::Undefined("Request") ;
     }
-    
+
     return method_ ;
 
 }
@@ -78,7 +78,7 @@ URL                             Request::getUrl                             ( ) 
     {
         throw library::core::error::runtime::Undefined("Request") ;
     }
-    
+
     return url_ ;
 
 }
@@ -90,7 +90,7 @@ String                          Request::getBody                            ( ) 
     {
         throw library::core::error::runtime::Undefined("Request") ;
     }
-    
+
     return body_ ;
 
 }
@@ -110,7 +110,7 @@ String                          Request::StringFromMethod                   (   
 
     using library::core::ctnr::Map ;
 
-    static const Map< Request::Method, String> methodStringMap = 
+    static const Map< Request::Method, String> methodStringMap =
     {
         {
             {  Request::Method::Undefined, "Undefined" },

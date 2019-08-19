@@ -2,7 +2,7 @@
 
 ################################################################################################################################################################
 
-# @project        Library/IO
+# @project        Library ▸ I/O
 # @file           tools/ci/deploy.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0

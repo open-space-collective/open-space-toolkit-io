@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           Library/IO/URL.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -154,7 +154,7 @@ TEST (Library_IO_URL, NotEqualToOperator)
         EXPECT_TRUE(URL::Undefined() != URL::Undefined()) ;
 
     }
-    
+
 }
 
 TEST (Library_IO_URL, AdditionOperator)
@@ -1042,7 +1042,7 @@ TEST (Library_IO_URL, Parse)
 
     using library::core::types::String ;
     using library::core::ctnr::Array ;
-    
+
     using library::io::URL ;
 
     {

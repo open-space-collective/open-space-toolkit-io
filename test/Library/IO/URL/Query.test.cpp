@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           Library/IO/URL/Query.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -75,7 +75,7 @@ TEST (Library_IO_URL_Query, EqualToOperator)
 
         EXPECT_FALSE(Query::Undefined() == query) ;
         EXPECT_FALSE(query == Query::Undefined()) ;
-        
+
         EXPECT_TRUE(Query::Undefined() == Query::Undefined()) ;
 
     }
@@ -194,7 +194,7 @@ TEST (Library_IO_URL_Query, GetParameterWithName)
         const Query query = { { { "key", "value" } } } ;
 
         EXPECT_EQ("value", query.getParameterWithName("key")) ;
-        
+
         EXPECT_ANY_THROW(query.getParameterWithName("other_key")) ;
 
     }
@@ -257,7 +257,7 @@ TEST (Library_IO_URL_Query, ConstIterator)
 
             EXPECT_TRUE(parameter == parameter) ;
             EXPECT_FALSE(parameter != parameter) ;
-            
+
             EXPECT_TRUE(parameter.isDefined()) ;
 
             EXPECT_EQ("key", parameter.accessName().getHead(3)) ;

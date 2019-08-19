@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           LibraryIOPy/IP/TCP/HTTP.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -15,13 +15,13 @@
 
 inline void                     LibraryIOPy_IP_TCP_HTTP                     ( )
 {
-    
+
     boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("Library.IO.IP.TCP.HTTP")))) ;
-    
+
     boost::python::scope().attr("HTTP") = module ;
-    
+
     boost::python::scope scope = module ;
-    
+
     LibraryIOPy_IP_TCP_HTTP_Request() ;
     LibraryIOPy_IP_TCP_HTTP_Response() ;
     LibraryIOPy_IP_TCP_HTTP_Client() ;

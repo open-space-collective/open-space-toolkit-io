@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           Library/IO/IP/TCP/HTTP/Request.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -90,39 +90,39 @@ class Request
         /// @brief              Get request method
         ///
         /// @return             Request method
-        
+
         Request::Method         getMethod                                   ( ) const ;
-        
+
         /// @brief              Get request URL
         ///
         /// @return             Request URL
-        
+
         URL                     getUrl                                      ( ) const ;
 
         /// @brief              Get request body
         ///
         /// @return             Request body
-        
+
         String                  getBody                                     ( ) const ;
 
         /// @brief              Constructs an undefined request
         ///
         /// @return             Undefined request
-        
+
         static Request          Undefined                                   ( ) ;
 
         /// @brief              Constructs a GET request
         ///
         /// @param              [in] aUrl A URL
         /// @return             GET request
-        
+
         static Request          Get                                         (   const   URL&                        aUrl                                        ) ;
 
         /// @brief              Converts request method to string
         ///
         /// @param              [in] aMethod A request method
         /// @return             Request method string
-        
+
         static String           StringFromMethod                            (   const   Request::Method&            aMethod                                     ) ;
 
     private:

@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           LibraryIOPy/IP.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -13,13 +13,13 @@
 
 inline void                     LibraryIOPy_IP                              ( )
 {
-    
+
     boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("Library.IO.IP")))) ;
-    
+
     boost::python::scope().attr("IP") = module ;
-    
+
     boost::python::scope scope = module ;
-    
+
     LibraryIOPy_IP_TCP() ;
 
 }

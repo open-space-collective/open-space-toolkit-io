@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           Library/IO/LibraryIOPy.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -18,7 +18,7 @@ BOOST_PYTHON_MODULE (LibraryIOPy)
 {
 
 	boost::python::object package = boost::python::scope() ;
-	
+
 	package.attr("__path__") = "Library" ;
 
 	LibraryIOPy_URL() ;

@@ -2,7 +2,7 @@
 
 ################################################################################################################################################################
 
-# @project        Library/IO
+# @project        Library ▸ I/O
 # @file           tools/python/start.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
@@ -32,12 +32,12 @@ command="start-notebook.sh --NotebookApp.token=''"
 
 if [[ ! -z ${1} ]] && [[ ${1} == "--link" ]]; then
 
+    command=""
+
     # Library ▸ Core
 
     options="${options} \
     --volume=${library_core_directory}:/opt/library-core:ro"
-
-    command="pip install --quiet LibraryCorePy;"
 
     command="${command} \
     mkdir -p /opt/conda/lib/python3.6/site-packages/Library/Core; \

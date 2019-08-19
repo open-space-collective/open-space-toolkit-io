@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           Library/IO/IP/TCP/HTTP/Client.test.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -109,7 +109,7 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Fetch)
     using library::core::fs::Path ;
     using library::core::fs::File ;
     using library::core::fs::Directory ;
-    
+
     using library::io::URL ;
     using library::io::ip::tcp::http::Client ;
 
@@ -149,7 +149,7 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Fetch)
 //     using library::core::fs::Path ;
 //     using library::core::fs::File ;
 //     using library::core::fs::Directory ;
-    
+
 //     using library::io::URL ;
 //     using library::io::ip::tcp::http::Client ;
 
@@ -160,14 +160,14 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Fetch)
 //         File file = File::Path(Path::Parse("/tmp/listing.txt")) ;
 
 //         Client::List(url, file, false) ;
-        
+
 //         EXPECT_TRUE(file.exists()) ;
 //         EXPECT_EQ("listing.txt", file.getName()) ;
 
 //         file.remove() ;
 
 //         Client::List(url, file, true) ;
-        
+
 //         EXPECT_TRUE(file.exists()) ;
 //         EXPECT_EQ("listing.txt", file.getName()) ;
 //         EXPECT_FALSE(file.getContents().isEmpty()) ;

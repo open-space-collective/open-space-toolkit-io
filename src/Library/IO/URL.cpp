@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           Library/IO/URL.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -51,14 +51,14 @@ bool                            URL::operator ==                            (   
     {
         return false ;
     }
-    
-    return (scheme_ == aURL.scheme_) 
-        && (user_ == aURL.user_) 
-        && (password_ == aURL.password_) 
-        && (host_ == aURL.host_) 
+
+    return (scheme_ == aURL.scheme_)
+        && (user_ == aURL.user_)
+        && (password_ == aURL.password_)
+        && (host_ == aURL.host_)
         && (((!port_.isDefined()) && (!aURL.port_.isDefined())) ? true : (port_ == aURL.port_))
-        && (path_ == aURL.path_) 
-        && (query_ == aURL.query_) 
+        && (path_ == aURL.path_)
+        && (query_ == aURL.query_)
         && (fragment_ == aURL.fragment_) ;
 
 }
@@ -71,13 +71,13 @@ bool                            URL::operator !=                            (   
         return true ;
     }
 
-    return (scheme_ != aURL.scheme_) 
-        || (user_ != aURL.user_) 
-        || (password_ != aURL.password_) 
-        || (host_ != aURL.host_) 
-        || (port_ != aURL.port_) 
-        || (path_ != aURL.path_) 
-        || (query_ != aURL.query_) 
+    return (scheme_ != aURL.scheme_)
+        || (user_ != aURL.user_)
+        || (password_ != aURL.password_)
+        || (host_ != aURL.host_)
+        || (port_ != aURL.port_)
+        || (path_ != aURL.path_)
+        || (query_ != aURL.query_)
         || (fragment_ != aURL.fragment_) ;
 
 }
@@ -247,7 +247,7 @@ String                          URL::toString                               (   
     {
         boost::replace_all(urlString, " ", "%20") ;
     }
-    
+
     return urlString ;
 
 }

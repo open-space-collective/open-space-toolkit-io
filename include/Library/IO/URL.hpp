@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library/IO
+/// @project        Library ▸ I/O
 /// @file           Library/IO/URL.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
@@ -161,7 +161,7 @@ class URL
         /// @endcode
         ///
         /// @return             Reference to URL host
-        
+
         const String&           accessHost                                  ( ) const ;
 
         /// @brief              Get reference to URL path
@@ -333,49 +333,49 @@ class URL
         /// @brief              Set URL scheme
         ///
         /// @param              [in] aScheme A scheme
-        
+
         void                    setScheme                                   (   const   String&                     aScheme                                     ) ;
 
         /// @brief              Set URL host
         ///
         /// @param              [in] aHost A host
-        
+
         void                    setHost                                     (   const   String&                     aHost                                       ) ;
 
         /// @brief              Set URL path
         ///
         /// @param              [in] aPath A path
-        
+
         void                    setPath                                     (   const   String&                     aPath                                       ) ;
 
         /// @brief              Set URL port
         ///
         /// @param              [in] aPort A port
-        
+
         void                    setPort                                     (   const   Integer&                    aPort                                       ) ;
 
         /// @brief              Set URL user
         ///
         /// @param              [in] aUser A user
-        
+
         void                    setUser                                     (   const   String&                     aUser                                       ) ;
 
         /// @brief              Set URL password
         ///
         /// @param              [in] aPassword A password
-        
+
         void                    setPassword                                 (   const   String&                     aPassword                                   ) ;
 
         /// @brief              Set URL query
         ///
         /// @param              [in] aQuery A query
-        
+
         void                    setQuery                                    (   const   Query&                      aQuery                                      ) ;
 
         /// @brief              Set URL fragment
         ///
         /// @param              [in] aFragment A fragment
-        
+
         void                    setFragment                                 (   const   String&                     aFragment                                   ) ;
 
         /// @brief              Constructs an undefined URL

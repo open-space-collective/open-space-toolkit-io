@@ -1,6 +1,6 @@
 ################################################################################################################################################################
 
-# @project        Library/IO
+# @project        Library ▸ I/O
 # @file           tools/python/docker/Dockerfile
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
@@ -24,5 +24,7 @@ RUN chown -R ${NB_UID}:${NB_UID} /home/jovyan/.jupyter
 USER ${NB_UID}
 
 RUN pip install LibraryIOPy
+
+RUN mkdir -p /home/jovyan/.library
 
 ################################################################################################################################################################
