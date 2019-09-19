@@ -67,8 +67,8 @@ ADD_COMPILE_DEFINITIONS (EIGEN_MAX_STATIC_ALIGN_BYTES)
 # SET (PYTHON_INCLUDE_DIR "/usr/include/python2.7")
 # SET (PYTHON_LIBRARIES "/usr/lib64/libpython2.7.so")
 
-SET (PYTHON_INCLUDE_DIR "/usr/include/python3.6m")
-SET (PYTHON_LIBRARIES "/usr/lib64/libpython3.6m.so")
+SET (PYTHON_INCLUDE_DIR "/usr/include/python3.7m")
+SET (PYTHON_LIBRARIES "/usr/lib64/libpython3.7m.so")
 
 ################################################################################################################################################################
 
