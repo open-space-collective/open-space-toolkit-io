@@ -59,6 +59,10 @@ FROM python:3.7-slim as python-release
 
 LABEL maintainer="lucas@loftorbital.com"
 
+RUN apt-get update -y \
+ && apt-get install -y libcurl4-openssl-dev libssl-dev \
+ && rm -rf /var/lib/apt/lists/*
+
 COPY --from=python-builder /usr/local/lib/python3.7/site-packages/Library /usr/local/lib/python3.7/site-packages/Library
 
 ENTRYPOINT ["python"]

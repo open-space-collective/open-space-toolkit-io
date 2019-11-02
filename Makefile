@@ -88,7 +88,7 @@ build-release-image-cpp-fedora: target := fedora
 
 build-release-image-cpp-debian build-release-image-cpp-fedora: _build-release-image-cpp
 
-_build-release-image-cpp:
+_build-release-image-cpp: _build-development-image
 
 	@ echo "Building [$(target)] C++ release image..."
 
@@ -108,7 +108,7 @@ build-release-image-python-fedora: target := fedora
 
 build-release-image-python-debian build-release-image-python-fedora: _build-release-image-python
 
-_build-release-image-python:
+_build-release-image-python: _build-development-image
 
 	@ echo "Building [$(target)] Python release image..."
 

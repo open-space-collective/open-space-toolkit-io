@@ -1,15 +1,12 @@
 ################################################################################################################################################################
 
-# @project        Library ▸ Core
+# @project        Library ▸ I/O
 # @file           bindings/python/test/ip/tcp/http/test_client.py
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
 
-import pytest
-
-import Library.Core as Core
 import Library.IO as IO
 
 ################################################################################################################################################################
@@ -26,5 +23,9 @@ def test_client ():
     response = Client.Get(URL.Parse("https://www.google.com"))
 
     assert response is not None
+
+    assert response.isDefined() is True
+    assert response.isOk() is True
+    assert response.getStatusCode() == 200
 
 ################################################################################################################################################################

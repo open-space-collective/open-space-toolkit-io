@@ -59,6 +59,10 @@ FROM fedora:30 as python-release
 
 LABEL maintainer="lucas@loftorbital.com"
 
+RUN dnf update -y \
+ && dnf install -y libcurl-devel openssl-devel \
+ && dnf clean all
+
 RUN ln -s /usr/bin/pip3 /usr/bin/pip
 
 COPY --from=python-builder /usr/local/lib/python3.7/site-packages/Library /usr/local/lib/python3.7/site-packages/Library
