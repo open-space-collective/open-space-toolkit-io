@@ -1,25 +1,8 @@
-#!/bin/bash
-
 ################################################################################################################################################################
 
 # @project        Library ▸ I/O
-# @file           tools/development/exec.sh
+# @file           bindings/python/test/__init__.py
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
-
-################################################################################################################################################################
-
-script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-# Setup environment
-
-source "${script_directory}/../.env"
-
-# Exec Docker container
-
-docker exec \
--it \
-${container_name} \
-/bin/bash
 
 ################################################################################################################################################################

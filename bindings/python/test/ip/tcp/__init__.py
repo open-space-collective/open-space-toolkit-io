@@ -1,20 +1,8 @@
-#!/bin/bash
-
 ################################################################################################################################################################
 
 # @project        Library ▸ I/O
-# @file           tools/development/docker/push.sh
+# @file           bindings/python/test/ip/tcp/__init__.py
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
-
-################################################################################################################################################################
-
-script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-source "${script_directory}/../../.env"
-
-docker push "${image_name}:${image_version}"
-
-docker push "${image_name}:latest"
 
 ################################################################################################################################################################

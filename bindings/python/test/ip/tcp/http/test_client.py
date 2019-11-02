@@ -1,24 +1,30 @@
-# coding=utf-8
-
 ################################################################################################################################################################
 
-# @project        Library ▸ I/O
-# @file           LibraryIOPy/IP.test.py
+# @project        Library ▸ Core
+# @file           bindings/python/test/ip/tcp/http/test_client.py
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
 
-# IP
+import pytest
 
 import Library.Core as Core
-import LibraryIOPy as IO
+import Library.IO as IO
+
+################################################################################################################################################################
 
 URL = IO.URL
 Request = IO.IP.TCP.HTTP.Request
 Response = IO.IP.TCP.HTTP.Response
 Client = IO.IP.TCP.HTTP.Client
 
-response = Client.Get(URL.Parse("https://www.google.com"))
+################################################################################################################################################################
+
+def test_client ():
+
+    response = Client.Get(URL.Parse("https://www.google.com"))
+
+    assert response is not None
 
 ################################################################################################################################################################
