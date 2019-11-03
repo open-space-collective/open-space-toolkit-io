@@ -1,24 +1,41 @@
 ################################################################################################################################################################
 
 # @project        Library ▸ I/O
-# @file           tools/python/docker/Dockerfile.investigate
+# @file           docker/jupyter/Dockerfile
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
 
-FROM jupyter/base-notebook:latest
+ARG JUPYTER_NOTEBOOK_IMAGE_REPOSITORY=jupyter/scipy-notebook:latest
+
+FROM ${JUPYTER_NOTEBOOK_IMAGE_REPOSITORY}
 
 LABEL maintainer="lucas@loftorbital.com"
 
 USER root
 
-RUN ln -s /opt/conda/include/python3.6m /opt/conda/include/python3.6
+# Install extensions
+
+RUN jupyter labextension install @jupyterlab/plotly-extension
 
 COPY ./shortcuts-extension /home/jovyan/.jupyter/lab/user-settings/@jupyterlab/shortcuts-extension
 
-RUN chown -R $NB_UID:$NB_UID /home/jovyan/.jupyter
+# Install NumPy and Plotly
 
-# USER $NB_UID
+RUN python -m pip install --quiet numpy --upgrade \
+ && python -m pip install --quiet plotly
+
+RUN chown -R ${NB_UID}:${NB_UID} /home/jovyan/.jupyter
+
+USER ${NB_UID}
+
+ENV JUPYTER_ENABLE_LAB yes
+
+ENV LD_LIBRARY_PATH "/usr/local/lib:/usr/lib/x86_64-linux-gnu:/opt/conda/lib/python3.7/site-packages:/home/jovyan/lib:/opt/conda/lib"
+ENV PYTHONPATH "/opt/conda/lib/python3.7/site-packages:/home/jovyan/lib"
+
+RUN pip install LibraryCorePy
+RUN pip install LibraryIOPy
 
 ################################################################################################################################################################

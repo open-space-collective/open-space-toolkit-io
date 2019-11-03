@@ -1,5 +1,4 @@
-Library ▸ I/O ▸ Bindings ▸ Python
-=================================
+# Library ▸ I/O ▸ Bindings ▸ Python
 
 Addressing, networking, database connectors.
 

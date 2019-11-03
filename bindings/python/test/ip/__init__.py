@@ -1,16 +1,8 @@
 ################################################################################################################################################################
 
 # @project        Library ▸ I/O
-# @file           tools/python/.env
+# @file           bindings/python/test/ip/__init__.py
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
-
-################################################################################################################################################################
-
-JUPYTER_ENABLE_LAB=yes
-# GRANT_SUDO=yes
-
-LD_LIBRARY_PATH=/usr/local/lib:/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib
-PYTHONPATH=/usr/local/lib:/opt/conda/lib/python3.6/site-packages:/home/jovyan/lib
 
 ################################################################################################################################################################
