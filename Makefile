@@ -19,6 +19,7 @@ export development_base_image_version := 0.1.10
 
 export docker_development_image_repository := $(docker_image_repository)-development
 export docker_release_image_python_repository := $(docker_image_repository)-python
+export docker_jupyter_notebook_image_repository := $(docker_image_repository)-jupyter
 
 export jupyter_notebook_image_repository := jupyter/scipy-notebook:latest
 export jupyter_notebook_port := 9002
