@@ -35,7 +35,7 @@ The {\bfseries IO} library exhibits the following structure\+:
 
 \subsection*{Documentation}
 
-The documentation can be found here\+:
+Documentation is available here\+:
 
 
 \begin{DoxyItemize}
@@ -45,7 +45,7 @@ The documentation can be found here\+:
 
 \subsection*{Tutorials}
 
-Various tutorials are available here\+:
+Tutorials are available here\+:
 
 
 \begin{DoxyItemize}
@@ -55,56 +55,53 @@ Various tutorials are available here\+:
 
 \subsection*{Setup}
 
-\subsubsection*{Development}
+\subsubsection*{Development Environment}
 
-Using \href{https://www.docker.com}{\tt Docker} is recommended, as the development tools and dependencies setup is described in the provided \href{./tools/development/docker/Dockerfile}{\tt Dockerfile}.
+Using \href{https://www.docker.com}{\tt Docker} for development is recommended, to simplify the installation of the necessary build tools and dependencies. Instructions on how to install Docker are available \href{https://docs.docker.com/install/}{\tt here}.
 
-Instructions to install Docker can be found \href{https://docs.docker.com/install/}{\tt here}.
-
-Start the development environment\+:
+To start the development environment\+:
 
 
 \begin{DoxyCode}
-./tools/development/start.sh
+make start-development
 \end{DoxyCode}
 
 
-This will also build the {\ttfamily openspacecollective/library-\/io\+:latest} Docker image, if not already.
+This will\+:
 
-If installing Docker is not an option, please manually install the development tools (G\+CC, C\+Make) and the dependencies. The procedure should be similar to the one described in the \href{./tools/development/docker/Dockerfile}{\tt Dockerfile}.
+
+\begin{DoxyEnumerate}
+\item Build the {\ttfamily openspacecollective/library-\/io-\/development} Docker image.
+\item Create a development environment container with local source files and helper scripts mounted.
+\item Start a {\ttfamily bash} shell from the {\ttfamily ./build} working directory.
+\end{DoxyEnumerate}
+
+If installing Docker is not an option, you can manually install the development tools (G\+CC, C\+Make) and all required dependencies, by following a procedure similar to the one described in the \href{./docker/development/Dockerfile}{\tt Development Dockerfile}.
 
 \subsubsection*{Build}
 
-From the development environment\+:
+From the {\ttfamily ./build} directory\+:
 
 
 \begin{DoxyCode}
-./build.sh
-\end{DoxyCode}
-
-
-Manually\+:
-
-
-\begin{DoxyCode}
-mkdir -p build
-cd build
 cmake ..
 make
 \end{DoxyCode}
 
 
+{\itshape Tip\+: {\ttfamily helpers/build.\+sh} simplifies building from within the development environment.}
+
 \subsubsection*{Test}
 
-From the development environment\+:
+To start a container to build and run the tests\+:
 
 
 \begin{DoxyCode}
-./test.sh
+make test
 \end{DoxyCode}
 
 
-Manually\+:
+Or to run them manually\+:
 
 
 \begin{DoxyCode}
@@ -112,9 +109,9 @@ Manually\+:
 \end{DoxyCode}
 
 
-\subsection*{Dependencies}
+{\itshape Tip\+: {\ttfamily helpers/test.\+sh} simplifies running tests from within the development environment.}
 
-The {\bfseries IO} library internally uses the following dependencies\+:
+\subsection*{Dependencies}
 
 \tabulinesep=1mm
 \begin{longtabu} spread 0pt [c]{*{4}{|X[-1]}|}
@@ -126,7 +123,7 @@ The {\bfseries IO} library internally uses the following dependencies\+:
 \hline
 \rowcolor{\tableheadbgcolor}\textbf{ Name }&\textbf{ Version }&\textbf{ License }&\textbf{ Link  }\\\cline{1-4}
 \endhead
-Boost &1.\+67.\+0 &B\+S\+L-\/1.\+0 &\href{https://www.boost.org}{\tt boost.\+org} \\\cline{1-4}
+Boost &1.\+69.\+0 &B\+S\+L-\/1.\+0 &\href{https://www.boost.org}{\tt boost.\+org} \\\cline{1-4}
 C++ Network Library &0.\+13.\+0 &B\+S\+L-\/1.\+0 &\href{https://cpp-netlib.org}{\tt cpp-\/netlib.\+org} \\\cline{1-4}
 Pistache &master &Apache License 2.\+0 &\href{http://pistache.io}{\tt pistache.\+io} \\\cline{1-4}
 Core &master &Apache License 2.\+0 &\href{https://github.com/open-space-collective/library-core}{\tt github.\+com/open-\/space-\/collective/library-\/core} \\\cline{1-4}
