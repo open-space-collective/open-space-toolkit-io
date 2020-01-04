@@ -10,7 +10,7 @@
 ## Project Properties
 
 SET (PROJECT_NAME "OpenSpaceToolkitIOPy")
-SET (PROJECT_DESCRIPTION "Python bindings for Library / IO.")
+SET (PROJECT_DESCRIPTION "Python bindings for Open Space Toolkit / I/O.")
 SET (PROJECT_PACKAGE_NAME "OpenSpaceToolkitIOPy")
 SET (PROJECT_PATH "OpenSpaceToolkit/IO")
 SET (PROJECT_LICENSE "Apache License 2.0")
