@@ -249,13 +249,13 @@ ELSE ()
     MESSAGE (SEND_ERROR "[CPP-NETLIB] not found.")
 ENDIF ()
 
-### Library ▸ Core [0.2.x]
+### Open Space Toolkit ▸ Core [0.2.x]
 
 FIND_PACKAGE ("LibraryCore" "0.2" REQUIRED)
 
 IF (NOT LibraryCore_FOUND)
 
-    MESSAGE (SEND_ERROR "[Library ▸ Core] not found.")
+    MESSAGE (SEND_ERROR "[Open Space Toolkit ▸ Core] not found.")
 
 ENDIF ()
 

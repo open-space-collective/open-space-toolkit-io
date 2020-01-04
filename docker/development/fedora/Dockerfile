@@ -62,7 +62,7 @@ RUN cd /tmp \
  && make install \
  && rm -rf /tmp/cppnetlib
 
-## Library ▸ Core [0.2.5]
+## Open Space Toolkit ▸ Core [0.2.5]
 
 RUN mkdir -p /tmp/library-core \
  && cd /tmp/library-core \

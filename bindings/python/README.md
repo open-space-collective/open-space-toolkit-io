@@ -1,4 +1,4 @@
-# Library ▸ I/O ▸ Bindings ▸ Python
+# Open Space Toolkit ▸ I/O ▸ Bindings ▸ Python
 
 Addressing, networking, database connectors.
 
@@ -9,4 +9,4 @@ Addressing, networking, database connectors.
 [![PyPI version](https://badge.fury.io/py/LibraryIOPy.svg)](https://badge.fury.io/py/LibraryIOPy)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-[Library ▸ I/O](https://github.com/open-space-collective/library-io)
+[Open Space Toolkit ▸ I/O](https://github.com/open-space-collective/library-io)
