@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_IO_IP_TCP_HTTP_Request__
-#define __Library_IO_IP_TCP_HTTP_Request__
+#ifndef __OpenSpaceToolkit_IO_IP_TCP_HTTP_Request__
+#define __OpenSpaceToolkit_IO_IP_TCP_HTTP_Request__
 
 #include <Library/IO/URL.hpp>
 

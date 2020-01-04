@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_IO_IP_TCP_Client__
-#define __Library_IO_IP_TCP_Client__
+#ifndef __OpenSpaceToolkit_IO_IP_TCP_Client__
+#define __OpenSpaceToolkit_IO_IP_TCP_Client__
 
 #include <OpenSpaceToolkit/Core/Types/String.hpp>
 

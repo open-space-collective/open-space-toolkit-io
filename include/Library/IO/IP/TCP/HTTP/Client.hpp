@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_IO_IP_TCP_HTTP_Client__
-#define __Library_IO_IP_TCP_HTTP_Client__
+#ifndef __OpenSpaceToolkit_IO_IP_TCP_HTTP_Client__
+#define __OpenSpaceToolkit_IO_IP_TCP_HTTP_Client__
 
 #include <Library/IO/IP/TCP/HTTP/Response.hpp>
 #include <Library/IO/IP/TCP/HTTP/Request.hpp>

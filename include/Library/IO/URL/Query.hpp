@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_IO_URL_Query__
-#define __Library_IO_URL_Query__
+#ifndef __OpenSpaceToolkit_IO_URL_Query__
+#define __OpenSpaceToolkit_IO_URL_Query__
 
 #include <OpenSpaceToolkit/Core/Containers/Array.hpp>
 #include <OpenSpaceToolkit/Core/Types/String.hpp>

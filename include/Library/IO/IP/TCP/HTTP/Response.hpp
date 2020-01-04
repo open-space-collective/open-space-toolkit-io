@@ -7,8 +7,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __Library_IO_IP_TCP_HTTP_Response__
-#define __Library_IO_IP_TCP_HTTP_Response__
+#ifndef __OpenSpaceToolkit_IO_IP_TCP_HTTP_Response__
+#define __OpenSpaceToolkit_IO_IP_TCP_HTTP_Response__
 
 #include <OpenSpaceToolkit/Core/Types/String.hpp>
 
