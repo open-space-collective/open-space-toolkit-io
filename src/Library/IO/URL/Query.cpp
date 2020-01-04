@@ -14,7 +14,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace io
 {
@@ -94,7 +94,7 @@ bool                            Query::hasParameterWithName                 (   
 
     if (aName.isEmpty())
     {
-        throw library::core::error::runtime::Undefined("Name") ;
+        throw ostk::core::error::runtime::Undefined("Name") ;
     }
 
     for (const auto& parameter : parameters_)
@@ -116,7 +116,7 @@ String                          Query::getParameterWithName                 (   
 
     if (aName.isEmpty())
     {
-        throw library::core::error::runtime::Undefined("Name") ;
+        throw ostk::core::error::runtime::Undefined("Name") ;
     }
 
     for (const auto& parameter : parameters_)
@@ -129,7 +129,7 @@ String                          Query::getParameterWithName                 (   
 
     }
 
-    throw library::core::error::RuntimeError("No parameter with name [{}].", aName) ;
+    throw ostk::core::error::RuntimeError("No parameter with name [{}].", aName) ;
 
     return String::Empty() ;
 
@@ -171,7 +171,7 @@ void                            Query::addParameter                         (   
 
     if (!aParameter.isDefined())
     {
-        throw library::core::error::runtime::Undefined("Parameter") ;
+        throw ostk::core::error::runtime::Undefined("Parameter") ;
     }
 
     parameters_.add(aParameter) ;
@@ -191,7 +191,7 @@ Query                           Query::Parse                                (   
         return Query::Undefined() ;
     }
 
-    throw library::core::error::runtime::ToBeImplemented("Query :: Parse") ;
+    throw ostk::core::error::runtime::ToBeImplemented("Query :: Parse") ;
 
 }
 

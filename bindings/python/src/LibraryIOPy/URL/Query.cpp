@@ -18,9 +18,9 @@ inline void                     LibraryIOPy_URL_Query                       ( )
 
     using namespace boost::python ;
 
-    using library::core::ctnr::Array ;
+    using ostk::core::ctnr::Array ;
 
-    using library::io::url::Query ;
+    using ostk::io::url::Query ;
 
     scope in_Query = class_<Query>("Query", init<const Array<Query::Parameter>&>())
 

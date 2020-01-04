@@ -15,7 +15,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace io
 {
@@ -42,13 +42,13 @@ std::ostream&                   operator <<                                 (   
                                                                                 const   Request&                    aRequest                                    )
 {
 
-    library::core::utils::Print::Header(anOutputStream, "Request") ;
+    ostk::core::utils::Print::Header(anOutputStream, "Request") ;
 
-    library::core::utils::Print::Line(anOutputStream) << "Method:"              << Request::StringFromMethod(aRequest.method_) ;
-    library::core::utils::Print::Line(anOutputStream) << "URL:"                 << (aRequest.url_.isDefined() ? aRequest.url_.toString() : "Undefined") ;
-    library::core::utils::Print::Line(anOutputStream) << "Body:"                << aRequest.body_ ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Method:"              << Request::StringFromMethod(aRequest.method_) ;
+    ostk::core::utils::Print::Line(anOutputStream) << "URL:"                 << (aRequest.url_.isDefined() ? aRequest.url_.toString() : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Body:"                << aRequest.body_ ;
 
-    library::core::utils::Print::Footer(anOutputStream) ;
+    ostk::core::utils::Print::Footer(anOutputStream) ;
 
     return anOutputStream ;
 
@@ -64,7 +64,7 @@ Request::Method                 Request::getMethod                          ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Request") ;
+        throw ostk::core::error::runtime::Undefined("Request") ;
     }
 
     return method_ ;
@@ -76,7 +76,7 @@ URL                             Request::getUrl                             ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Request") ;
+        throw ostk::core::error::runtime::Undefined("Request") ;
     }
 
     return url_ ;
@@ -88,7 +88,7 @@ String                          Request::getBody                            ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Request") ;
+        throw ostk::core::error::runtime::Undefined("Request") ;
     }
 
     return body_ ;
@@ -108,7 +108,7 @@ Request                         Request::Get                                (   
 String                          Request::StringFromMethod                   (   const   Request::Method&            aMethod                                     )
 {
 
-    using library::core::ctnr::Map ;
+    using ostk::core::ctnr::Map ;
 
     static const Map< Request::Method, String> methodStringMap =
     {

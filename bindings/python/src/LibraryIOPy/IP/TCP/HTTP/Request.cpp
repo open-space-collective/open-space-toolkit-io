@@ -16,10 +16,10 @@ inline void                     LibraryIOPy_IP_TCP_HTTP_Request             ( )
 
     using namespace boost::python ;
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
-    using library::io::URL ;
-    using library::io::ip::tcp::http::Request ;
+    using ostk::io::URL ;
+    using ostk::io::ip::tcp::http::Request ;
 
     scope in_Request = class_<Request>("Request", init<const Request::Method&, const URL&, const String&>())
 

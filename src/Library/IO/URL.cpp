@@ -17,7 +17,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace io
 {
@@ -100,18 +100,18 @@ std::ostream&                   operator <<                                 (   
                                                                                 const   URL&                        aURL                                        )
 {
 
-    library::core::utils::Print::Header(anOutputStream, "URL") ;
+    ostk::core::utils::Print::Header(anOutputStream, "URL") ;
 
-    library::core::utils::Print::Line(anOutputStream) << "Scheme"               << (!aURL.scheme_.isEmpty() ? aURL.scheme_ : "Undefined") ;
-    library::core::utils::Print::Line(anOutputStream) << "User"                 << (!aURL.user_.isEmpty() ? aURL.user_ : "Undefined") ;
-    library::core::utils::Print::Line(anOutputStream) << "Password"             << (!aURL.password_.isEmpty() ? aURL.password_ : "Undefined") ;
-    library::core::utils::Print::Line(anOutputStream) << "Host"                 << (!aURL.host_.isEmpty() ? aURL.host_ : "Undefined") ;
-    library::core::utils::Print::Line(anOutputStream) << "Port"                 << (aURL.port_.isDefined() ? aURL.port_.toString() : "Undefined") ;
-    library::core::utils::Print::Line(anOutputStream) << "Path"                 << (aURL.path_.isEmpty() ? aURL.path_ : "Undefined") ;
-    library::core::utils::Print::Line(anOutputStream) << "Query"                << (aURL.query_.isDefined() ? aURL.query_.toString() : "Undefined") ;
-    library::core::utils::Print::Line(anOutputStream) << "Fragment"             << (aURL.fragment_.isEmpty() ? aURL.fragment_ : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Scheme"               << (!aURL.scheme_.isEmpty() ? aURL.scheme_ : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream) << "User"                 << (!aURL.user_.isEmpty() ? aURL.user_ : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Password"             << (!aURL.password_.isEmpty() ? aURL.password_ : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Host"                 << (!aURL.host_.isEmpty() ? aURL.host_ : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Port"                 << (aURL.port_.isDefined() ? aURL.port_.toString() : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Path"                 << (aURL.path_.isEmpty() ? aURL.path_ : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Query"                << (aURL.query_.isDefined() ? aURL.query_.toString() : "Undefined") ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Fragment"             << (aURL.fragment_.isEmpty() ? aURL.fragment_ : "Undefined") ;
 
-    library::core::utils::Print::Footer(anOutputStream) ;
+    ostk::core::utils::Print::Footer(anOutputStream) ;
 
     return anOutputStream ;
 
@@ -207,7 +207,7 @@ String                          URL::toString                               (   
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("URL") ;
+        throw ostk::core::error::runtime::Undefined("URL") ;
     }
 
     String urlString = String::Format("{}://", scheme_) ;
@@ -302,14 +302,14 @@ URL                             URL::Parse                                  (   
 
     if (aString.isEmpty())
     {
-        throw library::core::error::runtime::Undefined("URL") ;
+        throw ostk::core::error::runtime::Undefined("URL") ;
     }
 
     boost::network::uri::uri uri = { aString } ;
 
     if (!uri.is_valid())
 	{
-		throw library::core::error::runtime::Wrong(aString) ;
+		throw ostk::core::error::runtime::Wrong(aString) ;
 	}
 
     const String scheme = uri.scheme() ;
@@ -323,7 +323,7 @@ URL                             URL::Parse                                  (   
 
     if (scheme.isEmpty() || host.isEmpty())
     {
-        throw library::core::error::runtime::Wrong(aString) ;
+        throw ostk::core::error::runtime::Wrong(aString) ;
     }
 
     return { scheme, host, path, port, user, password, query, fragment } ;

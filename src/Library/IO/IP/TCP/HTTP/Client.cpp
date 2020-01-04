@@ -36,7 +36,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace io
 {
@@ -107,7 +107,7 @@ Response                        Client::Send                                (   
 
     if (!aRequest.isDefined())
     {
-        throw library::core::error::runtime::Undefined("Request") ;
+        throw ostk::core::error::runtime::Undefined("Request") ;
     }
 
     // std::cout << "curl_global_init(CURL_GLOBAL_SSL)..." << std::endl ;
@@ -122,7 +122,7 @@ Response                        Client::Send                                (   
 
     if (curlPtr == nullptr)
     {
-        throw library::core::error::RuntimeError("Error with cURL setup.") ;
+        throw ostk::core::error::RuntimeError("Error with cURL setup.") ;
     }
 
     // Set URL
@@ -175,7 +175,7 @@ Response                        Client::Send                                (   
 
     if (curlCode != CURLE_OK)
     {
-        throw library::core::error::RuntimeError("Error using cURL: [{}].", curl_easy_strerror(curlCode)) ;
+        throw ostk::core::error::RuntimeError("Error using cURL: [{}].", curl_easy_strerror(curlCode)) ;
     }
 
     long responseCode ;
@@ -395,13 +395,13 @@ Response                        Client::Send                                (   
     //     }
     //     else
     //     {
-    //         throw library::core::error::runtime::Wrong("URL scheme", aUrl.getScheme()) ;
+    //         throw ostk::core::error::runtime::Wrong("URL scheme", aUrl.getScheme()) ;
     //     }
 
     // }
     // catch (const std::exception& e)
     // {
-    //     throw library::core::error::RuntimeError(e.what()) ;
+    //     throw ostk::core::error::RuntimeError(e.what()) ;
     // }
 
     // return { responseStatusCode, responseBody } ;
@@ -417,16 +417,16 @@ File                            Client::Fetch                               (   
                                                                                 const   Directory&                  aDirectory                                  )
 {
 
-    using library::core::fs::Path ;
+    using ostk::core::fs::Path ;
 
     if (!aUrl.isDefined())
     {
-        throw library::core::error::runtime::Undefined("URL") ;
+        throw ostk::core::error::runtime::Undefined("URL") ;
     }
 
     if (!aDirectory.isDefined())
     {
-        throw library::core::error::runtime::Undefined("Directory") ;
+        throw ostk::core::error::runtime::Undefined("Directory") ;
     }
 
     File file = File::Undefined() ;
@@ -437,7 +437,7 @@ File                            Client::Fetch                               (   
 
     if (curlPtr == nullptr)
     {
-        throw library::core::error::RuntimeError("Error with cURL setup.") ;
+        throw ostk::core::error::RuntimeError("Error with cURL setup.") ;
     }
 
     if (!aDirectory.exists())
@@ -459,7 +459,7 @@ File                            Client::Fetch                               (   
 
     if (!filePtr)
     {
-        throw library::core::error::RuntimeError("Cannot create file [" + file.toString() + "].") ;
+        throw ostk::core::error::RuntimeError("Cannot create file [" + file.toString() + "].") ;
     }
 
     curl_easy_setopt(curlPtr, CURLOPT_WRITEDATA, filePtr) ;
@@ -493,7 +493,7 @@ File                            Client::Fetch                               (   
 
         if (fclose(filePtr) == EOF)
         {
-            throw library::core::error::RuntimeError("Error when closing the file.") ;
+            throw ostk::core::error::RuntimeError("Error when closing the file.") ;
         }
 
         filePtr = nullptr ;
@@ -510,7 +510,7 @@ File                            Client::Fetch                               (   
 
         file = File::Undefined() ;
 
-        throw library::core::error::RuntimeError("Error using cURL to fetch file at URL [{}]: [{}].", aUrl.toString(), curl_easy_strerror(curlCode)) ;
+        throw ostk::core::error::RuntimeError("Error using cURL to fetch file at URL [{}]: [{}].", aUrl.toString(), curl_easy_strerror(curlCode)) ;
 
     }
 
@@ -523,21 +523,21 @@ void                            Client::List                                (   
                                                                                 const   bool                        showNamesOnly                               )
 {
 
-    using library::core::fs::Path ;
+    using ostk::core::fs::Path ;
 
     if (!aUrl.isDefined())
     {
-        throw library::core::error::runtime::Undefined("URL") ;
+        throw ostk::core::error::runtime::Undefined("URL") ;
     }
 
     if (!aFile.isDefined())
     {
-        throw library::core::error::runtime::Undefined("File") ;
+        throw ostk::core::error::runtime::Undefined("File") ;
     }
 
     if (aFile.exists())
     {
-        throw library::core::error::RuntimeError("File [{}] already exists.", aFile.toString()) ;
+        throw ostk::core::error::RuntimeError("File [{}] already exists.", aFile.toString()) ;
     }
 
     // Setup
@@ -546,7 +546,7 @@ void                            Client::List                                (   
 
     if (curlPtr == nullptr)
     {
-        throw library::core::error::RuntimeError("Error with cURL setup.") ;
+        throw ostk::core::error::RuntimeError("Error with cURL setup.") ;
     }
 
     // Set URL
@@ -561,7 +561,7 @@ void                            Client::List                                (   
 
     if (!filePtr)
     {
-        throw library::core::error::RuntimeError("Cannot create file [" + aFile.toString() + "].") ;
+        throw ostk::core::error::RuntimeError("Cannot create file [" + aFile.toString() + "].") ;
     }
 
     curl_easy_setopt(curlPtr, CURLOPT_FILE, filePtr) ;
@@ -594,7 +594,7 @@ void                            Client::List                                (   
 
         if (fclose(filePtr) == EOF)
         {
-            throw library::core::error::RuntimeError("Error when closing the file.") ;
+            throw ostk::core::error::RuntimeError("Error when closing the file.") ;
         }
 
         filePtr = nullptr ;
@@ -609,7 +609,7 @@ void                            Client::List                                (   
             File(aFile).remove() ;
         }
 
-        throw library::core::error::RuntimeError("Error using cURL to list files at URL [{}]: [{}].", aUrl.toString(), curl_easy_strerror(curlCode)) ;
+        throw ostk::core::error::RuntimeError("Error using cURL to list files at URL [{}]: [{}].", aUrl.toString(), curl_easy_strerror(curlCode)) ;
 
     }
 

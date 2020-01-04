@@ -13,7 +13,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS (LibraryIOPy_URL_toString_overloads, library::io::URL::toString, 0, 1)
+BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS (LibraryIOPy_URL_toString_overloads, ostk::io::URL::toString, 0, 1)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -22,11 +22,11 @@ inline void                     LibraryIOPy_URL                             ( )
 
     using namespace boost::python ;
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
 
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     scope in_URL = class_<URL>("URL", init<const String&, const String&, const String&, const Integer&, const String&, const String&, const Query&, const String&>())
 

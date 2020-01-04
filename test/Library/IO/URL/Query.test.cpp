@@ -19,7 +19,7 @@
 TEST (Library_IO_URL_Query, Constructor)
 {
 
-    using library::io::url::Query ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -32,7 +32,7 @@ TEST (Library_IO_URL_Query, Constructor)
 TEST (Library_IO_URL_Query, EqualToOperator)
 {
 
-    using library::io::url::Query ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -85,7 +85,7 @@ TEST (Library_IO_URL_Query, EqualToOperator)
 TEST (Library_IO_URL_Query, NotEqualToOperator)
 {
 
-    using library::io::url::Query ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -138,7 +138,7 @@ TEST (Library_IO_URL_Query, NotEqualToOperator)
 TEST (Library_IO_URL_Query, IsDefined)
 {
 
-    using library::io::url::Query ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -159,7 +159,7 @@ TEST (Library_IO_URL_Query, IsDefined)
 TEST (Library_IO_URL_Query, HasParameterWithName)
 {
 
-    using library::io::url::Query ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -187,7 +187,7 @@ TEST (Library_IO_URL_Query, HasParameterWithName)
 TEST (Library_IO_URL_Query, GetParameterWithName)
 {
 
-    using library::io::url::Query ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -213,7 +213,7 @@ TEST (Library_IO_URL_Query, GetParameterWithName)
 TEST (Library_IO_URL_Query, ToString)
 {
 
-    using library::io::url::Query ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -242,9 +242,9 @@ TEST (Library_IO_URL_Query, ToString)
 TEST (Library_IO_URL_Query, ConstIterator)
 {
 
-    using library::core::types::Index ;
+    using ostk::core::types::Index ;
 
-    using library::io::url::Query ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -279,7 +279,7 @@ TEST (Library_IO_URL_Query, ConstIterator)
 TEST (Library_IO_URL_Query, AddParameter)
 {
 
-    using library::io::url::Query ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -298,7 +298,7 @@ TEST (Library_IO_URL_Query, AddParameter)
 TEST (Library_IO_URL_Query, Undefined)
 {
 
-    using library::io::url::Query ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -312,7 +312,7 @@ TEST (Library_IO_URL_Query, Undefined)
 TEST (Library_IO_URL_Query, Parse)
 {
 
-    using library::io::url::Query ;
+    using ostk::io::url::Query ;
 
     {
 

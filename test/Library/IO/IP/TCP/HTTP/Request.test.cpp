@@ -16,10 +16,10 @@
 TEST (Library_IO_IP_TCP_HTTP_Request, Constructor)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
-    using library::io::URL ;
-    using library::io::ip::tcp::http::Request ;
+    using ostk::io::URL ;
+    using ostk::io::ip::tcp::http::Request ;
 
     {
 
@@ -36,10 +36,10 @@ TEST (Library_IO_IP_TCP_HTTP_Request, Constructor)
 TEST (Library_IO_IP_TCP_HTTP_Request, StreamOperator)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
-    using library::io::URL ;
-    using library::io::ip::tcp::http::Request ;
+    using ostk::io::URL ;
+    using ostk::io::ip::tcp::http::Request ;
 
     {
 
@@ -62,10 +62,10 @@ TEST (Library_IO_IP_TCP_HTTP_Request, StreamOperator)
 TEST (Library_IO_IP_TCP_HTTP_Request, IsDefined)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
-    using library::io::URL ;
-    using library::io::ip::tcp::http::Request ;
+    using ostk::io::URL ;
+    using ostk::io::ip::tcp::http::Request ;
 
     {
 
@@ -90,10 +90,10 @@ TEST (Library_IO_IP_TCP_HTTP_Request, IsDefined)
 TEST (Library_IO_IP_TCP_HTTP_Request, GetMethod)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
-    using library::io::URL ;
-    using library::io::ip::tcp::http::Request ;
+    using ostk::io::URL ;
+    using ostk::io::ip::tcp::http::Request ;
 
     {
 
@@ -118,10 +118,10 @@ TEST (Library_IO_IP_TCP_HTTP_Request, GetMethod)
 TEST (Library_IO_IP_TCP_HTTP_Request, GetUrl)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
-    using library::io::URL ;
-    using library::io::ip::tcp::http::Request ;
+    using ostk::io::URL ;
+    using ostk::io::ip::tcp::http::Request ;
 
     {
 
@@ -146,10 +146,10 @@ TEST (Library_IO_IP_TCP_HTTP_Request, GetUrl)
 TEST (Library_IO_IP_TCP_HTTP_Request, GetBody)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
-    using library::io::URL ;
-    using library::io::ip::tcp::http::Request ;
+    using ostk::io::URL ;
+    using ostk::io::ip::tcp::http::Request ;
 
     {
 
@@ -174,7 +174,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, GetBody)
 TEST (Library_IO_IP_TCP_HTTP_Request, Undefined)
 {
 
-    using library::io::ip::tcp::http::Request ;
+    using ostk::io::ip::tcp::http::Request ;
 
     {
 
@@ -188,8 +188,8 @@ TEST (Library_IO_IP_TCP_HTTP_Request, Undefined)
 TEST (Library_IO_IP_TCP_HTTP_Request, Get)
 {
 
-    using library::io::URL ;
-    using library::io::ip::tcp::http::Request ;
+    using ostk::io::URL ;
+    using ostk::io::ip::tcp::http::Request ;
 
     {
 
@@ -204,7 +204,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, Get)
 TEST (Library_IO_IP_TCP_HTTP_Request, StringFromMethod)
 {
 
-    using library::io::ip::tcp::http::Request ;
+    using ostk::io::ip::tcp::http::Request ;
 
     {
 

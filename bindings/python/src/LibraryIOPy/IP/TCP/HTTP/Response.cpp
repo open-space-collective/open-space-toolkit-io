@@ -16,9 +16,9 @@ inline void                     LibraryIOPy_IP_TCP_HTTP_Response            ( )
 
     using namespace boost::python ;
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
-    using library::io::ip::tcp::http::Response ;
+    using ostk::io::ip::tcp::http::Response ;
 
     scope in_Response = class_<Response>("Response", init<const Response::StatusCode&, const String&>())
 

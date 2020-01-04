@@ -16,9 +16,9 @@
 TEST (Library_IO_IP_TCP_HTTP_Response, Constructor)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
-    using library::io::ip::tcp::http::Response ;
+    using ostk::io::ip::tcp::http::Response ;
 
     {
 
@@ -34,9 +34,9 @@ TEST (Library_IO_IP_TCP_HTTP_Response, Constructor)
 TEST (Library_IO_IP_TCP_HTTP_Response, StreamOperator)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
-    using library::io::ip::tcp::http::Response ;
+    using ostk::io::ip::tcp::http::Response ;
 
     {
 
@@ -58,9 +58,9 @@ TEST (Library_IO_IP_TCP_HTTP_Response, StreamOperator)
 TEST (Library_IO_IP_TCP_HTTP_Response, IsDefined)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
-    using library::io::ip::tcp::http::Response ;
+    using ostk::io::ip::tcp::http::Response ;
 
     {
 
@@ -84,9 +84,9 @@ TEST (Library_IO_IP_TCP_HTTP_Response, IsDefined)
 TEST (Library_IO_IP_TCP_HTTP_Response, IsOk)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
-    using library::io::ip::tcp::http::Response ;
+    using ostk::io::ip::tcp::http::Response ;
 
     {
 
@@ -121,9 +121,9 @@ TEST (Library_IO_IP_TCP_HTTP_Response, IsOk)
 TEST (Library_IO_IP_TCP_HTTP_Response, GetStatusCode)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
-    using library::io::ip::tcp::http::Response ;
+    using ostk::io::ip::tcp::http::Response ;
 
     {
 
@@ -147,9 +147,9 @@ TEST (Library_IO_IP_TCP_HTTP_Response, GetStatusCode)
 TEST (Library_IO_IP_TCP_HTTP_Response, GetBody)
 {
 
-    using library::core::types::String ;
+    using ostk::core::types::String ;
 
-    using library::io::ip::tcp::http::Response ;
+    using ostk::io::ip::tcp::http::Response ;
 
     {
 
@@ -173,7 +173,7 @@ TEST (Library_IO_IP_TCP_HTTP_Response, GetBody)
 TEST (Library_IO_IP_TCP_HTTP_Response, Undefined)
 {
 
-    using library::io::ip::tcp::http::Response ;
+    using ostk::io::ip::tcp::http::Response ;
 
     {
 
@@ -187,7 +187,7 @@ TEST (Library_IO_IP_TCP_HTTP_Response, Undefined)
 TEST (Library_IO_IP_TCP_HTTP_Response, StringFromStatusCode)
 {
 
-    using library::io::ip::tcp::http::Response ;
+    using ostk::io::ip::tcp::http::Response ;
 
     {
 

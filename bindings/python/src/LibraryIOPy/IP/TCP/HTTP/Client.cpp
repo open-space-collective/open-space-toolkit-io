@@ -16,7 +16,7 @@ inline void                     LibraryIOPy_IP_TCP_HTTP_Client              ( )
 
     using namespace boost::python ;
 
-    using library::io::ip::tcp::http::Client ;
+    using ostk::io::ip::tcp::http::Client ;
 
     scope in_Client = class_<Client>("Client", no_init)
 

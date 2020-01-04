@@ -16,10 +16,10 @@
 TEST (Library_IO_IP_TCP_HTTP_Client, Send)
 {
 
-    using library::io::URL ;
-    using library::io::ip::tcp::http::Request ;
-    using library::io::ip::tcp::http::Response ;
-    using library::io::ip::tcp::http::Client ;
+    using ostk::io::URL ;
+    using ostk::io::ip::tcp::http::Request ;
+    using ostk::io::ip::tcp::http::Response ;
+    using ostk::io::ip::tcp::http::Client ;
 
     {
 
@@ -43,9 +43,9 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Send)
 TEST (Library_IO_IP_TCP_HTTP_Client, Get)
 {
 
-    using library::io::URL ;
-    using library::io::ip::tcp::http::Response ;
-    using library::io::ip::tcp::http::Client ;
+    using ostk::io::URL ;
+    using ostk::io::ip::tcp::http::Response ;
+    using ostk::io::ip::tcp::http::Client ;
 
     {
 
@@ -106,12 +106,12 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Get)
 TEST (Library_IO_IP_TCP_HTTP_Client, Fetch)
 {
 
-    using library::core::fs::Path ;
-    using library::core::fs::File ;
-    using library::core::fs::Directory ;
+    using ostk::core::fs::Path ;
+    using ostk::core::fs::File ;
+    using ostk::core::fs::Directory ;
 
-    using library::io::URL ;
-    using library::io::ip::tcp::http::Client ;
+    using ostk::io::URL ;
+    using ostk::io::ip::tcp::http::Client ;
 
     {
 
@@ -146,12 +146,12 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Fetch)
 // TEST (Library_IO_IP_TCP_HTTP_Client, List)
 // {
 
-//     using library::core::fs::Path ;
-//     using library::core::fs::File ;
-//     using library::core::fs::Directory ;
+//     using ostk::core::fs::Path ;
+//     using ostk::core::fs::File ;
+//     using ostk::core::fs::Directory ;
 
-//     using library::io::URL ;
-//     using library::io::ip::tcp::http::Client ;
+//     using ostk::io::URL ;
+//     using ostk::io::ip::tcp::http::Client ;
 
 //     {
 

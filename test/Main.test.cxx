@@ -17,7 +17,7 @@ int                             main                                        (   
 
     ::testing::InitGoogleTest(&argc, argv) ;
 
-    ::testing::AddGlobalTestEnvironment(new library::io::test::Environment(argc >= 2 ? argv[1] : "")) ;
+    ::testing::AddGlobalTestEnvironment(new ostk::io::test::Environment(argc >= 2 ? argv[1] : "")) ;
 
     return RUN_ALL_TESTS() ;
 

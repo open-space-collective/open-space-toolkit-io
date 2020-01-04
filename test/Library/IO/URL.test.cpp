@@ -16,10 +16,10 @@
 TEST (Library_IO_URL, Constructor)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -50,10 +50,10 @@ TEST (Library_IO_URL, Constructor)
 TEST (Library_IO_URL, EqualToOperator)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -105,10 +105,10 @@ TEST (Library_IO_URL, EqualToOperator)
 TEST (Library_IO_URL, NotEqualToOperator)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -160,7 +160,7 @@ TEST (Library_IO_URL, NotEqualToOperator)
 TEST (Library_IO_URL, AdditionOperator)
 {
 
-    using library::io::URL ;
+    using ostk::io::URL ;
 
     {
 
@@ -181,7 +181,7 @@ TEST (Library_IO_URL, AdditionOperator)
 TEST (Library_IO_URL, AdditionAssignmentOperator)
 {
 
-    using library::io::URL ;
+    using ostk::io::URL ;
 
     {
 
@@ -204,10 +204,10 @@ TEST (Library_IO_URL, AdditionAssignmentOperator)
 TEST (Library_IO_URL, StreamOperator)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -235,10 +235,10 @@ TEST (Library_IO_URL, StreamOperator)
 TEST (Library_IO_URL, IsDefined)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -275,10 +275,10 @@ TEST (Library_IO_URL, IsDefined)
 TEST (Library_IO_URL, AccessScheme)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -302,10 +302,10 @@ TEST (Library_IO_URL, AccessScheme)
 TEST (Library_IO_URL, AccessHost)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -329,10 +329,10 @@ TEST (Library_IO_URL, AccessHost)
 TEST (Library_IO_URL, AccessPath)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -356,10 +356,10 @@ TEST (Library_IO_URL, AccessPath)
 TEST (Library_IO_URL, AccessPort)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -383,10 +383,10 @@ TEST (Library_IO_URL, AccessPort)
 TEST (Library_IO_URL, AccessUser)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -410,10 +410,10 @@ TEST (Library_IO_URL, AccessUser)
 TEST (Library_IO_URL, AccessPassword)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -437,10 +437,10 @@ TEST (Library_IO_URL, AccessPassword)
 TEST (Library_IO_URL, AccessQuery)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -464,10 +464,10 @@ TEST (Library_IO_URL, AccessQuery)
 TEST (Library_IO_URL, AccessFragment)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -491,10 +491,10 @@ TEST (Library_IO_URL, AccessFragment)
 TEST (Library_IO_URL, GetScheme)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -518,10 +518,10 @@ TEST (Library_IO_URL, GetScheme)
 TEST (Library_IO_URL, GetHost)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -545,10 +545,10 @@ TEST (Library_IO_URL, GetHost)
 TEST (Library_IO_URL, GetPath)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -572,10 +572,10 @@ TEST (Library_IO_URL, GetPath)
 TEST (Library_IO_URL, GetPort)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -599,10 +599,10 @@ TEST (Library_IO_URL, GetPort)
 TEST (Library_IO_URL, GetUser)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -626,10 +626,10 @@ TEST (Library_IO_URL, GetUser)
 TEST (Library_IO_URL, GetPassword)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -653,10 +653,10 @@ TEST (Library_IO_URL, GetPassword)
 TEST (Library_IO_URL, GetQuery)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -680,10 +680,10 @@ TEST (Library_IO_URL, GetQuery)
 TEST (Library_IO_URL, GetFragment)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -707,10 +707,10 @@ TEST (Library_IO_URL, GetFragment)
 TEST (Library_IO_URL, ToString)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -757,10 +757,10 @@ TEST (Library_IO_URL, ToString)
 TEST (Library_IO_URL, SetScheme)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -790,10 +790,10 @@ TEST (Library_IO_URL, SetScheme)
 TEST (Library_IO_URL, SetHost)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -823,10 +823,10 @@ TEST (Library_IO_URL, SetHost)
 TEST (Library_IO_URL, SetPath)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -856,10 +856,10 @@ TEST (Library_IO_URL, SetPath)
 TEST (Library_IO_URL, SetPort)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -889,10 +889,10 @@ TEST (Library_IO_URL, SetPort)
 TEST (Library_IO_URL, SetUser)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -922,10 +922,10 @@ TEST (Library_IO_URL, SetUser)
 TEST (Library_IO_URL, SetPassword)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -955,10 +955,10 @@ TEST (Library_IO_URL, SetPassword)
 TEST (Library_IO_URL, SetQuery)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -988,10 +988,10 @@ TEST (Library_IO_URL, SetQuery)
 TEST (Library_IO_URL, SetFragment)
 {
 
-    using library::core::types::Integer ;
-    using library::core::types::String ;
-    using library::io::URL ;
-    using library::io::url::Query ;
+    using ostk::core::types::Integer ;
+    using ostk::core::types::String ;
+    using ostk::io::URL ;
+    using ostk::io::url::Query ;
 
     {
 
@@ -1021,7 +1021,7 @@ TEST (Library_IO_URL, SetFragment)
 TEST (Library_IO_URL, Undefined)
 {
 
-    using library::io::URL ;
+    using ostk::io::URL ;
 
     {
 
@@ -1040,10 +1040,10 @@ TEST (Library_IO_URL, Undefined)
 TEST (Library_IO_URL, Parse)
 {
 
-    using library::core::types::String ;
-    using library::core::ctnr::Array ;
+    using ostk::core::types::String ;
+    using ostk::core::ctnr::Array ;
 
-    using library::io::URL ;
+    using ostk::io::URL ;
 
     {
 

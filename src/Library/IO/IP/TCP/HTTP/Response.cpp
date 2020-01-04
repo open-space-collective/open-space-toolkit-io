@@ -15,7 +15,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-namespace library
+namespace ostk
 {
 namespace io
 {
@@ -40,12 +40,12 @@ std::ostream&                   operator <<                                 (   
                                                                                 const   Response&                   aResponse                                   )
 {
 
-    library::core::utils::Print::Header(anOutputStream, "Response") ;
+    ostk::core::utils::Print::Header(anOutputStream, "Response") ;
 
-    library::core::utils::Print::Line(anOutputStream) << "Status code:"         << String::Format("{} - {}", static_cast<uint>(aResponse.statusCode_), Response::StringFromStatusCode(aResponse.statusCode_)) ;
-    library::core::utils::Print::Line(anOutputStream) << "Body:"                << aResponse.body_ ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Status code:"         << String::Format("{} - {}", static_cast<uint>(aResponse.statusCode_), Response::StringFromStatusCode(aResponse.statusCode_)) ;
+    ostk::core::utils::Print::Line(anOutputStream) << "Body:"                << aResponse.body_ ;
 
-    library::core::utils::Print::Footer(anOutputStream) ;
+    ostk::core::utils::Print::Footer(anOutputStream) ;
 
     return anOutputStream ;
 
@@ -61,7 +61,7 @@ bool                            Response::isOk                              ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Response") ;
+        throw ostk::core::error::runtime::Undefined("Response") ;
     }
 
     return statusCode_ == Response::StatusCode::Ok ;
@@ -73,7 +73,7 @@ Response::StatusCode            Response::getStatusCode                     ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Response") ;
+        throw ostk::core::error::runtime::Undefined("Response") ;
     }
 
     return statusCode_ ;
@@ -85,7 +85,7 @@ String                          Response::getBody                           ( ) 
 
     if (!this->isDefined())
     {
-        throw library::core::error::runtime::Undefined("Response") ;
+        throw ostk::core::error::runtime::Undefined("Response") ;
     }
 
     return body_ ;
@@ -100,7 +100,7 @@ Response                        Response::Undefined                         ( )
 String                          Response::StringFromStatusCode              (   const   Response::StatusCode&       aStatusCode                                 )
 {
 
-    using library::core::ctnr::Map ;
+    using ostk::core::ctnr::Map ;
 
     static const Map<Response::StatusCode, String> statusCodeStringMap =
     {
