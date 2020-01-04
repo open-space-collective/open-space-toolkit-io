@@ -23,7 +23,7 @@ setuptools.setup(
     description = 'Addressing, networking, database connectors.',
     long_description = long_description,
     long_description_content_type = 'text/markdown',
-    url = 'https://github.com/open-space-collective/library-io',
+    url = 'https://github.com/open-space-collective/open-space-toolkit-io',
     classifiers = (
         'Development Status :: 3 - Alpha',
         'Programming Language :: Python :: 3',
@@ -35,7 +35,7 @@ setuptools.setup(
     package_data = {
         '': [
             '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/LibraryIOPy.so',
-            '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/liblibrary-io.so.0',
+            '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libopen-space-toolkit-io.so.0',
             '${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/test'
         ]
     },

@@ -7,7 +7,7 @@
 
 ################################################################################################################################################################
 
-export project_name := library-io
+export project_name := open-space-toolkit-io
 export project_version := $(shell git describe --tags --always)
 export project_directory := $(shell git rev-parse --show-toplevel)
 

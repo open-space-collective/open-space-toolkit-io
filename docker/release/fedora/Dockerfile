@@ -9,7 +9,7 @@
 
 ARG VERSION
 
-FROM openspacecollective/library-io-development:${VERSION}-fedora as cpp-builder
+FROM openspacecollective/open-space-toolkit-io-development:${VERSION}-fedora as cpp-builder
 
 RUN mkdir -p /app/bin /app/build /app/lib
 
@@ -39,11 +39,11 @@ FROM fedora:30 as cpp-release
 ENV LD_LIBRARY_PATH /usr/local/lib
 
 COPY --from=cpp-builder /usr/local/include/Library /usr/local/include/Library
-COPY --from=cpp-builder /usr/local/lib/liblibrary-io.* /usr/local/lib/
+COPY --from=cpp-builder /usr/local/lib/libopen-space-toolkit-io.* /usr/local/lib/
 COPY --from=cpp-builder /usr/local/share/Library /usr/local/share/Library
 COPY --from=cpp-builder /usr/local/test/Library /usr/local/test/Library
 
-ENTRYPOINT ["/usr/local/test/Library/IO/library-io.test"]
+ENTRYPOINT ["/usr/local/test/Library/IO/open-space-toolkit-io.test"]
 
 ################################################################################################################################################################
 
