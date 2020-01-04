@@ -63,8 +63,10 @@ RUN apt-get update -y \
  && apt-get install -y libcurl4-openssl-dev libssl-dev \
  && rm -rf /var/lib/apt/lists/*
 
+RUN pip install ipython
+
 COPY --from=python-builder /usr/local/lib/python3.7/site-packages/Library /usr/local/lib/python3.7/site-packages/Library
 
-ENTRYPOINT ["python"]
+ENTRYPOINT ["ipython"]
 
 ################################################################################################################################################################
