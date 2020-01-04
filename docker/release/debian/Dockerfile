@@ -1,6 +1,6 @@
 ################################################################################################################################################################
 
-# @project        Library ▸ I/O
+# @project        Open Space Toolkit ▸ I/O
 # @file           docker/release/debian/Dockerfile
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0

@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/// @project        Library ▸ I/O
+/// @project        Open Space Toolkit ▸ I/O
 /// @file           LibraryIOPy/Utilities/IterableConverter.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
