@@ -1,5 +1,5 @@
 {
-    "name": "Library I/O",
+    "name": "Open Space Toolkit I/O",
     "extensions": [
         "ms-vscode.cpptools",
         "ms-python.python",
