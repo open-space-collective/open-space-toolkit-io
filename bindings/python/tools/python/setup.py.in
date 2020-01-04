@@ -30,7 +30,7 @@ setuptools.setup(
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: POSIX :: Linux'
     ),
-    keywords = 'open-space-collective library io',
+    keywords = 'open-space-collective open-space-toolkit io',
     packages = setuptools.find_packages(),
     package_data = {
         '': [
