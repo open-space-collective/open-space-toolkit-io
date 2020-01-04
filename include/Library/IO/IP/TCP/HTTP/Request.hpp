@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ I/O
-/// @file           Library/IO/IP/TCP/HTTP/Request.hpp
+/// @file           OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,7 +10,7 @@
 #ifndef __OpenSpaceToolkit_IO_IP_TCP_HTTP_Request__
 #define __OpenSpaceToolkit_IO_IP_TCP_HTTP_Request__
 
-#include <Library/IO/URL.hpp>
+#include <OpenSpaceToolkit/IO/URL.hpp>
 
 #include <OpenSpaceToolkit/Core/Types/String.hpp>
 

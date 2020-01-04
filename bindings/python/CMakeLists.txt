@@ -12,7 +12,7 @@
 SET (PROJECT_NAME "LibraryIOPy")
 SET (PROJECT_DESCRIPTION "Python bindings for Library / IO.")
 SET (PROJECT_PACKAGE_NAME "LibraryIOPy")
-SET (PROJECT_PATH "Library/IO")
+SET (PROJECT_PATH "OpenSpaceToolkit/IO")
 SET (PROJECT_LICENSE "Apache License 2.0")
 SET (PROJECT_VENDOR_ID "com.bremond.lucas")
 SET (PROJECT_VENDOR_NAME "Lucas Brémond")

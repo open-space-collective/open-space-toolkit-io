@@ -11,7 +11,7 @@
 
 SET (PROJECT_NAME "LibraryIO")
 SET (PROJECT_DESCRIPTION "I/O library.")
-SET (PROJECT_PATH "Library/IO")
+SET (PROJECT_PATH "OpenSpaceToolkit/IO")
 SET (PROJECT_PACKAGE_NAME "open-space-toolkit-io")
 SET (PROJECT_LICENSE "Apache License 2.0")
 SET (PROJECT_VENDOR_ID "org.open-space-collective")

@@ -9,7 +9,7 @@
 
 SET (LibraryIO_ROOT_DIR ${LibraryIO_ROOT_DIR} @CMAKE_INSTALL_PREFIX@)
 
-FIND_PATH (LibraryIO_INCLUDE_DIR "Library/IO/URL.hpp" PATHS ${LibraryIO_ROOT_DIR} PATH_SUFFIXES "include" NO_DEFAULT_PATH)
+FIND_PATH (LibraryIO_INCLUDE_DIR "OpenSpaceToolkit/IO/URL.hpp" PATHS ${LibraryIO_ROOT_DIR} PATH_SUFFIXES "include" NO_DEFAULT_PATH)
 FIND_LIBRARY (LibraryIO_LIBRARY NAMES "libopen-space-toolkit-io.so" PATHS ${LibraryIO_ROOT_DIR} PATH_SUFFIXES "lib" NO_DEFAULT_PATH)
 
 # MESSAGE (STATUS "LibraryIO_ROOT_DIR = ${LibraryIO_ROOT_DIR}")
@@ -19,7 +19,7 @@ FIND_LIBRARY (LibraryIO_LIBRARY NAMES "libopen-space-toolkit-io.so" PATHS ${Libr
 
 IF (LibraryIO_INCLUDE_DIR)
 
-    SET (LibraryIO_INCLUDE_DIRS ${LibraryIO_INCLUDE_DIR} ${LibraryIO_INCLUDE_DIR}/Library/IO)
+    SET (LibraryIO_INCLUDE_DIRS ${LibraryIO_INCLUDE_DIR} ${LibraryIO_INCLUDE_DIR}/OpenSpaceToolkit/IO)
     SET (LibraryIO_LIBRARIES ${LibraryIO_LIBRARY})
 
     SET (LibraryIO_FOUND TRUE)

@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ I/O
-/// @file           Library/IO/IP/TCP/HTTP/Client.hpp
+/// @file           OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,9 +10,9 @@
 #ifndef __OpenSpaceToolkit_IO_IP_TCP_HTTP_Client__
 #define __OpenSpaceToolkit_IO_IP_TCP_HTTP_Client__
 
-#include <Library/IO/IP/TCP/HTTP/Response.hpp>
-#include <Library/IO/IP/TCP/HTTP/Request.hpp>
-#include <Library/IO/URL.hpp>
+#include <OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp>
+#include <OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp>
+#include <OpenSpaceToolkit/IO/URL.hpp>
 
 #include <OpenSpaceToolkit/Core/FileSystem/Directory.hpp>
 #include <OpenSpaceToolkit/Core/FileSystem/File.hpp>

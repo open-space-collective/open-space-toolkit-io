@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ I/O
-/// @file           Library/IO/URL.hpp
+/// @file           OpenSpaceToolkit/IO/URL.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -10,7 +10,7 @@
 #ifndef __OpenSpaceToolkit_IO_URL__
 #define __OpenSpaceToolkit_IO_URL__
 
-#include <Library/IO/URL/Query.hpp>
+#include <OpenSpaceToolkit/IO/URL/Query.hpp>
 
 #include <OpenSpaceToolkit/Core/Types/String.hpp>
 #include <OpenSpaceToolkit/Core/Types/Integer.hpp>
