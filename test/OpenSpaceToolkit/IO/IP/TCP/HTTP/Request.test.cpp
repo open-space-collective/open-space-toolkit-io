@@ -13,7 +13,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-TEST (Library_IO_IP_TCP_HTTP_Request, Constructor)
+TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, Constructor)
 {
 
     using ostk::core::types::String ;
@@ -33,7 +33,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, Constructor)
 
 }
 
-TEST (Library_IO_IP_TCP_HTTP_Request, StreamOperator)
+TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, StreamOperator)
 {
 
     using ostk::core::types::String ;
@@ -59,7 +59,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, StreamOperator)
 
 }
 
-TEST (Library_IO_IP_TCP_HTTP_Request, IsDefined)
+TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, IsDefined)
 {
 
     using ostk::core::types::String ;
@@ -87,7 +87,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, IsDefined)
 
 }
 
-TEST (Library_IO_IP_TCP_HTTP_Request, GetMethod)
+TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetMethod)
 {
 
     using ostk::core::types::String ;
@@ -115,7 +115,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, GetMethod)
 
 }
 
-TEST (Library_IO_IP_TCP_HTTP_Request, GetUrl)
+TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetUrl)
 {
 
     using ostk::core::types::String ;
@@ -143,7 +143,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, GetUrl)
 
 }
 
-TEST (Library_IO_IP_TCP_HTTP_Request, GetBody)
+TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetBody)
 {
 
     using ostk::core::types::String ;
@@ -171,7 +171,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, GetBody)
 
 }
 
-TEST (Library_IO_IP_TCP_HTTP_Request, Undefined)
+TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, Undefined)
 {
 
     using ostk::io::ip::tcp::http::Request ;
@@ -185,7 +185,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, Undefined)
 
 }
 
-TEST (Library_IO_IP_TCP_HTTP_Request, Get)
+TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, Get)
 {
 
     using ostk::io::URL ;
@@ -201,7 +201,7 @@ TEST (Library_IO_IP_TCP_HTTP_Request, Get)
 
 }
 
-TEST (Library_IO_IP_TCP_HTTP_Request, StringFromMethod)
+TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, StringFromMethod)
 {
 
     using ostk::io::ip::tcp::http::Request ;

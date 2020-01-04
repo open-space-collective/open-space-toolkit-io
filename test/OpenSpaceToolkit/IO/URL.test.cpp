@@ -13,7 +13,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-TEST (Library_IO_URL, Constructor)
+TEST (OpenSpaceToolkit_IO_URL, Constructor)
 {
 
     using ostk::core::types::Integer ;
@@ -47,7 +47,7 @@ TEST (Library_IO_URL, Constructor)
 
 }
 
-TEST (Library_IO_URL, EqualToOperator)
+TEST (OpenSpaceToolkit_IO_URL, EqualToOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -102,7 +102,7 @@ TEST (Library_IO_URL, EqualToOperator)
 
 }
 
-TEST (Library_IO_URL, NotEqualToOperator)
+TEST (OpenSpaceToolkit_IO_URL, NotEqualToOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -157,7 +157,7 @@ TEST (Library_IO_URL, NotEqualToOperator)
 
 }
 
-TEST (Library_IO_URL, AdditionOperator)
+TEST (OpenSpaceToolkit_IO_URL, AdditionOperator)
 {
 
     using ostk::io::URL ;
@@ -178,7 +178,7 @@ TEST (Library_IO_URL, AdditionOperator)
 
 }
 
-TEST (Library_IO_URL, AdditionAssignmentOperator)
+TEST (OpenSpaceToolkit_IO_URL, AdditionAssignmentOperator)
 {
 
     using ostk::io::URL ;
@@ -201,7 +201,7 @@ TEST (Library_IO_URL, AdditionAssignmentOperator)
 
 }
 
-TEST (Library_IO_URL, StreamOperator)
+TEST (OpenSpaceToolkit_IO_URL, StreamOperator)
 {
 
     using ostk::core::types::Integer ;
@@ -232,7 +232,7 @@ TEST (Library_IO_URL, StreamOperator)
 
 }
 
-TEST (Library_IO_URL, IsDefined)
+TEST (OpenSpaceToolkit_IO_URL, IsDefined)
 {
 
     using ostk::core::types::Integer ;
@@ -272,7 +272,7 @@ TEST (Library_IO_URL, IsDefined)
 
 }
 
-TEST (Library_IO_URL, AccessScheme)
+TEST (OpenSpaceToolkit_IO_URL, AccessScheme)
 {
 
     using ostk::core::types::Integer ;
@@ -299,7 +299,7 @@ TEST (Library_IO_URL, AccessScheme)
 
 }
 
-TEST (Library_IO_URL, AccessHost)
+TEST (OpenSpaceToolkit_IO_URL, AccessHost)
 {
 
     using ostk::core::types::Integer ;
@@ -326,7 +326,7 @@ TEST (Library_IO_URL, AccessHost)
 
 }
 
-TEST (Library_IO_URL, AccessPath)
+TEST (OpenSpaceToolkit_IO_URL, AccessPath)
 {
 
     using ostk::core::types::Integer ;
@@ -353,7 +353,7 @@ TEST (Library_IO_URL, AccessPath)
 
 }
 
-TEST (Library_IO_URL, AccessPort)
+TEST (OpenSpaceToolkit_IO_URL, AccessPort)
 {
 
     using ostk::core::types::Integer ;
@@ -380,7 +380,7 @@ TEST (Library_IO_URL, AccessPort)
 
 }
 
-TEST (Library_IO_URL, AccessUser)
+TEST (OpenSpaceToolkit_IO_URL, AccessUser)
 {
 
     using ostk::core::types::Integer ;
@@ -407,7 +407,7 @@ TEST (Library_IO_URL, AccessUser)
 
 }
 
-TEST (Library_IO_URL, AccessPassword)
+TEST (OpenSpaceToolkit_IO_URL, AccessPassword)
 {
 
     using ostk::core::types::Integer ;
@@ -434,7 +434,7 @@ TEST (Library_IO_URL, AccessPassword)
 
 }
 
-TEST (Library_IO_URL, AccessQuery)
+TEST (OpenSpaceToolkit_IO_URL, AccessQuery)
 {
 
     using ostk::core::types::Integer ;
@@ -461,7 +461,7 @@ TEST (Library_IO_URL, AccessQuery)
 
 }
 
-TEST (Library_IO_URL, AccessFragment)
+TEST (OpenSpaceToolkit_IO_URL, AccessFragment)
 {
 
     using ostk::core::types::Integer ;
@@ -488,7 +488,7 @@ TEST (Library_IO_URL, AccessFragment)
 
 }
 
-TEST (Library_IO_URL, GetScheme)
+TEST (OpenSpaceToolkit_IO_URL, GetScheme)
 {
 
     using ostk::core::types::Integer ;
@@ -515,7 +515,7 @@ TEST (Library_IO_URL, GetScheme)
 
 }
 
-TEST (Library_IO_URL, GetHost)
+TEST (OpenSpaceToolkit_IO_URL, GetHost)
 {
 
     using ostk::core::types::Integer ;
@@ -542,7 +542,7 @@ TEST (Library_IO_URL, GetHost)
 
 }
 
-TEST (Library_IO_URL, GetPath)
+TEST (OpenSpaceToolkit_IO_URL, GetPath)
 {
 
     using ostk::core::types::Integer ;
@@ -569,7 +569,7 @@ TEST (Library_IO_URL, GetPath)
 
 }
 
-TEST (Library_IO_URL, GetPort)
+TEST (OpenSpaceToolkit_IO_URL, GetPort)
 {
 
     using ostk::core::types::Integer ;
@@ -596,7 +596,7 @@ TEST (Library_IO_URL, GetPort)
 
 }
 
-TEST (Library_IO_URL, GetUser)
+TEST (OpenSpaceToolkit_IO_URL, GetUser)
 {
 
     using ostk::core::types::Integer ;
@@ -623,7 +623,7 @@ TEST (Library_IO_URL, GetUser)
 
 }
 
-TEST (Library_IO_URL, GetPassword)
+TEST (OpenSpaceToolkit_IO_URL, GetPassword)
 {
 
     using ostk::core::types::Integer ;
@@ -650,7 +650,7 @@ TEST (Library_IO_URL, GetPassword)
 
 }
 
-TEST (Library_IO_URL, GetQuery)
+TEST (OpenSpaceToolkit_IO_URL, GetQuery)
 {
 
     using ostk::core::types::Integer ;
@@ -677,7 +677,7 @@ TEST (Library_IO_URL, GetQuery)
 
 }
 
-TEST (Library_IO_URL, GetFragment)
+TEST (OpenSpaceToolkit_IO_URL, GetFragment)
 {
 
     using ostk::core::types::Integer ;
@@ -704,7 +704,7 @@ TEST (Library_IO_URL, GetFragment)
 
 }
 
-TEST (Library_IO_URL, ToString)
+TEST (OpenSpaceToolkit_IO_URL, ToString)
 {
 
     using ostk::core::types::Integer ;
@@ -754,7 +754,7 @@ TEST (Library_IO_URL, ToString)
 
 }
 
-TEST (Library_IO_URL, SetScheme)
+TEST (OpenSpaceToolkit_IO_URL, SetScheme)
 {
 
     using ostk::core::types::Integer ;
@@ -787,7 +787,7 @@ TEST (Library_IO_URL, SetScheme)
 
 }
 
-TEST (Library_IO_URL, SetHost)
+TEST (OpenSpaceToolkit_IO_URL, SetHost)
 {
 
     using ostk::core::types::Integer ;
@@ -820,7 +820,7 @@ TEST (Library_IO_URL, SetHost)
 
 }
 
-TEST (Library_IO_URL, SetPath)
+TEST (OpenSpaceToolkit_IO_URL, SetPath)
 {
 
     using ostk::core::types::Integer ;
@@ -853,7 +853,7 @@ TEST (Library_IO_URL, SetPath)
 
 }
 
-TEST (Library_IO_URL, SetPort)
+TEST (OpenSpaceToolkit_IO_URL, SetPort)
 {
 
     using ostk::core::types::Integer ;
@@ -886,7 +886,7 @@ TEST (Library_IO_URL, SetPort)
 
 }
 
-TEST (Library_IO_URL, SetUser)
+TEST (OpenSpaceToolkit_IO_URL, SetUser)
 {
 
     using ostk::core::types::Integer ;
@@ -919,7 +919,7 @@ TEST (Library_IO_URL, SetUser)
 
 }
 
-TEST (Library_IO_URL, SetPassword)
+TEST (OpenSpaceToolkit_IO_URL, SetPassword)
 {
 
     using ostk::core::types::Integer ;
@@ -952,7 +952,7 @@ TEST (Library_IO_URL, SetPassword)
 
 }
 
-TEST (Library_IO_URL, SetQuery)
+TEST (OpenSpaceToolkit_IO_URL, SetQuery)
 {
 
     using ostk::core::types::Integer ;
@@ -985,7 +985,7 @@ TEST (Library_IO_URL, SetQuery)
 
 }
 
-TEST (Library_IO_URL, SetFragment)
+TEST (OpenSpaceToolkit_IO_URL, SetFragment)
 {
 
     using ostk::core::types::Integer ;
@@ -1018,7 +1018,7 @@ TEST (Library_IO_URL, SetFragment)
 
 }
 
-TEST (Library_IO_URL, Undefined)
+TEST (OpenSpaceToolkit_IO_URL, Undefined)
 {
 
     using ostk::io::URL ;
@@ -1037,7 +1037,7 @@ TEST (Library_IO_URL, Undefined)
 
 }
 
-TEST (Library_IO_URL, Parse)
+TEST (OpenSpaceToolkit_IO_URL, Parse)
 {
 
     using ostk::core::types::String ;
@@ -1110,12 +1110,12 @@ TEST (Library_IO_URL, Parse)
 
 }
 
-// TEST (Library_IO_URL, EncodeString)
+// TEST (OpenSpaceToolkit_IO_URL, EncodeString)
 // {
 
 // }
 
-// TEST (Library_IO_URL, DecodeString)
+// TEST (OpenSpaceToolkit_IO_URL, DecodeString)
 // {
 
 // }

@@ -13,7 +13,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-TEST (Library_IO_IP_TCP_HTTP_Client, Send)
+TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Send)
 {
 
     using ostk::io::URL ;
@@ -40,7 +40,7 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Send)
 
 }
 
-TEST (Library_IO_IP_TCP_HTTP_Client, Get)
+TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Get)
 {
 
     using ostk::io::URL ;
@@ -103,7 +103,7 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Get)
 
 }
 
-TEST (Library_IO_IP_TCP_HTTP_Client, Fetch)
+TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Fetch)
 {
 
     using ostk::core::fs::Path ;
@@ -143,7 +143,7 @@ TEST (Library_IO_IP_TCP_HTTP_Client, Fetch)
 // Disabling as Travis CI does not seem to support FTP anymore
 // https://blog.travis-ci.com/2018-07-23-the-tale-of-ftp-at-travis-ci
 
-// TEST (Library_IO_IP_TCP_HTTP_Client, List)
+// TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, List)
 // {
 
 //     using ostk::core::fs::Path ;

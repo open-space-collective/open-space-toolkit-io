@@ -16,7 +16,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-TEST (Library_IO_URL_Query, Constructor)
+TEST (OpenSpaceToolkit_IO_URL_Query, Constructor)
 {
 
     using ostk::io::url::Query ;
@@ -29,7 +29,7 @@ TEST (Library_IO_URL_Query, Constructor)
 
 }
 
-TEST (Library_IO_URL_Query, EqualToOperator)
+TEST (OpenSpaceToolkit_IO_URL_Query, EqualToOperator)
 {
 
     using ostk::io::url::Query ;
@@ -82,7 +82,7 @@ TEST (Library_IO_URL_Query, EqualToOperator)
 
 }
 
-TEST (Library_IO_URL_Query, NotEqualToOperator)
+TEST (OpenSpaceToolkit_IO_URL_Query, NotEqualToOperator)
 {
 
     using ostk::io::url::Query ;
@@ -135,7 +135,7 @@ TEST (Library_IO_URL_Query, NotEqualToOperator)
 
 }
 
-TEST (Library_IO_URL_Query, IsDefined)
+TEST (OpenSpaceToolkit_IO_URL_Query, IsDefined)
 {
 
     using ostk::io::url::Query ;
@@ -156,7 +156,7 @@ TEST (Library_IO_URL_Query, IsDefined)
 
 }
 
-TEST (Library_IO_URL_Query, HasParameterWithName)
+TEST (OpenSpaceToolkit_IO_URL_Query, HasParameterWithName)
 {
 
     using ostk::io::url::Query ;
@@ -184,7 +184,7 @@ TEST (Library_IO_URL_Query, HasParameterWithName)
 
 }
 
-TEST (Library_IO_URL_Query, GetParameterWithName)
+TEST (OpenSpaceToolkit_IO_URL_Query, GetParameterWithName)
 {
 
     using ostk::io::url::Query ;
@@ -210,7 +210,7 @@ TEST (Library_IO_URL_Query, GetParameterWithName)
 
 }
 
-TEST (Library_IO_URL_Query, ToString)
+TEST (OpenSpaceToolkit_IO_URL_Query, ToString)
 {
 
     using ostk::io::url::Query ;
@@ -239,7 +239,7 @@ TEST (Library_IO_URL_Query, ToString)
 
 }
 
-TEST (Library_IO_URL_Query, ConstIterator)
+TEST (OpenSpaceToolkit_IO_URL_Query, ConstIterator)
 {
 
     using ostk::core::types::Index ;
@@ -276,7 +276,7 @@ TEST (Library_IO_URL_Query, ConstIterator)
 
 }
 
-TEST (Library_IO_URL_Query, AddParameter)
+TEST (OpenSpaceToolkit_IO_URL_Query, AddParameter)
 {
 
     using ostk::io::url::Query ;
@@ -295,7 +295,7 @@ TEST (Library_IO_URL_Query, AddParameter)
 
 }
 
-TEST (Library_IO_URL_Query, Undefined)
+TEST (OpenSpaceToolkit_IO_URL_Query, Undefined)
 {
 
     using ostk::io::url::Query ;
@@ -309,7 +309,7 @@ TEST (Library_IO_URL_Query, Undefined)
 
 }
 
-TEST (Library_IO_URL_Query, Parse)
+TEST (OpenSpaceToolkit_IO_URL_Query, Parse)
 {
 
     using ostk::io::url::Query ;
