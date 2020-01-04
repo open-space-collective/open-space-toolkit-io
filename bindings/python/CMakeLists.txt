@@ -1,7 +1,7 @@
 ################################################################################################################################################################
 
 # @project        Open Space Toolkit ▸ I/O
-# @file           LibraryIOPy/CMakeLists.txt
+# @file           OpenSpaceToolkitIOPy/CMakeLists.txt
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
@@ -9,9 +9,9 @@
 
 ## Project Properties
 
-SET (PROJECT_NAME "LibraryIOPy")
+SET (PROJECT_NAME "OpenSpaceToolkitIOPy")
 SET (PROJECT_DESCRIPTION "Python bindings for Library / IO.")
-SET (PROJECT_PACKAGE_NAME "LibraryIOPy")
+SET (PROJECT_PACKAGE_NAME "OpenSpaceToolkitIOPy")
 SET (PROJECT_PATH "OpenSpaceToolkit/IO")
 SET (PROJECT_LICENSE "Apache License 2.0")
 SET (PROJECT_VENDOR_ID "com.bremond.lucas")
@@ -138,7 +138,7 @@ ADD_CUSTOM_COMMAND (OUTPUT ${OUTPUT}
                     COMMAND cp "${CMAKE_CURRENT_SOURCE_DIR}/tools/python/${PROJECT_PATH}/__init__.py" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/__init__.py"
                     COMMAND cp "/usr/local/lib/libboost_${PYTHON_VERSION}.so.${BOOST_VERSION}.0" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libboost_${PYTHON_VERSION}.so.${BOOST_VERSION}.0"
                     COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${SHARED_LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/libopen-space-toolkit-io.so.0"
-                    COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/LibraryIOPy.so"
+                    COMMAND cp "${CMAKE_SOURCE_DIR}/lib/${LIBRARY_TARGET}" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_PATH}/OpenSpaceToolkitIOPy.so"
                     COMMAND ${PYTHON} ${SETUP_PY} bdist_wheel
                     COMMAND ${CMAKE_COMMAND} -E touch ${OUTPUT}
                     DEPENDS ${DEPS})

@@ -1,28 +1,28 @@
 ################################################################################################################################################################
 
 # @project        Open Space Toolkit ▸ I/O
-# @file           tools/cmake/LibraryIOConfig.cmake.in
+# @file           tools/cmake/OpenSpaceToolkitIOConfig.cmake.in
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
 
-SET (LibraryIO_ROOT_DIR ${LibraryIO_ROOT_DIR} @CMAKE_INSTALL_PREFIX@)
+SET (OpenSpaceToolkitIO_ROOT_DIR ${OpenSpaceToolkitIO_ROOT_DIR} @CMAKE_INSTALL_PREFIX@)
 
-FIND_PATH (LibraryIO_INCLUDE_DIR "OpenSpaceToolkit/IO/URL.hpp" PATHS ${LibraryIO_ROOT_DIR} PATH_SUFFIXES "include" NO_DEFAULT_PATH)
-FIND_LIBRARY (LibraryIO_LIBRARY NAMES "libopen-space-toolkit-io.so" PATHS ${LibraryIO_ROOT_DIR} PATH_SUFFIXES "lib" NO_DEFAULT_PATH)
+FIND_PATH (OpenSpaceToolkitIO_INCLUDE_DIR "OpenSpaceToolkit/IO/URL.hpp" PATHS ${OpenSpaceToolkitIO_ROOT_DIR} PATH_SUFFIXES "include" NO_DEFAULT_PATH)
+FIND_LIBRARY (OpenSpaceToolkitIO_LIBRARY NAMES "libopen-space-toolkit-io.so" PATHS ${OpenSpaceToolkitIO_ROOT_DIR} PATH_SUFFIXES "lib" NO_DEFAULT_PATH)
 
-# MESSAGE (STATUS "LibraryIO_ROOT_DIR = ${LibraryIO_ROOT_DIR}")
-# MESSAGE (STATUS "LibraryIO_INCLUDE_DIR = ${LibraryIO_INCLUDE_DIR}")
-# MESSAGE (STATUS "LibraryIO_LIBRARY = ${LibraryIO_LIBRARY}")
-# MESSAGE (STATUS "LibraryIO_FIND_VERSION = ${LibraryIO_FIND_VERSION}")
+# MESSAGE (STATUS "OpenSpaceToolkitIO_ROOT_DIR = ${OpenSpaceToolkitIO_ROOT_DIR}")
+# MESSAGE (STATUS "OpenSpaceToolkitIO_INCLUDE_DIR = ${OpenSpaceToolkitIO_INCLUDE_DIR}")
+# MESSAGE (STATUS "OpenSpaceToolkitIO_LIBRARY = ${OpenSpaceToolkitIO_LIBRARY}")
+# MESSAGE (STATUS "OpenSpaceToolkitIO_FIND_VERSION = ${OpenSpaceToolkitIO_FIND_VERSION}")
 
-IF (LibraryIO_INCLUDE_DIR)
+IF (OpenSpaceToolkitIO_INCLUDE_DIR)
 
-    SET (LibraryIO_INCLUDE_DIRS ${LibraryIO_INCLUDE_DIR} ${LibraryIO_INCLUDE_DIR}/OpenSpaceToolkit/IO)
-    SET (LibraryIO_LIBRARIES ${LibraryIO_LIBRARY})
+    SET (OpenSpaceToolkitIO_INCLUDE_DIRS ${OpenSpaceToolkitIO_INCLUDE_DIR} ${OpenSpaceToolkitIO_INCLUDE_DIR}/OpenSpaceToolkit/IO)
+    SET (OpenSpaceToolkitIO_LIBRARIES ${OpenSpaceToolkitIO_LIBRARY})
 
-    SET (LibraryIO_FOUND TRUE)
+    SET (OpenSpaceToolkitIO_FOUND TRUE)
 
 ENDIF ()
 

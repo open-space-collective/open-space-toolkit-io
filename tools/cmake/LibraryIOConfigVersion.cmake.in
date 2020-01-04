@@ -1,7 +1,7 @@
 ################################################################################################################################################################
 
 # @project        Open Space Toolkit ▸ I/O
-# @file           tools/cmake/LibraryIOConfigVersion.cmake.in
+# @file           tools/cmake/OpenSpaceToolkitIOConfigVersion.cmake.in
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 

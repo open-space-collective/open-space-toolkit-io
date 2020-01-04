@@ -1,19 +1,19 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ I/O
-/// @file           LibraryIOPy/IP/TCP/HTTP.cpp
+/// @file           OpenSpaceToolkitIOPy/IP/TCP/HTTP.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <LibraryIOPy/IP/TCP/HTTP/Client.cpp>
-#include <LibraryIOPy/IP/TCP/HTTP/Response.cpp>
-#include <LibraryIOPy/IP/TCP/HTTP/Request.cpp>
+#include <OpenSpaceToolkitIOPy/IP/TCP/HTTP/Client.cpp>
+#include <OpenSpaceToolkitIOPy/IP/TCP/HTTP/Response.cpp>
+#include <OpenSpaceToolkitIOPy/IP/TCP/HTTP/Request.cpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     LibraryIOPy_IP_TCP_HTTP                     ( )
+inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP                     ( )
 {
 
     boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("Library.IO.IP.TCP.HTTP")))) ;
@@ -22,9 +22,9 @@ inline void                     LibraryIOPy_IP_TCP_HTTP                     ( )
 
     boost::python::scope scope = module ;
 
-    LibraryIOPy_IP_TCP_HTTP_Request() ;
-    LibraryIOPy_IP_TCP_HTTP_Response() ;
-    LibraryIOPy_IP_TCP_HTTP_Client() ;
+    OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request() ;
+    OpenSpaceToolkitIOPy_IP_TCP_HTTP_Response() ;
+    OpenSpaceToolkitIOPy_IP_TCP_HTTP_Client() ;
 
 }
 

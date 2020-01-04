@@ -1,14 +1,14 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ I/O
-/// @file           LibraryIOPy/Utilities/IterableConverter.hpp
+/// @file           OpenSpaceToolkitIOPy/Utilities/IterableConverter.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef __LibraryIOPy_Utilities_IterableConverter__
-#define __LibraryIOPy_Utilities_IterableConverter__
+#ifndef __OpenSpaceToolkitIOPy_Utilities_IterableConverter__
+#define __OpenSpaceToolkitIOPy_Utilities_IterableConverter__
 
 #include <boost/python/stl_iterator.hpp>
 

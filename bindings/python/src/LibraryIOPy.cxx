@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ I/O
-/// @file           OpenSpaceToolkit/IO/LibraryIOPy.hpp
+/// @file           OpenSpaceToolkit/IO/OpenSpaceToolkitIOPy.hpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -9,20 +9,20 @@
 
 #include <boost/python.hpp>
 
-#include <LibraryIOPy/IP.cpp>
-#include <LibraryIOPy/URL.cpp>
+#include <OpenSpaceToolkitIOPy/IP.cpp>
+#include <OpenSpaceToolkitIOPy/URL.cpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-BOOST_PYTHON_MODULE (LibraryIOPy)
+BOOST_PYTHON_MODULE (OpenSpaceToolkitIOPy)
 {
 
 	boost::python::object package = boost::python::scope() ;
 
 	package.attr("__path__") = "Library" ;
 
-	LibraryIOPy_URL() ;
-	LibraryIOPy_IP() ;
+	OpenSpaceToolkitIOPy_URL() ;
+	OpenSpaceToolkitIOPy_IP() ;
 
 }
 

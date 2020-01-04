@@ -9,7 +9,7 @@
 
 ## Project Properties
 
-SET (PROJECT_NAME "LibraryIO")
+SET (PROJECT_NAME "OpenSpaceToolkitIO")
 SET (PROJECT_DESCRIPTION "I/O library.")
 SET (PROJECT_PATH "OpenSpaceToolkit/IO")
 SET (PROJECT_PACKAGE_NAME "open-space-toolkit-io")

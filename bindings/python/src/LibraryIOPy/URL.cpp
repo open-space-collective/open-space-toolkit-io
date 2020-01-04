@@ -1,23 +1,23 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ I/O
-/// @file           LibraryIOPy/URL.cpp
+/// @file           OpenSpaceToolkitIOPy/URL.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <LibraryIOPy/URL/Query.cpp>
+#include <OpenSpaceToolkitIOPy/URL/Query.cpp>
 
 #include <OpenSpaceToolkit/IO/URL.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS (LibraryIOPy_URL_toString_overloads, ostk::io::URL::toString, 0, 1)
+BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS (OpenSpaceToolkitIOPy_URL_toString_overloads, ostk::io::URL::toString, 0, 1)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     LibraryIOPy_URL                             ( )
+inline void                     OpenSpaceToolkitIOPy_URL                             ( )
 {
 
     using namespace boost::python ;
@@ -50,7 +50,7 @@ inline void                     LibraryIOPy_URL                             ( )
         .def("getPassword", &URL::getPassword)
         .def("getQuery", &URL::getQuery)
         .def("getFragment", &URL::getFragment)
-        .def("toString", &URL::toString, LibraryIOPy_URL_toString_overloads())
+        .def("toString", &URL::toString, OpenSpaceToolkitIOPy_URL_toString_overloads())
         .def("setScheme", &URL::setScheme)
         .def("setHost", &URL::setHost)
         .def("setPath", &URL::setPath)
@@ -67,7 +67,7 @@ inline void                     LibraryIOPy_URL                             ( )
 
     ;
 
-    LibraryIOPy_URL_Query() ;
+    OpenSpaceToolkitIOPy_URL_Query() ;
 
 }
 
