@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ I/O
-/// @file           OpenSpaceToolkitIOPy/IP/TCP/HTTP/Request.cpp
+/// @file           bindings/python/src/OpenSpaceToolkitIOPy/IP/TCP/HTTP/Request.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -11,7 +11,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request             ( )
+inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request    ( )
 {
 
     using namespace boost::python ;

@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ I/O
-/// @file           OpenSpaceToolkitIOPy/IP/TCP/HTTP.cpp
+/// @file           bindings/python/src/OpenSpaceToolkitIOPy/IP/TCP/HTTP.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -13,12 +13,12 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP                     ( )
+inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP            ( )
 {
 
-    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("Library.IO.IP.TCP.HTTP")))) ;
+    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("ostk.io.ip.tcp.http")))) ;
 
-    boost::python::scope().attr("HTTP") = module ;
+    boost::python::scope().attr("http") = module ;
 
     boost::python::scope scope = module ;
 

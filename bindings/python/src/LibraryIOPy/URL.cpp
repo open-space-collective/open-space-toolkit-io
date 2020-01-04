@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ I/O
-/// @file           OpenSpaceToolkitIOPy/URL.cpp
+/// @file           bindings/python/src/OpenSpaceToolkitIOPy/URL.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -17,7 +17,7 @@ BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS (OpenSpaceToolkitIOPy_URL_toString_overlo
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitIOPy_URL                             ( )
+inline void                     OpenSpaceToolkitIOPy_URL                    ( )
 {
 
     using namespace boost::python ;

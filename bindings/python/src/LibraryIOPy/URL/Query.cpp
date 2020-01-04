@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ I/O
-/// @file           OpenSpaceToolkitIOPy/URL/Query.cpp
+/// @file           bindings/python/src/OpenSpaceToolkitIOPy/URL/Query.cpp
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -13,7 +13,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitIOPy_URL_Query                       ( )
+inline void                     OpenSpaceToolkitIOPy_URL_Query              ( )
 {
 
     using namespace boost::python ;

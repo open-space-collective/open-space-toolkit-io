@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ I/O
-/// @file           OpenSpaceToolkit/IO/OpenSpaceToolkitIOPy.hpp
+/// @file           bindings/python/src/OpenSpaceToolkitIOPy.cxx
 /// @author         Lucas Brémond <lucas@loftorbital.com>
 /// @license        Apache License 2.0
 
@@ -19,7 +19,7 @@ BOOST_PYTHON_MODULE (OpenSpaceToolkitIOPy)
 
 	boost::python::object package = boost::python::scope() ;
 
-	package.attr("__path__") = "Library" ;
+	package.attr("__path__") = "ostk" ;
 
 	OpenSpaceToolkitIOPy_URL() ;
 	OpenSpaceToolkitIOPy_IP() ;
