@@ -64,12 +64,12 @@ RUN cd /tmp \
 
 ## Open Space Toolkit ▸ Core [0.2.5]
 
-RUN mkdir -p /tmp/library-core \
- && cd /tmp/library-core \
- && wget --quiet https://github.com/open-space-collective/library-core/releases/download/0.2.5/library-core-0.2.5-1.x86_64-runtime.deb \
- && wget --quiet https://github.com/open-space-collective/library-core/releases/download/0.2.5/library-core-0.2.5-1.x86_64-devel.deb \
+RUN mkdir -p /tmp/open-space-toolkit-core \
+ && cd /tmp/open-space-toolkit-core \
+ && wget --quiet https://github.com/open-space-collective/open-space-toolkit-core/releases/download/0.2.5/open-space-toolkit-core-0.2.5-1.x86_64-runtime.deb \
+ && wget --quiet https://github.com/open-space-collective/open-space-toolkit-core/releases/download/0.2.5/open-space-toolkit-core-0.2.5-1.x86_64-devel.deb \
  && apt install -y ./*.deb \
- && rm -rf /tmp/library-core
+ && rm -rf /tmp/open-space-toolkit-core
 
 # Labels
 

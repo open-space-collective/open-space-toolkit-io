@@ -14,8 +14,8 @@
 #include <Library/IO/IP/TCP/HTTP/Request.hpp>
 #include <Library/IO/URL.hpp>
 
-#include <Library/Core/FileSystem/Directory.hpp>
-#include <Library/Core/FileSystem/File.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/Directory.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

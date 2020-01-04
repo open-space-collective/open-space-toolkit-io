@@ -12,8 +12,8 @@
 
 #include <Library/IO/URL/Query.hpp>
 
-#include <Library/Core/Types/String.hpp>
-#include <Library/Core/Types/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -9,9 +9,9 @@
 
 #include <Library/IO/IP/TCP/HTTP/Client.hpp>
 
-#include <Library/Core/FileSystem/Path.hpp>
-#include <Library/Core/Error.hpp>
-#include <Library/Core/Utilities.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/Path.hpp>
+#include <OpenSpaceToolkit/Core/Error.hpp>
+#include <OpenSpaceToolkit/Core/Utilities.hpp>
 
 #include <curl/curl.h>
 

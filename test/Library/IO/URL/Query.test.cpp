@@ -9,7 +9,7 @@
 
 #include <Library/IO/URL/Query.hpp>
 
-#include <Library/Core/Types/Index.hpp>
+#include <OpenSpaceToolkit/Core/Types/Index.hpp>
 
 #include <Global.test.hpp>
 

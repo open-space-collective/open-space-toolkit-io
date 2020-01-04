@@ -10,8 +10,8 @@
 #ifndef __Library_IO_URL_Query__
 #define __Library_IO_URL_Query__
 
-#include <Library/Core/Containers/Array.hpp>
-#include <Library/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
+#include <OpenSpaceToolkit/Core/Types/String.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
