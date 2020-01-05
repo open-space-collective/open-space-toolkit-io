@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['parameter',['Parameter',['../classlibrary_1_1io_1_1url_1_1_query_1_1_parameter.html#ad6160646a07cb92213403426dbba4c64',1,'library::io::url::Query::Parameter']]],
-  ['parse',['Parse',['../classlibrary_1_1io_1_1ip_1_1_address.html#af8ab0e365de3c00109b456ee94e2590b',1,'library::io::ip::Address::Parse()'],['../classlibrary_1_1io_1_1url_1_1_query.html#a52a7b884fbf52bb9bc449e5f314c3199',1,'library::io::url::Query::Parse()'],['../classlibrary_1_1io_1_1_u_r_l.html#a03a589af0787df20428d4d33e26bb2d7',1,'library::io::URL::Parse()']]]
+  ['parameter',['Parameter',['../classostk_1_1io_1_1url_1_1_query_1_1_parameter.html#a0206a88a6546df8ec49219db4a8db3f3',1,'ostk::io::url::Query::Parameter']]],
+  ['parse',['Parse',['../classostk_1_1io_1_1ip_1_1_address.html#a3d60e44d816e30f17db36f9bb7ac6307',1,'ostk::io::ip::Address::Parse()'],['../classostk_1_1io_1_1url_1_1_query.html#aa61f25b072cbbe0973142fdf283bf499',1,'ostk::io::url::Query::Parse()'],['../classostk_1_1io_1_1_u_r_l.html#a1cd7216bb1079f62386a218ba510958d',1,'ostk::io::URL::Parse()']]]
 ];

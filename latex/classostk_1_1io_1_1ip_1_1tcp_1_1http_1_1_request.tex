@@ -1,0 +1,271 @@
+\hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{}\section{ostk\+:\+:io\+:\+:ip\+:\+:tcp\+:\+:http\+:\+:Request Class Reference}
+\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}
+
+
+Hypertext Transfer Protocol (H\+T\+TP) request.  
+
+
+
+
+{\ttfamily \#include $<$Request.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3}{Method} \{ \newline
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3aec0fc0100c4fc1ce4eea230c3dc10360}{Method\+::\+Undefined}, 
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3ac55582518cba2c464f29f5bae1c68def}{Method\+::\+Get}, 
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3a98921133d10fbdb0fb6dbb7b2648befe}{Method\+::\+Head}, 
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3a03d947a2158373c3b9d74325850cb8b9}{Method\+::\+Post}, 
+\newline
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3ad0bf1810982e9728fcf3ac444a015373}{Method\+::\+Put}, 
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3af2a6c498fb90ee345d997f888fce3b18}{Method\+::\+Delete}, 
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3add4ec0ac4e58f7c32a01244ae91150b1}{Method\+::\+Trace}, 
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3adae8ace18bdcbcc6ae5aece263e14fe8}{Method\+::\+Options}, 
+\newline
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3a49ab28040dfa07f53544970c6d147e1e}{Method\+::\+Connect}, 
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3a156e10596fdc76ee5300bab931d89c0f}{Method\+::\+Patch}
+ \}\begin{DoxyCompactList}\small\item\em \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request} method. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a7b67e5386b0aa2af737c74416c20f56b}{Request} (const \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3}{Request\+::\+Method} \&a\+Method, const \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \&a\+Url, const \hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String} \&a\+Body)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_ac01119273b40874c0bb6a687fe7266b7}{is\+Defined} () const
+\begin{DoxyCompactList}\small\item\em Check if request is defined. \end{DoxyCompactList}\item 
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3}{Request\+::\+Method} \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a8c31b842f3672488b2fb42a304873a94}{get\+Method} () const
+\begin{DoxyCompactList}\small\item\em Get request method. \end{DoxyCompactList}\item 
+\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a75e34ca54feb62159075147444ffa6ec}{get\+Url} () const
+\begin{DoxyCompactList}\small\item\em Get request \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}. \end{DoxyCompactList}\item 
+\hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String} \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a1aa99b1bc1fdd0b29e86a27331a2d6fa}{get\+Body} () const
+\begin{DoxyCompactList}\small\item\em Get request body. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request} \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a6364c734464bdc1244ef9de16df1ee0c}{Undefined} ()
+\begin{DoxyCompactList}\small\item\em Constructs an undefined request. \end{DoxyCompactList}\item 
+static \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request} \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_affd88441e083283d9baee02e44738f5f}{Get} (const \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \&a\+Url)
+\begin{DoxyCompactList}\small\item\em Constructs a G\+ET request. \end{DoxyCompactList}\item 
+static \hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String} \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_aebda9e8cb66ad693422238e5bad8b91a}{String\+From\+Method} (const \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3}{Request\+::\+Method} \&a\+Method)
+\begin{DoxyCompactList}\small\item\em Converts request method to string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a73dd714a92305cf3d0b7bdba904b3fc7}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request} \&a\+Request)
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Hypertext Transfer Protocol (H\+T\+TP) request. 
+
+https\+://en.wikipedia.\+org/wiki/\+Hypertext\+\_\+\+Transfer\+\_\+\+Protocol\#\+Request\+\_\+methods 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3}} 
+\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!Method@{Method}}
+\index{Method@{Method}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}
+\subsubsection{\texorpdfstring{Method}{Method}}
+{\footnotesize\ttfamily enum \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3}{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request\+::\+Method}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request} method. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Undefined@{Undefined}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!Undefined@{Undefined}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3aec0fc0100c4fc1ce4eea230c3dc10360}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3aec0fc0100c4fc1ce4eea230c3dc10360}} 
+Undefined&Undefined request method. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Get@{Get}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!Get@{Get}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3ac55582518cba2c464f29f5bae1c68def}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3ac55582518cba2c464f29f5bae1c68def}} 
+Get&Requests a representation of the specified resource. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Head@{Head}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!Head@{Head}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3a98921133d10fbdb0fb6dbb7b2648befe}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3a98921133d10fbdb0fb6dbb7b2648befe}} 
+Head&Asks for a response identical to that of a G\+ET request, but without the response body. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Post@{Post}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!Post@{Post}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3a03d947a2158373c3b9d74325850cb8b9}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3a03d947a2158373c3b9d74325850cb8b9}} 
+Post&Requests that the server accept the entity enclosed in the request as a new subordinate of the web resource identified by the U\+RI. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Put@{Put}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!Put@{Put}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3ad0bf1810982e9728fcf3ac444a015373}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3ad0bf1810982e9728fcf3ac444a015373}} 
+Put&Requests that the enclosed entity be stored under the supplied U\+RI. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delete@{Delete}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!Delete@{Delete}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3af2a6c498fb90ee345d997f888fce3b18}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3af2a6c498fb90ee345d997f888fce3b18}} 
+Delete&Deletes the specified resource. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Trace@{Trace}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!Trace@{Trace}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3add4ec0ac4e58f7c32a01244ae91150b1}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3add4ec0ac4e58f7c32a01244ae91150b1}} 
+Trace&Echoes the received request so that a client can see what (if any) changes or additions have been made by intermediate servers. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Options@{Options}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!Options@{Options}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3adae8ace18bdcbcc6ae5aece263e14fe8}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3adae8ace18bdcbcc6ae5aece263e14fe8}} 
+Options&Returns the H\+T\+TP methods that the server supports for the specified \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Connect@{Connect}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!Connect@{Connect}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3a49ab28040dfa07f53544970c6d147e1e}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3a49ab28040dfa07f53544970c6d147e1e}} 
+Connect&Converts the request connection to a transparent T\+C\+P/\+IP tunnel. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Patch@{Patch}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!Patch@{Patch}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3a156e10596fdc76ee5300bab931d89c0f}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3a156e10596fdc76ee5300bab931d89c0f}} 
+Patch&Applies partial modifications to a resource. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a7b67e5386b0aa2af737c74416c20f56b}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a7b67e5386b0aa2af737c74416c20f56b}} 
+\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!Request@{Request}}
+\index{Request@{Request}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}
+\subsubsection{\texorpdfstring{Request()}{Request()}}
+{\footnotesize\ttfamily ostk\+::io\+::ip\+::tcp\+::http\+::\+Request\+::\+Request (\begin{DoxyParamCaption}\item[{const \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3}{Request\+::\+Method} \&}]{a\+Method,  }\item[{const \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \&}]{a\+Url,  }\item[{const \hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String} \&}]{a\+Body }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Method} & A method \\
+\hline
+\mbox{\tt in}  & {\em a\+Url} & A \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \\
+\hline
+\mbox{\tt in}  & {\em a\+Body} & A body \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_affd88441e083283d9baee02e44738f5f}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_affd88441e083283d9baee02e44738f5f}} 
+\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!Get@{Get}}
+\index{Get@{Get}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request} ostk\+::io\+::ip\+::tcp\+::http\+::\+Request\+::\+Get (\begin{DoxyParamCaption}\item[{const \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \&}]{a\+Url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a G\+ET request. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Url} & A \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+G\+ET request 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a1aa99b1bc1fdd0b29e86a27331a2d6fa}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a1aa99b1bc1fdd0b29e86a27331a2d6fa}} 
+\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!get\+Body@{get\+Body}}
+\index{get\+Body@{get\+Body}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}
+\subsubsection{\texorpdfstring{get\+Body()}{getBody()}}
+{\footnotesize\ttfamily \hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String} ostk\+::io\+::ip\+::tcp\+::http\+::\+Request\+::get\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get request body. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request} body 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a8c31b842f3672488b2fb42a304873a94}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a8c31b842f3672488b2fb42a304873a94}} 
+\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!get\+Method@{get\+Method}}
+\index{get\+Method@{get\+Method}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}
+\subsubsection{\texorpdfstring{get\+Method()}{getMethod()}}
+{\footnotesize\ttfamily \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3}{Request\+::\+Method} ostk\+::io\+::ip\+::tcp\+::http\+::\+Request\+::get\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get request method. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request} method 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a75e34ca54feb62159075147444ffa6ec}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a75e34ca54feb62159075147444ffa6ec}} 
+\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!get\+Url@{get\+Url}}
+\index{get\+Url@{get\+Url}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}
+\subsubsection{\texorpdfstring{get\+Url()}{getUrl()}}
+{\footnotesize\ttfamily \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} ostk\+::io\+::ip\+::tcp\+::http\+::\+Request\+::get\+Url (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get request \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request} \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_ac01119273b40874c0bb6a687fe7266b7}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_ac01119273b40874c0bb6a687fe7266b7}} 
+\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!is\+Defined@{is\+Defined}}
+\index{is\+Defined@{is\+Defined}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}
+\subsubsection{\texorpdfstring{is\+Defined()}{isDefined()}}
+{\footnotesize\ttfamily bool ostk\+::io\+::ip\+::tcp\+::http\+::\+Request\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if request is defined. 
+
+\begin{DoxyReturn}{Returns}
+True if request is defined 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_aebda9e8cb66ad693422238e5bad8b91a}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_aebda9e8cb66ad693422238e5bad8b91a}} 
+\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!String\+From\+Method@{String\+From\+Method}}
+\index{String\+From\+Method@{String\+From\+Method}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}
+\subsubsection{\texorpdfstring{String\+From\+Method()}{StringFromMethod()}}
+{\footnotesize\ttfamily \hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String} ostk\+::io\+::ip\+::tcp\+::http\+::\+Request\+::\+String\+From\+Method (\begin{DoxyParamCaption}\item[{const \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a07a40d81f4a6fb8443c80afc11571dd3}{Request\+::\+Method} \&}]{a\+Method }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts request method to string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Method} & A request method \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request} method string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a6364c734464bdc1244ef9de16df1ee0c}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a6364c734464bdc1244ef9de16df1ee0c}} 
+\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!Undefined@{Undefined}}
+\index{Undefined@{Undefined}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}
+\subsubsection{\texorpdfstring{Undefined()}{Undefined()}}
+{\footnotesize\ttfamily \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request} ostk\+::io\+::ip\+::tcp\+::http\+::\+Request\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs an undefined request. 
+
+\begin{DoxyReturn}{Returns}
+Undefined request 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a73dd714a92305cf3d0b7bdba904b3fc7}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_a73dd714a92305cf3d0b7bdba904b3fc7}} 
+\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Request@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Request}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request} \&}]{a\+Request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\tt in}  & {\em a\+Request} & A request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An output stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Open\+Space\+Toolkit/\+I\+O/\+I\+P/\+T\+C\+P/\+H\+T\+T\+P/\hyperlink{_request_8hpp}{Request.\+hpp}\item 
+src/\+Open\+Space\+Toolkit/\+I\+O/\+I\+P/\+T\+C\+P/\+H\+T\+T\+P/\hyperlink{_request_8cpp}{Request.\+cpp}\end{DoxyCompactItemize}

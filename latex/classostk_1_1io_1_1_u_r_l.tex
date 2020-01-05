@@ -1,0 +1,865 @@
+\hypertarget{classostk_1_1io_1_1_u_r_l}{}\section{ostk\+:\+:io\+:\+:U\+RL Class Reference}
+\label{classostk_1_1io_1_1_u_r_l}\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+
+
+Uniform Resource Locator (\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL})  
+
+
+
+
+{\ttfamily \#include $<$U\+R\+L.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{U\+RL} ()=delete
+\begin{DoxyCompactList}\small\item\em Default constructor (disabled) \end{DoxyCompactList}\item 
+\hyperlink{classostk_1_1io_1_1_u_r_l_a5a24386372bb8c71e9314c003058b22f}{U\+RL} (const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+Scheme, const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+Host, const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+Path=String\+::\+Empty(), const \hyperlink{namespaceostk_1_1io_a35328f680550d000b2754860bbe1d268}{Integer} \&a\+Port=Integer\+::\+Undefined(), const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+User=String\+::\+Empty(), const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+Password=String\+::\+Empty(), const \hyperlink{namespaceostk_1_1io_aeabc644ba5c25896df8014bd0271f970}{Query} \&a\+Query=\hyperlink{classostk_1_1io_1_1url_1_1_query_a25f41e04f41e40fd63519e377829323f}{Query\+::\+Undefined}(), const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+Fragment=String\+::\+Empty())
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classostk_1_1io_1_1_u_r_l_a46fed221d83ea9a6985b079ee6d6f151}{operator==} (const \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \&a\+U\+RL) const
+\begin{DoxyCompactList}\small\item\em Equal to operator. \end{DoxyCompactList}\item 
+bool \hyperlink{classostk_1_1io_1_1_u_r_l_af0e7f1e614d4268332deb8255cfd042a}{operator!=} (const \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \&a\+U\+RL) const
+\begin{DoxyCompactList}\small\item\em Not equal to operator. \end{DoxyCompactList}\item 
+\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \hyperlink{classostk_1_1io_1_1_u_r_l_a6af6a4ec30e137242a80b51096ef09b2}{operator+} (const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+Url\+Element) const
+\begin{DoxyCompactList}\small\item\em Addition operator. \end{DoxyCompactList}\item 
+\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \& \hyperlink{classostk_1_1io_1_1_u_r_l_a07e4a0573aa017fc782ed6712f3df3f9}{operator+=} (const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+Url\+Element)
+\begin{DoxyCompactList}\small\item\em Addition assignment operator. \end{DoxyCompactList}\item 
+bool \hyperlink{classostk_1_1io_1_1_u_r_l_ae777a4a970e3c36af2ca1e22a72336de}{is\+Defined} () const
+\begin{DoxyCompactList}\small\item\em Check if \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} is defined. \end{DoxyCompactList}\item 
+const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \& \hyperlink{classostk_1_1io_1_1_u_r_l_ac807a165cb3da86a7b9cea5800754fa1}{access\+Scheme} () const
+\begin{DoxyCompactList}\small\item\em Get reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} scheme. \end{DoxyCompactList}\item 
+const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \& \hyperlink{classostk_1_1io_1_1_u_r_l_a2faf73b2ba1fd2224a6f53a1883d8340}{access\+Host} () const
+\begin{DoxyCompactList}\small\item\em Get reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} host. \end{DoxyCompactList}\item 
+const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \& \hyperlink{classostk_1_1io_1_1_u_r_l_a94b5966da7e3d32068f87c33ca78828e}{access\+Path} () const
+\begin{DoxyCompactList}\small\item\em Get reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} path. \end{DoxyCompactList}\item 
+const \hyperlink{namespaceostk_1_1io_a35328f680550d000b2754860bbe1d268}{Integer} \& \hyperlink{classostk_1_1io_1_1_u_r_l_a143ce5446cddd58318ba77d425b4f7e4}{access\+Port} () const
+\begin{DoxyCompactList}\small\item\em Get reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} port. \end{DoxyCompactList}\item 
+const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \& \hyperlink{classostk_1_1io_1_1_u_r_l_a793b078fb609dd5870a7c4bc9b13cf05}{access\+User} () const
+\begin{DoxyCompactList}\small\item\em Get reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} user. \end{DoxyCompactList}\item 
+const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \& \hyperlink{classostk_1_1io_1_1_u_r_l_a7b61c488b9b1781cf1783cee04cd61e6}{access\+Password} () const
+\begin{DoxyCompactList}\small\item\em Get reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} password. \end{DoxyCompactList}\item 
+const \hyperlink{namespaceostk_1_1io_aeabc644ba5c25896df8014bd0271f970}{Query} \& \hyperlink{classostk_1_1io_1_1_u_r_l_ad10cb94dcbe3952e59d508ccc36323c0}{access\+Query} () const
+\begin{DoxyCompactList}\small\item\em Get reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} query. \end{DoxyCompactList}\item 
+const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \& \hyperlink{classostk_1_1io_1_1_u_r_l_ad73236e116c77a5c92c518c8f23649ea}{access\+Fragment} () const
+\begin{DoxyCompactList}\small\item\em Get reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} fragment. \end{DoxyCompactList}\item 
+\hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \hyperlink{classostk_1_1io_1_1_u_r_l_a28880731bc5e0a3eb216f436ff0caac6}{get\+Scheme} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} scheme. \end{DoxyCompactList}\item 
+\hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \hyperlink{classostk_1_1io_1_1_u_r_l_a3b1dd5dd205854fc291a6c9a5438d7ec}{get\+Host} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} host. \end{DoxyCompactList}\item 
+\hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \hyperlink{classostk_1_1io_1_1_u_r_l_aba0a0da071c5ac9d7a79f24672b769ab}{get\+Path} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} path. \end{DoxyCompactList}\item 
+\hyperlink{namespaceostk_1_1io_a35328f680550d000b2754860bbe1d268}{Integer} \hyperlink{classostk_1_1io_1_1_u_r_l_a471a0b1cb0bd5ab83b2798e1dc71e2d1}{get\+Port} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} port. \end{DoxyCompactList}\item 
+\hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \hyperlink{classostk_1_1io_1_1_u_r_l_ab3aeffffa4a2c72173e7e075d15e06fd}{get\+User} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} user. \end{DoxyCompactList}\item 
+\hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \hyperlink{classostk_1_1io_1_1_u_r_l_aa0a33984e00c87fa1f9c405bffea4c56}{get\+Password} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} password. \end{DoxyCompactList}\item 
+\hyperlink{namespaceostk_1_1io_aeabc644ba5c25896df8014bd0271f970}{Query} \hyperlink{classostk_1_1io_1_1_u_r_l_ac6ddb4ae26ba6f2cd61f3c94483d7b0f}{get\+Query} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} query. \end{DoxyCompactList}\item 
+\hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \hyperlink{classostk_1_1io_1_1_u_r_l_ab4f89a76481899ca2ef35915cf5460b6}{get\+Fragment} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} fragment. \end{DoxyCompactList}\item 
+\hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \hyperlink{classostk_1_1io_1_1_u_r_l_af1b7bd5cffeda8dcbf7e469f68bc8f0f}{to\+String} (const bool do\+Sanitize=false) const
+\begin{DoxyCompactList}\small\item\em Get serialized \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}. \end{DoxyCompactList}\item 
+void \hyperlink{classostk_1_1io_1_1_u_r_l_ac758bfb15653ebfcc7b4f1fee145024b}{set\+Scheme} (const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+Scheme)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} scheme. \end{DoxyCompactList}\item 
+void \hyperlink{classostk_1_1io_1_1_u_r_l_accdfb1800b5e0d89e85bc27d302004a7}{set\+Host} (const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+Host)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} host. \end{DoxyCompactList}\item 
+void \hyperlink{classostk_1_1io_1_1_u_r_l_a9889bf7f7516b095adadebea4ba3ceae}{set\+Path} (const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+Path)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} path. \end{DoxyCompactList}\item 
+void \hyperlink{classostk_1_1io_1_1_u_r_l_a991fe376c996ad6457ebbd8b976c44ec}{set\+Port} (const \hyperlink{namespaceostk_1_1io_a35328f680550d000b2754860bbe1d268}{Integer} \&a\+Port)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} port. \end{DoxyCompactList}\item 
+void \hyperlink{classostk_1_1io_1_1_u_r_l_ab12a067e5d0e37707db80d16bbdf7251}{set\+User} (const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+User)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} user. \end{DoxyCompactList}\item 
+void \hyperlink{classostk_1_1io_1_1_u_r_l_a2d5ddc1fc8f2693c376d6f4794b1ed26}{set\+Password} (const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+Password)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} password. \end{DoxyCompactList}\item 
+void \hyperlink{classostk_1_1io_1_1_u_r_l_a948c7c671b2b36ff4a62534990aa86da}{set\+Query} (const \hyperlink{namespaceostk_1_1io_aeabc644ba5c25896df8014bd0271f970}{Query} \&a\+Query)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} query. \end{DoxyCompactList}\item 
+void \hyperlink{classostk_1_1io_1_1_u_r_l_a3e646332fa91ee14876c15782967a960}{set\+Fragment} (const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+Fragment)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} fragment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \hyperlink{classostk_1_1io_1_1_u_r_l_a668bfbf59c42356063be619b5f39d613}{Undefined} ()
+\begin{DoxyCompactList}\small\item\em Constructs an undefined \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}. \end{DoxyCompactList}\item 
+static \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{Parse} (const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+String)
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} from a given string. \end{DoxyCompactList}\item 
+static \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \hyperlink{classostk_1_1io_1_1_u_r_l_aefa7a336010b16d6a658932953648481}{Encode\+String} (const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+String)
+\begin{DoxyCompactList}\small\item\em Encode string. \end{DoxyCompactList}\item 
+static \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \hyperlink{classostk_1_1io_1_1_u_r_l_ad0e89f0fc413fb05b83759b451b8f2b7}{Decode\+String} (const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&a\+String)
+\begin{DoxyCompactList}\small\item\em Decode string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classostk_1_1io_1_1_u_r_l_a98ed4737303253c4105846425180fc30}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \&a\+U\+RL)
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Uniform Resource Locator (\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}) 
+
+https\+://en.wikipedia.\+org/wiki/\+U\+RL 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}\label{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!U\+RL@{U\+RL}}
+\index{U\+RL@{U\+RL}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{U\+R\+L()}{URL()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ostk\+::io\+::\+U\+R\+L\+::\+U\+RL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Default constructor (disabled) 
+
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a5a24386372bb8c71e9314c003058b22f}\label{classostk_1_1io_1_1_u_r_l_a5a24386372bb8c71e9314c003058b22f}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!U\+RL@{U\+RL}}
+\index{U\+RL@{U\+RL}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{U\+R\+L()}{URL()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ostk\+::io\+::\+U\+R\+L\+::\+U\+RL (\begin{DoxyParamCaption}\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+Scheme,  }\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+Host,  }\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+Path = {\ttfamily String\+:\+:Empty()},  }\item[{const \hyperlink{namespaceostk_1_1io_a35328f680550d000b2754860bbe1d268}{Integer} \&}]{a\+Port = {\ttfamily Integer\+:\+:Undefined()},  }\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+User = {\ttfamily String\+:\+:Empty()},  }\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+Password = {\ttfamily String\+:\+:Empty()},  }\item[{const \hyperlink{namespaceostk_1_1io_aeabc644ba5c25896df8014bd0271f970}{Query} \&}]{a\+Query = {\ttfamily \hyperlink{classostk_1_1io_1_1url_1_1_query_a25f41e04f41e40fd63519e377829323f}{Query\+::\+Undefined}()},  }\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+Fragment = {\ttfamily String\+:\+:Empty()} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}, \textcolor{stringliteral}{"/path/to/page.html"}, 80) ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Scheme} & A scheme \\
+\hline
+\mbox{\tt in}  & {\em a\+Host} & A host \\
+\hline
+\mbox{\tt in}  & {\em a\+Path} & A path \\
+\hline
+\mbox{\tt in}  & {\em a\+Port} & A port \\
+\hline
+\mbox{\tt in}  & {\em a\+User} & A user \\
+\hline
+\mbox{\tt in}  & {\em a\+Password} & A password \\
+\hline
+\mbox{\tt in}  & {\em a\+Query} & A query \\
+\hline
+\mbox{\tt in}  & {\em a\+Fragment} & A fragment \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_ad73236e116c77a5c92c518c8f23649ea}\label{classostk_1_1io_1_1_u_r_l_ad73236e116c77a5c92c518c8f23649ea}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!access\+Fragment@{access\+Fragment}}
+\index{access\+Fragment@{access\+Fragment}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{access\+Fragment()}{accessFragment()}}
+{\footnotesize\ttfamily const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \& ostk\+::io\+::\+U\+R\+L\+::access\+Fragment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} fragment. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://server.org#fragment"}) ;
+url.accessFragment() ; \textcolor{comment}{// &"fragment"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} fragment 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a2faf73b2ba1fd2224a6f53a1883d8340}\label{classostk_1_1io_1_1_u_r_l_a2faf73b2ba1fd2224a6f53a1883d8340}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!access\+Host@{access\+Host}}
+\index{access\+Host@{access\+Host}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{access\+Host()}{accessHost()}}
+{\footnotesize\ttfamily const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \& ostk\+::io\+::\+U\+R\+L\+::access\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} host. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://server.org"}) ;
+url.accessHost() ; \textcolor{comment}{// &"server.org"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} host 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a7b61c488b9b1781cf1783cee04cd61e6}\label{classostk_1_1io_1_1_u_r_l_a7b61c488b9b1781cf1783cee04cd61e6}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!access\+Password@{access\+Password}}
+\index{access\+Password@{access\+Password}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{access\+Password()}{accessPassword()}}
+{\footnotesize\ttfamily const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \& ostk\+::io\+::\+U\+R\+L\+::access\+Password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} password. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://user:password@server.org"}) ;
+url.accessPassword() ; \textcolor{comment}{// &"password"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} password 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a94b5966da7e3d32068f87c33ca78828e}\label{classostk_1_1io_1_1_u_r_l_a94b5966da7e3d32068f87c33ca78828e}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!access\+Path@{access\+Path}}
+\index{access\+Path@{access\+Path}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{access\+Path()}{accessPath()}}
+{\footnotesize\ttfamily const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \& ostk\+::io\+::\+U\+R\+L\+::access\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} path. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://server.org/path/to/index.html"}) ;
+url.accessPath() ; \textcolor{comment}{// &"/path/to/index.html"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a143ce5446cddd58318ba77d425b4f7e4}\label{classostk_1_1io_1_1_u_r_l_a143ce5446cddd58318ba77d425b4f7e4}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!access\+Port@{access\+Port}}
+\index{access\+Port@{access\+Port}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{access\+Port()}{accessPort()}}
+{\footnotesize\ttfamily const \hyperlink{namespaceostk_1_1io_a35328f680550d000b2754860bbe1d268}{Integer} \& ostk\+::io\+::\+U\+R\+L\+::access\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} port. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://server.org:80"}) ;
+url.accessPort() ; \textcolor{comment}{// &80}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} port 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_ad10cb94dcbe3952e59d508ccc36323c0}\label{classostk_1_1io_1_1_u_r_l_ad10cb94dcbe3952e59d508ccc36323c0}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!access\+Query@{access\+Query}}
+\index{access\+Query@{access\+Query}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{access\+Query()}{accessQuery()}}
+{\footnotesize\ttfamily const \hyperlink{namespaceostk_1_1io_aeabc644ba5c25896df8014bd0271f970}{Query} \& ostk\+::io\+::\+U\+R\+L\+::access\+Query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} query. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://server.org?key=value"}) ;
+url.accessQuery() ; \textcolor{comment}{// &"key=value"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} query 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_ac807a165cb3da86a7b9cea5800754fa1}\label{classostk_1_1io_1_1_u_r_l_ac807a165cb3da86a7b9cea5800754fa1}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!access\+Scheme@{access\+Scheme}}
+\index{access\+Scheme@{access\+Scheme}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{access\+Scheme()}{accessScheme()}}
+{\footnotesize\ttfamily const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \& ostk\+::io\+::\+U\+R\+L\+::access\+Scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} scheme. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://server.org"}) ;
+url.accessScheme() ; \textcolor{comment}{// &"http"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} scheme 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a793b078fb609dd5870a7c4bc9b13cf05}\label{classostk_1_1io_1_1_u_r_l_a793b078fb609dd5870a7c4bc9b13cf05}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!access\+User@{access\+User}}
+\index{access\+User@{access\+User}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{access\+User()}{accessUser()}}
+{\footnotesize\ttfamily const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \& ostk\+::io\+::\+U\+R\+L\+::access\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} user. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://user:password@server.org"}) ;
+url.accessUser() ; \textcolor{comment}{// &"user"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} user 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_ad0e89f0fc413fb05b83759b451b8f2b7}\label{classostk_1_1io_1_1_u_r_l_ad0e89f0fc413fb05b83759b451b8f2b7}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!Decode\+String@{Decode\+String}}
+\index{Decode\+String@{Decode\+String}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{Decode\+String()}{DecodeString()}}
+{\footnotesize\ttfamily static \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} ostk\+::io\+::\+U\+R\+L\+::\+Decode\+String (\begin{DoxyParamCaption}\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Decode string. 
+
+
+\begin{DoxyCode}
+\hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} decodedString = \hyperlink{classostk_1_1io_1_1_u_r_l_ad0e89f0fc413fb05b83759b451b8f2b7}{URL::DecodeString}(\textcolor{stringliteral}{"key%3Da\_b\_c"}) ; \textcolor{comment}{// "key=a\_b\_c"}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+String} & A string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_aefa7a336010b16d6a658932953648481}\label{classostk_1_1io_1_1_u_r_l_aefa7a336010b16d6a658932953648481}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!Encode\+String@{Encode\+String}}
+\index{Encode\+String@{Encode\+String}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{Encode\+String()}{EncodeString()}}
+{\footnotesize\ttfamily static \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} ostk\+::io\+::\+U\+R\+L\+::\+Encode\+String (\begin{DoxyParamCaption}\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Encode string. 
+
+
+\begin{DoxyCode}
+\hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} encodedString = \hyperlink{classostk_1_1io_1_1_u_r_l_aefa7a336010b16d6a658932953648481}{URL::EncodeString}(\textcolor{stringliteral}{"key=a\_b\_c"}) ; \textcolor{comment}{// "key%3Da\_b\_c"}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+String} & A string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_ab4f89a76481899ca2ef35915cf5460b6}\label{classostk_1_1io_1_1_u_r_l_ab4f89a76481899ca2ef35915cf5460b6}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!get\+Fragment@{get\+Fragment}}
+\index{get\+Fragment@{get\+Fragment}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+Fragment()}{getFragment()}}
+{\footnotesize\ttfamily \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} ostk\+::io\+::\+U\+R\+L\+::get\+Fragment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} fragment. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://server.org#fragment"}) ;
+url.getFragment() ; \textcolor{comment}{// "fragment"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} fragment 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a3b1dd5dd205854fc291a6c9a5438d7ec}\label{classostk_1_1io_1_1_u_r_l_a3b1dd5dd205854fc291a6c9a5438d7ec}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!get\+Host@{get\+Host}}
+\index{get\+Host@{get\+Host}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+Host()}{getHost()}}
+{\footnotesize\ttfamily \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} ostk\+::io\+::\+U\+R\+L\+::get\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} host. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://server.org"}) ;
+url.getHost() ; \textcolor{comment}{// "server.org"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} host 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_aa0a33984e00c87fa1f9c405bffea4c56}\label{classostk_1_1io_1_1_u_r_l_aa0a33984e00c87fa1f9c405bffea4c56}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!get\+Password@{get\+Password}}
+\index{get\+Password@{get\+Password}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+Password()}{getPassword()}}
+{\footnotesize\ttfamily \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} ostk\+::io\+::\+U\+R\+L\+::get\+Password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} password. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://user:password@server.org"}) ;
+url.getPassword() ; \textcolor{comment}{// "password"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} password 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_aba0a0da071c5ac9d7a79f24672b769ab}\label{classostk_1_1io_1_1_u_r_l_aba0a0da071c5ac9d7a79f24672b769ab}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!get\+Path@{get\+Path}}
+\index{get\+Path@{get\+Path}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+Path()}{getPath()}}
+{\footnotesize\ttfamily \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} ostk\+::io\+::\+U\+R\+L\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} path. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://server.org/path/to/index.html"}) ;
+url.getPath() ; \textcolor{comment}{// "/path/to/index.html"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a471a0b1cb0bd5ab83b2798e1dc71e2d1}\label{classostk_1_1io_1_1_u_r_l_a471a0b1cb0bd5ab83b2798e1dc71e2d1}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!get\+Port@{get\+Port}}
+\index{get\+Port@{get\+Port}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+Port()}{getPort()}}
+{\footnotesize\ttfamily \hyperlink{namespaceostk_1_1io_a35328f680550d000b2754860bbe1d268}{Integer} ostk\+::io\+::\+U\+R\+L\+::get\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} port. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://server.org:80"}) ;
+url.getPort() ; \textcolor{comment}{// 80}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} port 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_ac6ddb4ae26ba6f2cd61f3c94483d7b0f}\label{classostk_1_1io_1_1_u_r_l_ac6ddb4ae26ba6f2cd61f3c94483d7b0f}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!get\+Query@{get\+Query}}
+\index{get\+Query@{get\+Query}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+Query()}{getQuery()}}
+{\footnotesize\ttfamily \hyperlink{namespaceostk_1_1io_aeabc644ba5c25896df8014bd0271f970}{Query} ostk\+::io\+::\+U\+R\+L\+::get\+Query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} query. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://server.org?key=value"}) ;
+url.getQuery() ; \textcolor{comment}{// "key=value"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} query 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a28880731bc5e0a3eb216f436ff0caac6}\label{classostk_1_1io_1_1_u_r_l_a28880731bc5e0a3eb216f436ff0caac6}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!get\+Scheme@{get\+Scheme}}
+\index{get\+Scheme@{get\+Scheme}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+Scheme()}{getScheme()}}
+{\footnotesize\ttfamily \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} ostk\+::io\+::\+U\+R\+L\+::get\+Scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} scheme. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://server.org"}) ;
+url.getScheme() ; \textcolor{comment}{// "http"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} scheme 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_ab3aeffffa4a2c72173e7e075d15e06fd}\label{classostk_1_1io_1_1_u_r_l_ab3aeffffa4a2c72173e7e075d15e06fd}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!get\+User@{get\+User}}
+\index{get\+User@{get\+User}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{get\+User()}{getUser()}}
+{\footnotesize\ttfamily \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} ostk\+::io\+::\+U\+R\+L\+::get\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} user. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://user:password@server.org"}) ;
+url.getUser() ; \textcolor{comment}{// "user"}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} user 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_ae777a4a970e3c36af2ca1e22a72336de}\label{classostk_1_1io_1_1_u_r_l_ae777a4a970e3c36af2ca1e22a72336de}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!is\+Defined@{is\+Defined}}
+\index{is\+Defined@{is\+Defined}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{is\+Defined()}{isDefined()}}
+{\footnotesize\ttfamily bool ostk\+::io\+::\+U\+R\+L\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} is defined. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"http://server.org"}) ;
+url.isDefined() ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+True if \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} is defined 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_af0e7f1e614d4268332deb8255cfd042a}\label{classostk_1_1io_1_1_u_r_l_af0e7f1e614d4268332deb8255cfd042a}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool ostk\+::io\+::\+U\+R\+L\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \&}]{a\+U\+RL }\end{DoxyParamCaption}) const}
+
+
+
+Not equal to operator. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL}(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}) != \hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL}(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.com"}) ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+U\+RL} & A \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if U\+R\+Ls are not equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a6af6a4ec30e137242a80b51096ef09b2}\label{classostk_1_1io_1_1_u_r_l_a6af6a4ec30e137242a80b51096ef09b2}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!operator+@{operator+}}
+\index{operator+@{operator+}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} ostk\+::io\+::\+U\+R\+L\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+Url\+Element }\end{DoxyParamCaption}) const}
+
+
+
+Addition operator. 
+
+Append element to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} path
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}) ; \textcolor{comment}{// http://server.org}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} newUrl = url + \textcolor{stringliteral}{"/page.html"} \textcolor{comment}{// http://server.org/page.html}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Url\+Element} & A path element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a07e4a0573aa017fc782ed6712f3df3f9}\label{classostk_1_1io_1_1_u_r_l_a07e4a0573aa017fc782ed6712f3df3f9}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \& ostk\+::io\+::\+U\+R\+L\+::operator+= (\begin{DoxyParamCaption}\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+Url\+Element }\end{DoxyParamCaption})}
+
+
+
+Addition assignment operator. 
+
+Append element to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} path
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}) ; \textcolor{comment}{// http://server.org}
+url += \textcolor{stringliteral}{"/page.html"} \textcolor{comment}{// http://server.org/page.html}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Url\+Element} & A path element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a46fed221d83ea9a6985b079ee6d6f151}\label{classostk_1_1io_1_1_u_r_l_a46fed221d83ea9a6985b079ee6d6f151}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!operator==@{operator==}}
+\index{operator==@{operator==}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool ostk\+::io\+::\+U\+R\+L\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \&}]{a\+U\+RL }\end{DoxyParamCaption}) const}
+
+
+
+Equal to operator. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL}(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}) == \hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL}(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}) ; \textcolor{comment}{// True}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+U\+RL} & A \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if U\+R\+Ls are equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}\label{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!Parse@{Parse}}
+\index{Parse@{Parse}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{Parse()}{Parse()}}
+{\footnotesize\ttfamily \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} ostk\+::io\+::\+U\+R\+L\+::\+Parse (\begin{DoxyParamCaption}\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs a \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} from a given string. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a1cd7216bb1079f62386a218ba510958d}{URL::Parse}(\textcolor{stringliteral}{"https://www.google.com"}) ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+String} & A string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a3e646332fa91ee14876c15782967a960}\label{classostk_1_1io_1_1_u_r_l_a3e646332fa91ee14876c15782967a960}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!set\+Fragment@{set\+Fragment}}
+\index{set\+Fragment@{set\+Fragment}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{set\+Fragment()}{setFragment()}}
+{\footnotesize\ttfamily void ostk\+::io\+::\+U\+R\+L\+::set\+Fragment (\begin{DoxyParamCaption}\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+Fragment }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} fragment. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Fragment} & A fragment \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_accdfb1800b5e0d89e85bc27d302004a7}\label{classostk_1_1io_1_1_u_r_l_accdfb1800b5e0d89e85bc27d302004a7}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!set\+Host@{set\+Host}}
+\index{set\+Host@{set\+Host}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{set\+Host()}{setHost()}}
+{\footnotesize\ttfamily void ostk\+::io\+::\+U\+R\+L\+::set\+Host (\begin{DoxyParamCaption}\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+Host }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} host. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Host} & A host \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a2d5ddc1fc8f2693c376d6f4794b1ed26}\label{classostk_1_1io_1_1_u_r_l_a2d5ddc1fc8f2693c376d6f4794b1ed26}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!set\+Password@{set\+Password}}
+\index{set\+Password@{set\+Password}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{set\+Password()}{setPassword()}}
+{\footnotesize\ttfamily void ostk\+::io\+::\+U\+R\+L\+::set\+Password (\begin{DoxyParamCaption}\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+Password }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} password. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Password} & A password \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a9889bf7f7516b095adadebea4ba3ceae}\label{classostk_1_1io_1_1_u_r_l_a9889bf7f7516b095adadebea4ba3ceae}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!set\+Path@{set\+Path}}
+\index{set\+Path@{set\+Path}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{set\+Path()}{setPath()}}
+{\footnotesize\ttfamily void ostk\+::io\+::\+U\+R\+L\+::set\+Path (\begin{DoxyParamCaption}\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+Path }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} path. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Path} & A path \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a991fe376c996ad6457ebbd8b976c44ec}\label{classostk_1_1io_1_1_u_r_l_a991fe376c996ad6457ebbd8b976c44ec}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!set\+Port@{set\+Port}}
+\index{set\+Port@{set\+Port}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{set\+Port()}{setPort()}}
+{\footnotesize\ttfamily void ostk\+::io\+::\+U\+R\+L\+::set\+Port (\begin{DoxyParamCaption}\item[{const \hyperlink{namespaceostk_1_1io_a35328f680550d000b2754860bbe1d268}{Integer} \&}]{a\+Port }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} port. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Port} & A port \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a948c7c671b2b36ff4a62534990aa86da}\label{classostk_1_1io_1_1_u_r_l_a948c7c671b2b36ff4a62534990aa86da}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!set\+Query@{set\+Query}}
+\index{set\+Query@{set\+Query}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{set\+Query()}{setQuery()}}
+{\footnotesize\ttfamily void ostk\+::io\+::\+U\+R\+L\+::set\+Query (\begin{DoxyParamCaption}\item[{const \hyperlink{namespaceostk_1_1io_aeabc644ba5c25896df8014bd0271f970}{Query} \&}]{a\+Query }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} query. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Query} & A query \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_ac758bfb15653ebfcc7b4f1fee145024b}\label{classostk_1_1io_1_1_u_r_l_ac758bfb15653ebfcc7b4f1fee145024b}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!set\+Scheme@{set\+Scheme}}
+\index{set\+Scheme@{set\+Scheme}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{set\+Scheme()}{setScheme()}}
+{\footnotesize\ttfamily void ostk\+::io\+::\+U\+R\+L\+::set\+Scheme (\begin{DoxyParamCaption}\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+Scheme }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} scheme. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+Scheme} & A scheme \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_ab12a067e5d0e37707db80d16bbdf7251}\label{classostk_1_1io_1_1_u_r_l_ab12a067e5d0e37707db80d16bbdf7251}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!set\+User@{set\+User}}
+\index{set\+User@{set\+User}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{set\+User()}{setUser()}}
+{\footnotesize\ttfamily void ostk\+::io\+::\+U\+R\+L\+::set\+User (\begin{DoxyParamCaption}\item[{const \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} \&}]{a\+User }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} user. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\+User} & A user \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_af1b7bd5cffeda8dcbf7e469f68bc8f0f}\label{classostk_1_1io_1_1_u_r_l_af1b7bd5cffeda8dcbf7e469f68bc8f0f}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} ostk\+::io\+::\+U\+R\+L\+::to\+String (\begin{DoxyParamCaption}\item[{const bool}]{do\+Sanitize = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+
+
+Get serialized \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}, \textcolor{stringliteral}{"/path/to/page.html"}, 80) ;
+url.toString() ; \textcolor{comment}{// "http://server.org:80/path/to/page.html"}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em optional} & do\+Sanitize If true, sanitize \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Serialized \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a668bfbf59c42356063be619b5f39d613}\label{classostk_1_1io_1_1_u_r_l_a668bfbf59c42356063be619b5f39d613}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!Undefined@{Undefined}}
+\index{Undefined@{Undefined}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{Undefined()}{Undefined()}}
+{\footnotesize\ttfamily \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} ostk\+::io\+::\+U\+R\+L\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs an undefined \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url = \hyperlink{classostk_1_1io_1_1_u_r_l_a668bfbf59c42356063be619b5f39d613}{URL::Undefined}() ;
+url.isDefined() ; \textcolor{comment}{// False}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+Undefined \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classostk_1_1io_1_1_u_r_l_a98ed4737303253c4105846425180fc30}\label{classostk_1_1io_1_1_u_r_l_a98ed4737303253c4105846425180fc30}} 
+\index{ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk\+::io\+::\+U\+RL@{ostk\+::io\+::\+U\+RL}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \&}]{a\+U\+RL }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator. 
+
+
+\begin{DoxyCode}
+\hyperlink{classostk_1_1io_1_1_u_r_l_a2537e046cef4ac966cc295abb81279c2}{URL} url(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}) ;
+std::cout << url ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\tt in}  & {\em a\+U\+RL} & A \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An output stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Open\+Space\+Toolkit/\+I\+O/\hyperlink{_u_r_l_8hpp}{U\+R\+L.\+hpp}\item 
+src/\+Open\+Space\+Toolkit/\+I\+O/\hyperlink{_u_r_l_8cpp}{U\+R\+L.\+cpp}\end{DoxyCompactItemize}

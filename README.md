@@ -1,23 +1,17 @@
-# Library ▸ I/O
+# Open Space Toolkit ▸ I/O
 
 Addressing, networking, database connectors.
 
-[![Build Status](https://travis-ci.com/open-space-collective/library-io.svg?branch=master)](https://travis-ci.com/open-space-collective/library-io)
-[![Code Coverage](https://codecov.io/gh/open-space-collective/library-io/branch/master/graph/badge.svg)](https://codecov.io/gh/open-space-collective/library-io)
-[![Documentation](https://img.shields.io/readthedocs/pip/stable.svg)](https://open-space-collective.github.io/library-io)
-[![GitHub version](https://badge.fury.io/gh/open-space-collective%2Flibrary-io.svg)](https://badge.fury.io/gh/open-space-collective%2Flibrary-io)
-[![PyPI version](https://badge.fury.io/py/LibraryIOPy.svg)](https://badge.fury.io/py/LibraryIOPy)
+[![Build Status](https://travis-ci.com/open-space-collective/open-space-toolkit-io.svg?branch=master)](https://travis-ci.com/open-space-collective/open-space-toolkit-io)
+[![Code Coverage](https://codecov.io/gh/open-space-collective/open-space-toolkit-io/branch/master/graph/badge.svg)](https://codecov.io/gh/open-space-collective/open-space-toolkit-io)
+[![Documentation](https://img.shields.io/readthedocs/pip/stable.svg)](https://open-space-collective.github.io/open-space-toolkit-io)
+[![GitHub version](https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-io.svg)](https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-io)
+[![PyPI version](https://badge.fury.io/py/open-space-toolkit-io.svg)](https://badge.fury.io/py/open-space-toolkit-io)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Warning
 
-Library **name** is yet to be defined.
-
-Please check the following projects:
-
-- [Naming Project](https://github.com/orgs/open-space-collective/projects/1)
-
-*⚠ This library is still under heavy development. Do not use!*
+*⚠ This component is under development.*
 
 ## Structure
 
@@ -39,7 +33,7 @@ The **IO** library exhibits the following structure:
 
 Documentation is available here:
 
-- [C++](https://open-space-collective.github.io/library-io)
+- [C++](https://open-space-collective.github.io/open-space-toolkit-io)
 - [Python](./bindings/python/docs)
 
 ## Tutorials
@@ -64,7 +58,7 @@ make start-development
 
 This will:
 
-1. Build the `openspacecollective/library-io-development` Docker image.
+1. Build the `openspacecollective/open-space-toolkit-io-development` Docker image.
 2. Create a development environment container with local source files and helper scripts mounted.
 3. Start a `bash` shell from the `./build` working directory.
 
@@ -93,19 +87,19 @@ make test
 Or to run them manually:
 
 ```bash
-./bin/library-io.test
+./bin/open-space-toolkit-io.test
 ```
 
 *Tip: `helpers/test.sh` simplifies running tests from within the development environment.*
 
 ## Dependencies
 
-| Name                | Version | License                | Link                                                                                                   |
-|---------------------|---------|------------------------|--------------------------------------------------------------------------------------------------------|
-| Boost               | 1.69.0  | BSL-1.0                | [boost.org](https://www.boost.org)                                                                     |
-| C++ Network Library | 0.13.0  | BSL-1.0                | [cpp-netlib.org](https://cpp-netlib.org)                                                               |
-| Pistache            | master  | Apache License 2.0     | [pistache.io](http://pistache.io)                                                                      |
-| Core                | master  | Apache License 2.0     | [github.com/open-space-collective/library-core](https://github.com/open-space-collective/library-core) |
+| Name                | Version | License                | Link                                                                                                                         |
+|---------------------|---------|------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| Boost               | 1.69.0  | BSL-1.0                | [boost.org](https://www.boost.org)                                                                                           |
+| C++ Network Library | 0.13.0  | BSL-1.0                | [cpp-netlib.org](https://cpp-netlib.org)                                                                                     |
+| Pistache            | master  | Apache License 2.0     | [pistache.io](http://pistache.io)                                                                                            |
+| Core                | master  | Apache License 2.0     | [github.com/open-space-collective/open-space-toolkit-core](https://github.com/open-space-collective/open-space-toolkit-core) |
 
 ## Contribution
 

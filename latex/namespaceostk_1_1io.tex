@@ -1,0 +1,75 @@
+\hypertarget{namespaceostk_1_1io}{}\section{ostk\+:\+:io Namespace Reference}
+\label{namespaceostk_1_1io}\index{ostk\+::io@{ostk\+::io}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceostk_1_1io_1_1ip}{ip}
+\item 
+ \hyperlink{namespaceostk_1_1io_1_1url}{url}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}
+\begin{DoxyCompactList}\small\item\em Uniform Resource Locator (\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{namespaceostk_1_1io_a35328f680550d000b2754860bbe1d268}{Integer} = ostk\+::core\+::types\+::\+Integer
+\item 
+using \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{String} = ostk\+::core\+::types\+::\+String
+\item 
+using \hyperlink{namespaceostk_1_1io_aeabc644ba5c25896df8014bd0271f970}{Query} = \hyperlink{classostk_1_1io_1_1url_1_1_query}{ostk\+::io\+::url\+::\+Query}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{namespaceostk_1_1io_a72e6c8096e4cae52cdd226a664f1b498}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \&a\+U\+RL)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{namespaceostk_1_1io_a35328f680550d000b2754860bbe1d268}\label{namespaceostk_1_1io_a35328f680550d000b2754860bbe1d268}} 
+\index{ostk\+::io@{ostk\+::io}!Integer@{Integer}}
+\index{Integer@{Integer}!ostk\+::io@{ostk\+::io}}
+\subsubsection{\texorpdfstring{Integer}{Integer}}
+{\footnotesize\ttfamily using \hyperlink{namespaceostk_1_1io_a35328f680550d000b2754860bbe1d268}{ostk\+::io\+::\+Integer} = typedef ostk\+::core\+::types\+::\+Integer}
+
+\mbox{\Hypertarget{namespaceostk_1_1io_aeabc644ba5c25896df8014bd0271f970}\label{namespaceostk_1_1io_aeabc644ba5c25896df8014bd0271f970}} 
+\index{ostk\+::io@{ostk\+::io}!Query@{Query}}
+\index{Query@{Query}!ostk\+::io@{ostk\+::io}}
+\subsubsection{\texorpdfstring{Query}{Query}}
+{\footnotesize\ttfamily using \hyperlink{namespaceostk_1_1io_aeabc644ba5c25896df8014bd0271f970}{ostk\+::io\+::\+Query} = typedef \hyperlink{classostk_1_1io_1_1url_1_1_query}{ostk\+::io\+::url\+::\+Query}}
+
+\mbox{\Hypertarget{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}\label{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}} 
+\index{ostk\+::io@{ostk\+::io}!String@{String}}
+\index{String@{String}!ostk\+::io@{ostk\+::io}}
+\subsubsection{\texorpdfstring{String}{String}}
+{\footnotesize\ttfamily using \hyperlink{namespaceostk_1_1io_a95d49b120613a7610cb1b4f03b1116b6}{ostk\+::io\+::\+String} = typedef ostk\+::core\+::types\+::\+String}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceostk_1_1io_a72e6c8096e4cae52cdd226a664f1b498}\label{namespaceostk_1_1io_a72e6c8096e4cae52cdd226a664f1b498}} 
+\index{ostk\+::io@{ostk\+::io}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk\+::io@{ostk\+::io}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& ostk\+::io\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \&}]{a\+U\+RL }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+URL url(\textcolor{stringliteral}{"http"}, \textcolor{stringliteral}{"server.org"}) ;
+std::cout << url ;
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an\+Output\+Stream} & An output stream \\
+\hline
+\mbox{\tt in}  & {\em a\+U\+RL} & A \hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An output stream 
+\end{DoxyReturn}

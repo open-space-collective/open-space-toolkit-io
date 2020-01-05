@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['debughandler',['debugHandler',['../namespacelibrary_1_1io_1_1ip_1_1tcp_1_1http.html#aaa7adb72f13ba15a0b4bd03152b8c516',1,'library::io::ip::tcp::http']]],
-  ['decodestring',['DecodeString',['../classlibrary_1_1io_1_1_u_r_l.html#a53663c78171412c2b3f6378911437720',1,'library::io::URL']]],
-  ['delete',['Delete',['../classlibrary_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a45baccf3aec384fbdbbf6ce411f11bd7af2a6c498fb90ee345d997f888fce3b18',1,'library::io::ip::tcp::http::Request']]]
+  ['debughandler',['debugHandler',['../namespaceostk_1_1io_1_1ip_1_1tcp_1_1http.html#a45138e3931d393948e0b441b0cc73cb8',1,'ostk::io::ip::tcp::http']]],
+  ['decodestring',['DecodeString',['../classostk_1_1io_1_1_u_r_l.html#ad0e89f0fc413fb05b83759b451b8f2b7',1,'ostk::io::URL']]],
+  ['delete',['Delete',['../classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request.html#a07a40d81f4a6fb8443c80afc11571dd3af2a6c498fb90ee345d997f888fce3b18',1,'ostk::io::ip::tcp::http::Request']]]
 ];

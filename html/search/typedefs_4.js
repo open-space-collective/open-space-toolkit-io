@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['string',['String',['../namespacelibrary_1_1io_1_1ip.html#a2ac70ed8dfa9969304e09cead6a39459',1,'library::io::ip::String()'],['../namespacelibrary_1_1io_1_1ip_1_1tcp.html#a3ffb785d0c06077d01e52b17cb183916',1,'library::io::ip::tcp::String()'],['../namespacelibrary_1_1io_1_1ip_1_1tcp_1_1http.html#a1c435ea1e3614d52139da88a36632815',1,'library::io::ip::tcp::http::String()'],['../namespacelibrary_1_1io.html#a7469b45835a4421045db344d6a5a1f85',1,'library::io::String()']]]
+  ['string',['String',['../namespaceostk_1_1io_1_1ip.html#a987b35b1bc61a18b66c2a45f9ce5536e',1,'ostk::io::ip::String()'],['../namespaceostk_1_1io_1_1ip_1_1tcp.html#a0913903efda9362d4b0a14e5031434d6',1,'ostk::io::ip::tcp::String()'],['../namespaceostk_1_1io_1_1ip_1_1tcp_1_1http.html#a88a1b82fb01d02df64ca01ef4058bbef',1,'ostk::io::ip::tcp::http::String()'],['../namespaceostk_1_1io.html#a95d49b120613a7610cb1b4f03b1116b6',1,'ostk::io::String()']]]
 ];

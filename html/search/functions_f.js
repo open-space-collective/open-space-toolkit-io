@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tostring',['toString',['../classlibrary_1_1io_1_1url_1_1_query.html#af38369d995520735ef60f28a949f1d6d',1,'library::io::url::Query::toString()'],['../classlibrary_1_1io_1_1_u_r_l.html#a0d6ace28a1ecbc7f5d8bffb3aa2a2431',1,'library::io::URL::toString()']]]
+  ['tostring',['toString',['../classostk_1_1io_1_1url_1_1_query.html#aca282853530302e594b16700c83169d9',1,'ostk::io::url::Query::toString()'],['../classostk_1_1io_1_1_u_r_l.html#af1b7bd5cffeda8dcbf7e469f68bc8f0f',1,'ostk::io::URL::toString()']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['query',['Query',['../namespacelibrary_1_1io.html#a39ebaf2265de78ba79eb5347f2af61b3',1,'library::io']]]
+  ['query',['Query',['../namespaceostk_1_1io.html#aeabc644ba5c25896df8014bd0271f970',1,'ostk::io']]]
 ];
