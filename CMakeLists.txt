@@ -1,6 +1,6 @@
 ################################################################################################################################################################
 
-# @project        Library ▸ I/O
+# @project        Open Space Toolkit ▸ I/O
 # @file           CMakeLists.txt
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
@@ -9,10 +9,10 @@
 
 ## Project Properties
 
-SET (PROJECT_NAME "LibraryIO")
+SET (PROJECT_NAME "OpenSpaceToolkitIO")
 SET (PROJECT_DESCRIPTION "I/O library.")
-SET (PROJECT_PATH "Library/IO")
-SET (PROJECT_PACKAGE_NAME "library-io")
+SET (PROJECT_PATH "OpenSpaceToolkit/IO")
+SET (PROJECT_PACKAGE_NAME "open-space-toolkit-io")
 SET (PROJECT_LICENSE "Apache License 2.0")
 SET (PROJECT_VENDOR_ID "org.open-space-collective")
 SET (PROJECT_VENDOR_NAME "Open Space Collective")
@@ -249,13 +249,13 @@ ELSE ()
     MESSAGE (SEND_ERROR "[CPP-NETLIB] not found.")
 ENDIF ()
 
-### Library ▸ Core [0.2.x]
+### Open Space Toolkit ▸ Core [0.2.x]
 
-FIND_PACKAGE ("LibraryCore" "0.2" REQUIRED)
+FIND_PACKAGE ("OpenSpaceToolkitCore" "0.2" REQUIRED)
 
-IF (NOT LibraryCore_FOUND)
+IF (NOT OpenSpaceToolkitCore_FOUND)
 
-    MESSAGE (SEND_ERROR "[Library ▸ Core] not found.")
+    MESSAGE (SEND_ERROR "[Open Space Toolkit ▸ Core] not found.")
 
 ENDIF ()
 
@@ -298,7 +298,7 @@ IF (BUILD_SHARED_LIBRARY)
     TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} "curl")
     TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} "Boost::date_time" "Boost::filesystem" "Boost::log")
     TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} ${CPPNETLIB_LIBRARIES})
-    TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} ${LibraryCore_LIBRARIES})
+    TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} ${OpenSpaceToolkitCore_LIBRARIES})
 
     SET_TARGET_PROPERTIES (${SHARED_LIBRARY_TARGET} PROPERTIES VERSION ${PROJECT_VERSION_STRING} SOVERSION ${PROJECT_VERSION_MAJOR} OUTPUT_NAME ${SHARED_LIBRARY_NAME} CLEAN_DIRECT_OUTPUT 1 INSTALL_RPATH "$ORIGIN/../lib:$ORIGIN/")
 
@@ -328,7 +328,7 @@ IF (BUILD_STATIC_LIBRARY)
     TARGET_LINK_LIBRARIES (${STATIC_LIBRARY_TARGET} "curl")
     TARGET_LINK_LIBRARIES (${STATIC_LIBRARY_TARGET} "Boost::date_time" "Boost::filesystem" "Boost::log")
     TARGET_LINK_LIBRARIES (${STATIC_LIBRARY_TARGET} ${CPPNETLIB_LIBRARIES})
-    TARGET_LINK_LIBRARIES (${STATIC_LIBRARY_TARGET} ${LibraryCore_LIBRARIES})
+    TARGET_LINK_LIBRARIES (${STATIC_LIBRARY_TARGET} ${OpenSpaceToolkitCore_LIBRARIES})
 
     SET_TARGET_PROPERTIES (${STATIC_LIBRARY_TARGET} PROPERTIES VERSION ${PROJECT_VERSION_STRING} OUTPUT_NAME ${SHARED_LIBRARY_NAME} CLEAN_DIRECT_OUTPUT 1 INSTALL_RPATH "$ORIGIN/../lib:$ORIGIN/")
 

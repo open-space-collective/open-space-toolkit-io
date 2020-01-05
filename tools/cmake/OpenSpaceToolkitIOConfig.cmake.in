@@ -1,0 +1,29 @@
+################################################################################################################################################################
+
+# @project        Open Space Toolkit ▸ I/O
+# @file           tools/cmake/OpenSpaceToolkitIOConfig.cmake.in
+# @author         Lucas Brémond <lucas@loftorbital.com>
+# @license        Apache License 2.0
+
+################################################################################################################################################################
+
+SET (OpenSpaceToolkitIO_ROOT_DIR ${OpenSpaceToolkitIO_ROOT_DIR} @CMAKE_INSTALL_PREFIX@)
+
+FIND_PATH (OpenSpaceToolkitIO_INCLUDE_DIR "OpenSpaceToolkit/IO/URL.hpp" PATHS ${OpenSpaceToolkitIO_ROOT_DIR} PATH_SUFFIXES "include" NO_DEFAULT_PATH)
+FIND_LIBRARY (OpenSpaceToolkitIO_LIBRARY NAMES "libopen-space-toolkit-io.so" PATHS ${OpenSpaceToolkitIO_ROOT_DIR} PATH_SUFFIXES "lib" NO_DEFAULT_PATH)
+
+# MESSAGE (STATUS "OpenSpaceToolkitIO_ROOT_DIR = ${OpenSpaceToolkitIO_ROOT_DIR}")
+# MESSAGE (STATUS "OpenSpaceToolkitIO_INCLUDE_DIR = ${OpenSpaceToolkitIO_INCLUDE_DIR}")
+# MESSAGE (STATUS "OpenSpaceToolkitIO_LIBRARY = ${OpenSpaceToolkitIO_LIBRARY}")
+# MESSAGE (STATUS "OpenSpaceToolkitIO_FIND_VERSION = ${OpenSpaceToolkitIO_FIND_VERSION}")
+
+IF (OpenSpaceToolkitIO_INCLUDE_DIR)
+
+    SET (OpenSpaceToolkitIO_INCLUDE_DIRS ${OpenSpaceToolkitIO_INCLUDE_DIR} ${OpenSpaceToolkitIO_INCLUDE_DIR}/OpenSpaceToolkit/IO)
+    SET (OpenSpaceToolkitIO_LIBRARIES ${OpenSpaceToolkitIO_LIBRARY})
+
+    SET (OpenSpaceToolkitIO_FOUND TRUE)
+
+ENDIF ()
+
+################################################################################################################################################################

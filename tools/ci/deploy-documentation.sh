@@ -2,7 +2,7 @@
 
 ################################################################################################################################################################
 
-# @project        Library ▸ I/O
+# @project        Open Space Toolkit ▸ I/O
 # @file           tools/ci/deploy-documentation.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
