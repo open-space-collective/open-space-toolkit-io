@@ -7,25 +7,25 @@
 
 ################################################################################################################################################################
 
-import ostk.io as IO
+import ostk.io as io
 
 ################################################################################################################################################################
 
-URL = IO.URL
-Request = IO.IP.TCP.HTTP.Request
-Response = IO.IP.TCP.HTTP.Response
-Client = IO.IP.TCP.HTTP.Client
+URL = io.URL
+Request = io.ip.tcp.http.Request
+Response = io.ip.tcp.http.Response
+Client = io.ip.tcp.http.Client
 
 ################################################################################################################################################################
 
 def test_client ():
 
-    response = Client.Get(URL.Parse("https://www.google.com"))
+    response = Client.get(URL.parse("https://www.google.com"))
 
     assert response is not None
 
-    assert response.isDefined() is True
-    assert response.isOk() is True
-    assert response.getStatusCode() == 200
+    assert response.is_defined() is True
+    assert response.is_ok() is True
+    assert response.get_status_code() == 200
 
 ################################################################################################################################################################
