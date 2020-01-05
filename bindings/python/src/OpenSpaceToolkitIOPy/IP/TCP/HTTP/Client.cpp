@@ -20,10 +20,10 @@ inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Client     ( )
 
     scope in_Client = class_<Client>("Client", no_init)
 
-        .def("Send", &Client::Send).staticmethod("Send")
-        .def("Get", &Client::Get).staticmethod("Get")
-        .def("Fetch", &Client::Fetch).staticmethod("Fetch")
-        .def("List", &Client::List).staticmethod("List")
+        .def("send", &Client::Send).staticmethod("send")
+        .def("get", &Client::Get).staticmethod("get")
+        .def("fetch", &Client::Fetch).staticmethod("fetch")
+        .def("list", &Client::List).staticmethod("list")
 
     ;
 

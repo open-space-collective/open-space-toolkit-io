@@ -25,13 +25,13 @@ inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Response   ( )
         .def(self_ns::str(self_ns::self))
         .def(self_ns::repr(self_ns::self))
 
-		.def("isDefined", &Response::isDefined)
-        .def("isOk", &Response::isOk)
-        .def("getStatusCode", &Response::getStatusCode)
-        .def("getBody", &Response::getBody)
+		.def("is_defined", &Response::isDefined)
+        .def("is_ok", &Response::isOk)
+        .def("get_status_code", &Response::getStatusCode)
+        .def("get_body", &Response::getBody)
 
-        .def("Undefined", &Response::Undefined).staticmethod("Undefined")
-        .def("StringFromStatusCode", &Response::StringFromStatusCode).staticmethod("StringFromStatusCode")
+        .def("undefined", &Response::Undefined).staticmethod("undefined")
+        .def("string_from_status_code", &Response::StringFromStatusCode).staticmethod("string_from_status_code")
 
     ;
 

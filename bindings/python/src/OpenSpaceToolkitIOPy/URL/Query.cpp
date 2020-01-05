@@ -30,15 +30,15 @@ inline void                     OpenSpaceToolkitIOPy_URL_Query              ( )
         .def("__str__", +[] (const Query& aQuery) -> std::string { return aQuery.toString() ; })
         .def("__repr__", +[] (const Query& aQuery) -> std::string { return aQuery.toString() ; })
 
-        .def("isDefined", &Query::isDefined)
-        .def("hasParameterWithName", &Query::hasParameterWithName)
+        .def("is_defined", &Query::isDefined)
+        .def("has_parameter_with_name", &Query::hasParameterWithName)
 
-        .def("getParameterWithName", &Query::getParameterWithName)
-        .def("toString", &Query::toString)
-        .def("addParameter", &Query::addParameter)
+        .def("get_parameter_with_name", &Query::getParameterWithName)
+        .def("to_string", &Query::toString)
+        .def("add_parameter", &Query::addParameter)
 
-        .def("Undefined", &Query::Undefined).staticmethod("Undefined")
-        .def("Parse", &Query::Parse).staticmethod("Parse")
+        .def("undefined", &Query::Undefined).staticmethod("undefined")
+        .def("parse", &Query::Parse).staticmethod("parse")
 
     ;
 
@@ -47,10 +47,10 @@ inline void                     OpenSpaceToolkitIOPy_URL_Query              ( )
         .def(self == self)
         .def(self != self)
 
-        .def("isDefined", &Query::Parameter::isDefined)
+        .def("is_defined", &Query::Parameter::isDefined)
 
-        .def("getName", &Query::Parameter::getName)
-        .def("getValue", &Query::Parameter::getValue)
+        .def("get_name", &Query::Parameter::getName)
+        .def("get_value", &Query::Parameter::getValue)
 
     ;
 

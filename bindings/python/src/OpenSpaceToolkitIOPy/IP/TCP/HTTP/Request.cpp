@@ -26,14 +26,14 @@ inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request    ( )
         .def(self_ns::str(self_ns::self))
         .def(self_ns::repr(self_ns::self))
 
-		.def("isDefined", &Request::isDefined)
-        .def("getMethod", &Request::getMethod)
-        .def("getUrl", &Request::getUrl)
-        .def("getBody", &Request::getBody)
+		.def("is_defined", &Request::isDefined)
+        .def("get_method", &Request::getMethod)
+        .def("get_url", &Request::getUrl)
+        .def("get_body", &Request::getBody)
 
-        .def("Undefined", &Request::Undefined).staticmethod("Undefined")
-        .def("Get", &Request::Get).staticmethod("Get")
-        .def("StringFromMethod", &Request::StringFromMethod).staticmethod("StringFromMethod")
+        .def("undefined", &Request::Undefined).staticmethod("undefined")
+        .def("get", &Request::Get).staticmethod("get")
+        .def("string_from_method", &Request::StringFromMethod).staticmethod("string_from_method")
 
     ;
 
