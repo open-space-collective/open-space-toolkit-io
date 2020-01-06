@@ -1,7 +1,5 @@
 # Open Space Toolkit ▸ I/O
 
-Addressing, networking, database connectors.
-
 [![Build Status](https://travis-ci.com/open-space-collective/open-space-toolkit-io.svg?branch=master)](https://travis-ci.com/open-space-collective/open-space-toolkit-io)
 [![Code Coverage](https://codecov.io/gh/open-space-collective/open-space-toolkit-io/branch/master/graph/badge.svg)](https://codecov.io/gh/open-space-collective/open-space-toolkit-io)
 [![Documentation](https://img.shields.io/readthedocs/pip/stable.svg)](https://open-space-collective.github.io/open-space-toolkit-io)
@@ -9,9 +7,80 @@ Addressing, networking, database connectors.
 [![PyPI version](https://badge.fury.io/py/open-space-toolkit-io.svg)](https://badge.fury.io/py/open-space-toolkit-io)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
+Addressing, networking, database connectors.
+
 ## Warning
 
 *⚠ This component is under development.*
+
+## Installation
+
+### C++
+
+The binary packages are hosted using [GitHub Releases](https://github.com/open-space-collective/open-space-toolkit-io/releases).
+
+*Note: Don't forget to set the desired version number in the URLs!*
+
+#### Debian / Ubuntu
+
+```bash
+# Download .deb packages
+
+wget https://github.com/open-space-collective/open-space-toolkit-io/releases/download/0.3.0/open-space-toolkit-io-0.3.0-1.x86_64-runtime.deb
+wget https://github.com/open-space-collective/open-space-toolkit-io/releases/download/0.3.0/open-space-toolkit-io-0.3.0-1.x86_64-devel.deb
+
+# Install .deb packages
+
+apt install -y open-space-toolkit-io-0.3.0-*.deb
+```
+
+#### Fedora / CentOS
+
+```bash
+# Download .rpm packages
+
+wget https://github.com/open-space-collective/open-space-toolkit-io/releases/download/0.3.0/open-space-toolkit-io-0.3.0-1.x86_64-runtime.rpm
+wget https://github.com/open-space-collective/open-space-toolkit-io/releases/download/0.3.0/open-space-toolkit-io-0.3.0-1.x86_64-devel.rpm
+
+# Install .rpm packages
+
+dnf install -y open-space-toolkit-io-0.3.0-*.rpm
+```
+
+### Python
+
+The binary packages are hosted on [PyPI](https://pypi.org/project/open-space-toolkit-io/):
+
+```bash
+pip install open-space-toolkit-io
+```
+
+## Getting Started
+
+Want to quickly get started? It's pretty simple.
+
+Install [Docker](https://www.docker.com/) and try this:
+
+```bash
+docker run -it openspacecollective/open-space-toolkit-io-python
+```
+
+This will start an [iPython](https://ipython.org/) shell within a container where the OSTk I/O component is already installed.
+
+Once the shell is up and running, playing with it is easy:
+
+```py
+from ostk.io import URL # URL class
+from ostk.io.ip.tcp.http import Client # HTTP client class
+
+url = URL.parse("https://www.google.com") # Construct a URL
+
+response = Client.get(url) # Send an HTTP GET request (over HTTPS)
+
+response.get_status_code() # Display the status code of the HTTP response
+```
+
+*Tip: Use tab for auto-completion!*
 
 ## Structure
 

@@ -1,10 +1,93 @@
-Addressing, networking, database connectors.
-
 \href{https://travis-ci.com/open-space-collective/open-space-toolkit-io}{\tt } \href{https://codecov.io/gh/open-space-collective/open-space-toolkit-io}{\tt } \href{https://open-space-collective.github.io/open-space-toolkit-io}{\tt } \href{https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-io}{\tt } \href{https://badge.fury.io/py/open-space-toolkit-io}{\tt } \href{https://opensource.org/licenses/Apache-2.0}{\tt }
+
+Addressing, networking, database connectors.
 
 \subsection*{Warning}
 
 {\itshape ⚠ This component is under development.}
+
+\subsection*{Installation}
+
+\subsubsection*{C++}
+
+The binary packages are hosted using \href{https://github.com/open-space-collective/open-space-toolkit-io/releases}{\tt Git\+Hub Releases}.
+
+{\itshape Note\+: Don\textquotesingle{}t forget to set the desired version number in the U\+R\+Ls!}
+
+\paragraph*{Debian / Ubuntu}
+
+
+\begin{DoxyCode}
+# Download .deb packages
+
+wget
+       https://github.com/open-space-collective/open-space-toolkit-io/releases/download/0.3.0/open-space-toolkit-io-0.3.0-1.x86\_64-runtime.deb
+wget
+       https://github.com/open-space-collective/open-space-toolkit-io/releases/download/0.3.0/open-space-toolkit-io-0.3.0-1.x86\_64-devel.deb
+
+# Install .deb packages
+
+apt install -y open-space-toolkit-io-0.3.0-*.deb
+\end{DoxyCode}
+
+
+\paragraph*{Fedora / Cent\+OS}
+
+
+\begin{DoxyCode}
+# Download .rpm packages
+
+wget
+       https://github.com/open-space-collective/open-space-toolkit-io/releases/download/0.3.0/open-space-toolkit-io-0.3.0-1.x86\_64-runtime.rpm
+wget
+       https://github.com/open-space-collective/open-space-toolkit-io/releases/download/0.3.0/open-space-toolkit-io-0.3.0-1.x86\_64-devel.rpm
+
+# Install .rpm packages
+
+dnf install -y open-space-toolkit-io-0.3.0-*.rpm
+\end{DoxyCode}
+
+
+\subsubsection*{Python}
+
+The binary packages are hosted on \href{https://pypi.org/project/open-space-toolkit-io/}{\tt Py\+PI}\+:
+
+
+\begin{DoxyCode}
+pip install open-space-toolkit-io
+\end{DoxyCode}
+
+
+\subsection*{Getting Started}
+
+Want to quickly get started? It\textquotesingle{}s pretty simple.
+
+Install \href{https://www.docker.com/}{\tt Docker} and try this\+:
+
+
+\begin{DoxyCode}
+docker run -it openspacecollective/open-space-toolkit-io-python
+\end{DoxyCode}
+
+
+This will start an \href{https://ipython.org/}{\tt i\+Python} shell within a container where the O\+S\+Tk I/O component is already installed.
+
+Once the shell is up and running, playing with it is easy\+:
+
+
+\begin{DoxyCode}
+\textcolor{keyword}{from} \hyperlink{namespaceostk_1_1io}{ostk.io} \textcolor{keyword}{import} URL \textcolor{comment}{# URL class}
+\textcolor{keyword}{from} \hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http}{ostk.io.ip.tcp.http} \textcolor{keyword}{import} Client \textcolor{comment}{# HTTP client class}
+
+url = URL.parse(\textcolor{stringliteral}{"https://www.google.com"}) \textcolor{comment}{# Construct a URL}
+
+response = Client.get(url) \textcolor{comment}{# Send an HTTP GET request (over HTTPS)}
+
+response.get\_status\_code() \textcolor{comment}{# Display the status code of the HTTP response}
+\end{DoxyCode}
+
+
+{\itshape Tip\+: Use tab for auto-\/completion!}
 
 \subsection*{Structure}
 
