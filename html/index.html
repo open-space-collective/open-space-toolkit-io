@@ -85,21 +85,35 @@ $(document).ready(function(){initNavTree('index.html','');});
 <p>Addressing, networking, database connectors.</p>
 <h2>Warning</h2>
 <p><em>⚠ This component is under development.</em></p>
+<h2>Getting Started</h2>
+<p>Want to get started? This is the simplest and quickest way:</p>
+<p><a href="https://mybinder.org/v2/gh/open-space-collective/open-space-toolkit/master?urlpath=lab/tree/notebooks"></a></p>
+<p><em>Nothing to download or install! This will automatically start a <a href="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</a> environment in your browser with Open Space Toolkit libraries and example notebooks ready to use.</em></p>
+<h3>Alternatives</h3>
+<h4>Docker Images</h4>
+<p><a href="https://www.docker.com/">Docker</a> must be installed on your system.</p>
+<h5>iPython</h5>
+<p>The following command will start an <a href="https://ipython.org/">iPython</a> shell within a container where the OSTk components are already installed:</p>
+<div class="fragment"><div class="line">docker run -it openspacecollective/open-space-toolkit-io-python</div></div><!-- fragment --><p>Once the shell is up and running, playing with it is easy:</p>
+<div class="fragment"><div class="line">from <a class="code" href="namespaceostk_1_1io.html">ostk.io</a> <span class="keyword">import</span> URL <span class="comment"># URL class</span></div><div class="line"><span class="keyword">from</span> <a class="code" href="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http.html">ostk.io.ip.tcp.http</a> <span class="keyword">import</span> Client <span class="comment"># HTTP client class</span></div><div class="line"></div><div class="line">url = URL.parse(<span class="stringliteral">&quot;https://www.google.com&quot;</span>) <span class="comment"># Construct a URL</span></div><div class="line"></div><div class="line">response = Client.get(url) <span class="comment"># Send an HTTP GET request (over HTTPS)</span></div><div class="line"></div><div class="line">response.get_status_code() <span class="comment"># Display the status code of the HTTP response</span></div></div><!-- fragment --><p><em>Tip: Use tab for auto-completion!</em></p>
+<h5>JupyterLab</h5>
+<p>The following command will start a <a href="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</a> server within a container where the OSTk components are already installed:</p>
+<div class="fragment"><div class="line">docker run --publish=8888:8888 openspacecollective/open-space-toolkit-io-jupyter</div></div><!-- fragment --><p>Once the container is running, access <a href="http://localhost:8888/lab">http://localhost:8888/lab</a> and create a Python 3 Notebook.</p>
 <h2>Installation</h2>
 <h3>C++</h3>
-<p>The binary packages are hosted using <a href="https://github.com/open-space-collective/open-space-toolkit-io/releases">GitHub Releases</a>.</p>
-<p><em>Note: Don't forget to set the desired version number in the URLs!</em></p>
+<p>The binary packages are hosted using <a href="https://github.com/open-space-collective/open-space-toolkit-io/releases">GitHub Releases</a>:</p>
+<ul>
+<li>Runtime libraries: <code>open-space-toolkit-io-X.Y.Z-1.x86_64-runtime</code></li>
+<li>C++ headers: <code>open-space-toolkit-io-X.Y.Z-1.x86_64-devel</code></li>
+<li>Python bindings: <code>open-space-toolkit-io-X.Y.Z-1.x86_64-python</code></li>
+</ul>
 <h4>Debian / Ubuntu</h4>
-<div class="fragment"><div class="line"># Download .deb packages</div><div class="line"></div><div class="line">wget https://github.com/open-space-collective/open-space-toolkit-io/releases/download/0.3.0/open-space-toolkit-io-0.3.0-1.x86_64-runtime.deb</div><div class="line">wget https://github.com/open-space-collective/open-space-toolkit-io/releases/download/0.3.0/open-space-toolkit-io-0.3.0-1.x86_64-devel.deb</div><div class="line"></div><div class="line"># Install .deb packages</div><div class="line"></div><div class="line">apt install -y open-space-toolkit-io-0.3.0-*.deb</div></div><!-- fragment --><h4>Fedora / CentOS</h4>
-<div class="fragment"><div class="line"># Download .rpm packages</div><div class="line"></div><div class="line">wget https://github.com/open-space-collective/open-space-toolkit-io/releases/download/0.3.0/open-space-toolkit-io-0.3.0-1.x86_64-runtime.rpm</div><div class="line">wget https://github.com/open-space-collective/open-space-toolkit-io/releases/download/0.3.0/open-space-toolkit-io-0.3.0-1.x86_64-devel.rpm</div><div class="line"></div><div class="line"># Install .rpm packages</div><div class="line"></div><div class="line">dnf install -y open-space-toolkit-io-0.3.0-*.rpm</div></div><!-- fragment --><h3>Python</h3>
-<p>The binary packages are hosted on <a href="https://pypi.org/project/open-space-toolkit-io/">PyPI</a>:</p>
-<div class="fragment"><div class="line">pip install open-space-toolkit-io</div></div><!-- fragment --><h2>Getting Started</h2>
-<p>Want to quickly get started? It's pretty simple.</p>
-<p>Install <a href="https://www.docker.com/">Docker</a> and try this:</p>
-<div class="fragment"><div class="line">docker run -it openspacecollective/open-space-toolkit-io-python</div></div><!-- fragment --><p>This will start an <a href="https://ipython.org/">iPython</a> shell within a container where the OSTk I/O component is already installed.</p>
-<p>Once the shell is up and running, playing with it is easy:</p>
-<div class="fragment"><div class="line">from <a class="code" href="namespaceostk_1_1io.html">ostk.io</a> <span class="keyword">import</span> URL <span class="comment"># URL class</span></div><div class="line"><span class="keyword">from</span> <a class="code" href="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http.html">ostk.io.ip.tcp.http</a> <span class="keyword">import</span> Client <span class="comment"># HTTP client class</span></div><div class="line"></div><div class="line">url = URL.parse(<span class="stringliteral">&quot;https://www.google.com&quot;</span>) <span class="comment"># Construct a URL</span></div><div class="line"></div><div class="line">response = Client.get(url) <span class="comment"># Send an HTTP GET request (over HTTPS)</span></div><div class="line"></div><div class="line">response.get_status_code() <span class="comment"># Display the status code of the HTTP response</span></div></div><!-- fragment --><p><em>Tip: Use tab for auto-completion!</em></p>
-<h2>Structure</h2>
+<p>After downloading the relevant <code>.deb</code> binary packages, install:</p>
+<div class="fragment"><div class="line">apt install open-space-toolkit-io-*.deb</div></div><!-- fragment --><h4>Fedora / CentOS</h4>
+<p>After downloading the relevant <code>.rpm</code> binary packages, install:</p>
+<div class="fragment"><div class="line">dnf install open-space-toolkit-io-*.rpm</div></div><!-- fragment --><h3>Python</h3>
+<p>Install from <a href="https://pypi.org/project/open-space-toolkit-io/">PyPI</a>:</p>
+<div class="fragment"><div class="line">pip install open-space-toolkit-io</div></div><!-- fragment --><h2>Structure</h2>
 <p>The <b>IO</b> library exhibits the following structure:</p>
 <div class="fragment"><div class="line">├── IP</div><div class="line">│   ├── Address</div><div class="line">│   └── TCP</div><div class="line">│       ├── Client</div><div class="line">│       ├── Server</div><div class="line">│       └── HTTP</div><div class="line">│           ├── Client</div><div class="line">│           └── Server</div><div class="line">└── URL</div></div><!-- fragment --><h2>Documentation</h2>
 <p>Documentation is available here:</p>
