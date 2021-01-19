@@ -7,20 +7,18 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <OpenSpaceToolkitIOPy/URL/Query.cpp>
+// #include <OpenSpaceToolkitIOPy/URL/Query.cpp>
 
 #include <OpenSpaceToolkit/IO/URL.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS (OpenSpaceToolkitIOPy_URL_toString_overloads, ostk::io::URL::toString, 0, 1)
+// https://pybind11.readthedocs.io/en/stable/basics.html#default-args
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-inline void                     OpenSpaceToolkitIOPy_URL                    ( )
+inline void                     OpenSpaceToolkitIOPy_URL                    (                      pybind11::module&                aModule                    )
 {
 
-    using namespace boost::python ;
+    using namespace pybind11 ;
 
     using ostk::core::types::Integer ;
     using ostk::core::types::String ;
@@ -28,7 +26,9 @@ inline void                     OpenSpaceToolkitIOPy_URL                    ( )
     using ostk::io::URL ;
     using ostk::io::url::Query ;
 
-    scope in_URL = class_<URL>("URL", init<const String&, const String&, const String&, const Integer&, const String&, const String&, const Query&, const String&>())
+    class_<URL>(aModule, "URL")
+
+        .def(init<const String&, const String&, const String&, const Integer&, const String&, const String&, const Query&, const String&>())
 
         .def(self == self)
         .def(self != self)
@@ -36,8 +36,7 @@ inline void                     OpenSpaceToolkitIOPy_URL                    ( )
         .def(self + String())
         .def(self += String())
 
-        .def(self_ns::str(self_ns::self))
-
+        .def("__str__", &(shift_to_string<URL>))
         .def("__repr__", +[] (const URL& aUrl) -> std::string { return aUrl.toString() ; })
 
         .def("is_defined", &URL::isDefined)
@@ -50,7 +49,9 @@ inline void                     OpenSpaceToolkitIOPy_URL                    ( )
         .def("get_password", &URL::getPassword)
         .def("get_query", &URL::getQuery)
         .def("get_fragment", &URL::getFragment)
-        .def("to_string", &URL::toString, OpenSpaceToolkitIOPy_URL_toString_overloads())
+        // Default arguments specification
+        // .def("to_string", &URL::toString, arg("doSanitize") = false)
+        .def("to_string", &URL::toString, "doSanitize"_a=false)
         .def("set_scheme", &URL::setScheme)
         .def("set_host", &URL::setHost)
         .def("set_path", &URL::setPath)
@@ -60,14 +61,14 @@ inline void                     OpenSpaceToolkitIOPy_URL                    ( )
         .def("set_query", &URL::setQuery)
         .def("set_fragment", &URL::setFragment)
 
-        .def("undefined", &URL::Undefined).staticmethod("undefined")
-        .def("parse", &URL::Parse).staticmethod("parse")
+        .def_static("undefined", &URL::Undefined)
+        .def_static("parse", &URL::Parse)
         // .def("encode_string", &URL::EncodeString).staticmethod("encode_string")
         // .def("decode_string", &URL::DecodeString).staticmethod("decode_string")
 
     ;
 
-    OpenSpaceToolkitIOPy_URL_Query() ;
+    OpenSpaceToolkitIOPy_URL_Query(aModule) ;
 
 }
 

@@ -13,18 +13,19 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP            ( )
+inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP            (                 pybind11::module&                        aModule                 )
 {
 
-    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("ostk.io.ip.tcp.http")))) ;
+    // Create "http" python submodule
+    auto http = aModule.def_submodule("http") ;
 
-    boost::python::scope().attr("http") = module ;
+    // Add __path__ attribute for "http" submodule
+    http.attr("__path__") = "ostk.io.ip.tcp.http" ;
 
-    boost::python::scope scope = module ;
-
-    OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request() ;
-    OpenSpaceToolkitIOPy_IP_TCP_HTTP_Response() ;
-    OpenSpaceToolkitIOPy_IP_TCP_HTTP_Client() ;
+    // Add custom types to python "http" submodule
+    OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request(http) ;
+    OpenSpaceToolkitIOPy_IP_TCP_HTTP_Response(http) ;
+    OpenSpaceToolkitIOPy_IP_TCP_HTTP_Client(http) ;
 
 }
 

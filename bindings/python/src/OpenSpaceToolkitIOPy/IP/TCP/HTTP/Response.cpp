@@ -11,31 +11,33 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Response   ( )
+inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Response                     (                     pybind11::module& aModule                  )
 {
 
-    using namespace boost::python ;
+    using namespace pybind11 ;
 
     using ostk::core::types::String ;
 
     using ostk::io::ip::tcp::http::Response ;
 
-    scope in_Response = class_<Response>("Response", init<const Response::StatusCode&, const String&>())
+    class_<Response> response (aModule, "Response") ;
 
-        .def(self_ns::str(self_ns::self))
-        .def(self_ns::repr(self_ns::self))
+    response.def(init<const Response::StatusCode&, const String&>())
+
+        .def("__str__", &(shift_to_string<Response>))
+        .def("__repr__", &(shift_to_string<Response>))
 
 		.def("is_defined", &Response::isDefined)
         .def("is_ok", &Response::isOk)
         .def("get_status_code", &Response::getStatusCode)
         .def("get_body", &Response::getBody)
 
-        .def("undefined", &Response::Undefined).staticmethod("undefined")
-        .def("string_from_status_code", &Response::StringFromStatusCode).staticmethod("string_from_status_code")
+        .def_static("undefined", &Response::Undefined)
+        .def_static("string_from_status_code", &Response::StringFromStatusCode)
 
     ;
 
-    enum_<Response::StatusCode>("StatusCode")
+    enum_<Response::StatusCode>(response, "StatusCode")
 
         .value("Undefined", Response::StatusCode::Undefined)
         .value("Continue", Response::StatusCode::Continue)
@@ -100,6 +102,7 @@ inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Response   ( )
         .value("LoopDetected", Response::StatusCode::LoopDetected)
         .value("NotExtended", Response::StatusCode::NotExtended)
         .value("NetworkAuthenticationRequire", Response::StatusCode::NetworkAuthenticationRequire)
+
     ;
 
 }

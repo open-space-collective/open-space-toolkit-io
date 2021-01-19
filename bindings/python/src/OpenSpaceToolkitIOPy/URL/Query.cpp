@@ -7,28 +7,34 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <OpenSpaceToolkitIOPy/Utilities/IterableConverter.hpp>
-
+#include <OpenSpaceToolkitIOPy/Utilities/ArrayCasting.hpp>
 #include <OpenSpaceToolkit/IO/URL/Query.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitIOPy_URL_Query              ( )
+using ostk::core::ctnr::Array ;
+using ostk::io::url::Query ;
+
+void          set_array(const Array<Query::Parameter>& anArray) { (void) anArray ; }
+
+inline void                     OpenSpaceToolkitIOPy_URL_Query              (              pybind11::module&                              aModule              )
 {
 
-    using namespace boost::python ;
+    using namespace pybind11 ;
 
     using ostk::core::ctnr::Array ;
 
     using ostk::io::url::Query ;
 
-    scope in_Query = class_<Query>("Query", init<const Array<Query::Parameter>&>())
+    class_<Query> query(aModule, "Query") ;
+
+    query.def(init<const Array<Query::Parameter>&>())
 
         .def(self == self)
         .def(self != self)
 
-        .def("__str__", +[] (const Query& aQuery) -> std::string { return aQuery.toString() ; })
-        .def("__repr__", +[] (const Query& aQuery) -> std::string { return aQuery.toString() ; })
+        .def("__str__", &(shift_to_string<Query>))
+        .def("__repr__", &(shift_to_string<Query>))
 
         .def("is_defined", &Query::isDefined)
         .def("has_parameter_with_name", &Query::hasParameterWithName)
@@ -37,12 +43,14 @@ inline void                     OpenSpaceToolkitIOPy_URL_Query              ( )
         .def("to_string", &Query::toString)
         .def("add_parameter", &Query::addParameter)
 
-        .def("undefined", &Query::Undefined).staticmethod("undefined")
-        .def("parse", &Query::Parse).staticmethod("parse")
+        .def_static("undefined", &Query::Undefined)
+        .def_static("parse", &Query::Parse)
 
     ;
 
-    scope in_Parameter = class_<Query::Parameter>("Parameter", init<const Query::Parameter::Name&, const Query::Parameter::Value&>())
+    class_<Query::Parameter> param(aModule, "Parameter") ;
+
+    param.def(init<const Query::Parameter::Name&, const Query::Parameter::Value&>())
 
         .def(self == self)
         .def(self != self)
@@ -54,12 +62,10 @@ inline void                     OpenSpaceToolkitIOPy_URL_Query              ( )
 
     ;
 
-    IterableConverter()
+    aModule.attr("Query") = query ;
+    aModule.attr("Parameter") = param ;
 
-        .from_python<Array<Query::Parameter>>()
-        .to_python<Array<Query::Parameter>>()
-
-    ;
+    aModule.def("set_array", overload_cast<const Array<Query::Parameter>&>(&set_array));
 
 }
 
