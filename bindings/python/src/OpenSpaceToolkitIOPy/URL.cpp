@@ -7,7 +7,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// #include <OpenSpaceToolkitIOPy/URL/Query.cpp>
+#include <OpenSpaceToolkitIOPy/URL/Query.cpp>
 
 #include <OpenSpaceToolkit/IO/URL.hpp>
 
@@ -26,9 +26,9 @@ inline void                     OpenSpaceToolkitIOPy_URL                    (   
     using ostk::io::URL ;
     using ostk::io::url::Query ;
 
-    class_<URL>(aModule, "URL")
+    class_<URL> url_class(aModule, "URL") ;
 
-        .def(init<const String&, const String&, const String&, const Integer&, const String&, const String&, const Query&, const String&>())
+    url_class.def(init<const String&, const String&, const String&, const Integer&, const String&, const String&, const Query&, const String&>())
 
         .def(self == self)
         .def(self != self)
@@ -63,12 +63,12 @@ inline void                     OpenSpaceToolkitIOPy_URL                    (   
 
         .def_static("undefined", &URL::Undefined)
         .def_static("parse", &URL::Parse)
-        // .def("encode_string", &URL::EncodeString).staticmethod("encode_string")
-        // .def("decode_string", &URL::DecodeString).staticmethod("decode_string")
+        // .def_static("encode_string", &URL::EncodeString)
+        // .def_static("decode_string", &URL::DecodeString)
 
     ;
 
-    OpenSpaceToolkitIOPy_URL_Query(aModule) ;
+    OpenSpaceToolkitIOPy_URL_Query(url_class) ;
 
 }
 

@@ -8,6 +8,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include <OpenSpaceToolkitIOPy/Utilities/ArrayCasting.hpp>
+
 #include <OpenSpaceToolkit/IO/URL/Query.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -17,7 +18,8 @@ using ostk::io::url::Query ;
 
 void          set_array(const Array<Query::Parameter>& anArray) { (void) anArray ; }
 
-inline void                     OpenSpaceToolkitIOPy_URL_Query              (              pybind11::module&                              aModule              )
+// Taking a python class as input to mimic previous behavior with Boost. Can be refined later if needed
+inline void                     OpenSpaceToolkitIOPy_URL_Query              (                  auto                              aClass                        )
 {
 
     using namespace pybind11 ;
@@ -26,15 +28,18 @@ inline void                     OpenSpaceToolkitIOPy_URL_Query              (   
 
     using ostk::io::url::Query ;
 
-    class_<Query> query(aModule, "Query") ;
+    class_<Query> query(aClass, "Query") ;
 
     query.def(init<const Array<Query::Parameter>&>())
 
         .def(self == self)
         .def(self != self)
 
-        .def("__str__", &(shift_to_string<Query>))
-        .def("__repr__", &(shift_to_string<Query>))
+        // Operator definition needed to use template
+        // .def("__str__", &(shift_to_string<Query>))
+        // .def("__repr__", &(shift_to_string<Query>))
+        .def("__str__", +[] (const Query& aQuery) -> std::string { return aQuery.toString() ; })
+        .def("__repr__", +[] (const Query& aQuery) -> std::string { return aQuery.toString() ; })
 
         .def("is_defined", &Query::isDefined)
         .def("has_parameter_with_name", &Query::hasParameterWithName)
@@ -48,7 +53,7 @@ inline void                     OpenSpaceToolkitIOPy_URL_Query              (   
 
     ;
 
-    class_<Query::Parameter> param(aModule, "Parameter") ;
+    class_<Query::Parameter> param(query, "Parameter") ;
 
     param.def(init<const Query::Parameter::Name&, const Query::Parameter::Value&>())
 
@@ -62,10 +67,7 @@ inline void                     OpenSpaceToolkitIOPy_URL_Query              (   
 
     ;
 
-    aModule.attr("Query") = query ;
-    aModule.attr("Parameter") = param ;
-
-    aModule.def("set_array", overload_cast<const Array<Query::Parameter>&>(&set_array));
+    aClass.def("set_array", overload_cast<const Array<Query::Parameter>&>(&set_array));
 
 }
 

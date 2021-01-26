@@ -113,6 +113,7 @@ The library exhibits the following structure:
 │           ├── Client
 │           └── Server
 └── URL
+    └── Query
 ```
 
 </p>
@@ -178,7 +179,7 @@ Or to run them manually:
 
 | Name                | Version | License            | Link                                                                                                                         |
 | ------------------- | ------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| Boost               | 1.69.0  | BSL-1.0            | [boost.org](https://www.boost.org)                                                                                           |
+| Pybind11            | 2.6.1   | BSD-3-Clause       | [github.com/pybind/pybind11](https://github.com/pybind/pybind11)                                                                                           |
 | C++ Network Library | 0.13.0  | BSL-1.0            | [cpp-netlib.org](https://cpp-netlib.org)                                                                                     |
 | Pistache            | master  | Apache License 2.0 | [pistache.io](http://pistache.io)                                                                                            |
 | Core                | master  | Apache License 2.0 | [github.com/open-space-collective/open-space-toolkit-core](https://github.com/open-space-collective/open-space-toolkit-core) |
