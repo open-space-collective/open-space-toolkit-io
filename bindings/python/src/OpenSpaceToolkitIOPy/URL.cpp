@@ -15,7 +15,7 @@
 
 // https://pybind11.readthedocs.io/en/stable/basics.html#default-args
 
-inline void                     OpenSpaceToolkitIOPy_URL                    (                      pybind11::module&                aModule                    )
+inline void                     OpenSpaceToolkitIOPy_URL                    (           pybind11::module&           aModule                                     )
 {
 
     using namespace pybind11 ;
@@ -36,7 +36,7 @@ inline void                     OpenSpaceToolkitIOPy_URL                    (   
         .def(self + String())
         .def(self += String())
 
-        .def("__str__", &(shift_to_string<URL>))
+        .def("__str__", &(shiftToString<URL>))
         .def("__repr__", +[] (const URL& aUrl) -> std::string { return aUrl.toString() ; })
 
         .def("is_defined", &URL::isDefined)
@@ -49,8 +49,7 @@ inline void                     OpenSpaceToolkitIOPy_URL                    (   
         .def("get_password", &URL::getPassword)
         .def("get_query", &URL::getQuery)
         .def("get_fragment", &URL::getFragment)
-        // Default arguments specification
-        // .def("to_string", &URL::toString, arg("doSanitize") = false)
+
         .def("to_string", &URL::toString, "doSanitize"_a=false)
         .def("set_scheme", &URL::setScheme)
         .def("set_host", &URL::setHost)

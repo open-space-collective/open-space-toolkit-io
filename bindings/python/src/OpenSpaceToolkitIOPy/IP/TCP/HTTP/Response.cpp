@@ -11,7 +11,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Response                     (                     pybind11::module& aModule                  )
+inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Response   (           pybind11::module&           aModule                                     )
 {
 
     using namespace pybind11 ;
@@ -24,8 +24,8 @@ inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Response       
 
     response.def(init<const Response::StatusCode&, const String&>())
 
-        .def("__str__", &(shift_to_string<Response>))
-        .def("__repr__", &(shift_to_string<Response>))
+        .def("__str__", &(shiftToString<Response>))
+        .def("__repr__", &(shiftToString<Response>))
 
 		.def("is_defined", &Response::isDefined)
         .def("is_ok", &Response::isOk)

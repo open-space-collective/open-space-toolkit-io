@@ -16,10 +16,15 @@
 using ostk::core::ctnr::Array ;
 using ostk::io::url::Query ;
 
-void          set_array(const Array<Query::Parameter>& anArray) { (void) anArray ; }
+void                            set_array                                   (   const   Array<Query::Parameter>&    anArray                                     )
+{
+
+     (void) anArray ;
+
+}
 
 // Taking a python class as input to mimic previous behavior with Boost. Can be refined later if needed
-inline void                     OpenSpaceToolkitIOPy_URL_Query              (                  auto                              aClass                        )
+inline void                     OpenSpaceToolkitIOPy_URL_Query              (           auto                        aClass                                      )
 {
 
     using namespace pybind11 ;
@@ -36,8 +41,8 @@ inline void                     OpenSpaceToolkitIOPy_URL_Query              (   
         .def(self != self)
 
         // Operator definition needed to use template
-        // .def("__str__", &(shift_to_string<Query>))
-        // .def("__repr__", &(shift_to_string<Query>))
+        // .def("__str__", &(shiftToString<Query>))
+        // .def("__repr__", &(shiftToString<Query>))
         .def("__str__", +[] (const Query& aQuery) -> std::string { return aQuery.toString() ; })
         .def("__repr__", +[] (const Query& aQuery) -> std::string { return aQuery.toString() ; })
 

@@ -11,7 +11,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Client                     (                     pybind11::module& aModule                    )
+inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Client     (           pybind11::module&           aModule                                     )
 {
 
     using namespace pybind11 ;

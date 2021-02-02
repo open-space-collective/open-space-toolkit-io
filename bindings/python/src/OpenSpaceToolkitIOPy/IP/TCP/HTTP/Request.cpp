@@ -11,7 +11,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request                     (                     pybind11::module& aModule                   )
+inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request    (           pybind11::module&           aModule                                     )
 {
 
     using namespace pybind11 ;
@@ -24,8 +24,8 @@ inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request        
 
     request.def(init<const Request::Method&, const URL&, const String&>())
 
-        .def("__str__", &(shift_to_string<Request>))
-        .def("__repr__", &(shift_to_string<Request>))
+        .def("__str__", &(shiftToString<Request>))
+        .def("__repr__", &(shiftToString<Request>))
 
 		.def("is_defined", &Request::isDefined)
         .def("get_method", &Request::getMethod)
@@ -50,7 +50,7 @@ inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request        
         .value("Options", Request::Method::Options)
         .value("Connect", Request::Method::Connect)
         .value("Patch", Request::Method::Patch)
-        
+
     ;
 
 }

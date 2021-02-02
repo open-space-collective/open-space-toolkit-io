@@ -7,6 +7,8 @@
 
 ################################################################################################################################################################
 
+import pytest
+
 import ostk.io as io
 
 ################################################################################################################################################################
@@ -18,14 +20,19 @@ Client = io.ip.tcp.http.Client
 
 ################################################################################################################################################################
 
-def test_client ():
+def test_http_client ():
 
     response = Client.get(URL.parse("https://www.google.com"))
 
     assert response is not None
-
     assert response.is_defined() is True
     assert response.is_ok() is True
-    assert response.get_status_code() == 200
+    assert response.get_status_code() == Response.StatusCode.Ok
+
+    # response = Client.send()
+
+    # response = Client.fetch()
+
+    # response = Client.list()
 
 ################################################################################################################################################################
