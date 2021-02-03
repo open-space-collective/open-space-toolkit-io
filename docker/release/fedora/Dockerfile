@@ -34,7 +34,7 @@ RUN cmake .. \
 
 ################################################################################################################################################################
 
-FROM fedora:30 as cpp-release
+FROM fedora:32 as cpp-release
 
 ENV LD_LIBRARY_PATH /usr/local/lib
 
@@ -47,25 +47,21 @@ ENTRYPOINT ["/usr/local/test/OpenSpaceToolkit/IO/open-space-toolkit-io.test"]
 
 ################################################################################################################################################################
 
-FROM fedora:30 as python-builder
+FROM fedora:32 as python-builder
 
 COPY --from=cpp-builder /app/build/bindings/python/dist /dist
 
-RUN pip3 install /dist/*.whl
+RUN python3.8 -m ensurepip --default-pip \
+ && python3.8 -m pip install /dist/*38*.whl
 
 ################################################################################################################################################################
 
-FROM fedora:30 as python-release
+FROM fedora:32 as python-release
 
 LABEL maintainer="lucas@loftorbital.com"
 
-RUN dnf update -y \
- && dnf install -y libcurl-devel openssl-devel \
- && dnf clean all
-
-RUN ln -s /usr/bin/pip3 /usr/bin/pip
-
-RUN pip install ipython
+RUN python3.8 -m ensurepip --default-pip \
+ && python3.8 -m pip install ipython
 
 COPY --from=python-builder /usr/local/lib/python3.8/site-packages/ostk /usr/local/lib/python3.8/site-packages/ostk
 
