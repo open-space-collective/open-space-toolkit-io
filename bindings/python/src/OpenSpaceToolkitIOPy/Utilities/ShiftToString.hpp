@@ -1,31 +1,28 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /// @project        Open Space Toolkit ▸ I/O
-/// @file           bindings/python/src/OpenSpaceToolkitIOPy/IP/TCP/HTTP/Client.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
+/// @file           bindings/python/src/OpenSpaceToolkitIOPy/Utilities/ShiftToString.cpp
+/// @author         Remy Derollez <remy@loftorbital.com>
 /// @license        Apache License 2.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp>
+#include <sstream>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Client     (           pybind11::module&           aModule                                     )
+/// @brief                      Shift to String Template Function
+///
+///                             Template function used for __str__ and __repr__
+///                             methods on classes exposed in python.
+
+                                template <class T>
+std::string                     shiftToString                               (   const   T&                          aClass                                      )
 {
 
-    using namespace pybind11 ;
-
-    using ostk::io::ip::tcp::http::Client ;
-
-    class_<Client>(aModule, "Client")
-
-        .def_static("send", &Client::Send)
-        .def_static("get", &Client::Get)
-        .def_static("fetch", &Client::Fetch)
-        .def_static("list", &Client::List)
-
-    ;
+    std::ostringstream out;
+    out << aClass;
+    return out.str();
 
 }
 

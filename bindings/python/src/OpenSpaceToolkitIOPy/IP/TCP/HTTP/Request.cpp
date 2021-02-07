@@ -11,33 +11,34 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request    ( )
+inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request    (           pybind11::module&           aModule                                     )
 {
 
-    using namespace boost::python ;
-
+    using namespace pybind11 ;
     using ostk::core::types::String ;
 
     using ostk::io::URL ;
     using ostk::io::ip::tcp::http::Request ;
 
-    scope in_Request = class_<Request>("Request", init<const Request::Method&, const URL&, const String&>())
+    class_<Request> request(aModule, "Request") ;
 
-        .def(self_ns::str(self_ns::self))
-        .def(self_ns::repr(self_ns::self))
+    request.def(init<const Request::Method&, const URL&, const String&>())
+
+        .def("__str__", &(shiftToString<Request>))
+        .def("__repr__", &(shiftToString<Request>))
 
 		.def("is_defined", &Request::isDefined)
         .def("get_method", &Request::getMethod)
         .def("get_url", &Request::getUrl)
         .def("get_body", &Request::getBody)
 
-        .def("undefined", &Request::Undefined).staticmethod("undefined")
-        .def("get", &Request::Get).staticmethod("get")
-        .def("string_from_method", &Request::StringFromMethod).staticmethod("string_from_method")
+        .def_static("undefined", &Request::Undefined)
+        .def_static("get", &Request::Get)
+        .def_static("string_from_method", &Request::StringFromMethod)
 
     ;
 
-    enum_<Request::Method>("Method")
+    enum_<Request::Method>(request, "Method")
 
         .value("Undefined", Request::Method::Undefined)
         .value("Get", Request::Method::Get)
@@ -49,6 +50,7 @@ inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request    ( )
         .value("Options", Request::Method::Options)
         .value("Connect", Request::Method::Connect)
         .value("Patch", Request::Method::Patch)
+
     ;
 
 }

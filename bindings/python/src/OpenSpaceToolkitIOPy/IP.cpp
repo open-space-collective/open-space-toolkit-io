@@ -11,16 +11,17 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitIOPy_IP                     ( )
+inline void                     OpenSpaceToolkitIOPy_IP                     (           pybind11::module&           aModule                                     )
 {
 
-    boost::python::object module(boost::python::handle<>(boost::python::borrowed(PyImport_AddModule("ostk.io.ip")))) ;
+    // Create "ip" python submodule
+    auto ip = aModule.def_submodule("ip") ;
 
-    boost::python::scope().attr("ip") = module ;
+    // Add __path__ attribute for "ip" submodule
+    ip.attr("__path__") = "ostk.io.ip" ;
 
-    boost::python::scope scope = module ;
-
-    OpenSpaceToolkitIOPy_IP_TCP() ;
+    // Add custom types to python "ip" submodule
+    OpenSpaceToolkitIOPy_IP_TCP(ip) ;
 
 }
 

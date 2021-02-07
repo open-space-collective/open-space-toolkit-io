@@ -7,26 +7,42 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <OpenSpaceToolkitIOPy/Utilities/IterableConverter.hpp>
+#include <OpenSpaceToolkitIOPy/Utilities/ArrayCasting.hpp>
 
 #include <OpenSpaceToolkit/IO/URL/Query.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-inline void                     OpenSpaceToolkitIOPy_URL_Query              ( )
+using ostk::core::ctnr::Array ;
+using ostk::io::url::Query ;
+
+void                            set_array                                   (   const   Array<Query::Parameter>&    anArray                                     )
 {
 
-    using namespace boost::python ;
+     (void) anArray ;
+
+}
+
+// Taking a python class as input to mimic previous behavior with Boost. Can be refined later if needed
+inline void                     OpenSpaceToolkitIOPy_URL_Query              (           auto                        aClass                                      )
+{
+
+    using namespace pybind11 ;
 
     using ostk::core::ctnr::Array ;
 
     using ostk::io::url::Query ;
 
-    scope in_Query = class_<Query>("Query", init<const Array<Query::Parameter>&>())
+    class_<Query> query(aClass, "Query") ;
+
+    query.def(init<const Array<Query::Parameter>&>())
 
         .def(self == self)
         .def(self != self)
 
+        // Operator definition needed to use template
+        // .def("__str__", &(shiftToString<Query>))
+        // .def("__repr__", &(shiftToString<Query>))
         .def("__str__", +[] (const Query& aQuery) -> std::string { return aQuery.toString() ; })
         .def("__repr__", +[] (const Query& aQuery) -> std::string { return aQuery.toString() ; })
 
@@ -37,12 +53,14 @@ inline void                     OpenSpaceToolkitIOPy_URL_Query              ( )
         .def("to_string", &Query::toString)
         .def("add_parameter", &Query::addParameter)
 
-        .def("undefined", &Query::Undefined).staticmethod("undefined")
-        .def("parse", &Query::Parse).staticmethod("parse")
+        .def_static("undefined", &Query::Undefined)
+        .def_static("parse", &Query::Parse)
 
     ;
 
-    scope in_Parameter = class_<Query::Parameter>("Parameter", init<const Query::Parameter::Name&, const Query::Parameter::Value&>())
+    class_<Query::Parameter> param(query, "Parameter") ;
+
+    param.def(init<const Query::Parameter::Name&, const Query::Parameter::Value&>())
 
         .def(self == self)
         .def(self != self)
@@ -54,12 +72,7 @@ inline void                     OpenSpaceToolkitIOPy_URL_Query              ( )
 
     ;
 
-    IterableConverter()
-
-        .from_python<Array<Query::Parameter>>()
-        .to_python<Array<Query::Parameter>>()
-
-    ;
+    aClass.def("set_array", overload_cast<const Array<Query::Parameter>&>(&set_array));
 
 }
 
