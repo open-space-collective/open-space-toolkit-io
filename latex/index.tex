@@ -1,10 +1,8 @@
+Structure
+
 \href{https://travis-ci.com/open-space-collective/open-space-toolkit-io}{\tt } \href{https://codecov.io/gh/open-space-collective/open-space-toolkit-io}{\tt } \href{https://open-space-collective.github.io/open-space-toolkit-io}{\tt } \href{https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-io}{\tt } \href{https://badge.fury.io/py/open-space-toolkit-io}{\tt } \href{https://opensource.org/licenses/Apache-2.0}{\tt }
 
 Addressing, networking, database connectors.
-
-\subsection*{Warning}
-
-{\itshape ⚠ This component is under development.}
 
 \subsection*{Getting Started}
 
@@ -102,9 +100,19 @@ pip install open-space-toolkit-io
 \end{DoxyCode}
 
 
-\subsection*{Structure}
+\subsection*{Documentation}
 
-The {\bfseries IO} library exhibits the following structure\+:
+Documentation is available here\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://open-space-collective.github.io/open-space-toolkit-io}{\tt C++}
+\item \href{./bindings/python/docs}{\tt Python}
+\end{DoxyItemize}
+
+$<$details$>$
+
+The library exhibits the following structure\+:
 
 
 \begin{DoxyCode}
@@ -117,18 +125,11 @@ The {\bfseries IO} library exhibits the following structure\+:
 │           ├── Client
 │           └── Server
 └── URL
+    └── \hyperlink{namespaceostk_1_1io_aeabc644ba5c25896df8014bd0271f970}{Query}
 \end{DoxyCode}
 
 
-\subsection*{Documentation}
-
-Documentation is available here\+:
-
-
-\begin{DoxyItemize}
-\item \href{https://open-space-collective.github.io/open-space-toolkit-io}{\tt C++}
-\item \href{./bindings/python/docs}{\tt Python}
-\end{DoxyItemize}
+$<$/details$>$
 
 \subsection*{Tutorials}
 
@@ -210,7 +211,7 @@ Or to run them manually\+:
 \hline
 \rowcolor{\tableheadbgcolor}\textbf{ Name }&\textbf{ Version }&\textbf{ License }&\textbf{ Link  }\\\cline{1-4}
 \endhead
-Boost &1.\+69.\+0 &B\+S\+L-\/1.\+0 &\href{https://www.boost.org}{\tt boost.\+org} \\\cline{1-4}
+Pybind11 &2.\+6.\+1 &B\+S\+D-\/3-\/\+Clause &\href{https://github.com/pybind/pybind11}{\tt github.\+com/pybind/pybind11} \\\cline{1-4}
 C++ Network Library &0.\+13.\+0 &B\+S\+L-\/1.\+0 &\href{https://cpp-netlib.org}{\tt cpp-\/netlib.\+org} \\\cline{1-4}
 Pistache &master &Apache License 2.\+0 &\href{http://pistache.io}{\tt pistache.\+io} \\\cline{1-4}
 Core &master &Apache License 2.\+0 &\href{https://github.com/open-space-collective/open-space-toolkit-core}{\tt github.\+com/open-\/space-\/collective/open-\/space-\/toolkit-\/core} \\\cline{1-4}

@@ -9,10 +9,6 @@
 
 Addressing, networking, database connectors.
 
-## Warning
-
-*⚠ This component is under development.*
-
 ## Getting Started
 
 Want to get started? This is the simplest and quickest way:
@@ -94,9 +90,18 @@ Install from [PyPI](https://pypi.org/project/open-space-toolkit-io/):
 pip install open-space-toolkit-io
 ```
 
-## Structure
+## Documentation
 
-The **IO** library exhibits the following structure:
+Documentation is available here:
+
+- [C++](https://open-space-collective.github.io/open-space-toolkit-io)
+- [Python](./bindings/python/docs)
+
+<details>
+<summary>Structure</summary>
+<p>
+
+The library exhibits the following structure:
 
 ```txt
 ├── IP
@@ -108,14 +113,11 @@ The **IO** library exhibits the following structure:
 │           ├── Client
 │           └── Server
 └── URL
+    └── Query
 ```
 
-## Documentation
-
-Documentation is available here:
-
-- [C++](https://open-space-collective.github.io/open-space-toolkit-io)
-- [Python](./bindings/python/docs)
+</p>
+</details>
 
 ## Tutorials
 
@@ -175,12 +177,12 @@ Or to run them manually:
 
 ## Dependencies
 
-| Name                | Version | License                | Link                                                                                                                         |
-|---------------------|---------|------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| Boost               | 1.69.0  | BSL-1.0                | [boost.org](https://www.boost.org)                                                                                           |
-| C++ Network Library | 0.13.0  | BSL-1.0                | [cpp-netlib.org](https://cpp-netlib.org)                                                                                     |
-| Pistache            | master  | Apache License 2.0     | [pistache.io](http://pistache.io)                                                                                            |
-| Core                | master  | Apache License 2.0     | [github.com/open-space-collective/open-space-toolkit-core](https://github.com/open-space-collective/open-space-toolkit-core) |
+| Name                | Version | License            | Link                                                                                                                         |
+| ------------------- | ------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| Pybind11            | 2.6.1   | BSD-3-Clause       | [github.com/pybind/pybind11](https://github.com/pybind/pybind11)                                                                                           |
+| C++ Network Library | 0.13.0  | BSL-1.0            | [cpp-netlib.org](https://cpp-netlib.org)                                                                                     |
+| Pistache            | master  | Apache License 2.0 | [pistache.io](http://pistache.io)                                                                                            |
+| Core                | master  | Apache License 2.0 | [github.com/open-space-collective/open-space-toolkit-core](https://github.com/open-space-collective/open-space-toolkit-core) |
 
 ## Contribution
 
