@@ -11,6 +11,8 @@
 
 #include <Global.test.hpp>
 
+#include <iostream>
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, Constructor)
@@ -194,6 +196,13 @@ TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, Get)
     {
 
         const URL url = URL::Parse("https://www.google.com") ;
+
+        EXPECT_EQ(Request::Method::Get, Request::Get(url).getMethod()) ;
+
+    }
+
+    {
+        const URL url = URL::Parse("http://this-address-does-not-exist.com") ;
 
         EXPECT_EQ(Request::Method::Get, Request::Get(url).getMethod()) ;
 
