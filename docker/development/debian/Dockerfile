@@ -62,12 +62,12 @@ RUN cd /tmp \
  && make install \
  && rm -rf /tmp/cppnetlib
 
-## Open Space Toolkit ▸ Core [0.4.2]
+## Open Space Toolkit ▸ Core [0.4.3]
 
 RUN mkdir -p /tmp/open-space-toolkit-core \
  && cd /tmp/open-space-toolkit-core \
- && wget --quiet https://github.com/open-space-collective/open-space-toolkit-core/releases/download/0.4.2/open-space-toolkit-core-0.4.2-1.x86_64-runtime.deb \
- && wget --quiet https://github.com/open-space-collective/open-space-toolkit-core/releases/download/0.4.2/open-space-toolkit-core-0.4.2-1.x86_64-devel.deb \
+ && wget --quiet https://github.com/open-space-collective/open-space-toolkit-core/releases/download/0.4.3/open-space-toolkit-core-0.4.3-1.x86_64-runtime.deb \
+ && wget --quiet https://github.com/open-space-collective/open-space-toolkit-core/releases/download/0.4.3/open-space-toolkit-core-0.4.3-1.x86_64-devel.deb \
  && apt install -y ./*.deb \
  && rm -rf /tmp/open-space-toolkit-core
 
