@@ -471,7 +471,6 @@ File                            Client::Fetch                               (   
 
         if (!filePtr)
         {
-            fclose(filePtr) ;
             throw ostk::core::error::RuntimeError("Cannot create file [" + file.toString() + "].") ;
         }
 
@@ -499,8 +498,6 @@ File                            Client::Fetch                               (   
 
         // Cleanup
 
-        curl_easy_cleanup(curlPtr) ;
-
         if (filePtr != nullptr)
         {
 
@@ -508,8 +505,6 @@ File                            Client::Fetch                               (   
             {
                 throw ostk::core::error::RuntimeError("Error when closing the file.") ;
             }
-
-            filePtr = nullptr ;
 
         }
 
@@ -521,12 +516,11 @@ File                            Client::Fetch                               (   
                 file.remove() ;
             }
 
-            file = File::Undefined() ;
-
-            fclose(filePtr) ;
             throw ostk::core::error::RuntimeError("Error using cURL to fetch file at URL [{}]: [{}].", aUrl.toString(), curl_easy_strerror(curlCode)) ;
 
         }
+
+        curl_easy_cleanup(curlPtr) ;
 
         return file ;
 
@@ -565,81 +559,82 @@ void                            Client::List                                (   
 
     CURL* curlPtr = curl_easy_init() ;
 
-    if (curlPtr == nullptr)
-    {
-        curl_easy_cleanup(curlPtr) ;
-        throw ostk::core::error::RuntimeError("Error with cURL setup.") ;
-    }
-
-    // Set URL
-
-    const String urlString = aUrl.toString(true) ;
-
-    curl_easy_setopt(curlPtr, CURLOPT_URL, urlString.data()) ;
-
-    // Set file handler
-
-    FILE* filePtr = fopen(aFile.getPath().toString().data(), "w") ;
-
-    if (!filePtr)
-    {
-        curl_easy_cleanup(curlPtr) ;
-        fclose(filePtr) ;
-        throw ostk::core::error::RuntimeError("Cannot create file [" + aFile.toString() + "].") ;
-    }
-
-    curl_easy_setopt(curlPtr, CURLOPT_FILE, filePtr) ;
-
-    // Set options
-
-    curl_easy_setopt(curlPtr, CURLOPT_TRANSFERTEXT, 1) ;
-
-    if (showNamesOnly)
-    {
-        curl_easy_setopt(curlPtr, CURLOPT_DIRLISTONLY, 1) ;
-    }
-
-    // Send request
-
-    const CURLcode curlCode = curl_easy_perform(curlPtr) ;
-
-    // Check response
-
-    long responseCode ;
-
-    curl_easy_getinfo(curlPtr, CURLINFO_RESPONSE_CODE, &responseCode) ;
-
-    // Cleanup
-
-    curl_easy_cleanup(curlPtr) ;
-
-    if (filePtr != nullptr)
+    try
     {
 
-        if (fclose(filePtr) == EOF)
+        if (curlPtr == nullptr)
         {
-            fclose(filePtr) ;
-            throw ostk::core::error::RuntimeError("Error when closing the file.") ;
+            throw ostk::core::error::RuntimeError("Error with cURL setup.") ;
         }
 
-        filePtr = nullptr ;
+        // Set URL
 
-    }
+        const String urlString = aUrl.toString(true) ;
 
-    if (curlCode != CURLE_OK)
-    {
+        curl_easy_setopt(curlPtr, CURLOPT_URL, urlString.data()) ;
 
-        if (aFile.exists())
+        // Set file handler
+
+        FILE* filePtr = fopen(aFile.getPath().toString().data(), "w") ;
+
+        if (!filePtr)
         {
-            File(aFile).remove() ;
+            throw ostk::core::error::RuntimeError("Cannot create file [" + aFile.toString() + "].") ;
         }
 
-        fclose(filePtr) ;
-        throw ostk::core::error::RuntimeError("Error using cURL to list files at URL [{}]: [{}].", aUrl.toString(), curl_easy_strerror(curlCode)) ;
+        curl_easy_setopt(curlPtr, CURLOPT_FILE, filePtr) ;
+
+        // Set options
+
+        curl_easy_setopt(curlPtr, CURLOPT_TRANSFERTEXT, 1) ;
+
+        if (showNamesOnly)
+        {
+            curl_easy_setopt(curlPtr, CURLOPT_DIRLISTONLY, 1) ;
+        }
+
+        // Send request
+
+        const CURLcode curlCode = curl_easy_perform(curlPtr) ;
+
+        // Check response
+
+        long responseCode ;
+
+        curl_easy_getinfo(curlPtr, CURLINFO_RESPONSE_CODE, &responseCode) ;
+
+        // Cleanup
+
+        if (filePtr != nullptr)
+        {
+
+            if (fclose(filePtr) == EOF)
+            {
+                throw ostk::core::error::RuntimeError("Error when closing the file.") ;
+            }
+
+        }
+
+        if (curlCode != CURLE_OK)
+        {
+
+            if (aFile.exists())
+            {
+                File(aFile).remove() ;
+            }
+
+            throw ostk::core::error::RuntimeError("Error using cURL to list files at URL [{}]: [{}].", aUrl.toString(), curl_easy_strerror(curlCode)) ;
+
+        }
+
+        curl_easy_cleanup(curlPtr) ;
 
     }
-
-    fclose(filePtr) ;
+    catch (...)
+    {
+        curl_easy_cleanup(curlPtr) ;
+        throw ;
+    }
 
 }
 
