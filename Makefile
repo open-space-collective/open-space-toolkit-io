@@ -630,12 +630,19 @@ deploy-coverage-cpp-results: _test-coverage-cpp
 
 	@ echo "Deploying C++ coverage results..."
 
+	$(eval ci_env=$(shell bash <(curl -s https://codecov.io/env)))
+
 	docker run \
 	--rm \
+	${ci_env} \
+	--environment="CI=true" \
 	--volume="$(project_directory):/app:delegated" \
 	--workdir=/app \
-	$(docker_development_image_repository):$(docker_image_version)-$(target) \
-	/bin/bash -c "bash <(curl -s https://codecov.io/bash) -X gcov -y .codecov.yml -t ${ci_codecov_token}"
+	alpine \
+	/bin/sh -c 'apk add git curl \
+		&& curl -Os https://uploader.codecov.io/latest/alpine/codecov \
+		&& chmod +x codecov \
+		&& ./codecov -t ${ci_codecov_token}'
 
 deploy-documentation: build-documentation ## Deploy documentation
 
