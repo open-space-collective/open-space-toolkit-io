@@ -1,7 +1,7 @@
 # Open Space Toolkit ▸ I/O
 
-[![Build and Test](https://github.com/open-space-collective/open-space-toolkit-io/actions/workflows/build-test.yml/badge.svg?branch=master)](https://github.com/open-space-collective/open-space-toolkit-io/actions/workflows/build-test.yml)
-[![Code Coverage](https://codecov.io/gh/open-space-collective/open-space-toolkit-io/branch/master/graph/badge.svg)](https://codecov.io/gh/open-space-collective/open-space-toolkit-io)
+[![Build and Test](https://github.com/open-space-collective/open-space-toolkit-io/actions/workflows/build-test.yml/badge.svg?branch=main)](https://github.com/open-space-collective/open-space-toolkit-io/actions/workflows/build-test.yml)
+[![Code Coverage](https://codecov.io/gh/open-space-collective/open-space-toolkit-io/branch/main/graph/badge.svg)](https://codecov.io/gh/open-space-collective/open-space-toolkit-io)
 [![Documentation](https://img.shields.io/readthedocs/pip/stable.svg)](https://open-space-collective.github.io/open-space-toolkit-io)
 [![GitHub version](https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-io.svg)](https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-io)
 [![PyPI version](https://badge.fury.io/py/open-space-toolkit-io.svg)](https://badge.fury.io/py/open-space-toolkit-io)
@@ -13,7 +13,7 @@ Addressing, networking, database connectors.
 
 Want to get started? This is the simplest and quickest way:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/open-space-collective/open-space-toolkit/master?urlpath=lab/tree/notebooks)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/open-space-collective/open-space-toolkit/main?urlpath=lab/tree/notebooks)
 
 *Nothing to download or install! This will automatically start a [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) environment in your browser with Open Space Toolkit libraries and example notebooks ready to use.*
 
@@ -182,7 +182,7 @@ Or to run them manually:
 | Pybind11            | 2.6.1   | BSD-3-Clause       | [github.com/pybind/pybind11](https://github.com/pybind/pybind11)                                                                                           |
 | C++ Network Library | 0.13.0  | BSL-1.0            | [cpp-netlib.org](https://cpp-netlib.org)                                                                                     |
 | Pistache            | master  | Apache License 2.0 | [pistache.io](http://pistache.io)                                                                                            |
-| Core                | master  | Apache License 2.0 | [github.com/open-space-collective/open-space-toolkit-core](https://github.com/open-space-collective/open-space-toolkit-core) |
+| Core                | main    | Apache License 2.0 | [github.com/open-space-collective/open-space-toolkit-core](https://github.com/open-space-collective/open-space-toolkit-core) |
 
 ## Contribution
 
