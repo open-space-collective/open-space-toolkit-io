@@ -1,12 +1,25 @@
+#!/bin/bash
+
 ################################################################################################################################################################
 
 # @project        Open Space Toolkit ▸ I/O
-# @file           requirements.txt
+# @file           tools/development/helpers/install-python.sh
 # @author         Lucas Brémond <lucas@loftorbital.com>
 # @license        Apache License 2.0
 
 ################################################################################################################################################################
 
-open-space-toolkit-core>=0.4.7
+PYTHON_VERSION="3.11"
+
+################################################################################################################################################################
+
+project_directory="$(git rev-parse --show-toplevel)"
+python_directory="${project_directory}/build/bindings/python/OpenSpaceToolkitIOPy-python-package-${PYTHON_VERSION}"
+
+pushd "${python_directory}" > /dev/null
+
+python${PYTHON_VERSION} -m pip install . --force-reinstall
+
+popd > /dev/null
 
 ################################################################################################################################################################
