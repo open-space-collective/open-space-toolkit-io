@@ -35,22 +35,6 @@ RUN apt-get update -y \
  && apt-get install -y libcurl4-openssl-dev libssl-dev \
  && rm -rf /var/lib/apt/lists/*
 
-## C++ Network Library
-
-ARG CPPNETLIB_VERSION="0.13"
-
-RUN cd /tmp \
- && git clone --branch ${CPPNETLIB_VERSION}-release --depth 1 https://github.com/cpp-netlib/cpp-netlib \
- && cd cpp-netlib \
- && git submodule init \
- && git submodule update \
- && mkdir build \
- && cd build \
- && cmake -DCPP-NETLIB_STATIC_BOOST=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON .. \
- && make -j $(nproc) \
- && make install \
- && rm -rf /tmp/cppnetlib
-
 ## Open Space Toolkit ▸ Core
 
 ARG OSTK_CORE_VERSION="0.4.7"

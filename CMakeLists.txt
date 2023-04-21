@@ -238,17 +238,6 @@ IF (NOT Boost_FOUND)
     MESSAGE (SEND_ERROR "[Boost] not found.")
 ENDIF ()
 
-### C++ Network Library
-
-FIND_PACKAGE ("cppnetlib" REQUIRED)
-
-IF (cppnetlib_FOUND)
-    INCLUDE_DIRECTORIES (${CPPNETLIB_INCLUDE_DIRS})
-    LINK_DIRECTORIES (${CPPNETLIB_LIBRARY_DIRS})
-ELSE ()
-    MESSAGE (SEND_ERROR "[CPP-NETLIB] not found.")
-ENDIF ()
-
 ### Open Space Toolkit ▸ Core [0.2.x]
 
 FIND_PACKAGE ("OpenSpaceToolkitCore" "0.2" REQUIRED)
