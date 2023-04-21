@@ -181,7 +181,6 @@ Or to run them manually:
 | ------------------- | -------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
 | Pybind11            | `2.10.1` | BSD-3-Clause       | [github.com/pybind/pybind11](https://github.com/pybind/pybind11)                                                             |
 | {fmt}               | `5.2.0`  | BSD-2-Clause       | [github.com/fmtlib/fmt](https://github.com/fmtlib/fmt)                                                                       |
-| C++ Network Library | `0.13`   | BSL-1.0            | [cpp-netlib.org](https://cpp-netlib.org)                                                                                     |
 | Core                | `main`   | Apache License 2.0 | [github.com/open-space-collective/open-space-toolkit-core](https://github.com/open-space-collective/open-space-toolkit-core) |
 
 ## Contribution

@@ -12,7 +12,8 @@
 #include <OpenSpaceToolkit/Core/Error.hpp>
 #include <OpenSpaceToolkit/Core/Utilities.hpp>
 
-#include <boost/network/uri.hpp>
+#include <boost/url/url.hpp>
+#include <boost/url/parse.hpp>
 #include <boost/algorithm/string/replace.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -305,21 +306,23 @@ URL                             URL::Parse                                  (   
         throw ostk::core::error::runtime::Undefined("URL") ;
     }
 
-    boost::network::uri::uri uri = { aString } ;
+    const boost::urls::result<boost::urls::url> urlResult = boost::urls::parse_uri(aString);
 
-    if (!uri.is_valid())
+    if (!urlResult)
 	{
 		throw ostk::core::error::runtime::Wrong(aString) ;
 	}
 
-    const String scheme = uri.scheme() ;
-    const String user = boost::network::uri::username(uri) ;
-    const String password = boost::network::uri::password(uri) ;
-    const String host = uri.host() ;
-    const Integer port = (!uri.port().empty()) ? Integer::Parse(uri.port()) : Integer::Undefined() ;
-    const String path = uri.path() ;
-    const Query query = (!uri.query().empty()) ? Query::Parse(uri.query()) : Query::Undefined() ;
-    const String fragment = uri.fragment() ;
+    const boost::urls::url url = urlResult.value() ;
+
+    const String scheme = std::string(url.scheme()) ;
+    const String user = url.user() ;
+    const String password = url.password() ;
+    const String host = url.host() ;
+    const Integer port = (!url.port().empty()) ? Integer::Parse(std::string(url.port())) : Integer::Undefined() ;
+    const String path = url.path() ;
+    const Query query = (!url.query().empty()) ? Query::Parse(url.query()) : Query::Undefined() ;
+    const String fragment = url.fragment() ;
 
     if (scheme.isEmpty() || host.isEmpty())
     {
