@@ -315,11 +315,11 @@ URL                             URL::Parse                                  (   
 
     const boost::urls::url url = urlResult.value() ;
 
-    const String scheme = url.scheme() ;
+    const String scheme = std::string(url.scheme()) ;
     const String user = url.user() ;
     const String password = url.password() ;
     const String host = url.host() ;
-    const Integer port = (!url.port().empty()) ? Integer::Parse(url.port()) : Integer::Undefined() ;
+    const Integer port = (!url.port().empty()) ? Integer::Parse(std::string(url.port())) : Integer::Undefined() ;
     const String path = url.path() ;
     const Query query = (!url.query().empty()) ? Query::Parse(url.query()) : Query::Undefined() ;
     const String fragment = url.fragment() ;
