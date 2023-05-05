@@ -20,13 +20,13 @@
 PYBIND11_MODULE (OpenSpaceToolkitIOPy, m)
 {
 
-    // Add optional docstring for package OpenSpaceToolkitCorePy
+    // Add optional docstring for package OpenSpaceToolkitIOPy
     m.doc() = "Addressing, networking, database connectors for OpenSpaceToolkit." ;
 
     // Add __path__ attribute to python package
     m.attr("__path__") = "ostk.io" ;
 
-    // Change attribute __name__ to make OpenSpaceToolkitCorePy invisible in import path
+    // Change attribute __name__ to make OpenSpaceToolkitIOPy invisible in import path
     m.attr("__name__") = "ostk.io" ;
 
     // Package version information
@@ -36,7 +36,7 @@ PYBIND11_MODULE (OpenSpaceToolkitIOPy, m)
         m.attr("__version__") = "dev" ;
     #endif
 
-    // Add python submodules to OpenSpaceToolkitCorePy
+    // Add python submodules to OpenSpaceToolkitIOPy
 	OpenSpaceToolkitIOPy_URL(m) ;
 	OpenSpaceToolkitIOPy_IP(m) ;
 
