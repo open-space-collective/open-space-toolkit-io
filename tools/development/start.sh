@@ -28,8 +28,6 @@ fi
 
 project_directory=$(git rev-parse --show-toplevel)
 
-open_space_toolkit_core_directory="${project_directory}/../open-space-toolkit-core"
-
 # Initialize variables
 
 options=()

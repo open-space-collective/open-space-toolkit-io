@@ -20,7 +20,7 @@ docker_release_image_python_repository := $(docker_image_repository)-python
 docker_release_image_jupyter_repository := $(docker_image_repository)-jupyter
 
 jupyter_notebook_image_repository := jupyter/scipy-notebook:latest
-jupyter_notebook_port := 9001
+jupyter_notebook_port := 9002
 
 project_name_camel_case := IO
 
@@ -31,7 +31,7 @@ pull: ## Pull all images
 	@ echo "Pulling images..."
 
 	@ make pull-development-image
-	@ make pull-release-image
+	@ make pull-release-images
 
 pull-development-image: ## Pull development image
 
@@ -86,7 +86,7 @@ build-development-image: pull-development-image ## Build development image
 
 	@ echo "Building development image..."
 
-	docker buildx build \
+	docker build \
 		--cache-from=$(docker_development_image_repository):latest \
 		--file="$(CURDIR)/docker/development/Dockerfile" \
 		--tag=$(docker_development_image_repository):$(docker_image_version) \
@@ -108,7 +108,7 @@ build-release-image-cpp: build-development-image pull-release-image-cpp
 
 	@ echo "Building C++ release image..."
 
-	docker buildx build \
+	docker build \
 		--cache-from=$(docker_release_image_cpp_repository):latest \
 		--file="$(CURDIR)/docker/release/Dockerfile" \
 		--tag=$(docker_release_image_cpp_repository):$(docker_image_version) \
@@ -121,7 +121,7 @@ build-release-image-python: build-development-image pull-release-image-python
 
 	@ echo "Building Python release image..."
 
-	docker buildx build \
+	docker build \
 		--cache-from=$(docker_release_image_python_repository):latest \
 		--file="$(CURDIR)/docker/release/Dockerfile" \
 		--tag=$(docker_release_image_python_repository):$(docker_image_version) \
@@ -134,7 +134,7 @@ build-release-image-jupyter: pull-release-image-jupyter
 
 	@ echo "Building Jupyter Notebook release image..."
 
-	docker buildx build \
+	docker build \
 		--cache-from=$(docker_release_image_jupyter_repository):latest \
 		--file="$(CURDIR)/docker/jupyter/Dockerfile" \
 		--tag=$(docker_release_image_jupyter_repository):$(docker_image_version) \
@@ -162,7 +162,7 @@ build-packages: ## Build packages
 	@ make build-packages-cpp
 	@ make build-packages-python
 
-build-packages-cpp: build-development-image
+build-packages-cpp: build-development-image ## Build C++ packages
 
 	@ echo "Building C++ packages..."
 
@@ -177,7 +177,7 @@ build-packages-cpp: build-development-image
 		&& mkdir -p /app/packages/cpp \
 		&& mv /app/build/*.deb /app/packages/cpp"
 
-build-packages-python: build-development-image
+build-packages-python: build-development-image ## Build Python packages
 
 	@ echo "Building Python packages..."
 
@@ -194,9 +194,7 @@ build-packages-python: build-development-image
 
 ################################################################################################################################################################
 
-start-development: build-development-image ## Start development environment
-
-start-development-no-link:
+start-development-no-link: build-development-image ## Start development environment
 
 	@ echo "Starting development environment..."
 
@@ -212,7 +210,7 @@ start-development-no-link:
 
 start-development-link: ## Start development environment (linked)
 
-	$(if $(links), , $(error "You need to provide the links to the C++ dependency repositories you want to link with, separated by white spaces. For example: make start-development-link links="/home/OSTk/open-space-toolkit-mathematics /home/OSTk/open-space-toolkit-core"))
+	$(if $(links), , $(error "You need to provide the links to the C++ dependency repositories you want to link with, separated by white spaces. For example: make start-development-link links="/home/OSTk/open-space-toolkit-core"))
 
 	@ echo "Starting development environment (linked)..."
 
@@ -224,7 +222,7 @@ else
 start-development: start-development-link
 endif
 
-start-python: build-release-image-python ## Start python environment
+start-python: build-release-image-python ## Start Python runtime environment
 
 	@ echo "Starting Python runtime environment..."
 
@@ -274,7 +272,7 @@ debug-development: build-development-image ## Debug development environment
 		$(docker_development_image_repository):$(docker_image_version) \
 		/bin/bash
 
-debug-cpp-release: build-release-image-cpp ## Debug C++ environment
+debug-cpp-release: build-release-image-cpp ## Debug C++ release environment
 
 	@ echo "Debugging C++ release environment..."
 
@@ -284,7 +282,7 @@ debug-cpp-release: build-release-image-cpp ## Debug C++ environment
 		--entrypoint=/bin/bash \
 		$(docker_release_image_cpp_repository):$(docker_image_version)
 
-debug-python-release: build-release-image-python ## Debug Python environment
+debug-python-release: build-release-image-python ## Debug Python release environment
 
 	@ echo "Debugging Python release environment..."
 
@@ -310,7 +308,7 @@ test-unit: ## Run unit tests
 	@ make test-unit-cpp
 	@ make test-unit-python
 
-test-unit-cpp: build-development-image ## Run C++ tests
+test-unit-cpp: build-development-image ## Run C++ unit tests
 
 	@ echo "Running C++ unit tests..."
 
@@ -325,7 +323,7 @@ test-unit-cpp: build-development-image ## Run C++ tests
 		&& make -j 4 \
 		&& make test"
 
-test-unit-python: build-release-image-python ## Run python tests
+test-unit-python: build-release-image-python ## Run Python unit tests
 
 	@ echo "Running Python unit tests..."
 
@@ -335,7 +333,7 @@ test-unit-python: build-release-image-python ## Run python tests
 		--workdir=/usr/local/lib/python3.11/site-packages/ostk/$(project_name) \
 		--entrypoint="" \
 		$(docker_release_image_python_repository):$(docker_image_version) \
-		/bin/bash -c "python3.11 -m pip install pytest && python3.11 -m pytest -sv ."
+		/bin/bash -c "pip install pytest && pytest -sv ."
 
 test-coverage: ## Run test coverage cpp
 
@@ -382,13 +380,10 @@ clean: ## Clean
 		build build-images build-development-image \
 		pull-release-images pull-release-image-cpp pull-release-image-python pull-release-image-jupyter \
 		build-release-image-cpp build-release-image-python build-release-image-jupyter \
-		build-documentation build-packages-cpp  \
+		build-documentation build-packages-cpp \
 		start-development start-python start-jupyter-notebook debug-jupyter-notebook \
 		debug-development debug-cpp-release debug-python-release \
-		test \
-		test-unit test-unit-cpp test-unit-python \
-		test-coverage \
-		test-coverage-cpp \
+		test test-unit test-unit-cpp test-unit-python test-coverage test-coverage-cpp \
 		clean
 
 ################################################################################################################################################################
@@ -396,6 +391,8 @@ clean: ## Clean
 help:
 
 	@grep -E '^[0-9a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
+export DOCKER_BUILDKIT = 1
 
 .DEFAULT_GOAL := help
 
