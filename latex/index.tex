@@ -1,113 +1,75 @@
-Structure
+Structure\href{https://github.com/open-space-collective/open-space-toolkit-io/actions/workflows/build-test.yml}{\texttt{ }} \href{https://codecov.io/gh/open-space-collective/open-space-toolkit-io}{\texttt{ }} \href{https://open-space-collective.github.io/open-space-toolkit-io}{\texttt{ }} \href{https://badge.fury.io/gh/open-space-collective\%2Fopen-space-toolkit-io}{\texttt{ }} \href{https://badge.fury.io/py/open-space-toolkit-io}{\texttt{ }} \href{https://opensource.org/licenses/Apache-2.0}{\texttt{ }}
 
-\href{https://github.com/open-space-collective/open-space-toolkit-io/actions/workflows/build-test.yml}{\tt } \href{https://codecov.io/gh/open-space-collective/open-space-toolkit-io}{\tt } \href{https://open-space-collective.github.io/open-space-toolkit-io}{\tt } \href{https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-io}{\tt } \href{https://badge.fury.io/py/open-space-toolkit-io}{\tt } \href{https://opensource.org/licenses/Apache-2.0}{\tt }
-
-Addressing, networking, database connectors.
-
-\subsection*{Getting Started}
-
+Addressing, networking, database connectors.\hypertarget{index_autotoc_md1}{}\doxysection{Getting Started}\label{index_autotoc_md1}
 Want to get started? This is the simplest and quickest way\+:
 
-\href{https://mybinder.org/v2/gh/open-space-collective/open-space-toolkit/main?urlpath=lab/tree/notebooks}{\tt }
+\href{https://mybinder.org/v2/gh/open-space-collective/open-space-toolkit/main?urlpath=lab/tree/notebooks}{\texttt{ }}
 
-{\itshape Nothing to download or install! This will automatically start a \href{https://jupyterlab.readthedocs.io/en/stable/}{\tt Jupyter\+Lab} environment in your browser with Open Space Toolkit libraries and example notebooks ready to use.}
-
-\subsubsection*{Alternatives}
-
-\paragraph*{Docker Images}
-
-\href{https://www.docker.com/}{\tt Docker} must be installed on your system.
-
-\subparagraph*{i\+Python}
-
-The following command will start an \href{https://ipython.org/}{\tt i\+Python} shell within a container where the O\+S\+Tk components are already installed\+:
+{\itshape Nothing to download or install! This will automatically start a \href{https://jupyterlab.readthedocs.io/en/stable/}{\texttt{ Jupyter\+Lab}} environment in your browser with Open Space Toolkit libraries and example notebooks ready to use.}\hypertarget{index_autotoc_md2}{}\doxysubsection{Alternatives}\label{index_autotoc_md2}
+\hypertarget{index_autotoc_md3}{}\doxysubsubsection{Docker Images}\label{index_autotoc_md3}
+\href{https://www.docker.com/}{\texttt{ Docker}} must be installed on your system.\hypertarget{index_autotoc_md4}{}\doxyparagraph{i\+Python}\label{index_autotoc_md4}
+The following command will start an \href{https://ipython.org/}{\texttt{ i\+Python}} shell within a container where the O\+S\+Tk components are already installed\+:
 
 
-\begin{DoxyCode}
-docker run -it openspacecollective/open-space-toolkit-io-python
+\begin{DoxyCode}{0}
+\DoxyCodeLine{docker run -\/it openspacecollective/open-\/space-\/toolkit-\/io-\/python}
 \end{DoxyCode}
 
 
 Once the shell is up and running, playing with it is easy\+:
 
 
-\begin{DoxyCode}
-\textcolor{keyword}{from} \hyperlink{namespaceostk_1_1io}{ostk.io} \textcolor{keyword}{import} URL \textcolor{comment}{# URL class}
-\textcolor{keyword}{from} \hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http}{ostk.io.ip.tcp.http} \textcolor{keyword}{import} Client \textcolor{comment}{# HTTP client class}
-
-url = URL.parse(\textcolor{stringliteral}{"https://www.google.com"}) \textcolor{comment}{# Construct a URL}
-
-response = Client.get(url) \textcolor{comment}{# Send an HTTP GET request (over HTTPS)}
-
-response.get\_status\_code() \textcolor{comment}{# Display the status code of the HTTP response}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{from} \mbox{\hyperlink{namespaceostk_1_1io}{ostk.io}} \textcolor{keyword}{import} URL \textcolor{comment}{\# URL class}}
+\DoxyCodeLine{\textcolor{keyword}{from} \mbox{\hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http}{ostk.io.ip.tcp.http}} \textcolor{keyword}{import} Client \textcolor{comment}{\# HTTP client class}}
+\DoxyCodeLine{}
+\DoxyCodeLine{url = URL.parse(\textcolor{stringliteral}{"https://www.google.com"}) \textcolor{comment}{\# Construct a URL}}
+\DoxyCodeLine{}
+\DoxyCodeLine{response = Client.get(url) \textcolor{comment}{\# Send an HTTP GET request (over HTTPS)}}
+\DoxyCodeLine{}
+\DoxyCodeLine{response.get\_status\_code() \textcolor{comment}{\# Display the status code of the HTTP response}}
 \end{DoxyCode}
 
 
-{\itshape Tip\+: Use tab for auto-\/completion!}
-
-\subparagraph*{Jupyter\+Lab}
-
-The following command will start a \href{https://jupyterlab.readthedocs.io/en/stable/}{\tt Jupyter\+Lab} server within a container where the O\+S\+Tk components are already installed\+:
+{\itshape Tip\+: Use tab for auto-\/completion!}\hypertarget{index_autotoc_md5}{}\doxyparagraph{Jupyter\+Lab}\label{index_autotoc_md5}
+The following command will start a \href{https://jupyterlab.readthedocs.io/en/stable/}{\texttt{ Jupyter\+Lab}} server within a container where the O\+S\+Tk components are already installed\+:
 
 
-\begin{DoxyCode}
-docker run --publish=8888:8888 openspacecollective/open-space-toolkit-io-jupyter
+\begin{DoxyCode}{0}
+\DoxyCodeLine{docker run -\/-\/publish=8888:8888 openspacecollective/open-\/space-\/toolkit-\/io-\/jupyter}
 \end{DoxyCode}
 
 
-Once the container is running, access \href{http://localhost:8888/lab}{\tt http\+://localhost\+:8888/lab} and create a Python 3 Notebook.
-
-\subsection*{Installation}
-
-\subsubsection*{C++}
-
-The binary packages are hosted using \href{https://github.com/open-space-collective/open-space-toolkit-io/releases}{\tt Git\+Hub Releases}\+:
+Once the container is running, access \href{http://localhost:8888/lab}{\texttt{ http\+://localhost\+:8888/lab}} and create a Python 3 Notebook.\hypertarget{index_autotoc_md6}{}\doxysection{Installation}\label{index_autotoc_md6}
+\hypertarget{index_autotoc_md7}{}\doxysubsection{C++}\label{index_autotoc_md7}
+The binary packages are hosted using \href{https://github.com/open-space-collective/open-space-toolkit-io/releases}{\texttt{ Git\+Hub Releases}}\+:
 
 
 \begin{DoxyItemize}
 \item Runtime libraries\+: {\ttfamily open-\/space-\/toolkit-\/io-\/\+X.\+Y.\+Z-\/1.\+x86\+\_\+64-\/runtime}
 \item C++ headers\+: {\ttfamily open-\/space-\/toolkit-\/io-\/\+X.\+Y.\+Z-\/1.\+x86\+\_\+64-\/devel}
 \item Python bindings\+: {\ttfamily open-\/space-\/toolkit-\/io-\/\+X.\+Y.\+Z-\/1.\+x86\+\_\+64-\/python}
-\end{DoxyItemize}
-
-\paragraph*{Debian / Ubuntu}
-
+\end{DoxyItemize}\hypertarget{index_autotoc_md8}{}\doxysubsubsection{Debian / Ubuntu}\label{index_autotoc_md8}
 After downloading the relevant {\ttfamily .deb} binary packages, install\+:
 
 
-\begin{DoxyCode}
-apt install open-space-toolkit-io-*.deb
+\begin{DoxyCode}{0}
+\DoxyCodeLine{apt install open-\/space-\/toolkit-\/io-\/*.deb}
 \end{DoxyCode}
+\hypertarget{index_autotoc_md9}{}\doxysubsection{Python}\label{index_autotoc_md9}
+Install from \href{https://pypi.org/project/open-space-toolkit-io/}{\texttt{ Py\+PI}}\+:
 
 
-\paragraph*{Fedora / Cent\+OS}
-
-After downloading the relevant {\ttfamily .rpm} binary packages, install\+:
-
-
-\begin{DoxyCode}
-dnf install open-space-toolkit-io-*.rpm
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pip install open-\/space-\/toolkit-\/io}
 \end{DoxyCode}
-
-
-\subsubsection*{Python}
-
-Install from \href{https://pypi.org/project/open-space-toolkit-io/}{\tt Py\+PI}\+:
-
-
-\begin{DoxyCode}
-pip install open-space-toolkit-io
-\end{DoxyCode}
-
-
-\subsection*{Documentation}
-
+\hypertarget{index_autotoc_md10}{}\doxysection{Documentation}\label{index_autotoc_md10}
 Documentation is available here\+:
 
 
 \begin{DoxyItemize}
-\item \href{https://open-space-collective.github.io/open-space-toolkit-io}{\tt C++}
-\item \href{./bindings/python/docs}{\tt Python}
+\item \href{https://open-space-collective.github.io/open-space-toolkit-io}{\texttt{ C++}}
+\item \href{./bindings/python/docs}{\texttt{ Python}}
 \end{DoxyItemize}
 
 $<$details$>$
@@ -115,43 +77,36 @@ $<$details$>$
 The library exhibits the following structure\+:
 
 
-\begin{DoxyCode}
-├── IP
-│   ├── Address
-│   └── TCP
-│       ├── Client
-│       ├── Server
-│       └── HTTP
-│           ├── Client
-│           └── Server
-└── URL
-    └── \hyperlink{namespaceostk_1_1io_aeabc644ba5c25896df8014bd0271f970}{Query}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{├── IP}
+\DoxyCodeLine{│   ├── Address}
+\DoxyCodeLine{│   └── TCP}
+\DoxyCodeLine{│       ├── Client}
+\DoxyCodeLine{│       ├── Server}
+\DoxyCodeLine{│       └── HTTP}
+\DoxyCodeLine{│           ├── Client}
+\DoxyCodeLine{│           └── Server}
+\DoxyCodeLine{└── URL}
+\DoxyCodeLine{    └── \mbox{\hyperlink{namespaceostk_1_1io_aeabc644ba5c25896df8014bd0271f970}{Query}}}
 \end{DoxyCode}
 
 
-$<$/details$>$
-
-\subsection*{Tutorials}
-
+$<$/details$>$\hypertarget{index_autotoc_md11}{}\doxysection{Tutorials}\label{index_autotoc_md11}
 Tutorials are available here\+:
 
 
 \begin{DoxyItemize}
-\item \href{./tutorials/cpp}{\tt C++}
-\item \href{./tutorials/python}{\tt Python}
-\end{DoxyItemize}
-
-\subsection*{Setup}
-
-\subsubsection*{Development Environment}
-
-Using \href{https://www.docker.com}{\tt Docker} for development is recommended, to simplify the installation of the necessary build tools and dependencies. Instructions on how to install Docker are available \href{https://docs.docker.com/install/}{\tt here}.
+\item \href{./tutorials/cpp}{\texttt{ C++}}
+\item \href{./tutorials/python}{\texttt{ Python}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md12}{}\doxysection{Setup}\label{index_autotoc_md12}
+\hypertarget{index_autotoc_md13}{}\doxysubsection{Development Environment}\label{index_autotoc_md13}
+Using \href{https://www.docker.com}{\texttt{ Docker}} for development is recommended, to simplify the installation of the necessary build tools and dependencies. Instructions on how to install Docker are available \href{https://docs.docker.com/install/}{\texttt{ here}}.
 
 To start the development environment\+:
 
 
-\begin{DoxyCode}
-make start-development
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make start-\/development}
 \end{DoxyCode}
 
 
@@ -164,67 +119,51 @@ This will\+:
 \item Start a {\ttfamily bash} shell from the {\ttfamily ./build} working directory.
 \end{DoxyEnumerate}
 
-If installing Docker is not an option, you can manually install the development tools (G\+CC, C\+Make) and all required dependencies, by following a procedure similar to the one described in the \href{./docker/development/Dockerfile}{\tt Development Dockerfile}.
-
-\subsubsection*{Build}
-
+If installing Docker is not an option, you can manually install the development tools (G\+CC, C\+Make) and all required dependencies, by following a procedure similar to the one described in the \href{./docker/development/Dockerfile}{\texttt{ Development Dockerfile}}.\hypertarget{index_autotoc_md14}{}\doxysubsection{Build}\label{index_autotoc_md14}
 From the {\ttfamily ./build} directory\+:
 
 
-\begin{DoxyCode}
-cmake ..
-make
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake ..}
+\DoxyCodeLine{make}
 \end{DoxyCode}
 
 
-{\itshape Tip\+: {\ttfamily helpers/build.\+sh} simplifies building from within the development environment.}
-
-\subsubsection*{Test}
-
+{\itshape Tip\+: {\ttfamily helpers/build.\+sh} simplifies building from within the development environment.}\hypertarget{index_autotoc_md15}{}\doxysubsection{Test}\label{index_autotoc_md15}
 To start a container to build and run the tests\+:
 
 
-\begin{DoxyCode}
-make test
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make test}
 \end{DoxyCode}
 
 
 Or to run them manually\+:
 
 
-\begin{DoxyCode}
-./bin/open-space-toolkit-io.test
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./bin/open-\/space-\/toolkit-\/io.test}
 \end{DoxyCode}
 
 
-{\itshape Tip\+: {\ttfamily helpers/test.\+sh} simplifies running tests from within the development environment.}
-
-\subsection*{Dependencies}
-
+{\itshape Tip\+: {\ttfamily helpers/test.\+sh} simplifies running tests from within the development environment.}\hypertarget{index_autotoc_md16}{}\doxysection{Dependencies}\label{index_autotoc_md16}
 \tabulinesep=1mm
-\begin{longtabu} spread 0pt [c]{*{4}{|X[-1]}|}
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
 \hline
-\rowcolor{\tableheadbgcolor}\textbf{ Name }&\textbf{ Version }&\textbf{ License }&\textbf{ Link  }\\\cline{1-4}
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Version }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ License }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Link  }\\\cline{1-4}
 \endfirsthead
 \hline
 \endfoot
 \hline
-\rowcolor{\tableheadbgcolor}\textbf{ Name }&\textbf{ Version }&\textbf{ License }&\textbf{ Link  }\\\cline{1-4}
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Version }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ License }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Link  }\\\cline{1-4}
 \endhead
-Pybind11 &{\ttfamily 2.\+10.\+1} &B\+S\+D-\/3-\/\+Clause &\href{https://github.com/pybind/pybind11}{\tt github.\+com/pybind/pybind11} \\\cline{1-4}
-\{fmt\} &{\ttfamily 5.\+2.\+0} &B\+S\+D-\/2-\/\+Clause &\href{https://github.com/fmtlib/fmt}{\tt github.\+com/fmtlib/fmt} \\\cline{1-4}
-Core &{\ttfamily main} &Apache License 2.\+0 &\href{https://github.com/open-space-collective/open-space-toolkit-core}{\tt github.\+com/open-\/space-\/collective/open-\/space-\/toolkit-\/core} \\\cline{1-4}
+Pybind11 &{\ttfamily 2.\+10.\+1} &B\+S\+D-\/3-\/\+Clause &\href{https://github.com/pybind/pybind11}{\texttt{ github.\+com/pybind/pybind11}}  \\\cline{1-4}
+\{fmt\} &{\ttfamily 5.\+2.\+0} &B\+S\+D-\/2-\/\+Clause &\href{https://github.com/fmtlib/fmt}{\texttt{ github.\+com/fmtlib/fmt}}  \\\cline{1-4}
+Core &{\ttfamily main} &Apache License 2.\+0 &\href{https://github.com/open-space-collective/open-space-toolkit-core}{\texttt{ github.\+com/open-\/space-\/collective/open-\/space-\/toolkit-\/core}}  \\\cline{1-4}
 \end{longtabu}
-\subsection*{Contribution}
-
+\hypertarget{index_autotoc_md17}{}\doxysection{Contribution}\label{index_autotoc_md17}
 Contributions are more than welcome!
 
-Please read our \hyperlink{_c_o_n_t_r_i_b_u_t_i_n_g_8md}{contributing guide} to learn about our development process, how to propose fixes and improvements, and how to build and test the code.
-
-\subsection*{Special Thanks}
-
-\href{https://www.loftorbital.com/}{\tt }
-
-\subsection*{License}
-
+Please read our \mbox{\hyperlink{_c_o_n_t_r_i_b_u_t_i_n_g_8md}{contributing guide}} to learn about our development process, how to propose fixes and improvements, and how to build and test the code.\hypertarget{index_autotoc_md18}{}\doxysection{Special Thanks}\label{index_autotoc_md18}
+\href{https://www.loftorbital.com/}{\texttt{ }}\hypertarget{index_autotoc_md19}{}\doxysection{License}\label{index_autotoc_md19}
 Apache License 2.\+0 

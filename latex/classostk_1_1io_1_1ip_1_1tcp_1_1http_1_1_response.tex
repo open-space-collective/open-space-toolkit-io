@@ -1,5 +1,5 @@
-\hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{}\section{ostk\+:\+:io\+:\+:ip\+:\+:tcp\+:\+:http\+:\+:Response Class Reference}
-\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}
+\hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{}\doxysection{ostk\+::io\+::ip\+::tcp\+::http\+::Response Class Reference}
+\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}
 
 
 Hypertext Transfer Protocol (H\+T\+TP) response.  
@@ -9,391 +9,391 @@ Hypertext Transfer Protocol (H\+T\+TP) response.
 
 {\ttfamily \#include $<$Response.\+hpp$>$}
 
-\subsection*{Public Types}
+\doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}{Status\+Code} \{ \newline
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aec0fc0100c4fc1ce4eea230c3dc10360}{Status\+Code\+::\+Undefined} = 0, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa0bfb8e59e6c13fc8d990781f77694fe}{Status\+Code\+::\+Continue} = 100, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a548c5a637eddf65132b21411aeafc6a1}{Status\+Code\+::\+Switching\+Protocols} = 101, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a643562a9ae7099c8aabfdc93478db117}{Status\+Code\+::\+Processing} = 102, 
+enum \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}{Status\+Code}} \{ \newline
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aec0fc0100c4fc1ce4eea230c3dc10360}{Status\+Code\+::\+Undefined}} = 0, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa0bfb8e59e6c13fc8d990781f77694fe}{Status\+Code\+::\+Continue}} = 100, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a548c5a637eddf65132b21411aeafc6a1}{Status\+Code\+::\+Switching\+Protocols}} = 101, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a643562a9ae7099c8aabfdc93478db117}{Status\+Code\+::\+Processing}} = 102, 
 \newline
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a7ff9f49506fe347fab32eb5ff72feda9}{Status\+Code\+::\+Early\+Hints} = 103, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa60852f204ed8028c1c58808b746d115}{Status\+Code\+::\+Ok} = 200, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0eceeb45861f9585dd7a97a3e36f85c6}{Status\+Code\+::\+Created} = 201, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a382ab522931673c11e398ead1b7b1678}{Status\+Code\+::\+Accepted} = 202, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a7ff9f49506fe347fab32eb5ff72feda9}{Status\+Code\+::\+Early\+Hints}} = 103, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa60852f204ed8028c1c58808b746d115}{Status\+Code\+::\+Ok}} = 200, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0eceeb45861f9585dd7a97a3e36f85c6}{Status\+Code\+::\+Created}} = 201, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a382ab522931673c11e398ead1b7b1678}{Status\+Code\+::\+Accepted}} = 202, 
 \newline
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a2d0ea43e788b779c0aec92366b711c2f}{Status\+Code\+::\+Non\+Authoritative\+Information} = 203, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36acd447f1ec89f564ebac583d60087df12}{Status\+Code\+::\+No\+Content} = 204, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4e9202c31896211f63be5b7345a897ed}{Status\+Code\+::\+Reset\+Content} = 205, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a750de7eda10d780b3bbaefb57128c24b}{Status\+Code\+::\+Partial\+Content} = 206, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a2d0ea43e788b779c0aec92366b711c2f}{Status\+Code\+::\+Non\+Authoritative\+Information}} = 203, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36acd447f1ec89f564ebac583d60087df12}{Status\+Code\+::\+No\+Content}} = 204, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4e9202c31896211f63be5b7345a897ed}{Status\+Code\+::\+Reset\+Content}} = 205, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a750de7eda10d780b3bbaefb57128c24b}{Status\+Code\+::\+Partial\+Content}} = 206, 
 \newline
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0790a60654c0b2939299af967571e59b}{Status\+Code\+::\+Multi\+Status} = 207, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac549fc73e09b412a8451b1648820acf2}{Status\+Code\+::\+Already\+Reported} = 208, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa3abca599dedd534e63c999418d70f45}{Status\+Code\+::\+I\+M\+Used} = 226, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa589749d075c3423333bdc93e3b4e774}{Status\+Code\+::\+Multiple\+Choices} = 300, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0790a60654c0b2939299af967571e59b}{Status\+Code\+::\+Multi\+Status}} = 207, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac549fc73e09b412a8451b1648820acf2}{Status\+Code\+::\+Already\+Reported}} = 208, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa3abca599dedd534e63c999418d70f45}{Status\+Code\+::\+I\+M\+Used}} = 226, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa589749d075c3423333bdc93e3b4e774}{Status\+Code\+::\+Multiple\+Choices}} = 300, 
 \newline
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a32638c25f4c913fce6214c2c4afff9dc}{Status\+Code\+::\+Moved\+Permanently} = 301, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a5d695cc28c6a7ea955162fbdd0ae42b9}{Status\+Code\+::\+Found} = 302, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a7843649eb3841f496a79303fd815029e}{Status\+Code\+::\+See\+Other} = 303, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac169e6d9a1b9442001384de8dcf49ab9}{Status\+Code\+::\+Not\+Modified} = 304, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a32638c25f4c913fce6214c2c4afff9dc}{Status\+Code\+::\+Moved\+Permanently}} = 301, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a5d695cc28c6a7ea955162fbdd0ae42b9}{Status\+Code\+::\+Found}} = 302, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a7843649eb3841f496a79303fd815029e}{Status\+Code\+::\+See\+Other}} = 303, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac169e6d9a1b9442001384de8dcf49ab9}{Status\+Code\+::\+Not\+Modified}} = 304, 
 \newline
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0a272f25fd5e8a06065ef8ee41a88bea}{Status\+Code\+::\+Use\+Proxy} = 305, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aad21cfb3c3c37f21b76dfc3453e8b3f6}{Status\+Code\+::\+Switch\+Proxy} = 306, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a1b73a351faf2b550d06fae9cc6e0a894}{Status\+Code\+::\+Temporary\+Redirect} = 307, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac13fb7996808b1abe56e3ae4da84fb4a}{Status\+Code\+::\+Permanent\+Redirect} = 308, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0a272f25fd5e8a06065ef8ee41a88bea}{Status\+Code\+::\+Use\+Proxy}} = 305, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aad21cfb3c3c37f21b76dfc3453e8b3f6}{Status\+Code\+::\+Switch\+Proxy}} = 306, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a1b73a351faf2b550d06fae9cc6e0a894}{Status\+Code\+::\+Temporary\+Redirect}} = 307, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac13fb7996808b1abe56e3ae4da84fb4a}{Status\+Code\+::\+Permanent\+Redirect}} = 308, 
 \newline
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a9edf8fbf00a57d95a0af4923c9a1ec6f}{Status\+Code\+::\+Bad\+Request} = 400, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ae06d1ba70f1331e9f9a113cc2f887d3f}{Status\+Code\+::\+Unauthorized} = 401, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4c99006c75b53fe48865cdfa0ac065ba}{Status\+Code\+::\+Payment\+Required} = 402, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a722969577a96ca3953e84e3d949dee81}{Status\+Code\+::\+Forbidden} = 403, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a9edf8fbf00a57d95a0af4923c9a1ec6f}{Status\+Code\+::\+Bad\+Request}} = 400, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ae06d1ba70f1331e9f9a113cc2f887d3f}{Status\+Code\+::\+Unauthorized}} = 401, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4c99006c75b53fe48865cdfa0ac065ba}{Status\+Code\+::\+Payment\+Required}} = 402, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a722969577a96ca3953e84e3d949dee81}{Status\+Code\+::\+Forbidden}} = 403, 
 \newline
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a38c300f4fc9ce8a77aad4a30de05cad8}{Status\+Code\+::\+Not\+Found} = 404, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8ba68fee5542f5fd071aed140c39bd8e}{Status\+Code\+::\+Method\+Not\+Allowed} = 405, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af83a928e6a3f3b502ffadd2a414ce48c}{Status\+Code\+::\+Not\+Acceptable} = 406, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a59a2898a8bf9da75a5855e76110f06f2}{Status\+Code\+::\+Proxy\+Authentication\+Required} = 407, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a38c300f4fc9ce8a77aad4a30de05cad8}{Status\+Code\+::\+Not\+Found}} = 404, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8ba68fee5542f5fd071aed140c39bd8e}{Status\+Code\+::\+Method\+Not\+Allowed}} = 405, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af83a928e6a3f3b502ffadd2a414ce48c}{Status\+Code\+::\+Not\+Acceptable}} = 406, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a59a2898a8bf9da75a5855e76110f06f2}{Status\+Code\+::\+Proxy\+Authentication\+Required}} = 407, 
 \newline
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3632c2e4e6225d4d9fcd2a6fd2c65048}{Status\+Code\+::\+Request\+Timeout} = 408, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af1d4ac54357cc0932f385d56814ba7e4}{Status\+Code\+::\+Conflict} = 409, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0b497b33b1a05057bc1634e607170bf6}{Status\+Code\+::\+Gone} = 410, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8282fb93cb1cf45b135ea191668ca583}{Status\+Code\+::\+Length\+Required} = 411, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3632c2e4e6225d4d9fcd2a6fd2c65048}{Status\+Code\+::\+Request\+Timeout}} = 408, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af1d4ac54357cc0932f385d56814ba7e4}{Status\+Code\+::\+Conflict}} = 409, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0b497b33b1a05057bc1634e607170bf6}{Status\+Code\+::\+Gone}} = 410, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8282fb93cb1cf45b135ea191668ca583}{Status\+Code\+::\+Length\+Required}} = 411, 
 \newline
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3542a02d18f11f46d53990d91752a6d4}{Status\+Code\+::\+Precondition\+Failed} = 412, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0234a767e9c5c06cdaf290cc9b690b34}{Status\+Code\+::\+Payload\+Too\+Large} = 413, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a49b33893beb20e48d9617f4934624adc}{Status\+Code\+::\+U\+R\+I\+Too\+Long} = 414, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa3219a6843adbb23de79b4df9c307f5d}{Status\+Code\+::\+Unsupported\+Media\+Type} = 415, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3542a02d18f11f46d53990d91752a6d4}{Status\+Code\+::\+Precondition\+Failed}} = 412, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0234a767e9c5c06cdaf290cc9b690b34}{Status\+Code\+::\+Payload\+Too\+Large}} = 413, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a49b33893beb20e48d9617f4934624adc}{Status\+Code\+::\+U\+R\+I\+Too\+Long}} = 414, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa3219a6843adbb23de79b4df9c307f5d}{Status\+Code\+::\+Unsupported\+Media\+Type}} = 415, 
 \newline
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a9283ef01c36e7e4793b3e1395d764dfe}{Status\+Code\+::\+Range\+Not\+Satisfiable} = 416, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a6af78095a2be4a230ba87f03dd131830}{Status\+Code\+::\+Expectation\+Failed} = 417, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a5ddbdcff68f084fdfef3c4988c92dbc0}{Status\+Code\+::\+Im\+A\+Teapot} = 418, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac110d06054539d0031cbefdf78d1fdd6}{Status\+Code\+::\+Misdirected\+Request} = 421, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a9283ef01c36e7e4793b3e1395d764dfe}{Status\+Code\+::\+Range\+Not\+Satisfiable}} = 416, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a6af78095a2be4a230ba87f03dd131830}{Status\+Code\+::\+Expectation\+Failed}} = 417, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a5ddbdcff68f084fdfef3c4988c92dbc0}{Status\+Code\+::\+Im\+A\+Teapot}} = 418, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac110d06054539d0031cbefdf78d1fdd6}{Status\+Code\+::\+Misdirected\+Request}} = 421, 
 \newline
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36abcc63308f9773c816911ce819b314e2c}{Status\+Code\+::\+Unprocessable\+Entity} = 422, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ad0f2e5376298c880665077b565ffd7dd}{Status\+Code\+::\+Locked} = 423, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3e30483e6f8d532c08ac164aebf039fd}{Status\+Code\+::\+Failed\+Dependency} = 424, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ae0eaea96be1ec038b859e02cc5330827}{Status\+Code\+::\+Upgrade\+Required} = 426, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36abcc63308f9773c816911ce819b314e2c}{Status\+Code\+::\+Unprocessable\+Entity}} = 422, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ad0f2e5376298c880665077b565ffd7dd}{Status\+Code\+::\+Locked}} = 423, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3e30483e6f8d532c08ac164aebf039fd}{Status\+Code\+::\+Failed\+Dependency}} = 424, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ae0eaea96be1ec038b859e02cc5330827}{Status\+Code\+::\+Upgrade\+Required}} = 426, 
 \newline
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4dd7ee1fe9fa9f29e190b416122146df}{Status\+Code\+::\+Precondition\+Required} = 428, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ab00b00233255c3551697fe613001265d}{Status\+Code\+::\+Too\+Many\+Requests} = 429, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a01d50823ab04e988e893bc17c2d55f24}{Status\+Code\+::\+Request\+Header\+Fields\+Too\+Large} = 431, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af7c925b24caa71cd7097be57c4de6130}{Status\+Code\+::\+Unavailable\+For\+Legal\+Reasons} = 451, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4dd7ee1fe9fa9f29e190b416122146df}{Status\+Code\+::\+Precondition\+Required}} = 428, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ab00b00233255c3551697fe613001265d}{Status\+Code\+::\+Too\+Many\+Requests}} = 429, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a01d50823ab04e988e893bc17c2d55f24}{Status\+Code\+::\+Request\+Header\+Fields\+Too\+Large}} = 431, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af7c925b24caa71cd7097be57c4de6130}{Status\+Code\+::\+Unavailable\+For\+Legal\+Reasons}} = 451, 
 \newline
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aecbf01325f1c744e9d7bb586ac2eb5ed}{Status\+Code\+::\+Internal\+Server\+Error} = 500, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a997ca4ce119685f40f03a9a8a6c5346e}{Status\+Code\+::\+Not\+Implemented} = 501, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0e7c9ad08be0653518bf456c9994ace5}{Status\+Code\+::\+Bad\+Gateway} = 502, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a2a4581043d849bcb0e4747970ef1489b}{Status\+Code\+::\+Service\+Unavailable} = 503, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aecbf01325f1c744e9d7bb586ac2eb5ed}{Status\+Code\+::\+Internal\+Server\+Error}} = 500, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a997ca4ce119685f40f03a9a8a6c5346e}{Status\+Code\+::\+Not\+Implemented}} = 501, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0e7c9ad08be0653518bf456c9994ace5}{Status\+Code\+::\+Bad\+Gateway}} = 502, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a2a4581043d849bcb0e4747970ef1489b}{Status\+Code\+::\+Service\+Unavailable}} = 503, 
 \newline
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ada405cbc74723dfdda615e3f679ef2be}{Status\+Code\+::\+Gateway\+Timeout} = 504, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a036c4283fc4ecb1686f44462f75208e5}{Status\+Code\+::\+H\+T\+T\+P\+Version\+Not\+Supported} = 505, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0af1f043b1bc6980b5cffce0d83f4736}{Status\+Code\+::\+Variant\+Also\+Negotiates} = 506, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aead0064570e2f25592cd76e0e69565a5}{Status\+Code\+::\+Insufficient\+Storage} = 507, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ada405cbc74723dfdda615e3f679ef2be}{Status\+Code\+::\+Gateway\+Timeout}} = 504, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a036c4283fc4ecb1686f44462f75208e5}{Status\+Code\+::\+H\+T\+T\+P\+Version\+Not\+Supported}} = 505, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0af1f043b1bc6980b5cffce0d83f4736}{Status\+Code\+::\+Variant\+Also\+Negotiates}} = 506, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aead0064570e2f25592cd76e0e69565a5}{Status\+Code\+::\+Insufficient\+Storage}} = 507, 
 \newline
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa2d07eb3939ad55d4acd3ed81291c61a}{Status\+Code\+::\+Loop\+Detected} = 508, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8eff020959c41ba903e16d966855ce03}{Status\+Code\+::\+Not\+Extended} = 510, 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a68fc9ac4408e02db0d6f5c86728042ea}{Status\+Code\+::\+Network\+Authentication\+Require} = 511
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa2d07eb3939ad55d4acd3ed81291c61a}{Status\+Code\+::\+Loop\+Detected}} = 508, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8eff020959c41ba903e16d966855ce03}{Status\+Code\+::\+Not\+Extended}} = 510, 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a68fc9ac4408e02db0d6f5c86728042ea}{Status\+Code\+::\+Network\+Authentication\+Require}} = 511
  \}
 \end{DoxyCompactItemize}
-\subsection*{Public Member Functions}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a859b29979cfa8dbd7d8296e1211b76fc}{Response} (const \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}{Response\+::\+Status\+Code} \&a\+Status\+Code, const \hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String} \&a\+Body)
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a859b29979cfa8dbd7d8296e1211b76fc}{Response}} (const \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}{Response\+::\+Status\+Code}} \&a\+Status\+Code, const \mbox{\hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String}} \&a\+Body)
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
-bool \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_afc78e507b0c295a20d9ef90748deb32b}{is\+Defined} () const
+bool \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_afc78e507b0c295a20d9ef90748deb32b}{is\+Defined}} () const
 \begin{DoxyCompactList}\small\item\em Check if response is defined. \end{DoxyCompactList}\item 
-bool \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a44768f02be45b9363a00a12c33aa112d}{is\+Ok} () const
+bool \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a44768f02be45b9363a00a12c33aa112d}{is\+Ok}} () const
 \begin{DoxyCompactList}\small\item\em Check if response status code is Ok. \end{DoxyCompactList}\item 
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}{Response\+::\+Status\+Code} \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a180c8df8a6a7c0b97acd1e5d3a01e981}{get\+Status\+Code} () const
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}{Response\+::\+Status\+Code}} \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a180c8df8a6a7c0b97acd1e5d3a01e981}{get\+Status\+Code}} () const
 \begin{DoxyCompactList}\small\item\em Get response status code. \end{DoxyCompactList}\item 
-\hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String} \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a86ef445eae9c71c35a00b24f31345a8c}{get\+Body} () const
+\mbox{\hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String}} \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a86ef445eae9c71c35a00b24f31345a8c}{get\+Body}} () const
 \begin{DoxyCompactList}\small\item\em Get response body. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Static Public Member Functions}
+\doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{Response} \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a0a3f62924ffb05edc9bb68351710bb23}{Undefined} ()
+static \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{Response}} \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a0a3f62924ffb05edc9bb68351710bb23}{Undefined}} ()
 \begin{DoxyCompactList}\small\item\em Constructs an undefined response. \end{DoxyCompactList}\item 
-static \hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String} \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a4a593d62047c96eead840c751972ffd4}{String\+From\+Status\+Code} (const \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}{Response\+::\+Status\+Code} \&a\+Status\+Code)
+static \mbox{\hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String}} \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a4a593d62047c96eead840c751972ffd4}{String\+From\+Status\+Code}} (const \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}{Response\+::\+Status\+Code}} \&a\+Status\+Code)
 \begin{DoxyCompactList}\small\item\em Converts response status code to string. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Friends}
+\doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-std\+::ostream \& \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_ae3715558aef62c5b9c3c9971e307dd8e}{operator$<$$<$} (std\+::ostream \&an\+Output\+Stream, const \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{Response} \&a\+Response)
+std\+::ostream \& \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_ae3715558aef62c5b9c3c9971e307dd8e}{operator$<$$<$}} (std\+::ostream \&an\+Output\+Stream, const \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{Response}} \&a\+Response)
 \begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
 Hypertext Transfer Protocol (H\+T\+TP) response. 
 
-https\+://en.wikipedia.\+org/wiki/\+List\+\_\+of\+\_\+\+H\+T\+T\+P\+\_\+status\+\_\+codes 
+\href{https://en.wikipedia.org/wiki/List_of_HTTP_status_codes}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+List\+\_\+of\+\_\+\+H\+T\+T\+P\+\_\+status\+\_\+codes}} 
 
-\subsection{Member Enumeration Documentation}
+\doxysubsection{Member Enumeration Documentation}
 \mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}} 
-\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Status\+Code@{Status\+Code}}
-\index{Status\+Code@{Status\+Code}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}
-\subsubsection{\texorpdfstring{Status\+Code}{StatusCode}}
-{\footnotesize\ttfamily enum \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response\+::\+Status\+Code}\hspace{0.3cm}{\ttfamily [strong]}}
+\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!StatusCode@{StatusCode}}
+\index{StatusCode@{StatusCode}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}
+\doxysubsubsection{\texorpdfstring{StatusCode}{StatusCode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response\+::\+Status\+Code}}\hspace{0.3cm}{\ttfamily [strong]}}
 
 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Undefined@{Undefined}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Undefined@{Undefined}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aec0fc0100c4fc1ce4eea230c3dc10360}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aec0fc0100c4fc1ce4eea230c3dc10360}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Undefined@{Undefined}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!Undefined@{Undefined}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aec0fc0100c4fc1ce4eea230c3dc10360}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aec0fc0100c4fc1ce4eea230c3dc10360}} 
 Undefined&Undefined. \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Continue@{Continue}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Continue@{Continue}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa0bfb8e59e6c13fc8d990781f77694fe}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa0bfb8e59e6c13fc8d990781f77694fe}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Continue@{Continue}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!Continue@{Continue}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa0bfb8e59e6c13fc8d990781f77694fe}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa0bfb8e59e6c13fc8d990781f77694fe}} 
 Continue&100 Continue \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Switching\+Protocols@{Switching\+Protocols}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Switching\+Protocols@{Switching\+Protocols}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a548c5a637eddf65132b21411aeafc6a1}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a548c5a637eddf65132b21411aeafc6a1}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SwitchingProtocols@{SwitchingProtocols}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!SwitchingProtocols@{SwitchingProtocols}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a548c5a637eddf65132b21411aeafc6a1}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a548c5a637eddf65132b21411aeafc6a1}} 
 Switching\+Protocols&101 Switching Protocols \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Processing@{Processing}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Processing@{Processing}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a643562a9ae7099c8aabfdc93478db117}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a643562a9ae7099c8aabfdc93478db117}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Processing@{Processing}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!Processing@{Processing}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a643562a9ae7099c8aabfdc93478db117}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a643562a9ae7099c8aabfdc93478db117}} 
 Processing&102 Processing (Web\+D\+AV; R\+FC 2518) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Early\+Hints@{Early\+Hints}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Early\+Hints@{Early\+Hints}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a7ff9f49506fe347fab32eb5ff72feda9}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a7ff9f49506fe347fab32eb5ff72feda9}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EarlyHints@{EarlyHints}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!EarlyHints@{EarlyHints}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a7ff9f49506fe347fab32eb5ff72feda9}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a7ff9f49506fe347fab32eb5ff72feda9}} 
 Early\+Hints&103 Early Hints (R\+FC 8297) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Ok@{Ok}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Ok@{Ok}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa60852f204ed8028c1c58808b746d115}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa60852f204ed8028c1c58808b746d115}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ok@{Ok}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!Ok@{Ok}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa60852f204ed8028c1c58808b746d115}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa60852f204ed8028c1c58808b746d115}} 
 Ok&200 OK \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Created@{Created}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Created@{Created}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0eceeb45861f9585dd7a97a3e36f85c6}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0eceeb45861f9585dd7a97a3e36f85c6}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Created@{Created}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!Created@{Created}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0eceeb45861f9585dd7a97a3e36f85c6}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0eceeb45861f9585dd7a97a3e36f85c6}} 
 Created&201 Created \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Accepted@{Accepted}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Accepted@{Accepted}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a382ab522931673c11e398ead1b7b1678}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a382ab522931673c11e398ead1b7b1678}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Accepted@{Accepted}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!Accepted@{Accepted}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a382ab522931673c11e398ead1b7b1678}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a382ab522931673c11e398ead1b7b1678}} 
 Accepted&202 Accepted \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Non\+Authoritative\+Information@{Non\+Authoritative\+Information}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Non\+Authoritative\+Information@{Non\+Authoritative\+Information}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a2d0ea43e788b779c0aec92366b711c2f}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a2d0ea43e788b779c0aec92366b711c2f}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NonAuthoritativeInformation@{NonAuthoritativeInformation}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!NonAuthoritativeInformation@{NonAuthoritativeInformation}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a2d0ea43e788b779c0aec92366b711c2f}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a2d0ea43e788b779c0aec92366b711c2f}} 
 Non\+Authoritative\+Information&203 Non-\/\+Authoritative Information (since H\+T\+T\+P/1.\+1) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{No\+Content@{No\+Content}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!No\+Content@{No\+Content}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36acd447f1ec89f564ebac583d60087df12}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36acd447f1ec89f564ebac583d60087df12}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoContent@{NoContent}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!NoContent@{NoContent}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36acd447f1ec89f564ebac583d60087df12}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36acd447f1ec89f564ebac583d60087df12}} 
 No\+Content&204 No Content \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Reset\+Content@{Reset\+Content}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Reset\+Content@{Reset\+Content}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4e9202c31896211f63be5b7345a897ed}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4e9202c31896211f63be5b7345a897ed}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ResetContent@{ResetContent}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!ResetContent@{ResetContent}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4e9202c31896211f63be5b7345a897ed}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4e9202c31896211f63be5b7345a897ed}} 
 Reset\+Content&205 Reset Content \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Partial\+Content@{Partial\+Content}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Partial\+Content@{Partial\+Content}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a750de7eda10d780b3bbaefb57128c24b}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a750de7eda10d780b3bbaefb57128c24b}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PartialContent@{PartialContent}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!PartialContent@{PartialContent}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a750de7eda10d780b3bbaefb57128c24b}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a750de7eda10d780b3bbaefb57128c24b}} 
 Partial\+Content&206 Partial Content (R\+FC 7233) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Multi\+Status@{Multi\+Status}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Multi\+Status@{Multi\+Status}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0790a60654c0b2939299af967571e59b}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0790a60654c0b2939299af967571e59b}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MultiStatus@{MultiStatus}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!MultiStatus@{MultiStatus}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0790a60654c0b2939299af967571e59b}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0790a60654c0b2939299af967571e59b}} 
 Multi\+Status&207 Multi-\/\+Status (Web\+D\+AV; R\+FC 4918) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Already\+Reported@{Already\+Reported}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Already\+Reported@{Already\+Reported}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac549fc73e09b412a8451b1648820acf2}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac549fc73e09b412a8451b1648820acf2}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AlreadyReported@{AlreadyReported}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!AlreadyReported@{AlreadyReported}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac549fc73e09b412a8451b1648820acf2}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac549fc73e09b412a8451b1648820acf2}} 
 Already\+Reported&208 Already Reported (Web\+D\+AV; R\+FC 5842) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+M\+Used@{I\+M\+Used}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!I\+M\+Used@{I\+M\+Used}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa3abca599dedd534e63c999418d70f45}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa3abca599dedd534e63c999418d70f45}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMUsed@{IMUsed}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!IMUsed@{IMUsed}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa3abca599dedd534e63c999418d70f45}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa3abca599dedd534e63c999418d70f45}} 
 I\+M\+Used&226 IM Used (R\+FC 3229) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Multiple\+Choices@{Multiple\+Choices}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Multiple\+Choices@{Multiple\+Choices}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa589749d075c3423333bdc93e3b4e774}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa589749d075c3423333bdc93e3b4e774}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MultipleChoices@{MultipleChoices}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!MultipleChoices@{MultipleChoices}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa589749d075c3423333bdc93e3b4e774}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa589749d075c3423333bdc93e3b4e774}} 
 Multiple\+Choices&300 Multiple Choices \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Moved\+Permanently@{Moved\+Permanently}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Moved\+Permanently@{Moved\+Permanently}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a32638c25f4c913fce6214c2c4afff9dc}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a32638c25f4c913fce6214c2c4afff9dc}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MovedPermanently@{MovedPermanently}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!MovedPermanently@{MovedPermanently}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a32638c25f4c913fce6214c2c4afff9dc}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a32638c25f4c913fce6214c2c4afff9dc}} 
 Moved\+Permanently&301 Moved Permanently \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Found@{Found}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Found@{Found}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a5d695cc28c6a7ea955162fbdd0ae42b9}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a5d695cc28c6a7ea955162fbdd0ae42b9}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Found@{Found}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!Found@{Found}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a5d695cc28c6a7ea955162fbdd0ae42b9}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a5d695cc28c6a7ea955162fbdd0ae42b9}} 
 Found&302 Found (Previously \char`\"{}\+Moved temporarily\char`\"{}) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{See\+Other@{See\+Other}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!See\+Other@{See\+Other}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a7843649eb3841f496a79303fd815029e}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a7843649eb3841f496a79303fd815029e}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SeeOther@{SeeOther}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!SeeOther@{SeeOther}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a7843649eb3841f496a79303fd815029e}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a7843649eb3841f496a79303fd815029e}} 
 See\+Other&303 See Other (since H\+T\+T\+P/1.\+1) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Not\+Modified@{Not\+Modified}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Not\+Modified@{Not\+Modified}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac169e6d9a1b9442001384de8dcf49ab9}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac169e6d9a1b9442001384de8dcf49ab9}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotModified@{NotModified}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!NotModified@{NotModified}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac169e6d9a1b9442001384de8dcf49ab9}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac169e6d9a1b9442001384de8dcf49ab9}} 
 Not\+Modified&304 Not Modified (R\+FC 7232) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Use\+Proxy@{Use\+Proxy}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Use\+Proxy@{Use\+Proxy}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0a272f25fd5e8a06065ef8ee41a88bea}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0a272f25fd5e8a06065ef8ee41a88bea}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UseProxy@{UseProxy}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!UseProxy@{UseProxy}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0a272f25fd5e8a06065ef8ee41a88bea}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0a272f25fd5e8a06065ef8ee41a88bea}} 
 Use\+Proxy&305 Use Proxy (since H\+T\+T\+P/1.\+1) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Switch\+Proxy@{Switch\+Proxy}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Switch\+Proxy@{Switch\+Proxy}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aad21cfb3c3c37f21b76dfc3453e8b3f6}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aad21cfb3c3c37f21b76dfc3453e8b3f6}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SwitchProxy@{SwitchProxy}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!SwitchProxy@{SwitchProxy}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aad21cfb3c3c37f21b76dfc3453e8b3f6}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aad21cfb3c3c37f21b76dfc3453e8b3f6}} 
 Switch\+Proxy&306 Switch Proxy \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Temporary\+Redirect@{Temporary\+Redirect}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Temporary\+Redirect@{Temporary\+Redirect}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a1b73a351faf2b550d06fae9cc6e0a894}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a1b73a351faf2b550d06fae9cc6e0a894}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TemporaryRedirect@{TemporaryRedirect}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!TemporaryRedirect@{TemporaryRedirect}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a1b73a351faf2b550d06fae9cc6e0a894}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a1b73a351faf2b550d06fae9cc6e0a894}} 
 Temporary\+Redirect&307 Temporary Redirect (since H\+T\+T\+P/1.\+1) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Permanent\+Redirect@{Permanent\+Redirect}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Permanent\+Redirect@{Permanent\+Redirect}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac13fb7996808b1abe56e3ae4da84fb4a}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac13fb7996808b1abe56e3ae4da84fb4a}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PermanentRedirect@{PermanentRedirect}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!PermanentRedirect@{PermanentRedirect}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac13fb7996808b1abe56e3ae4da84fb4a}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac13fb7996808b1abe56e3ae4da84fb4a}} 
 Permanent\+Redirect&308 Permanent Redirect (R\+FC 7538) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Bad\+Request@{Bad\+Request}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Bad\+Request@{Bad\+Request}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a9edf8fbf00a57d95a0af4923c9a1ec6f}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a9edf8fbf00a57d95a0af4923c9a1ec6f}} 
-Bad\+Request&400 Bad \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request} \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BadRequest@{BadRequest}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!BadRequest@{BadRequest}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a9edf8fbf00a57d95a0af4923c9a1ec6f}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a9edf8fbf00a57d95a0af4923c9a1ec6f}} 
+Bad\+Request&400 Bad \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request}} \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Unauthorized@{Unauthorized}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Unauthorized@{Unauthorized}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ae06d1ba70f1331e9f9a113cc2f887d3f}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ae06d1ba70f1331e9f9a113cc2f887d3f}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unauthorized@{Unauthorized}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!Unauthorized@{Unauthorized}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ae06d1ba70f1331e9f9a113cc2f887d3f}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ae06d1ba70f1331e9f9a113cc2f887d3f}} 
 Unauthorized&401 Unauthorized (R\+FC 7235) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Payment\+Required@{Payment\+Required}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Payment\+Required@{Payment\+Required}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4c99006c75b53fe48865cdfa0ac065ba}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4c99006c75b53fe48865cdfa0ac065ba}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PaymentRequired@{PaymentRequired}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!PaymentRequired@{PaymentRequired}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4c99006c75b53fe48865cdfa0ac065ba}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4c99006c75b53fe48865cdfa0ac065ba}} 
 Payment\+Required&402 Payment Required \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Forbidden@{Forbidden}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Forbidden@{Forbidden}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a722969577a96ca3953e84e3d949dee81}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a722969577a96ca3953e84e3d949dee81}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Forbidden@{Forbidden}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!Forbidden@{Forbidden}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a722969577a96ca3953e84e3d949dee81}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a722969577a96ca3953e84e3d949dee81}} 
 Forbidden&403 Forbidden \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Not\+Found@{Not\+Found}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Not\+Found@{Not\+Found}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a38c300f4fc9ce8a77aad4a30de05cad8}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a38c300f4fc9ce8a77aad4a30de05cad8}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotFound@{NotFound}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!NotFound@{NotFound}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a38c300f4fc9ce8a77aad4a30de05cad8}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a38c300f4fc9ce8a77aad4a30de05cad8}} 
 Not\+Found&404 Not Found \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Method\+Not\+Allowed@{Method\+Not\+Allowed}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Method\+Not\+Allowed@{Method\+Not\+Allowed}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8ba68fee5542f5fd071aed140c39bd8e}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8ba68fee5542f5fd071aed140c39bd8e}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MethodNotAllowed@{MethodNotAllowed}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!MethodNotAllowed@{MethodNotAllowed}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8ba68fee5542f5fd071aed140c39bd8e}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8ba68fee5542f5fd071aed140c39bd8e}} 
 Method\+Not\+Allowed&405 Method Not Allowed \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Not\+Acceptable@{Not\+Acceptable}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Not\+Acceptable@{Not\+Acceptable}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af83a928e6a3f3b502ffadd2a414ce48c}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af83a928e6a3f3b502ffadd2a414ce48c}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotAcceptable@{NotAcceptable}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!NotAcceptable@{NotAcceptable}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af83a928e6a3f3b502ffadd2a414ce48c}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af83a928e6a3f3b502ffadd2a414ce48c}} 
 Not\+Acceptable&406 Not Acceptable \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Proxy\+Authentication\+Required@{Proxy\+Authentication\+Required}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Proxy\+Authentication\+Required@{Proxy\+Authentication\+Required}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a59a2898a8bf9da75a5855e76110f06f2}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a59a2898a8bf9da75a5855e76110f06f2}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ProxyAuthenticationRequired@{ProxyAuthenticationRequired}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!ProxyAuthenticationRequired@{ProxyAuthenticationRequired}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a59a2898a8bf9da75a5855e76110f06f2}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a59a2898a8bf9da75a5855e76110f06f2}} 
 Proxy\+Authentication\+Required&407 Proxy Authentication Required (R\+FC 7235) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Request\+Timeout@{Request\+Timeout}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Request\+Timeout@{Request\+Timeout}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3632c2e4e6225d4d9fcd2a6fd2c65048}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3632c2e4e6225d4d9fcd2a6fd2c65048}} 
-Request\+Timeout&408 \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request} Timeout \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RequestTimeout@{RequestTimeout}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!RequestTimeout@{RequestTimeout}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3632c2e4e6225d4d9fcd2a6fd2c65048}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3632c2e4e6225d4d9fcd2a6fd2c65048}} 
+Request\+Timeout&408 \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request}} Timeout \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Conflict@{Conflict}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Conflict@{Conflict}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af1d4ac54357cc0932f385d56814ba7e4}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af1d4ac54357cc0932f385d56814ba7e4}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Conflict@{Conflict}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!Conflict@{Conflict}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af1d4ac54357cc0932f385d56814ba7e4}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af1d4ac54357cc0932f385d56814ba7e4}} 
 Conflict&409 Conflict \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Gone@{Gone}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Gone@{Gone}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0b497b33b1a05057bc1634e607170bf6}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0b497b33b1a05057bc1634e607170bf6}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Gone@{Gone}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!Gone@{Gone}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0b497b33b1a05057bc1634e607170bf6}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0b497b33b1a05057bc1634e607170bf6}} 
 Gone&410 Gone \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Length\+Required@{Length\+Required}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Length\+Required@{Length\+Required}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8282fb93cb1cf45b135ea191668ca583}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8282fb93cb1cf45b135ea191668ca583}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LengthRequired@{LengthRequired}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!LengthRequired@{LengthRequired}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8282fb93cb1cf45b135ea191668ca583}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8282fb93cb1cf45b135ea191668ca583}} 
 Length\+Required&411 Length Required \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Precondition\+Failed@{Precondition\+Failed}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Precondition\+Failed@{Precondition\+Failed}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3542a02d18f11f46d53990d91752a6d4}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3542a02d18f11f46d53990d91752a6d4}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PreconditionFailed@{PreconditionFailed}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!PreconditionFailed@{PreconditionFailed}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3542a02d18f11f46d53990d91752a6d4}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3542a02d18f11f46d53990d91752a6d4}} 
 Precondition\+Failed&412 Precondition Failed (R\+FC 7232) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Payload\+Too\+Large@{Payload\+Too\+Large}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Payload\+Too\+Large@{Payload\+Too\+Large}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0234a767e9c5c06cdaf290cc9b690b34}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0234a767e9c5c06cdaf290cc9b690b34}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PayloadTooLarge@{PayloadTooLarge}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!PayloadTooLarge@{PayloadTooLarge}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0234a767e9c5c06cdaf290cc9b690b34}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0234a767e9c5c06cdaf290cc9b690b34}} 
 Payload\+Too\+Large&413 Payload Too Large (R\+FC 7231) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+R\+I\+Too\+Long@{U\+R\+I\+Too\+Long}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!U\+R\+I\+Too\+Long@{U\+R\+I\+Too\+Long}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a49b33893beb20e48d9617f4934624adc}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a49b33893beb20e48d9617f4934624adc}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{URITooLong@{URITooLong}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!URITooLong@{URITooLong}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a49b33893beb20e48d9617f4934624adc}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a49b33893beb20e48d9617f4934624adc}} 
 U\+R\+I\+Too\+Long&414 U\+RI Too Long (R\+FC 7231) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Unsupported\+Media\+Type@{Unsupported\+Media\+Type}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Unsupported\+Media\+Type@{Unsupported\+Media\+Type}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa3219a6843adbb23de79b4df9c307f5d}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa3219a6843adbb23de79b4df9c307f5d}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UnsupportedMediaType@{UnsupportedMediaType}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!UnsupportedMediaType@{UnsupportedMediaType}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa3219a6843adbb23de79b4df9c307f5d}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa3219a6843adbb23de79b4df9c307f5d}} 
 Unsupported\+Media\+Type&415 Unsupported Media Type \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Range\+Not\+Satisfiable@{Range\+Not\+Satisfiable}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Range\+Not\+Satisfiable@{Range\+Not\+Satisfiable}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a9283ef01c36e7e4793b3e1395d764dfe}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a9283ef01c36e7e4793b3e1395d764dfe}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RangeNotSatisfiable@{RangeNotSatisfiable}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!RangeNotSatisfiable@{RangeNotSatisfiable}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a9283ef01c36e7e4793b3e1395d764dfe}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a9283ef01c36e7e4793b3e1395d764dfe}} 
 Range\+Not\+Satisfiable&416 Range Not Satisfiable (R\+FC 7233) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Expectation\+Failed@{Expectation\+Failed}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Expectation\+Failed@{Expectation\+Failed}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a6af78095a2be4a230ba87f03dd131830}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a6af78095a2be4a230ba87f03dd131830}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ExpectationFailed@{ExpectationFailed}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!ExpectationFailed@{ExpectationFailed}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a6af78095a2be4a230ba87f03dd131830}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a6af78095a2be4a230ba87f03dd131830}} 
 Expectation\+Failed&417 Expectation Failed \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+A\+Teapot@{Im\+A\+Teapot}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Im\+A\+Teapot@{Im\+A\+Teapot}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a5ddbdcff68f084fdfef3c4988c92dbc0}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a5ddbdcff68f084fdfef3c4988c92dbc0}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ImATeapot@{ImATeapot}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!ImATeapot@{ImATeapot}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a5ddbdcff68f084fdfef3c4988c92dbc0}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a5ddbdcff68f084fdfef3c4988c92dbc0}} 
 Im\+A\+Teapot&418 I\textquotesingle{}m a teapot (R\+FC 2324, R\+FC 7168) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Misdirected\+Request@{Misdirected\+Request}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Misdirected\+Request@{Misdirected\+Request}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac110d06054539d0031cbefdf78d1fdd6}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac110d06054539d0031cbefdf78d1fdd6}} 
-Misdirected\+Request&421 Misdirected \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request} (R\+FC 7540) \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MisdirectedRequest@{MisdirectedRequest}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!MisdirectedRequest@{MisdirectedRequest}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac110d06054539d0031cbefdf78d1fdd6}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ac110d06054539d0031cbefdf78d1fdd6}} 
+Misdirected\+Request&421 Misdirected \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request}} (R\+FC 7540) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Unprocessable\+Entity@{Unprocessable\+Entity}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Unprocessable\+Entity@{Unprocessable\+Entity}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36abcc63308f9773c816911ce819b314e2c}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36abcc63308f9773c816911ce819b314e2c}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UnprocessableEntity@{UnprocessableEntity}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!UnprocessableEntity@{UnprocessableEntity}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36abcc63308f9773c816911ce819b314e2c}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36abcc63308f9773c816911ce819b314e2c}} 
 Unprocessable\+Entity&422 Unprocessable Entity (Web\+D\+AV; R\+FC 4918) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Locked@{Locked}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Locked@{Locked}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ad0f2e5376298c880665077b565ffd7dd}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ad0f2e5376298c880665077b565ffd7dd}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Locked@{Locked}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!Locked@{Locked}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ad0f2e5376298c880665077b565ffd7dd}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ad0f2e5376298c880665077b565ffd7dd}} 
 Locked&423 Locked (Web\+D\+AV; R\+FC 4918) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Failed\+Dependency@{Failed\+Dependency}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Failed\+Dependency@{Failed\+Dependency}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3e30483e6f8d532c08ac164aebf039fd}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3e30483e6f8d532c08ac164aebf039fd}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FailedDependency@{FailedDependency}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!FailedDependency@{FailedDependency}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3e30483e6f8d532c08ac164aebf039fd}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a3e30483e6f8d532c08ac164aebf039fd}} 
 Failed\+Dependency&424 Failed Dependency (Web\+D\+AV; R\+FC 4918) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Upgrade\+Required@{Upgrade\+Required}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Upgrade\+Required@{Upgrade\+Required}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ae0eaea96be1ec038b859e02cc5330827}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ae0eaea96be1ec038b859e02cc5330827}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UpgradeRequired@{UpgradeRequired}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!UpgradeRequired@{UpgradeRequired}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ae0eaea96be1ec038b859e02cc5330827}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ae0eaea96be1ec038b859e02cc5330827}} 
 Upgrade\+Required&426 Upgrade Required \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Precondition\+Required@{Precondition\+Required}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Precondition\+Required@{Precondition\+Required}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4dd7ee1fe9fa9f29e190b416122146df}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4dd7ee1fe9fa9f29e190b416122146df}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PreconditionRequired@{PreconditionRequired}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!PreconditionRequired@{PreconditionRequired}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4dd7ee1fe9fa9f29e190b416122146df}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a4dd7ee1fe9fa9f29e190b416122146df}} 
 Precondition\+Required&428 Precondition Required (R\+FC 6585) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Too\+Many\+Requests@{Too\+Many\+Requests}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Too\+Many\+Requests@{Too\+Many\+Requests}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ab00b00233255c3551697fe613001265d}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ab00b00233255c3551697fe613001265d}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TooManyRequests@{TooManyRequests}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!TooManyRequests@{TooManyRequests}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ab00b00233255c3551697fe613001265d}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ab00b00233255c3551697fe613001265d}} 
 Too\+Many\+Requests&429 Too Many Requests (R\+FC 6585) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Request\+Header\+Fields\+Too\+Large@{Request\+Header\+Fields\+Too\+Large}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Request\+Header\+Fields\+Too\+Large@{Request\+Header\+Fields\+Too\+Large}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a01d50823ab04e988e893bc17c2d55f24}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a01d50823ab04e988e893bc17c2d55f24}} 
-Request\+Header\+Fields\+Too\+Large&431 \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request} Header Fields Too Large (R\+FC 6585) \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RequestHeaderFieldsTooLarge@{RequestHeaderFieldsTooLarge}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!RequestHeaderFieldsTooLarge@{RequestHeaderFieldsTooLarge}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a01d50823ab04e988e893bc17c2d55f24}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a01d50823ab04e988e893bc17c2d55f24}} 
+Request\+Header\+Fields\+Too\+Large&431 \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request}{Request}} Header Fields Too Large (R\+FC 6585) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Unavailable\+For\+Legal\+Reasons@{Unavailable\+For\+Legal\+Reasons}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Unavailable\+For\+Legal\+Reasons@{Unavailable\+For\+Legal\+Reasons}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af7c925b24caa71cd7097be57c4de6130}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af7c925b24caa71cd7097be57c4de6130}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UnavailableForLegalReasons@{UnavailableForLegalReasons}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!UnavailableForLegalReasons@{UnavailableForLegalReasons}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af7c925b24caa71cd7097be57c4de6130}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36af7c925b24caa71cd7097be57c4de6130}} 
 Unavailable\+For\+Legal\+Reasons&451 Unavailable For Legal Reasons (R\+FC 7725) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Internal\+Server\+Error@{Internal\+Server\+Error}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Internal\+Server\+Error@{Internal\+Server\+Error}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aecbf01325f1c744e9d7bb586ac2eb5ed}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aecbf01325f1c744e9d7bb586ac2eb5ed}} 
-Internal\+Server\+Error&500 Internal \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_server}{Server} Error \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InternalServerError@{InternalServerError}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!InternalServerError@{InternalServerError}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aecbf01325f1c744e9d7bb586ac2eb5ed}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aecbf01325f1c744e9d7bb586ac2eb5ed}} 
+Internal\+Server\+Error&500 Internal \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_server}{Server}} Error \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Not\+Implemented@{Not\+Implemented}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Not\+Implemented@{Not\+Implemented}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a997ca4ce119685f40f03a9a8a6c5346e}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a997ca4ce119685f40f03a9a8a6c5346e}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotImplemented@{NotImplemented}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!NotImplemented@{NotImplemented}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a997ca4ce119685f40f03a9a8a6c5346e}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a997ca4ce119685f40f03a9a8a6c5346e}} 
 Not\+Implemented&501 Not Implemented \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Bad\+Gateway@{Bad\+Gateway}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Bad\+Gateway@{Bad\+Gateway}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0e7c9ad08be0653518bf456c9994ace5}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0e7c9ad08be0653518bf456c9994ace5}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BadGateway@{BadGateway}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!BadGateway@{BadGateway}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0e7c9ad08be0653518bf456c9994ace5}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0e7c9ad08be0653518bf456c9994ace5}} 
 Bad\+Gateway&502 Bad Gateway \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Service\+Unavailable@{Service\+Unavailable}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Service\+Unavailable@{Service\+Unavailable}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a2a4581043d849bcb0e4747970ef1489b}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a2a4581043d849bcb0e4747970ef1489b}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ServiceUnavailable@{ServiceUnavailable}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!ServiceUnavailable@{ServiceUnavailable}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a2a4581043d849bcb0e4747970ef1489b}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a2a4581043d849bcb0e4747970ef1489b}} 
 Service\+Unavailable&503 Service Unavailable \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Gateway\+Timeout@{Gateway\+Timeout}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Gateway\+Timeout@{Gateway\+Timeout}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ada405cbc74723dfdda615e3f679ef2be}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ada405cbc74723dfdda615e3f679ef2be}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GatewayTimeout@{GatewayTimeout}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!GatewayTimeout@{GatewayTimeout}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ada405cbc74723dfdda615e3f679ef2be}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36ada405cbc74723dfdda615e3f679ef2be}} 
 Gateway\+Timeout&504 Gateway Timeout \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+T\+T\+P\+Version\+Not\+Supported@{H\+T\+T\+P\+Version\+Not\+Supported}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!H\+T\+T\+P\+Version\+Not\+Supported@{H\+T\+T\+P\+Version\+Not\+Supported}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a036c4283fc4ecb1686f44462f75208e5}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a036c4283fc4ecb1686f44462f75208e5}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HTTPVersionNotSupported@{HTTPVersionNotSupported}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!HTTPVersionNotSupported@{HTTPVersionNotSupported}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a036c4283fc4ecb1686f44462f75208e5}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a036c4283fc4ecb1686f44462f75208e5}} 
 H\+T\+T\+P\+Version\+Not\+Supported&505 H\+T\+TP Version Not Supported \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Variant\+Also\+Negotiates@{Variant\+Also\+Negotiates}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Variant\+Also\+Negotiates@{Variant\+Also\+Negotiates}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0af1f043b1bc6980b5cffce0d83f4736}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0af1f043b1bc6980b5cffce0d83f4736}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VariantAlsoNegotiates@{VariantAlsoNegotiates}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!VariantAlsoNegotiates@{VariantAlsoNegotiates}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0af1f043b1bc6980b5cffce0d83f4736}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a0af1f043b1bc6980b5cffce0d83f4736}} 
 Variant\+Also\+Negotiates&506 Variant Also Negotiates (R\+FC 2295) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Insufficient\+Storage@{Insufficient\+Storage}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Insufficient\+Storage@{Insufficient\+Storage}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aead0064570e2f25592cd76e0e69565a5}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aead0064570e2f25592cd76e0e69565a5}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InsufficientStorage@{InsufficientStorage}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!InsufficientStorage@{InsufficientStorage}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aead0064570e2f25592cd76e0e69565a5}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aead0064570e2f25592cd76e0e69565a5}} 
 Insufficient\+Storage&507 Insufficient Storage (Web\+D\+AV; R\+FC 4918) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Loop\+Detected@{Loop\+Detected}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Loop\+Detected@{Loop\+Detected}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa2d07eb3939ad55d4acd3ed81291c61a}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa2d07eb3939ad55d4acd3ed81291c61a}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LoopDetected@{LoopDetected}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!LoopDetected@{LoopDetected}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa2d07eb3939ad55d4acd3ed81291c61a}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36aa2d07eb3939ad55d4acd3ed81291c61a}} 
 Loop\+Detected&508 Loop Detected (Web\+D\+AV; R\+FC 5842) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Not\+Extended@{Not\+Extended}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Not\+Extended@{Not\+Extended}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8eff020959c41ba903e16d966855ce03}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8eff020959c41ba903e16d966855ce03}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotExtended@{NotExtended}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!NotExtended@{NotExtended}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8eff020959c41ba903e16d966855ce03}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a8eff020959c41ba903e16d966855ce03}} 
 Not\+Extended&510 Not Extended (R\+FC 2774) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Network\+Authentication\+Require@{Network\+Authentication\+Require}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Network\+Authentication\+Require@{Network\+Authentication\+Require}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a68fc9ac4408e02db0d6f5c86728042ea}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a68fc9ac4408e02db0d6f5c86728042ea}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NetworkAuthenticationRequire@{NetworkAuthenticationRequire}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!NetworkAuthenticationRequire@{NetworkAuthenticationRequire}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a68fc9ac4408e02db0d6f5c86728042ea}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36a68fc9ac4408e02db0d6f5c86728042ea}} 
 Network\+Authentication\+Require&511 Network Authentication Required (R\+FC 6585)d \\
 \hline
 
 \end{DoxyEnumFields}
 
 
-\subsection{Constructor \& Destructor Documentation}
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a859b29979cfa8dbd7d8296e1211b76fc}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a859b29979cfa8dbd7d8296e1211b76fc}} 
-\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Response@{Response}}
-\index{Response@{Response}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}
-\subsubsection{\texorpdfstring{Response()}{Response()}}
-{\footnotesize\ttfamily ostk\+::io\+::ip\+::tcp\+::http\+::\+Response\+::\+Response (\begin{DoxyParamCaption}\item[{const \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}{Response\+::\+Status\+Code} \&}]{a\+Status\+Code,  }\item[{const \hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String} \&}]{a\+Body }\end{DoxyParamCaption})}
+\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!Response@{Response}}
+\index{Response@{Response}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}
+\doxysubsubsection{\texorpdfstring{Response()}{Response()}}
+{\footnotesize\ttfamily ostk\+::io\+::ip\+::tcp\+::http\+::\+Response\+::\+Response (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}{Response\+::\+Status\+Code}} \&}]{a\+Status\+Code,  }\item[{const \mbox{\hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String}} \&}]{a\+Body }\end{DoxyParamCaption})}
 
 
 
@@ -401,44 +401,44 @@ Constructor.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em a\+Status\+Code} & A status code \\
+\mbox{\texttt{ in}}  & {\em a\+Status\+Code} & A status code \\
 \hline
-\mbox{\tt in}  & {\em a\+Body} & A body \\
+\mbox{\texttt{ in}}  & {\em a\+Body} & A body \\
 \hline
 \end{DoxyParams}
 
 
-\subsection{Member Function Documentation}
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a86ef445eae9c71c35a00b24f31345a8c}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a86ef445eae9c71c35a00b24f31345a8c}} 
-\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!get\+Body@{get\+Body}}
-\index{get\+Body@{get\+Body}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}
-\subsubsection{\texorpdfstring{get\+Body()}{getBody()}}
-{\footnotesize\ttfamily \hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String} ostk\+::io\+::ip\+::tcp\+::http\+::\+Response\+::get\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!getBody@{getBody}}
+\index{getBody@{getBody}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}
+\doxysubsubsection{\texorpdfstring{getBody()}{getBody()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String}} ostk\+::io\+::ip\+::tcp\+::http\+::\+Response\+::get\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
 Get response body. 
 
 \begin{DoxyReturn}{Returns}
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{Response} body 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{Response}} body 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a180c8df8a6a7c0b97acd1e5d3a01e981}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a180c8df8a6a7c0b97acd1e5d3a01e981}} 
-\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!get\+Status\+Code@{get\+Status\+Code}}
-\index{get\+Status\+Code@{get\+Status\+Code}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}
-\subsubsection{\texorpdfstring{get\+Status\+Code()}{getStatusCode()}}
-{\footnotesize\ttfamily \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}{Response\+::\+Status\+Code} ostk\+::io\+::ip\+::tcp\+::http\+::\+Response\+::get\+Status\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!getStatusCode@{getStatusCode}}
+\index{getStatusCode@{getStatusCode}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}
+\doxysubsubsection{\texorpdfstring{getStatusCode()}{getStatusCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}{Response\+::\+Status\+Code}} ostk\+::io\+::ip\+::tcp\+::http\+::\+Response\+::get\+Status\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
 Get response status code. 
 
 \begin{DoxyReturn}{Returns}
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{Response} status code 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{Response}} status code 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_afc78e507b0c295a20d9ef90748deb32b}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_afc78e507b0c295a20d9ef90748deb32b}} 
-\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!is\+Defined@{is\+Defined}}
-\index{is\+Defined@{is\+Defined}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}
-\subsubsection{\texorpdfstring{is\+Defined()}{isDefined()}}
+\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!isDefined@{isDefined}}
+\index{isDefined@{isDefined}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}
+\doxysubsubsection{\texorpdfstring{isDefined()}{isDefined()}}
 {\footnotesize\ttfamily bool ostk\+::io\+::ip\+::tcp\+::http\+::\+Response\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -449,9 +449,9 @@ Check if response is defined.
 True if response is defined 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a44768f02be45b9363a00a12c33aa112d}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a44768f02be45b9363a00a12c33aa112d}} 
-\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!is\+Ok@{is\+Ok}}
-\index{is\+Ok@{is\+Ok}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}
-\subsubsection{\texorpdfstring{is\+Ok()}{isOk()}}
+\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!isOk@{isOk}}
+\index{isOk@{isOk}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}
+\doxysubsubsection{\texorpdfstring{isOk()}{isOk()}}
 {\footnotesize\ttfamily bool ostk\+::io\+::ip\+::tcp\+::http\+::\+Response\+::is\+Ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
@@ -462,10 +462,10 @@ Check if response status code is Ok.
 True if response status code is Ok 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a4a593d62047c96eead840c751972ffd4}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a4a593d62047c96eead840c751972ffd4}} 
-\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!String\+From\+Status\+Code@{String\+From\+Status\+Code}}
-\index{String\+From\+Status\+Code@{String\+From\+Status\+Code}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}
-\subsubsection{\texorpdfstring{String\+From\+Status\+Code()}{StringFromStatusCode()}}
-{\footnotesize\ttfamily \hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String} ostk\+::io\+::ip\+::tcp\+::http\+::\+Response\+::\+String\+From\+Status\+Code (\begin{DoxyParamCaption}\item[{const \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}{Response\+::\+Status\+Code} \&}]{a\+Status\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!StringFromStatusCode@{StringFromStatusCode}}
+\index{StringFromStatusCode@{StringFromStatusCode}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}
+\doxysubsubsection{\texorpdfstring{StringFromStatusCode()}{StringFromStatusCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_a88a1b82fb01d02df64ca01ef4058bbef}{String}} ostk\+::io\+::ip\+::tcp\+::http\+::\+Response\+::\+String\+From\+Status\+Code (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_af537657bbf13ea832203957144230c36}{Response\+::\+Status\+Code}} \&}]{a\+Status\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -473,17 +473,17 @@ Converts response status code to string.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em a\+Status\+Code} & A response status code \\
+\mbox{\texttt{ in}}  & {\em a\+Status\+Code} & A response status code \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{Response} status code string 
+\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{Response}} status code string 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a0a3f62924ffb05edc9bb68351710bb23}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_a0a3f62924ffb05edc9bb68351710bb23}} 
-\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!Undefined@{Undefined}}
-\index{Undefined@{Undefined}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}
-\subsubsection{\texorpdfstring{Undefined()}{Undefined()}}
-{\footnotesize\ttfamily \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{Response} ostk\+::io\+::ip\+::tcp\+::http\+::\+Response\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!Undefined@{Undefined}}
+\index{Undefined@{Undefined}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}
+\doxysubsubsection{\texorpdfstring{Undefined()}{Undefined()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{Response}} ostk\+::io\+::ip\+::tcp\+::http\+::\+Response\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -494,12 +494,12 @@ Undefined response
 \end{DoxyReturn}
 
 
-\subsection{Friends And Related Function Documentation}
+\doxysubsection{Friends And Related Function Documentation}
 \mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_ae3715558aef62c5b9c3c9971e307dd8e}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_ae3715558aef62c5b9c3c9971e307dd8e}} 
-\index{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}!operator$<$$<$@{operator$<$$<$}}
-\index{operator$<$$<$@{operator$<$$<$}!ostk\+::io\+::ip\+::tcp\+::http\+::\+Response@{ostk\+::io\+::ip\+::tcp\+::http\+::\+Response}}
-\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
-{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{Response} \&}]{a\+Response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+\index{ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ostk::io::ip::tcp::http::Response@{ostk::io::ip::tcp::http::Response}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{an\+Output\+Stream,  }\item[{const \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{Response}} \&}]{a\+Response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
@@ -507,9 +507,9 @@ Output stream operator.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em an\+Output\+Stream} & An output stream \\
+\mbox{\texttt{ in}}  & {\em an\+Output\+Stream} & An output stream \\
 \hline
-\mbox{\tt in}  & {\em a\+Response} & A response \\
+\mbox{\texttt{ in}}  & {\em a\+Response} & A response \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -519,5 +519,5 @@ An output stream
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\+Open\+Space\+Toolkit/\+I\+O/\+I\+P/\+T\+C\+P/\+H\+T\+T\+P/\hyperlink{_response_8hpp}{Response.\+hpp}\item 
-src/\+Open\+Space\+Toolkit/\+I\+O/\+I\+P/\+T\+C\+P/\+H\+T\+T\+P/\hyperlink{_response_8cpp}{Response.\+cpp}\end{DoxyCompactItemize}
+include/\+Open\+Space\+Toolkit/\+I\+O/\+I\+P/\+T\+C\+P/\+H\+T\+T\+P/\mbox{\hyperlink{_response_8hpp}{Response.\+hpp}}\item 
+src/\+Open\+Space\+Toolkit/\+I\+O/\+I\+P/\+T\+C\+P/\+H\+T\+T\+P/\mbox{\hyperlink{_response_8cpp}{Response.\+cpp}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parameter',['Parameter',['../classostk_1_1io_1_1url_1_1_query_1_1_parameter.html',1,'ostk::io::url::Query']]]
+  ['parameter_192',['Parameter',['../classostk_1_1io_1_1url_1_1_query_1_1_parameter.html',1,'ostk::io::url::Query']]]
 ];
