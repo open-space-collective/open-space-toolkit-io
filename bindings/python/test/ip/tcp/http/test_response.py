@@ -8,8 +8,8 @@ URL = io.URL
 Response = io.ip.tcp.http.Response
 StatusCode = Response.StatusCode
 
-def test_http_response ():
 
+def test_http_response():
     enum_members = Response.StatusCode.__members__
 
     list_keys = [
@@ -75,7 +75,7 @@ def test_http_response ():
         "InsufficientStorage",
         "LoopDetected",
         "NotExtended",
-        "NetworkAuthenticationRequire"
+        "NetworkAuthenticationRequire",
     ]
 
     list_values = [
@@ -141,7 +141,7 @@ def test_http_response ():
         StatusCode.InsufficientStorage,
         StatusCode.LoopDetected,
         StatusCode.NotExtended,
-        StatusCode.NetworkAuthenticationRequire
+        StatusCode.NetworkAuthenticationRequire,
     ]
 
     assert list(enum_members.keys()) == list_keys
@@ -150,7 +150,7 @@ def test_http_response ():
     responses = []
     for i in range(len(list_values)):
         statuscode = list_values[i]
-        response = Response(statuscode, f'body{i}')
+        response = Response(statuscode, f"body{i}")
         assert isinstance(response, Response)
         if i > 0:
             assert response.is_defined()
@@ -172,15 +172,13 @@ def test_http_response ():
     assert Response.undefined().is_defined() is False
 
     with pytest.raises(RuntimeError):
-
         response_0.get_body()
 
-    assert response_2.get_body() == 'body2'
-    assert response_3.get_body() == 'body3'
-    assert response_4.get_body() == 'body4'
+    assert response_2.get_body() == "body2"
+    assert response_3.get_body() == "body3"
+    assert response_4.get_body() == "body4"
 
     with pytest.raises(RuntimeError):
-
         response_0.is_ok()
 
     assert response_2.is_ok() is False
@@ -188,7 +186,6 @@ def test_http_response ():
     assert response_4.is_ok() is False
 
     with pytest.raises(RuntimeError):
-
         response_0.get_status_code()
 
     assert response_2.get_status_code() == StatusCode.SwitchingProtocols
@@ -198,4 +195,4 @@ def test_http_response ():
     assert response_5.is_defined() is True
     assert response_5.is_ok() is True
     assert response_5.get_status_code() == StatusCode.Ok
-    assert response_5.get_body() == 'body5'
+    assert response_5.get_body() == "body5"

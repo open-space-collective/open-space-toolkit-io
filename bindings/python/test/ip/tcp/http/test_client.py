@@ -9,8 +9,8 @@ Request = io.ip.tcp.http.Request
 Response = io.ip.tcp.http.Response
 Client = io.ip.tcp.http.Client
 
-def test_http_client ():
 
+def test_http_client():
     response = Client.get(URL.parse("https://www.google.com"))
 
     assert response is not None
