@@ -16,27 +16,21 @@ namespace tcp
 namespace http
 {
 
-using String = ostk::core::types::String ;
+using String = ostk::core::types::String;
 
 /// @brief
 
 class Server
 {
+   public:
+   private:
+    // [TBI]
+};
 
-    public:
-
-
-
-    private:
-
-        // [TBI]
-
-} ;
-
-}
-}
-}
-}
-}
+}  // namespace http
+}  // namespace tcp
+}  // namespace ip
+}  // namespace io
+}  // namespace ostk
 
 #endif

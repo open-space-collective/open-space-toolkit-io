@@ -3,9 +3,9 @@
 #ifndef __OpenSpaceToolkit_IO_IP_TCP_HTTP_Request__
 #define __OpenSpaceToolkit_IO_IP_TCP_HTTP_Request__
 
-#include <OpenSpaceToolkit/IO/URL.hpp>
-
 #include <OpenSpaceToolkit/Core/Types/String.hpp>
+
+#include <OpenSpaceToolkit/IO/URL.hpp>
 
 namespace ostk
 {
@@ -18,9 +18,9 @@ namespace tcp
 namespace http
 {
 
-using ostk::core::types::String ;
+using ostk::core::types::String;
 
-using ostk::io::URL ;
+using ostk::io::URL;
 
 /// @brief                      Hypertext Transfer Protocol (HTTP) request
 ///
@@ -28,102 +28,97 @@ using ostk::io::URL ;
 
 class Request
 {
+   public:
+    /// @brief              Request method
 
-    public:
+    enum class Method
+    {
 
-        /// @brief              Request method
+        Undefined,  ///< Undefined request method.
+        Get,        ///< Requests a representation of the specified resource.
+        Head,       ///< Asks for a response identical to that of a GET request, but without the response body.
+        Post,    ///< Requests that the server accept the entity enclosed in the request as a new subordinate of the web
+                 ///< resource identified by the URI.
+        Put,     ///< Requests that the enclosed entity be stored under the supplied URI.
+        Delete,  ///< Deletes the specified resource.
+        Trace,   ///< Echoes the received request so that a client can see what (if any) changes or additions have been
+                 ///< made by intermediate servers.
+        Options,  ///< Returns the HTTP methods that the server supports for the specified URL.
+        Connect,  ///< Converts the request connection to a transparent TCP/IP tunnel.
+        Patch     ///< Applies partial modifications to a resource.
 
-        enum class Method
-        {
+    };
 
-            Undefined,          ///< Undefined request method.
-            Get,                ///< Requests a representation of the specified resource.
-            Head,               ///< Asks for a response identical to that of a GET request, but without the response body.
-            Post,               ///< Requests that the server accept the entity enclosed in the request as a new subordinate of the web resource identified by the URI.
-            Put,                ///< Requests that the enclosed entity be stored under the supplied URI.
-            Delete,             ///< Deletes the specified resource.
-            Trace,              ///< Echoes the received request so that a client can see what (if any) changes or additions have been made by intermediate servers.
-            Options,            ///< Returns the HTTP methods that the server supports for the specified URL.
-            Connect,            ///< Converts the request connection to a transparent TCP/IP tunnel.
-            Patch               ///< Applies partial modifications to a resource.
+    /// @brief              Constructor
+    ///
+    /// @param              [in] aMethod A method
+    /// @param              [in] aUrl A URL
+    /// @param              [in] aBody A body
 
-        } ;
+    Request(const Request::Method& aMethod, const URL& aUrl, const String& aBody);
 
-        /// @brief              Constructor
-        ///
-        /// @param              [in] aMethod A method
-        /// @param              [in] aUrl A URL
-        /// @param              [in] aBody A body
+    /// @brief              Output stream operator
+    ///
+    /// @param              [in] anOutputStream An output stream
+    /// @param              [in] aRequest A request
+    /// @return             An output stream
 
-                                Request                                     (   const   Request::Method&            aMethod,
-                                                                                const   URL&                        aUrl,
-                                                                                const   String&                     aBody                                       ) ;
+    friend std::ostream& operator<<(std::ostream& anOutputStream, const Request& aRequest);
 
-        /// @brief              Output stream operator
-        ///
-        /// @param              [in] anOutputStream An output stream
-        /// @param              [in] aRequest A request
-        /// @return             An output stream
+    /// @brief              Check if request is defined
+    ///
+    /// @return             True if request is defined
 
-        friend std::ostream&    operator <<                                 (           std::ostream&               anOutputStream,
-                                                                                const   Request&                    aRequest                                    ) ;
+    bool isDefined() const;
 
-        /// @brief              Check if request is defined
-        ///
-        /// @return             True if request is defined
+    /// @brief              Get request method
+    ///
+    /// @return             Request method
 
-        bool                    isDefined                                   ( ) const ;
+    Request::Method getMethod() const;
 
-        /// @brief              Get request method
-        ///
-        /// @return             Request method
+    /// @brief              Get request URL
+    ///
+    /// @return             Request URL
 
-        Request::Method         getMethod                                   ( ) const ;
+    URL getUrl() const;
 
-        /// @brief              Get request URL
-        ///
-        /// @return             Request URL
+    /// @brief              Get request body
+    ///
+    /// @return             Request body
 
-        URL                     getUrl                                      ( ) const ;
+    String getBody() const;
 
-        /// @brief              Get request body
-        ///
-        /// @return             Request body
+    /// @brief              Constructs an undefined request
+    ///
+    /// @return             Undefined request
 
-        String                  getBody                                     ( ) const ;
+    static Request Undefined();
 
-        /// @brief              Constructs an undefined request
-        ///
-        /// @return             Undefined request
+    /// @brief              Constructs a GET request
+    ///
+    /// @param              [in] aUrl A URL
+    /// @return             GET request
 
-        static Request          Undefined                                   ( ) ;
+    static Request Get(const URL& aUrl);
 
-        /// @brief              Constructs a GET request
-        ///
-        /// @param              [in] aUrl A URL
-        /// @return             GET request
+    /// @brief              Converts request method to string
+    ///
+    /// @param              [in] aMethod A request method
+    /// @return             Request method string
 
-        static Request          Get                                         (   const   URL&                        aUrl                                        ) ;
+    static String StringFromMethod(const Request::Method& aMethod);
 
-        /// @brief              Converts request method to string
-        ///
-        /// @param              [in] aMethod A request method
-        /// @return             Request method string
+   private:
+    Request::Method method_;
+    URL url_;
+    String body_;
+};
 
-        static String           StringFromMethod                            (   const   Request::Method&            aMethod                                     ) ;
-
-    private:
-
-        Request::Method         method_ ;
-        URL                     url_ ;
-        String                  body_ ;
-
-} ;
-
-}
-}
-}
-}
-}
+}  // namespace http
+}  // namespace tcp
+}  // namespace ip
+}  // namespace io
+}  // namespace ostk
 
 #endif

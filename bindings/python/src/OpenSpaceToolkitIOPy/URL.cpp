@@ -1,25 +1,33 @@
 /// Apache License 2.0
 
-#include <OpenSpaceToolkitIOPy/URL/Query.cpp>
-
 #include <OpenSpaceToolkit/IO/URL.hpp>
+
+#include <OpenSpaceToolkitIOPy/URL/Query.cpp>
 
 // https://pybind11.readthedocs.io/en/stable/basics.html#default-args
 
-inline void                     OpenSpaceToolkitIOPy_URL                    (           pybind11::module&           aModule                                     )
+inline void OpenSpaceToolkitIOPy_URL(pybind11::module& aModule)
 {
+    using namespace pybind11;
 
-    using namespace pybind11 ;
+    using ostk::core::types::Integer;
+    using ostk::core::types::String;
 
-    using ostk::core::types::Integer ;
-    using ostk::core::types::String ;
+    using ostk::io::URL;
+    using ostk::io::url::Query;
 
-    using ostk::io::URL ;
-    using ostk::io::url::Query ;
+    class_<URL> url_class(aModule, "URL");
 
-    class_<URL> url_class(aModule, "URL") ;
-
-    url_class.def(init<const String&, const String&, const String&, const Integer&, const String&, const String&, const Query&, const String&>())
+    url_class
+        .def(init<
+             const String&,
+             const String&,
+             const String&,
+             const Integer&,
+             const String&,
+             const String&,
+             const Query&,
+             const String&>())
 
         .def(self == self)
         .def(self != self)
@@ -28,7 +36,13 @@ inline void                     OpenSpaceToolkitIOPy_URL                    (   
         .def(self += String())
 
         .def("__str__", &(shiftToString<URL>))
-        .def("__repr__", +[] (const URL& aUrl) -> std::string { return aUrl.toString() ; })
+        .def(
+            "__repr__",
+            +[](const URL& aUrl) -> std::string
+            {
+                return aUrl.toString();
+            }
+        )
 
         .def("is_defined", &URL::isDefined)
 
@@ -41,7 +55,7 @@ inline void                     OpenSpaceToolkitIOPy_URL                    (   
         .def("get_query", &URL::getQuery)
         .def("get_fragment", &URL::getFragment)
 
-        .def("to_string", &URL::toString, "doSanitize"_a=false)
+        .def("to_string", &URL::toString, "doSanitize"_a = false)
         .def("set_scheme", &URL::setScheme)
         .def("set_host", &URL::setHost)
         .def("set_path", &URL::setPath)
@@ -56,8 +70,7 @@ inline void                     OpenSpaceToolkitIOPy_URL                    (   
         // .def_static("encode_string", &URL::EncodeString)
         // .def_static("decode_string", &URL::DecodeString)
 
-    ;
+        ;
 
-    OpenSpaceToolkitIOPy_URL_Query(url_class) ;
-
+    OpenSpaceToolkitIOPy_URL_Query(url_class);
 }

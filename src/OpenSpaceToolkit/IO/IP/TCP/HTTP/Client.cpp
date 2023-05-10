@@ -1,14 +1,13 @@
 /// Apache License 2.0
 
-#include <OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp>
-
-#include <OpenSpaceToolkit/Core/FileSystem/Path.hpp>
-#include <OpenSpaceToolkit/Core/Error.hpp>
-#include <OpenSpaceToolkit/Core/Utilities.hpp>
-
+#include <boost/algorithm/string.hpp>
 #include <curl/curl.h>
 
-#include <boost/algorithm/string.hpp>
+#include <OpenSpaceToolkit/Core/Error.hpp>
+#include <OpenSpaceToolkit/Core/FileSystem/Path.hpp>
+#include <OpenSpaceToolkit/Core/Utilities.hpp>
+
+#include <OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp>
 
 // [TBI] curl_easy_setopt(curlPtr, CURLOPT_USERPWD, "username:password") ;
 
@@ -23,63 +22,54 @@ namespace tcp
 namespace http
 {
 
-int                             debugHandler                                (           CURL*                       aCurlPtr,
-                                                                                        curl_infotype               aType,
-                                                                                        char*                       aDataset,
-                                                                                        size_t                      aSize,
-                                                                                        void*                       aContext                                    )
+int debugHandler(CURL* aCurlPtr, curl_infotype aType, char* aDataset, size_t aSize, void* aContext)
 {
-
-    (void) aCurlPtr ;
-    (void) aSize ;
-    (void) aContext ;
+    (void)aCurlPtr;
+    (void)aSize;
+    (void)aContext;
 
     switch (aType)
     {
-
         case CURLINFO_TEXT:
-            std::cout << aDataset << std::endl ;
-            break ;
+            std::cout << aDataset << std::endl;
+            break;
 
         case CURLINFO_HEADER_OUT:
-            std::cout << "=> Send header" << std::endl ;
-            break ;
+            std::cout << "=> Send header" << std::endl;
+            break;
 
         case CURLINFO_DATA_OUT:
-            std::cout << "=> Send data" << std::endl ;
-            break ;
+            std::cout << "=> Send data" << std::endl;
+            break;
 
         case CURLINFO_SSL_DATA_OUT:
-            std::cout << "=> Send SSL data" << std::endl ;
-            break ;
+            std::cout << "=> Send SSL data" << std::endl;
+            break;
 
         case CURLINFO_HEADER_IN:
-            std::cout << "<= Recv header" << std::endl ;
-            break ;
+            std::cout << "<= Recv header" << std::endl;
+            break;
 
         case CURLINFO_DATA_IN:
-            std::cout << "<= Recv data" << std::endl ;
-            break ;
+            std::cout << "<= Recv data" << std::endl;
+            break;
 
         case CURLINFO_SSL_DATA_IN:
-            std::cout << "<= Recv SSL data" << std::endl ;
-            break ;
+            std::cout << "<= Recv SSL data" << std::endl;
+            break;
 
         default:
-            return 0 ;
-
+            return 0;
     }
 
-    return 0 ;
-
+    return 0;
 }
 
-Response                        Client::Send                                (   const   Request&                    aRequest                                    )
+Response Client::Send(const Request& aRequest)
 {
-
     if (!aRequest.isDefined())
     {
-        throw ostk::core::error::runtime::Undefined("Request") ;
+        throw ostk::core::error::runtime::Undefined("Request");
     }
 
     // std::cout << "curl_global_init(CURL_GLOBAL_SSL)..." << std::endl ;
@@ -90,50 +80,51 @@ Response                        Client::Send                                (   
 
     // Setup
 
-    CURL* curlPtr = curl_easy_init() ;
+    CURL* curlPtr = curl_easy_init();
 
     try
     {
-
         if (curlPtr == nullptr)
         {
-            throw ostk::core::error::RuntimeError("Error with cURL setup.") ;
+            throw ostk::core::error::RuntimeError("Error with cURL setup.");
         }
 
         // Set URL
 
-        const String urlString = aRequest.getUrl().toString(true) ;
+        const String urlString = aRequest.getUrl().toString(true);
 
-        curl_easy_setopt(curlPtr, CURLOPT_URL, urlString.data()) ;
+        curl_easy_setopt(curlPtr, CURLOPT_URL, urlString.data());
 
         // Set request method
 
-        curl_easy_setopt(curlPtr, CURLOPT_CUSTOMREQUEST, boost::to_upper_copy<String>(Request::StringFromMethod(aRequest.getMethod())).data()) ;
+        curl_easy_setopt(
+            curlPtr,
+            CURLOPT_CUSTOMREQUEST,
+            boost::to_upper_copy<String>(Request::StringFromMethod(aRequest.getMethod())).data()
+        );
 
         // Set request body
 
-        curl_easy_setopt(curlPtr, CURLOPT_POSTFIELDS, aRequest.getBody().data()) ;
+        curl_easy_setopt(curlPtr, CURLOPT_POSTFIELDS, aRequest.getBody().data());
 
         // Set response data handler
 
-        std::ostringstream responseStream ;
+        std::ostringstream responseStream;
 
-        curl_easy_setopt(curlPtr, CURLOPT_WRITEDATA, &responseStream) ;
+        curl_easy_setopt(curlPtr, CURLOPT_WRITEDATA, &responseStream);
 
-        const auto writeDataFunction = +[] (char* aBuffer, size_t aSize, size_t aDataSize, void* aContextPtr) -> size_t
+        const auto writeDataFunction = +[](char* aBuffer, size_t aSize, size_t aDataSize, void* aContextPtr) -> size_t
         {
+            std::ostringstream* streamPtr = static_cast<std::ostringstream*>(aContextPtr);
 
-            std::ostringstream* streamPtr = static_cast<std::ostringstream*>(aContextPtr) ;
+            const size_t count = aSize * aDataSize;
 
-            const size_t count = aSize * aDataSize ;
+            streamPtr->write(aBuffer, count);
 
-            streamPtr->write(aBuffer, count) ;
+            return count;
+        };
 
-            return count ;
-
-        } ;
-
-        curl_easy_setopt(curlPtr, CURLOPT_WRITEFUNCTION, writeDataFunction) ;
+        curl_easy_setopt(curlPtr, CURLOPT_WRITEFUNCTION, writeDataFunction);
 
         //
 
@@ -144,256 +135,242 @@ Response                        Client::Send                                (   
 
         // Send request
 
-        const CURLcode curlCode = curl_easy_perform(curlPtr) ;
+        const CURLcode curlCode = curl_easy_perform(curlPtr);
 
         // Check response
 
         if (curlCode != CURLE_OK)
         {
-            throw ostk::core::error::RuntimeError("Error using cURL: [{}].", curl_easy_strerror(curlCode)) ;
+            throw ostk::core::error::RuntimeError("Error using cURL: [{}].", curl_easy_strerror(curlCode));
         }
 
-        long responseCode ;
+        long responseCode;
 
-        curl_easy_getinfo(curlPtr, CURLINFO_RESPONSE_CODE, &responseCode) ;
+        curl_easy_getinfo(curlPtr, CURLINFO_RESPONSE_CODE, &responseCode);
 
         // Cleanup
 
-        curl_easy_cleanup(curlPtr) ;
+        curl_easy_cleanup(curlPtr);
 
-        return { Response::StatusCode(responseCode), responseStream.str() } ;
+        return {Response::StatusCode(responseCode), responseStream.str()};
     }
     catch (...)
     {
-        curl_easy_cleanup(curlPtr) ;
-        throw ;
+        curl_easy_cleanup(curlPtr);
+        throw;
     }
-
 }
 
-Response                        Client::Get                                 (   const   URL&                        aUrl                                        )
+Response Client::Get(const URL& aUrl)
 {
-    return Client::Send(Request::Get(aUrl)) ;
+    return Client::Send(Request::Get(aUrl));
 }
 
-File                            Client::Fetch                               (   const   URL&                        aUrl,
-                                                                                const   Directory&                  aDirectory                                  )
+File Client::Fetch(const URL& aUrl, const Directory& aDirectory)
 {
-
-    using ostk::core::fs::Path ;
+    using ostk::core::fs::Path;
 
     if (!aUrl.isDefined())
     {
-        throw ostk::core::error::runtime::Undefined("URL") ;
+        throw ostk::core::error::runtime::Undefined("URL");
     }
 
     if (!aDirectory.isDefined())
     {
-        throw ostk::core::error::runtime::Undefined("Directory") ;
+        throw ostk::core::error::runtime::Undefined("Directory");
     }
 
-    File file = File::Undefined() ;
+    File file = File::Undefined();
 
     // Setup
 
-    CURL* curlPtr = curl_easy_init() ;
+    CURL* curlPtr = curl_easy_init();
 
     try
     {
-
         if (curlPtr == nullptr)
         {
-            throw ostk::core::error::RuntimeError("Error with cURL setup.") ;
+            throw ostk::core::error::RuntimeError("Error with cURL setup.");
         }
 
         if (!aDirectory.exists())
         {
-            Directory(aDirectory).create() ;
+            Directory(aDirectory).create();
         }
 
         // Set URL
 
-        const String urlString = aUrl.toString(true) ;
+        const String urlString = aUrl.toString(true);
 
-        curl_easy_setopt(curlPtr, CURLOPT_URL, urlString.data()) ;
+        curl_easy_setopt(curlPtr, CURLOPT_URL, urlString.data());
 
         // Set response data handler
 
-        file = File::Path(Path::Parse(String::Format("{}/{}", aDirectory.getPath().toString(), Path::Parse(aUrl.getPath()).getLastElement()))) ;
+        file = File::Path(Path::Parse(
+            String::Format("{}/{}", aDirectory.getPath().toString(), Path::Parse(aUrl.getPath()).getLastElement())
+        ));
 
-        FILE* filePtr = fopen(file.getPath().toString().data(), "wb") ;
+        FILE* filePtr = fopen(file.getPath().toString().data(), "wb");
 
         if (!filePtr)
         {
-            throw ostk::core::error::RuntimeError("Cannot create file [" + file.toString() + "].") ;
+            throw ostk::core::error::RuntimeError("Cannot create file [" + file.toString() + "].");
         }
 
-        curl_easy_setopt(curlPtr, CURLOPT_WRITEDATA, filePtr) ;
+        curl_easy_setopt(curlPtr, CURLOPT_WRITEDATA, filePtr);
 
-        const auto writeDataFunction = +[] (void* aBuffer, size_t aSize, size_t aDataSize, FILE* aFilePtr) -> size_t
+        const auto writeDataFunction = +[](void* aBuffer, size_t aSize, size_t aDataSize, FILE* aFilePtr) -> size_t
         {
-            return fwrite(aBuffer, aSize, aDataSize, aFilePtr) ;
-        } ;
+            return fwrite(aBuffer, aSize, aDataSize, aFilePtr);
+        };
 
-        curl_easy_setopt(curlPtr, CURLOPT_WRITEFUNCTION, writeDataFunction) ;
+        curl_easy_setopt(curlPtr, CURLOPT_WRITEFUNCTION, writeDataFunction);
 
-        curl_easy_setopt(curlPtr, CURLOPT_FAILONERROR, true) ;
+        curl_easy_setopt(curlPtr, CURLOPT_FAILONERROR, true);
         // curl_easy_setopt(curlPtr, CURLOPT_FOLLOWLOCATION, 1L) ;
 
         // Send request
 
-        const CURLcode curlCode = curl_easy_perform(curlPtr) ;
+        const CURLcode curlCode = curl_easy_perform(curlPtr);
 
         // Check response
 
-        long responseCode ;
+        long responseCode;
 
-        curl_easy_getinfo(curlPtr, CURLINFO_RESPONSE_CODE, &responseCode) ;
+        curl_easy_getinfo(curlPtr, CURLINFO_RESPONSE_CODE, &responseCode);
 
         // Cleanup
 
         if (filePtr != nullptr)
         {
-
             if (fclose(filePtr) == EOF)
             {
-                throw ostk::core::error::RuntimeError("Error when closing the file.") ;
+                throw ostk::core::error::RuntimeError("Error when closing the file.");
             }
-
         }
 
         if (curlCode != CURLE_OK)
         {
-
             if (file.exists())
             {
-                file.remove() ;
+                file.remove();
             }
 
-            throw ostk::core::error::RuntimeError("Error using cURL to fetch file at URL [{}]: [{}].", aUrl.toString(), curl_easy_strerror(curlCode)) ;
-
+            throw ostk::core::error::RuntimeError(
+                "Error using cURL to fetch file at URL [{}]: [{}].", aUrl.toString(), curl_easy_strerror(curlCode)
+            );
         }
 
-        curl_easy_cleanup(curlPtr) ;
+        curl_easy_cleanup(curlPtr);
 
-        return file ;
-
+        return file;
     }
     catch (...)
     {
-        curl_easy_cleanup(curlPtr) ;
-        throw ;
+        curl_easy_cleanup(curlPtr);
+        throw;
     }
-
 }
 
-void                            Client::List                                (   const   URL&                        aUrl,
-                                                                                const   File&                       aFile,
-                                                                                const   bool                        showNamesOnly                               )
+void Client::List(const URL& aUrl, const File& aFile, const bool showNamesOnly)
 {
-
-    using ostk::core::fs::Path ;
+    using ostk::core::fs::Path;
 
     if (!aUrl.isDefined())
     {
-        throw ostk::core::error::runtime::Undefined("URL") ;
+        throw ostk::core::error::runtime::Undefined("URL");
     }
 
     if (!aFile.isDefined())
     {
-        throw ostk::core::error::runtime::Undefined("File") ;
+        throw ostk::core::error::runtime::Undefined("File");
     }
 
     if (aFile.exists())
     {
-        throw ostk::core::error::RuntimeError("File [{}] already exists.", aFile.toString()) ;
+        throw ostk::core::error::RuntimeError("File [{}] already exists.", aFile.toString());
     }
 
     // Setup
 
-    CURL* curlPtr = curl_easy_init() ;
+    CURL* curlPtr = curl_easy_init();
 
     try
     {
-
         if (curlPtr == nullptr)
         {
-            throw ostk::core::error::RuntimeError("Error with cURL setup.") ;
+            throw ostk::core::error::RuntimeError("Error with cURL setup.");
         }
 
         // Set URL
 
-        const String urlString = aUrl.toString(true) ;
+        const String urlString = aUrl.toString(true);
 
-        curl_easy_setopt(curlPtr, CURLOPT_URL, urlString.data()) ;
+        curl_easy_setopt(curlPtr, CURLOPT_URL, urlString.data());
 
         // Set file handler
 
-        FILE* filePtr = fopen(aFile.getPath().toString().data(), "w") ;
+        FILE* filePtr = fopen(aFile.getPath().toString().data(), "w");
 
         if (!filePtr)
         {
-            throw ostk::core::error::RuntimeError("Cannot create file [" + aFile.toString() + "].") ;
+            throw ostk::core::error::RuntimeError("Cannot create file [" + aFile.toString() + "].");
         }
 
-        curl_easy_setopt(curlPtr, CURLOPT_FILE, filePtr) ;
+        curl_easy_setopt(curlPtr, CURLOPT_FILE, filePtr);
 
         // Set options
 
-        curl_easy_setopt(curlPtr, CURLOPT_TRANSFERTEXT, 1) ;
+        curl_easy_setopt(curlPtr, CURLOPT_TRANSFERTEXT, 1);
 
         if (showNamesOnly)
         {
-            curl_easy_setopt(curlPtr, CURLOPT_DIRLISTONLY, 1) ;
+            curl_easy_setopt(curlPtr, CURLOPT_DIRLISTONLY, 1);
         }
 
         // Send request
 
-        const CURLcode curlCode = curl_easy_perform(curlPtr) ;
+        const CURLcode curlCode = curl_easy_perform(curlPtr);
 
         // Check response
 
-        long responseCode ;
+        long responseCode;
 
-        curl_easy_getinfo(curlPtr, CURLINFO_RESPONSE_CODE, &responseCode) ;
+        curl_easy_getinfo(curlPtr, CURLINFO_RESPONSE_CODE, &responseCode);
 
         // Cleanup
 
         if (filePtr != nullptr)
         {
-
             if (fclose(filePtr) == EOF)
             {
-                throw ostk::core::error::RuntimeError("Error when closing the file.") ;
+                throw ostk::core::error::RuntimeError("Error when closing the file.");
             }
-
         }
 
         if (curlCode != CURLE_OK)
         {
-
             if (aFile.exists())
             {
-                File(aFile).remove() ;
+                File(aFile).remove();
             }
 
-            throw ostk::core::error::RuntimeError("Error using cURL to list files at URL [{}]: [{}].", aUrl.toString(), curl_easy_strerror(curlCode)) ;
-
+            throw ostk::core::error::RuntimeError(
+                "Error using cURL to list files at URL [{}]: [{}].", aUrl.toString(), curl_easy_strerror(curlCode)
+            );
         }
 
-        curl_easy_cleanup(curlPtr) ;
-
+        curl_easy_cleanup(curlPtr);
     }
     catch (...)
     {
-        curl_easy_cleanup(curlPtr) ;
-        throw ;
+        curl_easy_cleanup(curlPtr);
+        throw;
     }
-
 }
 
-}
-}
-}
-}
-}
+}  // namespace http
+}  // namespace tcp
+}  // namespace ip
+}  // namespace io
+}  // namespace ostk

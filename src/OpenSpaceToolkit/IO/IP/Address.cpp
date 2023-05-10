@@ -9,11 +9,11 @@ namespace io
 namespace ip
 {
 
-//                                 Address::Address                            (   const   Address&                    anAddress                                   )
+//                                 Address::Address                            (   const   Address& anAddress )
 // {
 
 // }
 
-}
-}
-}
+}  // namespace ip
+}  // namespace io
+}  // namespace ostk
