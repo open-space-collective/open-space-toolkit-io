@@ -451,9 +451,7 @@ test-coverage-cpp: build-development-image ## Run C++ tests with coverage
 
 	@ $(MAKE) test-coverage-cpp-standalone
 
-.PHONY: test-coverage
-
-test-coverage-cpp: build-development-image
+test-coverage-cpp-standalone: ## Run C++ tests with coverage (standalone)
 
 	@ echo "Running C++ coverage tests..."
 
