@@ -1,11 +1,4 @@
-################################################################################################################################################################
-
-# @project        Open Space Toolkit ▸ I/O
-# @file           tools/cmake/OpenSpaceToolkitIOConfig.cmake.in
-# @author         Lucas Brémond <lucas@loftorbital.com>
-# @license        Apache License 2.0
-
-################################################################################################################################################################
+# Apache License 2.0
 
 SET (OpenSpaceToolkitIO_ROOT_DIR ${OpenSpaceToolkitIO_ROOT_DIR} @CMAKE_INSTALL_PREFIX@)
 
@@ -25,5 +18,3 @@ IF (OpenSpaceToolkitIO_INCLUDE_DIR)
     SET (OpenSpaceToolkitIO_FOUND TRUE)
 
 ENDIF ()
-
-################################################################################################################################################################

@@ -1,33 +1,24 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/// @project        Open Space Toolkit ▸ I/O
-/// @file           bindings/python/src/OpenSpaceToolkitIOPy/IP/TCP/HTTP/Request.cpp
-/// @author         Lucas Brémond <lucas@loftorbital.com>
-/// @license        Apache License 2.0
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Apache License 2.0
 
 #include <OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp>
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request    (           pybind11::module&           aModule                                     )
+inline void OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request(pybind11::module& aModule)
 {
+    using namespace pybind11;
+    using ostk::core::types::String;
 
-    using namespace pybind11 ;
-    using ostk::core::types::String ;
+    using ostk::io::URL;
+    using ostk::io::ip::tcp::http::Request;
 
-    using ostk::io::URL ;
-    using ostk::io::ip::tcp::http::Request ;
+    class_<Request> request(aModule, "Request");
 
-    class_<Request> request(aModule, "Request") ;
-
-    request.def(init<const Request::Method&, const URL&, const String&>())
+    request
+        .def(init<const Request::Method&, const URL&, const String&>())
 
         .def("__str__", &(shiftToString<Request>))
         .def("__repr__", &(shiftToString<Request>))
 
-		.def("is_defined", &Request::isDefined)
+        .def("is_defined", &Request::isDefined)
         .def("get_method", &Request::getMethod)
         .def("get_url", &Request::getUrl)
         .def("get_body", &Request::getBody)
@@ -36,7 +27,7 @@ inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request    (   
         .def_static("get", &Request::Get)
         .def_static("string_from_method", &Request::StringFromMethod)
 
-    ;
+        ;
 
     enum_<Request::Method>(request, "Method")
 
@@ -51,8 +42,5 @@ inline void                     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request    (   
         .value("Connect", Request::Method::Connect)
         .value("Patch", Request::Method::Patch)
 
-    ;
-
+        ;
 }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,39 +1,28 @@
-################################################################################################################################################################
-
-# @project        Open Space Toolkit ▸ I/O
-# @file           bindings/python/test/ip/tcp/http/test_request.py
-# @author         Lucas Brémond <lucas@loftorbital.com>
-# @license        Apache License 2.0
-
-################################################################################################################################################################
+# Apache License 2.0
 
 import pytest
 
 import ostk.io as io
 
-################################################################################################################################################################
-
 URL = io.URL
 Request = io.ip.tcp.http.Request
 Method = Request.Method
 
-################################################################################################################################################################
 
-def test_http_request ():
-
+def test_http_request():
     enum_members = Request.Method.__members__
 
     list_keys = [
-        'Undefined',
-        'Get',
-        'Head',
-        'Post',
-        'Put',
-        'Delete',
-        'Trace',
-        'Options',
-        'Connect',
-        'Patch'
+        "Undefined",
+        "Get",
+        "Head",
+        "Post",
+        "Put",
+        "Delete",
+        "Trace",
+        "Options",
+        "Connect",
+        "Patch",
     ]
 
     list_values = [
@@ -46,17 +35,17 @@ def test_http_request ():
         Method.Trace,
         Method.Options,
         Method.Connect,
-        Method.Patch
+        Method.Patch,
     ]
 
     assert list(enum_members.keys()) == list_keys
     assert list(enum_members.values()) == list_values
 
     requests = []
-    url = URL.parse('https://www.google.com')
+    url = URL.parse("https://www.google.com")
 
     for request_method in list_values:
-        request = Request(request_method, url, 'body')
+        request = Request(request_method, url, "body")
         assert isinstance(request, Request)
         requests.append(request)
 
@@ -78,21 +67,18 @@ def test_http_request ():
     assert post_request.get_method() == Method.Post
 
     with pytest.raises(RuntimeError):
-
         undef_request.get_method()
 
     assert get_request.get_url() == url
     assert post_request.get_url() == url
 
     with pytest.raises(RuntimeError):
-
         undef_request.get_url()
 
-    assert get_request.get_body() == 'body'
-    assert post_request.get_body() == 'body'
+    assert get_request.get_body() == "body"
+    assert post_request.get_body() == "body"
 
     with pytest.raises(RuntimeError):
-
         undef_request.get_body()
 
     new_get_request = Request.get(url)
@@ -101,6 +87,4 @@ def test_http_request ():
     assert new_get_request.is_defined()
     assert new_get_request.get_method() == Method.Get
     assert new_get_request.get_url() == url
-    assert new_get_request.get_body() == ''
-
-################################################################################################################################################################
+    assert new_get_request.get_body() == ""
