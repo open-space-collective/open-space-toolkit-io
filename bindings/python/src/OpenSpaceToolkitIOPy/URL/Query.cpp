@@ -6,6 +6,7 @@
 
 using ostk::core::ctnr::Array;
 using ostk::io::url::Query;
+using ostk::io::URL;
 
 void set_array(const Array<Query::Parameter>& anArray)
 {
@@ -13,7 +14,7 @@ void set_array(const Array<Query::Parameter>& anArray)
 }
 
 // Taking a python class as input to mimic previous behavior with Boost. Can be refined later if needed
-inline void OpenSpaceToolkitIOPy_URL_Query(auto aClass)
+inline void OpenSpaceToolkitIOPy_URL_Query(pybind11::class_<URL> aClass)
 {
     using namespace pybind11;
 
