@@ -84,11 +84,11 @@ std::ostream& operator<<(std::ostream& anOutputStream, const URL& aURL)
     ostk::core::utils::Print::Line(anOutputStream) << "Host" << (!aURL.host_.isEmpty() ? aURL.host_ : "Undefined");
     ostk::core::utils::Print::Line(anOutputStream)
         << "Port" << (aURL.port_.isDefined() ? aURL.port_.toString() : "Undefined");
-    ostk::core::utils::Print::Line(anOutputStream) << "Path" << (aURL.path_.isEmpty() ? aURL.path_ : "Undefined");
+    ostk::core::utils::Print::Line(anOutputStream) << "Path" << (!aURL.path_.isEmpty() ? aURL.path_ : "Undefined");
     ostk::core::utils::Print::Line(anOutputStream)
         << "Query" << (aURL.query_.isDefined() ? aURL.query_.toString() : "Undefined");
     ostk::core::utils::Print::Line(anOutputStream)
-        << "Fragment" << (aURL.fragment_.isEmpty() ? aURL.fragment_ : "Undefined");
+        << "Fragment" << (!aURL.fragment_.isEmpty() ? aURL.fragment_ : "Undefined");
 
     ostk::core::utils::Print::Footer(anOutputStream);
 
