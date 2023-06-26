@@ -743,8 +743,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns true if address is multicast. </p>
-<pre class="fragment">                IPv4 multicast addresses are in the 224.0.0.0 to 239.255.255.255 range (the first four bits have the value 1110).
-                IPv6 multicast addresses are in the FFxx:x:x:x:x:x:x:x range.
+<pre class="fragment">                IPv4 multicast addresses are in the 224.0.0.0 to 239.255.255.255 range (the first four bits
+                have the value 1110). IPv6 multicast addresses are in the FFxx:x:x:x:x:x:x:x range.
 </pre><dl class="section return"><dt>Returns</dt><dd>True if address is multicast </dd></dl>
 
 </div>
@@ -765,8 +765,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns true if address is node-local multicast. </p>
-<pre class="fragment">                IPv4 does not support node-local addresses, thus the result is always false for an IPv4 address.
-                For IPv6, node-local multicast addresses are in the FFx1:x:x:x:x:x:x:x range.
+<pre class="fragment">                IPv4 does not support node-local addresses, thus the result is always false for an IPv4
+                address. For IPv6, node-local multicast addresses are in the FFx1:x:x:x:x:x:x:x range.
 </pre><dl class="section return"><dt>Returns</dt><dd>True if address is node-local multicast </dd></dl>
 
 </div>
@@ -809,9 +809,10 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns true if address is site local unicast. </p>
-<pre class="fragment">                IPv4 site local addresses are in on of the 10.0.0.0/24, 192.168.0.0/16 or 172.16.0.0 to 172.31.255.255 ranges.
-                Originally, IPv6 site-local addresses had FEC0/10 (1111 1110 11) prefix (RFC 4291), followed by 38 zeros.
-                Interfaces using this mask are supported, but obsolete; RFC 4193 prescribes fc00::/7 (1111 110) as local unicast prefix.
+<pre class="fragment">                IPv4 site local addresses are in on of the 10.0.0.0/24, 192.168.0.0/16 or 172.16.0.0 to
+                172.31.255.255 ranges. Originally, IPv6 site-local addresses had FEC0/10 (1111 1110 11)
+                prefix (RFC 4291), followed by 38 zeros. Interfaces using this mask are supported, but
+                obsolete; RFC 4193 prescribes fc00::/7 (1111 110) as local unicast prefix.
 </pre><dl class="section return"><dt>Returns</dt><dd>True if address is site local unicast </dd></dl>
 
 </div>

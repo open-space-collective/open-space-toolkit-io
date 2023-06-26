@@ -444,8 +444,8 @@ True if address is loopback
 
 Returns true if address is multicast. 
 
-\begin{DoxyVerb}                IPv4 multicast addresses are in the 224.0.0.0 to 239.255.255.255 range (the first four bits have the value 1110).
-                IPv6 multicast addresses are in the FFxx:x:x:x:x:x:x:x range.
+\begin{DoxyVerb}                IPv4 multicast addresses are in the 224.0.0.0 to 239.255.255.255 range (the first four bits
+                have the value 1110). IPv6 multicast addresses are in the FFxx:x:x:x:x:x:x:x range.
 \end{DoxyVerb}
 
 
@@ -462,8 +462,8 @@ True if address is multicast
 
 Returns true if address is node-\/local multicast. 
 
-\begin{DoxyVerb}                IPv4 does not support node-local addresses, thus the result is always false for an IPv4 address.
-                For IPv6, node-local multicast addresses are in the FFx1:x:x:x:x:x:x:x range.
+\begin{DoxyVerb}                IPv4 does not support node-local addresses, thus the result is always false for an IPv4
+                address. For IPv6, node-local multicast addresses are in the FFx1:x:x:x:x:x:x:x range.
 \end{DoxyVerb}
 
 
@@ -498,9 +498,10 @@ True if address is organization-\/local multicast
 
 Returns true if address is site local unicast. 
 
-\begin{DoxyVerb}                IPv4 site local addresses are in on of the 10.0.0.0/24, 192.168.0.0/16 or 172.16.0.0 to 172.31.255.255 ranges.
-                Originally, IPv6 site-local addresses had FEC0/10 (1111 1110 11) prefix (RFC 4291), followed by 38 zeros.
-                Interfaces using this mask are supported, but obsolete; RFC 4193 prescribes fc00::/7 (1111 110) as local unicast prefix.
+\begin{DoxyVerb}                IPv4 site local addresses are in on of the 10.0.0.0/24, 192.168.0.0/16 or 172.16.0.0 to
+                172.31.255.255 ranges. Originally, IPv6 site-local addresses had FEC0/10 (1111 1110 11)
+                prefix (RFC 4291), followed by 38 zeros. Interfaces using this mask are supported, but
+                obsolete; RFC 4193 prescribes fc00::/7 (1111 110) as local unicast prefix.
 \end{DoxyVerb}
 
 
