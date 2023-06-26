@@ -216,7 +216,7 @@ ENDFOREACH ()
 SET (Boost_USE_STATIC_LIBS ON)
 SET (Boost_USE_MULTITHREADED ON)
 
-FIND_PACKAGE ("Boost" "1.82" REQUIRED COMPONENTS "url" "system" "filesystem" "regex" "log" "stacktrace_backtrace")
+FIND_PACKAGE ("Boost" "1.82" REQUIRED COMPONENTS "url" "system" "filesystem" "regex" "log")
 
 ADD_DEFINITIONS(-DBOOST_STACKTRACE_USE_BACKTRACE -DBOOST_STACKTRACE_BACKTRACE_INCLUDE_FILE=</usr/lib/gcc/x86_64-linux-gnu/9/include/backtrace.h>)
 
