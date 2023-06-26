@@ -25,6 +25,7 @@ project_directory=$(git rev-parse --show-toplevel)
 
 options=()
 command=""
+deps=""
 
 # Setup linked mode
 
@@ -37,28 +38,23 @@ if [[ ! -z ${1} ]] && [[ ${1} == "--link" ]]; then
         # Extract last part of the path
 
         dep=$(basename ${link})
+        deps+=" ${dep}"
 
         # Log the linking step
 
         echo "Linking with ${dep} at ${link}..."
 
-        # Open Space Toolkit ▸ Core
+        options+=( "-v" )
+        options+=( "${link}:/mnt/open-space-toolkit-core:ro" )
 
-        if [[ ${dep} == "open-space-toolkit-core" ]]; then
-
-            options+=( "-v" )
-            options+=( "${link}:/mnt/open-space-toolkit-core:ro" )
-
-            command="${command} \
-            rm -rf /usr/local/include/OpenSpaceToolkit/Core; \
-            rm -f /usr/local/lib/libopen-space-toolkit-core.so*; \
-            cp -as /mnt/open-space-toolkit-core/include/OpenSpaceToolkit/Core /usr/local/include/OpenSpaceToolkit/Core; \
-            cp -as /mnt/open-space-toolkit-core/src/OpenSpaceToolkit/Core/* /usr/local/include/OpenSpaceToolkit/Core/; \
-            ln -s /mnt/open-space-toolkit-core/lib/libopen-space-toolkit-core.so /usr/local/lib/; \
-            ln -s /mnt/open-space-toolkit-core/lib/libopen-space-toolkit-core.so.* /usr/local/lib/; \
-            cp -as /mnt/open-space-toolkit-core/build/bindings/python/dist/* /usr/local/share;"
-
-        fi
+        command="${command} \
+        rm -rf /usr/local/include/OpenSpaceToolkit/Core; \
+        rm -f /usr/local/lib/libopen-space-toolkit-core.so*; \
+        cp -as /mnt/open-space-toolkit-core/include/OpenSpaceToolkit/Core /usr/local/include/OpenSpaceToolkit/Core; \
+        cp -as /mnt/open-space-toolkit-core/src/OpenSpaceToolkit/Core/* /usr/local/include/OpenSpaceToolkit/Core/; \
+        ln -s /mnt/open-space-toolkit-core/lib/libopen-space-toolkit-core.so /usr/local/lib/; \
+        ln -s /mnt/open-space-toolkit-core/lib/libopen-space-toolkit-core.so.* /usr/local/lib/; \
+        cp -as /mnt/open-space-toolkit-core/build/bindings/python/dist/* /usr/local/share;"
 
     done
 
@@ -75,7 +71,7 @@ docker run \
     "${options[@]}" \
     --volume="${project_directory}:/app:delegated" \
     --volume="${project_directory}/tools/development/helpers:/app/build/helpers:ro,delegated" \
-    --env="links=${@:2}" \
+    --env="deps=${deps}" \
     --workdir="/app/build" \
     ${docker_development_image_repository}:${docker_image_version} \
     /bin/bash -c "${command}"

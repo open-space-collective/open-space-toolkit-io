@@ -4,6 +4,8 @@
 
 PYTHON_VERSION="3.11"
 
+py_version=$(echo "${PYTHON_VERSION}" | sed 's/\.//')
+
 project_directory="$(git rev-parse --show-toplevel)"
 python_directory="${project_directory}/build/bindings/python/OpenSpaceToolkitIOPy-python-package-${PYTHON_VERSION}"
 
@@ -13,14 +15,14 @@ python${PYTHON_VERSION} -m pip install . --force-reinstall
 
 popd > /dev/null
 
-for link in ${links}
+for dep in ${deps}
 
 do
 
-    dep=$(basename ${link} | tr '-' '_' | sed 's/\/$//')
+    echo "Installing ${dep} python package..."
 
-    py_version=$(echo "${PYTHON_VERSION}" | sed 's/\.//')
+    dep_underscore=$(echo ${dep} | tr '-' '_' | sed 's/\/$//')
 
-    python${PYTHON_VERSION} -m pip install /usr/local/share/${dep}-*-py${py_version}-*.whl --force-reinstall;
+    python${PYTHON_VERSION} -m pip install /usr/local/share/${dep_underscore}-*-py${py_version}-*.whl --quiet --force-reinstall;
 
 done
