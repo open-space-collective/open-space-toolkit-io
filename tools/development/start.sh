@@ -36,7 +36,7 @@ if [[ ! -z ${1} ]] && [[ ${1} == "--link" ]]; then
 
         # Extract last part of the path
 
-        dep=${link##*/}
+        dep=$(basename ${link})
 
         # Log the linking step
 
@@ -75,6 +75,7 @@ docker run \
     "${options[@]}" \
     --volume="${project_directory}:/app:delegated" \
     --volume="${project_directory}/tools/development/helpers:/app/build/helpers:ro,delegated" \
+    --env="links=${@:2}" \
     --workdir="/app/build" \
     ${docker_development_image_repository}:${docker_image_version} \
     /bin/bash -c "${command}"
