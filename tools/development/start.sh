@@ -33,23 +33,30 @@ if [[ ! -z ${1} ]] && [[ ${1} == "--link" ]]; then
         # Extract last part of the path
 
         dep=$(basename ${link})
+
         deps+=" ${dep}"
 
         # Log the linking step
 
         echo "Linking with ${dep} at ${link}..."
 
+        # Open Space Toolkit ▸ Dep
+
+        project_name=$(echo ${dep} | cut -d "-" -f 4)
+
+        project_name_capitalized=${project_name^}
+
         options+=( "-v" )
-        options+=( "${link}:/mnt/open-space-toolkit-core:ro" )
+        options+=( "${link}:/mnt/${dep}:ro" )
 
         command="${command} \
-        rm -rf /usr/local/include/OpenSpaceToolkit/Core; \
-        rm -f /usr/local/lib/libopen-space-toolkit-core.so*; \
-        cp -as /mnt/open-space-toolkit-core/include/OpenSpaceToolkit/Core /usr/local/include/OpenSpaceToolkit/Core; \
-        cp -as /mnt/open-space-toolkit-core/src/OpenSpaceToolkit/Core/* /usr/local/include/OpenSpaceToolkit/Core/; \
-        ln -s /mnt/open-space-toolkit-core/lib/libopen-space-toolkit-core.so /usr/local/lib/; \
-        ln -s /mnt/open-space-toolkit-core/lib/libopen-space-toolkit-core.so.* /usr/local/lib/; \
-        cp -as /mnt/open-space-toolkit-core/build/bindings/python/dist/* /usr/local/share;"
+        rm -rf /usr/local/include/OpenSpaceToolkit/${project_name_capitalized}; \
+        rm -f /usr/local/lib/lib${dep}.so*; \
+        cp -as /mnt/${dep}/include/OpenSpaceToolkit/${project_name_capitalized} /usr/local/include/OpenSpaceToolkit/${project_name_capitalized}; \
+        cp -as /mnt/${dep}/src/OpenSpaceToolkit/${project_name_capitalized}/* /usr/local/include/OpenSpaceToolkit/${project_name_capitalized}/; \
+        ln -s /mnt/${dep}/lib/lib${dep}.so /usr/local/lib/; \
+        ln -s /mnt/${dep}/lib/lib${dep}.so.* /usr/local/lib/; \
+        cp -as /mnt/${dep}/build/bindings/python/dist/* /usr/local/share;"
 
     done
 
