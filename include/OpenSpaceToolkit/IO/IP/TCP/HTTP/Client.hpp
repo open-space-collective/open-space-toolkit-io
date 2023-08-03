@@ -59,7 +59,7 @@ class Client
     /// @param              [in] aDirectory A destination directory
     /// @return             A file
 
-    static File Fetch(const URL& aUrl, const Directory& aDirectory);
+    static File Fetch(const URL& aUrl, const Directory& aDirectory, const Integer& aFollowCount = 0);
 
     /// @brief              List files
     ///

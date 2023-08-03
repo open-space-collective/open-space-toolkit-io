@@ -80,6 +80,8 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Fetch)
     using ostk::core::fs::File;
     using ostk::core::fs::Directory;
 
+    using ostk::core::types::Integer;
+
     using ostk::io::URL;
     using ostk::io::ip::tcp::http::Client;
 
@@ -104,6 +106,19 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Fetch)
         EXPECT_ANY_THROW(Client::Fetch(url, Directory::Undefined()));
         EXPECT_ANY_THROW(Client::Fetch(URL::Undefined(), directory));
         EXPECT_ANY_THROW(Client::Fetch(URL::Undefined(), Directory::Undefined()));
+    }
+
+    {
+        const URL url =
+            URL::Parse("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png");
+
+        const Directory directory = Directory::Path(Path::Parse("/tmp"));
+
+        EXPECT_ANY_THROW(Client::Fetch(url, Directory::Undefined()));
+        EXPECT_ANY_THROW(Client::Fetch(URL::Undefined(), directory));
+        EXPECT_ANY_THROW(Client::Fetch(URL::Undefined(), Directory::Undefined()));
+        EXPECT_ANY_THROW(Client::Fetch(url, directory, Integer::Undefined()));
+        EXPECT_ANY_THROW(Client::Fetch(url, directory, -1));
     }
 }
 
