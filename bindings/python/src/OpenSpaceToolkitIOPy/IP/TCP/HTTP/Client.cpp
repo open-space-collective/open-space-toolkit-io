@@ -12,7 +12,8 @@ inline void OpenSpaceToolkitIOPy_IP_TCP_HTTP_Client(pybind11::module& aModule)
 
         .def_static("send", &Client::Send)
         .def_static("get", &Client::Get)
-        .def_static("fetch", &Client::Fetch)
+        .def_static("fetch", &Client::Fetch, arg("url"), arg("directory"), arg("follow_count") = 0)
+
         .def_static("list", &Client::List)
 
         ;

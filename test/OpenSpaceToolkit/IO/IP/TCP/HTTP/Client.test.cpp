@@ -122,8 +122,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Fetch)
     }
 }
 
-// Disabling as Travis CI does not seem to support FTP anymore
-// https://blog.travis-ci.com/2018-07-23-the-tale-of-ftp-at-travis-ci
+// Disabling because the List takes about 1 minute to complete for some reason.
 
 // TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, List)
 // {
