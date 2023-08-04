@@ -80,7 +80,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Fetch)
     using ostk::core::fs::File;
     using ostk::core::fs::Directory;
 
-    using ostk::core::types::Integer;
+    using ostk::core::types::Size;
 
     using ostk::io::URL;
     using ostk::io::ip::tcp::http::Client;
@@ -117,7 +117,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Fetch)
         EXPECT_ANY_THROW(Client::Fetch(url, Directory::Undefined()));
         EXPECT_ANY_THROW(Client::Fetch(URL::Undefined(), directory));
         EXPECT_ANY_THROW(Client::Fetch(URL::Undefined(), Directory::Undefined()));
-        EXPECT_ANY_THROW(Client::Fetch(url, directory, Integer::Undefined()));
+        EXPECT_ANY_THROW(Client::Fetch(url, directory, Size::Undefined()));
         EXPECT_ANY_THROW(Client::Fetch(url, directory, -1));
     }
 }
