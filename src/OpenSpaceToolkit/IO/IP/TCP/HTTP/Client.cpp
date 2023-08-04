@@ -166,7 +166,7 @@ Response Client::Get(const URL& aUrl)
     return Client::Send(Request::Get(aUrl));
 }
 
-File Client::Fetch(const URL& aUrl, const Directory& aDirectory)
+File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Size& aFollowCount)
 {
     using ostk::core::fs::Path;
 
@@ -227,7 +227,7 @@ File Client::Fetch(const URL& aUrl, const Directory& aDirectory)
         curl_easy_setopt(curlPtr, CURLOPT_WRITEFUNCTION, writeDataFunction);
 
         curl_easy_setopt(curlPtr, CURLOPT_FAILONERROR, true);
-        // curl_easy_setopt(curlPtr, CURLOPT_FOLLOWLOCATION, 1L) ;
+        curl_easy_setopt(curlPtr, CURLOPT_FOLLOWLOCATION, aFollowCount);
 
         // Send request
 
