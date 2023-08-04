@@ -180,11 +180,6 @@ File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Size& aFo
         throw ostk::core::error::runtime::Undefined("Directory");
     }
 
-    if (!aFollowCount.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Follow Count");
-    }
-
     File file = File::Undefined();
 
     // Setup
