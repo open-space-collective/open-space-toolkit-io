@@ -117,7 +117,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Fetch)
         EXPECT_ANY_THROW(Client::Fetch(url, Directory::Undefined()));
         EXPECT_ANY_THROW(Client::Fetch(URL::Undefined(), directory));
         EXPECT_ANY_THROW(Client::Fetch(URL::Undefined(), Directory::Undefined()));
-        EXPECT_NO_THROW(Client::Fetch(url, directory, -1)); // Converted to max unsigned int
+        EXPECT_NO_THROW(Client::Fetch(url, directory, -1));  // Converted to max unsigned int
         EXPECT_NO_THROW(Client::Fetch(url, directory, 5));
     }
 }
