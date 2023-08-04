@@ -5,6 +5,7 @@
 
 #include <OpenSpaceToolkit/Core/FileSystem/Directory.hpp>
 #include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
+#include <OpenSpaceToolkit/Core/Types/Size.hpp>
 
 #include <OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp>
 #include <OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp>
@@ -21,6 +22,7 @@ namespace tcp
 namespace http
 {
 
+using ostk::core::types::Size;
 using ostk::core::fs::File;
 using ostk::core::fs::Directory;
 
@@ -57,9 +59,10 @@ class Client
     ///
     /// @param              [in] aUrl A URL
     /// @param              [in] aDirectory A destination directory
+    /// @param              [in] (optional) aFollowCount Number of redirects to follow
     /// @return             A file
 
-    static File Fetch(const URL& aUrl, const Directory& aDirectory);
+    static File Fetch(const URL& aUrl, const Directory& aDirectory, const Size& aFollowCount = 0);
 
     /// @brief              List files
     ///
