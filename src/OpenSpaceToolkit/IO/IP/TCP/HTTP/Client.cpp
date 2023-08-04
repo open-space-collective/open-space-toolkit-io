@@ -166,7 +166,7 @@ Response Client::Get(const URL& aUrl)
     return Client::Send(Request::Get(aUrl));
 }
 
-File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Integer& aFollowCount)
+File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Size& aFollowCount)
 {
     using ostk::core::fs::Path;
 
@@ -183,11 +183,6 @@ File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Integer& 
     if (!aFollowCount.isDefined())
     {
         throw ostk::core::error::runtime::Undefined("Follow Count");
-    }
-
-    if (aFollowCount < 0)
-    {
-        throw ostk::core::error::RuntimeError("Follow Count must be a positive integer.");
     }
 
     File file = File::Undefined();
@@ -237,7 +232,7 @@ File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Integer& 
         curl_easy_setopt(curlPtr, CURLOPT_WRITEFUNCTION, writeDataFunction);
 
         curl_easy_setopt(curlPtr, CURLOPT_FAILONERROR, true);
-        curl_easy_setopt(curlPtr, CURLOPT_FOLLOWLOCATION, aFollowCount) ;
+        curl_easy_setopt(curlPtr, CURLOPT_FOLLOWLOCATION, aFollowCount);
 
         // Send request
 

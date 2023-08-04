@@ -57,9 +57,10 @@ class Client
     ///
     /// @param              [in] aUrl A URL
     /// @param              [in] aDirectory A destination directory
+    /// @param              [in] (optional) aFollowCount Number of redirects to follow
     /// @return             A file
 
-    static File Fetch(const URL& aUrl, const Directory& aDirectory, const Integer& aFollowCount = 0);
+    static File Fetch(const URL& aUrl, const Directory& aDirectory, const Size& aFollowCount = 0);
 
     /// @brief              List files
     ///
