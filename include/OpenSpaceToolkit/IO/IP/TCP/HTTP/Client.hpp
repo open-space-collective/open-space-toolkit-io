@@ -3,6 +3,7 @@
 #ifndef __OpenSpaceToolkit_IO_IP_TCP_HTTP_Client__
 #define __OpenSpaceToolkit_IO_IP_TCP_HTTP_Client__
 
+#include <OpenSpaceToolkit/Core/Types/Size.hpp>
 #include <OpenSpaceToolkit/Core/FileSystem/Directory.hpp>
 #include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
 
@@ -21,6 +22,7 @@ namespace tcp
 namespace http
 {
 
+using ostk::core::types::Size;
 using ostk::core::fs::File;
 using ostk::core::fs::Directory;
 
