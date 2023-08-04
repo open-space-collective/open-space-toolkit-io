@@ -108,9 +108,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a3a84e295e2fb2274a010f791edd8a9d6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html">Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client.html#a3a84e295e2fb2274a010f791edd8a9d6">Get</a> (const <a class="el" href="classostk_1_1io_1_1_u_r_l.html">URL</a> &amp;aUrl)</td></tr>
 <tr class="memdesc:a3a84e295e2fb2274a010f791edd8a9d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a HTTP GET request.  <a href="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client.html#a3a84e295e2fb2274a010f791edd8a9d6">More...</a><br /></td></tr>
 <tr class="separator:a3a84e295e2fb2274a010f791edd8a9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58b0f28bf092cb3a6a797ae5d3779f79"><td class="memItemLeft" align="right" valign="top">static File&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client.html#a58b0f28bf092cb3a6a797ae5d3779f79">Fetch</a> (const <a class="el" href="classostk_1_1io_1_1_u_r_l.html">URL</a> &amp;aUrl, const Directory &amp;aDirectory)</td></tr>
-<tr class="memdesc:a58b0f28bf092cb3a6a797ae5d3779f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch file over HTTP.  <a href="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client.html#a58b0f28bf092cb3a6a797ae5d3779f79">More...</a><br /></td></tr>
-<tr class="separator:a58b0f28bf092cb3a6a797ae5d3779f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add18d245335574a5dc0b6c09d82dd8da"><td class="memItemLeft" align="right" valign="top">static File&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client.html#add18d245335574a5dc0b6c09d82dd8da">Fetch</a> (const <a class="el" href="classostk_1_1io_1_1_u_r_l.html">URL</a> &amp;aUrl, const Directory &amp;aDirectory, const Size &amp;aFollowCount=0)</td></tr>
+<tr class="memdesc:add18d245335574a5dc0b6c09d82dd8da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch file over HTTP.  <a href="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client.html#add18d245335574a5dc0b6c09d82dd8da">More...</a><br /></td></tr>
+<tr class="separator:add18d245335574a5dc0b6c09d82dd8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b02fb4cec2bb63499e38c1311fb45bb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client.html#a4b02fb4cec2bb63499e38c1311fb45bb">List</a> (const <a class="el" href="classostk_1_1io_1_1_u_r_l.html">URL</a> &amp;aUrl, const File &amp;aFile, const bool showNamesOnly=false)</td></tr>
 <tr class="memdesc:a4b02fb4cec2bb63499e38c1311fb45bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">List files.  <a href="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client.html#a4b02fb4cec2bb63499e38c1311fb45bb">More...</a><br /></td></tr>
 <tr class="separator:a4b02fb4cec2bb63499e38c1311fb45bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,8 +147,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a58b0f28bf092cb3a6a797ae5d3779f79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58b0f28bf092cb3a6a797ae5d3779f79">&#9670;&nbsp;</a></span>Fetch()</h2>
+<a id="add18d245335574a5dc0b6c09d82dd8da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add18d245335574a5dc0b6c09d82dd8da">&#9670;&nbsp;</a></span>Fetch()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,7 +166,13 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Directory &amp;&#160;</td>
-          <td class="paramname"><em>aDirectory</em>&#160;</td>
+          <td class="paramname"><em>aDirectory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Size &amp;&#160;</td>
+          <td class="paramname"><em>aFollowCount</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -186,6 +192,7 @@ Static Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aUrl</td><td>A <a class="el" href="classostk_1_1io_1_1_u_r_l.html" title="Uniform Resource Locator (URL)">URL</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">aDirectory</td><td>A destination directory </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">(optional)</td><td>aFollowCount Number of redirects to follow </td></tr>
   </table>
   </dd>
 </dl>

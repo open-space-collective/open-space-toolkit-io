@@ -21,7 +21,7 @@ static \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{Respo
 \begin{DoxyCompactList}\small\item\em Send a H\+T\+TP request. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response}{Response}} \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_a3a84e295e2fb2274a010f791edd8a9d6}{Get}} (const \mbox{\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}} \&a\+Url)
 \begin{DoxyCompactList}\small\item\em Send a H\+T\+TP G\+ET request. \end{DoxyCompactList}\item 
-static File \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_a58b0f28bf092cb3a6a797ae5d3779f79}{Fetch}} (const \mbox{\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}} \&a\+Url, const Directory \&a\+Directory)
+static File \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_add18d245335574a5dc0b6c09d82dd8da}{Fetch}} (const \mbox{\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}} \&a\+Url, const Directory \&a\+Directory, const Size \&a\+Follow\+Count=0)
 \begin{DoxyCompactList}\small\item\em Fetch file over H\+T\+TP. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_a4b02fb4cec2bb63499e38c1311fb45bb}{List}} (const \mbox{\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}} \&a\+Url, const File \&a\+File, const bool show\+Names\+Only=false)
 \begin{DoxyCompactList}\small\item\em List files. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -46,11 +46,11 @@ Default constructor (deleted)
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_a58b0f28bf092cb3a6a797ae5d3779f79}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_a58b0f28bf092cb3a6a797ae5d3779f79}} 
+\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_add18d245335574a5dc0b6c09d82dd8da}\label{classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_add18d245335574a5dc0b6c09d82dd8da}} 
 \index{ostk::io::ip::tcp::http::Client@{ostk::io::ip::tcp::http::Client}!Fetch@{Fetch}}
 \index{Fetch@{Fetch}!ostk::io::ip::tcp::http::Client@{ostk::io::ip::tcp::http::Client}}
 \doxysubsubsection{\texorpdfstring{Fetch()}{Fetch()}}
-{\footnotesize\ttfamily File ostk\+::io\+::ip\+::tcp\+::http\+::\+Client\+::\+Fetch (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}} \&}]{a\+Url,  }\item[{const Directory \&}]{a\+Directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily File ostk\+::io\+::ip\+::tcp\+::http\+::\+Client\+::\+Fetch (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}} \&}]{a\+Url,  }\item[{const Directory \&}]{a\+Directory,  }\item[{const Size \&}]{a\+Follow\+Count = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -61,6 +61,8 @@ Fetch file over H\+T\+TP.
 \mbox{\texttt{ in}}  & {\em a\+Url} & A \mbox{\hyperlink{classostk_1_1io_1_1_u_r_l}{U\+RL}} \\
 \hline
 \mbox{\texttt{ in}}  & {\em a\+Directory} & A destination directory \\
+\hline
+\mbox{\texttt{ in}}  & {\em (optional)} & a\+Follow\+Count Number of redirects to follow \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
