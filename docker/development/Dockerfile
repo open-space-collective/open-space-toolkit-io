@@ -30,7 +30,7 @@ RUN apt-get update -y \
 
 ## Open Space Toolkit ▸ Core
 
-ARG OSTK_CORE_VERSION="0.7.2"
+ARG OSTK_CORE_VERSION="0.7.3"
 
 RUN mkdir -p /tmp/open-space-toolkit-core \
  && cd /tmp/open-space-toolkit-core \
