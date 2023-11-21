@@ -76,9 +76,9 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Get)
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Fetch)
 {
-    using ostk::core::fs::Path;
-    using ostk::core::fs::File;
-    using ostk::core::fs::Directory;
+    using ostk::core::filesystem::Path;
+    using ostk::core::filesystem::File;
+    using ostk::core::filesystem::Directory;
 
     using ostk::core::types::Size;
 
@@ -127,9 +127,9 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Fetch)
 // TEST (OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, List)
 // {
 
-//     using ostk::core::fs::Path ;
-//     using ostk::core::fs::File ;
-//     using ostk::core::fs::Directory ;
+//     using ostk::core::filesystem::Path ;
+//     using ostk::core::filesystem::File ;
+//     using ostk::core::filesystem::Directory ;
 
 //     using ostk::io::URL ;
 //     using ostk::io::ip::tcp::http::Client ;
