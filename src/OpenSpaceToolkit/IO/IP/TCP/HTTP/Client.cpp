@@ -168,7 +168,7 @@ Response Client::Get(const URL& aUrl)
 
 File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Size& aFollowCount)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     if (!aUrl.isDefined())
     {
@@ -274,7 +274,7 @@ File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Size& aFo
 
 void Client::List(const URL& aUrl, const File& aFile, const bool showNamesOnly)
 {
-    using ostk::core::fs::Path;
+    using ostk::core::filesystem::Path;
 
     if (!aUrl.isDefined())
     {
