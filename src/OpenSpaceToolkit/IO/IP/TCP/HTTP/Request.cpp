@@ -1,8 +1,8 @@
 /// Apache License 2.0
 
-#include <OpenSpaceToolkit/Core/Containers/Map.hpp>
+#include <OpenSpaceToolkit/Core/Container/Map.hpp>
 #include <OpenSpaceToolkit/Core/Error.hpp>
-#include <OpenSpaceToolkit/Core/Utilities.hpp>
+#include <OpenSpaceToolkit/Core/Utility.hpp>
 
 #include <OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp>
 
@@ -85,7 +85,7 @@ Request Request::Get(const URL& aUrl)
 
 String Request::StringFromMethod(const Request::Method& aMethod)
 {
-    using ostk::core::ctnr::Map;
+    using ostk::core::container::Map;
 
     static const Map<Request::Method, String> methodStringMap = {
         {{Request::Method::Undefined, "Undefined"},

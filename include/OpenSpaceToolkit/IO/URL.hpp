@@ -3,8 +3,8 @@
 #ifndef __OpenSpaceToolkit_IO_URL__
 #define __OpenSpaceToolkit_IO_URL__
 
-#include <OpenSpaceToolkit/Core/Types/Integer.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 #include <OpenSpaceToolkit/IO/URL/Query.hpp>
 
@@ -13,8 +13,8 @@ namespace ostk
 namespace io
 {
 
-using Integer = ostk::core::types::Integer;
-using String = ostk::core::types::String;
+using Integer = ostk::core::type::Integer;
+using String = ostk::core::type::String;
 using Query = ostk::io::url::Query;
 
 /// @brief                      Uniform Resource Locator (URL)

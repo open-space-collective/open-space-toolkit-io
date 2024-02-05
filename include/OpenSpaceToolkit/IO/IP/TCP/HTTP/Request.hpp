@@ -3,7 +3,7 @@
 #ifndef __OpenSpaceToolkit_IO_IP_TCP_HTTP_Request__
 #define __OpenSpaceToolkit_IO_IP_TCP_HTTP_Request__
 
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 #include <OpenSpaceToolkit/IO/URL.hpp>
 
@@ -18,7 +18,7 @@ namespace tcp
 namespace http
 {
 
-using ostk::core::types::String;
+using ostk::core::type::String;
 
 using ostk::io::URL;
 

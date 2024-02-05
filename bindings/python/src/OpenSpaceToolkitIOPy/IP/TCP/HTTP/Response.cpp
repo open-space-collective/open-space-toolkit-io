@@ -6,7 +6,7 @@ inline void OpenSpaceToolkitIOPy_IP_TCP_HTTP_Response(pybind11::module& aModule)
 {
     using namespace pybind11;
 
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     using ostk::io::ip::tcp::http::Response;
 

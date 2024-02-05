@@ -5,7 +5,7 @@
 
 #include <OpenSpaceToolkit/Core/FileSystem/Directory.hpp>
 #include <OpenSpaceToolkit/Core/FileSystem/File.hpp>
-#include <OpenSpaceToolkit/Core/Types/Size.hpp>
+#include <OpenSpaceToolkit/Core/Type/Size.hpp>
 
 #include <OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp>
 #include <OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp>
@@ -22,7 +22,7 @@ namespace tcp
 namespace http
 {
 
-using ostk::core::types::Size;
+using ostk::core::type::Size;
 using ostk::core::filesystem::File;
 using ostk::core::filesystem::Directory;
 

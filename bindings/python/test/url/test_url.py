@@ -4,7 +4,7 @@ import pytest
 
 import ostk.io as io
 
-from ostk.core.types import String
+from ostk.core.type import String
 
 URL = io.URL
 

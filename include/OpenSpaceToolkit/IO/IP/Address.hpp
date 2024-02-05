@@ -3,7 +3,7 @@
 #ifndef __OpenSpaceToolkit_IO_IP_Address__
 #define __OpenSpaceToolkit_IO_IP_Address__
 
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 namespace ostk
 {
@@ -12,7 +12,7 @@ namespace io
 namespace ip
 {
 
-using String = ostk::core::types::String;
+using String = ostk::core::type::String;
 
 /// @brief                      Internet Protocol (IP) address
 ///
