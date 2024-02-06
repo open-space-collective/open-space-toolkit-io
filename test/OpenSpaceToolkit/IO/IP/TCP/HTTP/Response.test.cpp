@@ -6,7 +6,7 @@
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, Constructor)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     using ostk::io::ip::tcp::http::Response;
 
@@ -20,7 +20,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, Constructor)
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, StreamOperator)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     using ostk::io::ip::tcp::http::Response;
 
@@ -40,7 +40,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, StreamOperator)
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, IsDefined)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     using ostk::io::ip::tcp::http::Response;
 
@@ -60,7 +60,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, IsDefined)
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, IsOk)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     using ostk::io::ip::tcp::http::Response;
 
@@ -89,7 +89,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, IsOk)
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, GetStatusCode)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     using ostk::io::ip::tcp::http::Response;
 
@@ -109,7 +109,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, GetStatusCode)
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, GetBody)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     using ostk::io::ip::tcp::http::Response;
 

@@ -8,7 +8,7 @@
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, Constructor)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     using ostk::io::URL;
     using ostk::io::ip::tcp::http::Request;
@@ -24,7 +24,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, Constructor)
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, StreamOperator)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     using ostk::io::URL;
     using ostk::io::ip::tcp::http::Request;
@@ -46,7 +46,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, StreamOperator)
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, IsDefined)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     using ostk::io::URL;
     using ostk::io::ip::tcp::http::Request;
@@ -68,7 +68,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, IsDefined)
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetMethod)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     using ostk::io::URL;
     using ostk::io::ip::tcp::http::Request;
@@ -90,7 +90,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetMethod)
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetUrl)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     using ostk::io::URL;
     using ostk::io::ip::tcp::http::Request;
@@ -112,7 +112,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetUrl)
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetBody)
 {
-    using ostk::core::types::String;
+    using ostk::core::type::String;
 
     using ostk::io::URL;
     using ostk::io::ip::tcp::http::Request;

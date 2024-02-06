@@ -4,7 +4,7 @@
 
 #include <OpenSpaceToolkit/IO/URL/Query.hpp>
 
-using ostk::core::ctnr::Array;
+using ostk::core::container::Array;
 using ostk::io::url::Query;
 
 void set_array(const Array<Query::Parameter>& anArray)
@@ -17,7 +17,7 @@ inline void OpenSpaceToolkitIOPy_URL_Query(auto aClass)
 {
     using namespace pybind11;
 
-    using ostk::core::ctnr::Array;
+    using ostk::core::container::Array;
 
     using ostk::io::url::Query;
 

@@ -3,7 +3,7 @@
 #ifndef __OpenSpaceToolkit_IO_IP_TCP_Client__
 #define __OpenSpaceToolkit_IO_IP_TCP_Client__
 
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 namespace ostk
 {
@@ -14,7 +14,7 @@ namespace ip
 namespace tcp
 {
 
-using String = ostk::core::types::String;
+using String = ostk::core::type::String;
 
 /// @brief
 

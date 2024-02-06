@@ -1,6 +1,6 @@
 /// Apache License 2.0
 
-#include <OpenSpaceToolkit/Core/Types/Index.hpp>
+#include <OpenSpaceToolkit/Core/Type/Index.hpp>
 
 #include <OpenSpaceToolkit/IO/URL/Query.hpp>
 
@@ -175,7 +175,7 @@ TEST(OpenSpaceToolkit_IO_URL_Query, ToString)
 
 TEST(OpenSpaceToolkit_IO_URL_Query, ConstIterator)
 {
-    using ostk::core::types::Index;
+    using ostk::core::type::Index;
 
     using ostk::io::url::Query;
 

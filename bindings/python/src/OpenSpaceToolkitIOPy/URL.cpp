@@ -10,8 +10,8 @@ inline void OpenSpaceToolkitIOPy_URL(pybind11::module& aModule)
 {
     using namespace pybind11;
 
-    using ostk::core::types::Integer;
-    using ostk::core::types::String;
+    using ostk::core::type::Integer;
+    using ostk::core::type::String;
 
     using ostk::io::URL;
     using ostk::io::url::Query;

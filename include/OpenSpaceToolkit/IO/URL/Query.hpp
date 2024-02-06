@@ -3,8 +3,8 @@
 #ifndef __OpenSpaceToolkit_IO_URL_Query__
 #define __OpenSpaceToolkit_IO_URL_Query__
 
-#include <OpenSpaceToolkit/Core/Containers/Array.hpp>
-#include <OpenSpaceToolkit/Core/Types/String.hpp>
+#include <OpenSpaceToolkit/Core/Container/Array.hpp>
+#include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 namespace ostk
 {
@@ -13,8 +13,8 @@ namespace io
 namespace url
 {
 
-using ostk::core::types::String;
-using ostk::core::ctnr::Array;
+using ostk::core::type::String;
+using ostk::core::container::Array;
 
 /// @brief                      Uniform Resource Locator (URL) query
 

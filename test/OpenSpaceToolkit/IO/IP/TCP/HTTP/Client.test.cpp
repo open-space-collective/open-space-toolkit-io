@@ -80,7 +80,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Fetch)
     using ostk::core::filesystem::File;
     using ostk::core::filesystem::Directory;
 
-    using ostk::core::types::Size;
+    using ostk::core::type::Size;
 
     using ostk::io::URL;
     using ostk::io::ip::tcp::http::Client;

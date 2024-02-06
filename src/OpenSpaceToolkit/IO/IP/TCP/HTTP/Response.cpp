@@ -1,8 +1,8 @@
 /// Apache License 2.0
 
-#include <OpenSpaceToolkit/Core/Containers/Map.hpp>
+#include <OpenSpaceToolkit/Core/Container/Map.hpp>
 #include <OpenSpaceToolkit/Core/Error.hpp>
-#include <OpenSpaceToolkit/Core/Utilities.hpp>
+#include <OpenSpaceToolkit/Core/Utility.hpp>
 
 #include <OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp>
 
@@ -81,7 +81,7 @@ Response Response::Undefined()
 
 String Response::StringFromStatusCode(const Response::StatusCode& aStatusCode)
 {
-    using ostk::core::ctnr::Map;
+    using ostk::core::container::Map;
 
     static const Map<Response::StatusCode, String> statusCodeStringMap = {
         {{Response::StatusCode::Undefined, "Undefined"},
