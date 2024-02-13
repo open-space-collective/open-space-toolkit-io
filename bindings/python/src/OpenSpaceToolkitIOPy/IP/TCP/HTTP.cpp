@@ -9,8 +9,6 @@ inline void OpenSpaceToolkitIOPy_IP_TCP_HTTP(pybind11::module& aModule)
     // Create "http" python submodule
     auto http = aModule.def_submodule("http");
 
-    // Add __path__ attribute for "http" submodule
-    http.attr("__path__") = "ostk.io.ip.tcp.http";
 
     // Add custom types to python "http" submodule
     OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request(http);
