@@ -22,8 +22,11 @@ extract_python_package_version := $(shell echo $(project_version) | sed 's/-/./'
 dev_username := developer
 
 
-TARGETPLATFORM ?= x86_64
+TARGETPLATFORM ?= linux/amd64
 $(info Platform is $(TARGETPLATFORM))
+
+PACKAGE_PLATFORM ?= x86_64
+$(info Platform is $(PACKAGE_PLATFORM))
 
 
 pull: ## Pull all images

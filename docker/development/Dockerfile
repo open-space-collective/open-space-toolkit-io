@@ -8,9 +8,6 @@ FROM openspacecollective/open-space-toolkit-base-development:${BASE_IMAGE_VERSIO
 
 LABEL maintainer="lucas@loftorbital.com"
 
-ARG TARGETPLATFORM="linux/amd64"
-RUN echo "I'm building for $TARGETPLATFORM"
-
 # Dependencies
 
 # jq
@@ -41,7 +38,7 @@ RUN apt-get update -y \
 
 ## Open Space Toolkit ▸ Core
 
-ARG TARGETPLATFORM="linux/amd64" # Default to amd64 if not set
+ARG TARGETPLATFORM
 ARG OSTK_CORE_MAJOR="2"
 ARG OSTK_CORE_MINOR="1"
 
