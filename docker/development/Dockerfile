@@ -4,11 +4,17 @@ ARG BASE_IMAGE_VERSION="latest"
 
 # General purpose development image (root user)
 
-FROM openspacecollective/open-space-toolkit-base:${BASE_IMAGE_VERSION} as root-user
+FROM openspacecollective/open-space-toolkit-base-development:${BASE_IMAGE_VERSION} as root-user
 
 LABEL maintainer="lucas@loftorbital.com"
 
 # Dependencies
+
+# jq
+
+RUN apt-get update \
+ && apt-get install -y jq \
+ && rm -rf /var/lib/apt/lists/*
 
 ## {fmt}
 
@@ -32,12 +38,19 @@ RUN apt-get update -y \
 
 ## Open Space Toolkit ▸ Core
 
-ARG OSTK_CORE_VERSION="2.1.0"
+ARG TARGETPLATFORM
+ARG OSTK_CORE_MAJOR="3"
+ARG OSTK_CORE_MINOR="0"
+
+## Force an image rebuild when new Core patch versions are detected
+ADD https://api.github.com/repos/open-space-collective/open-space-toolkit-core/git/matching-refs/tags/${OSTK_CORE_MAJOR}.${OSTK_CORE_MINOR} /tmp/open-space-toolkit-core/versions.json
 
 RUN mkdir -p /tmp/open-space-toolkit-core \
  && cd /tmp/open-space-toolkit-core \
- && wget --quiet https://github.com/open-space-collective/open-space-toolkit-core/releases/download/${OSTK_CORE_VERSION}/open-space-toolkit-core-${OSTK_CORE_VERSION}-1.x86_64-runtime.deb \
- && wget --quiet https://github.com/open-space-collective/open-space-toolkit-core/releases/download/${OSTK_CORE_VERSION}/open-space-toolkit-core-${OSTK_CORE_VERSION}-1.x86_64-devel.deb \
+ && export LATEST_PATCH_OF_MINOR=$(jq -r .[-1].ref versions.json | cut -d "/" -f3) \
+ && export PACKAGE_PLATFORM=$(if [ ${TARGETPLATFORM} = "linux/amd64" ]; then echo "x86_64"; elif [ ${TARGETPLATFORM} = "linux/arm64" ]; then echo "aarch64"; else echo "Unknown platform" && exit 1; fi;) \
+ && wget --quiet https://github.com/open-space-collective/open-space-toolkit-core/releases/download/${LATEST_PATCH_OF_MINOR}/open-space-toolkit-core-${LATEST_PATCH_OF_MINOR}-1.${PACKAGE_PLATFORM}-runtime.deb \
+ && wget --quiet https://github.com/open-space-collective/open-space-toolkit-core/releases/download/${LATEST_PATCH_OF_MINOR}/open-space-toolkit-core-${LATEST_PATCH_OF_MINOR}-1.${PACKAGE_PLATFORM}-devel.deb \
  && apt-get install -y ./*.deb \
  && rm -rf /tmp/open-space-toolkit-core
 
