@@ -40,7 +40,7 @@ RUN apt-get update -y \
 
 ARG TARGETPLATFORM
 ARG OSTK_CORE_MAJOR="2"
-ARG OSTK_CORE_MINOR="1"
+ARG OSTK_CORE_MINOR="2"
 
 ## Force an image rebuild when new Core patch versions are detected
 ADD https://api.github.com/repos/open-space-collective/open-space-toolkit-core/git/matching-refs/tags/${OSTK_CORE_MAJOR}.${OSTK_CORE_MINOR} /tmp/open-space-toolkit-core/versions.json
