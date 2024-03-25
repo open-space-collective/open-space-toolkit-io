@@ -22,11 +22,11 @@ extract_python_package_version := $(shell echo $(project_version) | sed 's/-/./'
 dev_username := developer
 
 
+# Handle multi-platform builds locally (CI sets these env vars, but need defaults here)
 TARGETPLATFORM ?= linux/amd64
-$(info Platform is $(TARGETPLATFORM))
-
-PACKAGE_PLATFORM ?= x86_64
-$(info Platform is $(PACKAGE_PLATFORM))
+$(info Target platform is $(TARGETPLATFORM))
+PLATFORM_SPECIFIC_PACKAGE_NAME ?= x86_64
+$(info Platform specific package name is $(PLATFORM_SPECIFIC_PACKAGE_NAME))
 
 
 pull: ## Pull all images
@@ -221,7 +221,7 @@ build-packages-cpp-standalone: ## Build C++ packages (standalone)
 	@ echo "Building C++ packages..."
 
 	docker run \
-		--platform $(TARGETPLATFORM) \
+		--platform $(PLATFORM_SPECIFIC_PACKAGE_NAME) \
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
 		--volume="/app/build" \
@@ -245,7 +245,7 @@ build-packages-python-standalone: ## Build Python packages (standalone)
 	@ echo "Building Python packages..."
 
 	docker run \
-		--platform $(TARGETPLATFORM) \
+		--platform $(PLATFORM_SPECIFIC_PACKAGE_NAME) \
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
 		--volume="/app/build" \
