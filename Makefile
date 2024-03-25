@@ -25,8 +25,6 @@ dev_username := developer
 # Handle multi-platform builds locally (CI sets these env vars, but need defaults here)
 TARGETPLATFORM ?= linux/amd64
 $(info Target platform is $(TARGETPLATFORM))
-PLATFORM_SPECIFIC_PACKAGE_NAME ?= x86_64
-$(info Platform specific package name is $(PLATFORM_SPECIFIC_PACKAGE_NAME))
 
 
 pull: ## Pull all images
@@ -221,7 +219,7 @@ build-packages-cpp-standalone: ## Build C++ packages (standalone)
 	@ echo "Building C++ packages..."
 
 	docker run \
-		--platform $(PLATFORM_SPECIFIC_PACKAGE_NAME) \
+		--platform $(TARGETPLATFORM) \
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
 		--volume="/app/build" \
@@ -245,7 +243,7 @@ build-packages-python-standalone: ## Build Python packages (standalone)
 	@ echo "Building Python packages..."
 
 	docker run \
-		--platform $(PLATFORM_SPECIFIC_PACKAGE_NAME) \
+		--platform $(TARGETPLATFORM) \
 		--rm \
 		--volume="$(CURDIR):/app:delegated" \
 		--volume="/app/build" \
