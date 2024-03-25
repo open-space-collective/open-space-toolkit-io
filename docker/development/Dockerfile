@@ -8,6 +8,9 @@ FROM openspacecollective/open-space-toolkit-base-development:${BASE_IMAGE_VERSIO
 
 LABEL maintainer="lucas@loftorbital.com"
 
+ARG TARGETPLATFORM="linux/amd64"
+RUN echo "I'm building for $TARGETPLATFORM"
+
 # Dependencies
 
 # jq
