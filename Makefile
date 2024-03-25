@@ -23,7 +23,7 @@ dev_username := developer
 
 
 TARGETPLATFORM ?= x86_64
-$(info Platform value is $(TARGETPLATFORM))
+$(info Platform is $(TARGETPLATFORM))
 
 
 pull: ## Pull all images
