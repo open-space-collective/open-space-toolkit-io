@@ -43,7 +43,6 @@ FROM python:${PYTHON_TEST_VERSION}-slim as python-builder
 
 COPY --from=cpp-builder /app/build/bindings/python/dist /dist
 
-ARG PYTHON_TEST_VERSION_WITHOUT_DOT
 RUN pip install /dist/*${PYTHON_TEST_VERSION_WITHOUT_DOT}*.whl
 
 FROM python:${PYTHON_TEST_VERSION}-slim as python-release
@@ -54,7 +53,6 @@ RUN apt-get update -y \
  && apt-get install -y libcurl4-openssl-dev libssl-dev \
  && rm -rf /var/lib/apt/lists/*
 
-ARG PYTHON_TEST_VERSION
 COPY --from=python-builder /usr/local/lib/python${PYTHON_TEST_VERSION}/site-packages/ostk /usr/local/lib/python${PYTHON_TEST_VERSION}/site-packages/ostk
 
 ENTRYPOINT ["ipython"]
