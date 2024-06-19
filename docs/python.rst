@@ -7,6 +7,6 @@ Python API Documentation
    :recursive:
 
    ostk.io
-   ostk.io.tcp
-   ostk.io.tcp.http
-   ostk.io.url
+   ostk.io.ip
+   ostk.io.ip.tcp
+   ostk.io.ip.tcp.http
