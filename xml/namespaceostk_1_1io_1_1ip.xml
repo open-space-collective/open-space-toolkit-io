@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceostk_1_1io_1_1ip" kind="namespace" language="C++">
+    <compoundname>ostk::io::ip</compoundname>
+    <innerclass refid="classostk_1_1io_1_1ip_1_1_address" prot="public">ostk::io::ip::Address</innerclass>
+    <innernamespace refid="namespaceostk_1_1io_1_1ip_1_1tcp">ostk::io::ip::tcp</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceostk_1_1io_1_1ip_1ae2b249d594f3ad32fab94162e284875e" prot="public" static="no">
+        <type>ostk::core::type::String</type>
+        <definition>using ostk::io::ip::String = typedef ostk::core::type::String</definition>
+        <argsstring></argsstring>
+        <name>String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/Address.hpp" line="15" column="1" bodyfile="include/OpenSpaceToolkit/IO/IP/Address.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/IO/IP/Address.hpp" line="13" column="1"/>
+  </compounddef>
+</doxygen>

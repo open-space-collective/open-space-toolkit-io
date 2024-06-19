@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_fdf01cc10d70b4022b4495bcf4aa6828" kind="dir">
+    <compoundname>src/OpenSpaceToolkit/IO/IP/TCP</compoundname>
+    <innerdir refid="dir_d562a9cdbaa98e6c03948967daa3a98f">src/OpenSpaceToolkit/IO/IP/TCP/HTTP</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/OpenSpaceToolkit/IO/IP/TCP/"/>
+  </compounddef>
+</doxygen>

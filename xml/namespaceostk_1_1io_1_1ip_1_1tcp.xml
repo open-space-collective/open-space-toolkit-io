@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceostk_1_1io_1_1ip_1_1tcp" kind="namespace" language="C++">
+    <compoundname>ostk::io::ip::tcp</compoundname>
+    <innerclass refid="classostk_1_1io_1_1ip_1_1tcp_1_1_client" prot="public">ostk::io::ip::tcp::Client</innerclass>
+    <innerclass refid="classostk_1_1io_1_1ip_1_1tcp_1_1_server" prot="public">ostk::io::ip::tcp::Server</innerclass>
+    <innernamespace refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http">ostk::io::ip::tcp::http</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceostk_1_1io_1_1ip_1_1tcp_1aded2bb4451ab0353a2e77467e3b618e2" prot="public" static="no">
+        <type>ostk::core::type::String</type>
+        <definition>typedef ostk::core::type::String ostk::io::ip::tcp::String</definition>
+        <argsstring></argsstring>
+        <name>String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/Client.hpp" line="17" column="1" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/Client.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/IO/IP/TCP/Client.hpp" line="15" column="1"/>
+  </compounddef>
+</doxygen>

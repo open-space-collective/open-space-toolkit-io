@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_cdb3657857e0f4711140116371756870" kind="dir">
+    <compoundname>src/OpenSpaceToolkit/IO/IP</compoundname>
+    <innerdir refid="dir_fdf01cc10d70b4022b4495bcf4aa6828">src/OpenSpaceToolkit/IO/IP/TCP</innerdir>
+    <innerfile refid="_address_8cpp">Address.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/OpenSpaceToolkit/IO/IP/"/>
+  </compounddef>
+</doxygen>

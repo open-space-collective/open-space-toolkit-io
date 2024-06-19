@@ -1,0 +1,1200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1io_1_1_u_r_l" kind="class" language="C++" prot="public">
+    <compoundname>ostk::io::URL</compoundname>
+    <includes refid="_u_r_l_8hpp" local="no">URL.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1io_1_1_u_r_l_1ad385309f407fd6abe4bdc36d605f8df4" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
+        <definition>String ostk::io::URL::scheme_</definition>
+        <argsstring></argsstring>
+        <name>scheme_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="410" column="12" bodyfile="include/OpenSpaceToolkit/IO/URL.hpp" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1io_1_1_u_r_l_1a347ae01097125677f4e510d4c7fdc230" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
+        <definition>String ostk::io::URL::user_</definition>
+        <argsstring></argsstring>
+        <name>user_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="411" column="12" bodyfile="include/OpenSpaceToolkit/IO/URL.hpp" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1io_1_1_u_r_l_1a189ceb389c578ae226bba6ab04f07351" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
+        <definition>String ostk::io::URL::password_</definition>
+        <argsstring></argsstring>
+        <name>password_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="412" column="12" bodyfile="include/OpenSpaceToolkit/IO/URL.hpp" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1io_1_1_u_r_l_1a25f7d8f7f941ce7c3b4d2fdc931a36be" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
+        <definition>String ostk::io::URL::host_</definition>
+        <argsstring></argsstring>
+        <name>host_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="413" column="12" bodyfile="include/OpenSpaceToolkit/IO/URL.hpp" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1io_1_1_u_r_l_1a672078bc4b9fdf4e236c68850792e683" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceostk_1_1io_1a4a52635c39246ec2c5fa925e7e25ccd3" kindref="member">Integer</ref></type>
+        <definition>Integer ostk::io::URL::port_</definition>
+        <argsstring></argsstring>
+        <name>port_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="414" column="13" bodyfile="include/OpenSpaceToolkit/IO/URL.hpp" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1io_1_1_u_r_l_1ac0aab1d61d19abbb75b7c15a2d008d48" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
+        <definition>String ostk::io::URL::path_</definition>
+        <argsstring></argsstring>
+        <name>path_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="415" column="12" bodyfile="include/OpenSpaceToolkit/IO/URL.hpp" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1io_1_1_u_r_l_1a8283a6ec622234f32c302f3e12ae4c52" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceostk_1_1io_1aeabc644ba5c25896df8014bd0271f970" kindref="member">Query</ref></type>
+        <definition>Query ostk::io::URL::query_</definition>
+        <argsstring></argsstring>
+        <name>query_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="416" column="11" bodyfile="include/OpenSpaceToolkit/IO/URL.hpp" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1io_1_1_u_r_l_1a4315924bbd45accebb194e7720123e26" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
+        <definition>String ostk::io::URL::fragment_</definition>
+        <argsstring></argsstring>
+        <name>fragment_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="417" column="12" bodyfile="include/OpenSpaceToolkit/IO/URL.hpp" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a2537e046cef4ac966cc295abb81279c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::io::URL::URL</definition>
+        <argsstring>()=delete</argsstring>
+        <name>URL</name>
+        <briefdescription>
+<para>Default constructor (disabled) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="29" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a5a24386372bb8c71e9314c003058b22f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::io::URL::URL</definition>
+        <argsstring>(const String &amp;aScheme, const String &amp;aHost, const String &amp;aPath=String::Empty(), const Integer &amp;aPort=Integer::Undefined(), const String &amp;aUser=String::Empty(), const String &amp;aPassword=String::Empty(), const Query &amp;aQuery=Query::Undefined(), const String &amp;aFragment=String::Empty())</argsstring>
+        <name>URL</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aScheme</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aHost</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aPath</declname>
+          <defval>String::Empty()</defval>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1a4a52635c39246ec2c5fa925e7e25ccd3" kindref="member">Integer</ref> &amp;</type>
+          <declname>aPort</declname>
+          <defval>Integer::Undefined()</defval>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aUser</declname>
+          <defval>String::Empty()</defval>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aPassword</declname>
+          <defval>String::Empty()</defval>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1aeabc644ba5c25896df8014bd0271f970" kindref="member">Query</ref> &amp;</type>
+          <declname>aQuery</declname>
+          <defval><ref refid="classostk_1_1io_1_1url_1_1_query_1a25f41e04f41e40fd63519e377829323f" kindref="member">Query::Undefined</ref>()</defval>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aFragment</declname>
+          <defval>String::Empty()</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url(&quot;http&quot;,<sp/>&quot;server.org&quot;,<sp/>&quot;/path/to/page.html&quot;,<sp/>80)<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aScheme</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A scheme </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aHost</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A host </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A path </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aPort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A port </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aUser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A user </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aPassword</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A password </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aQuery</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A query </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aFragment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A fragment </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="46" column="5" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="17" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a46fed221d83ea9a6985b079ee6d6f151" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::io::URL::operator==</definition>
+        <argsstring>(const URL &amp;aURL) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> &amp;</type>
+          <declname>aURL</declname>
+        </param>
+        <briefdescription>
+<para>Equal to operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL(&quot;http&quot;,<sp/>&quot;server.org&quot;)<sp/>==<sp/>URL(&quot;http&quot;,<sp/>&quot;server.org&quot;)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aURL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if URLs are equal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="64" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="38" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1af0e7f1e614d4268332deb8255cfd042a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::io::URL::operator!=</definition>
+        <argsstring>(const URL &amp;aURL) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> &amp;</type>
+          <declname>aURL</declname>
+        </param>
+        <briefdescription>
+<para>Not equal to operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL(&quot;http&quot;,<sp/>&quot;server.org&quot;)<sp/>!=<sp/>URL(&quot;http&quot;,<sp/>&quot;server.com&quot;)<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aURL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if URLs are not equal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="75" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="51" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a6af6a4ec30e137242a80b51096ef09b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref></type>
+        <definition>URL ostk::io::URL::operator+</definition>
+        <argsstring>(const String &amp;aUrlElement) const</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aUrlElement</declname>
+        </param>
+        <briefdescription>
+<para>Addition operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>                Append element to URL path
+</verbatim></para>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url(&quot;http&quot;,<sp/>&quot;server.org&quot;)<sp/>;<sp/>//<sp/>http://server.org</highlight></codeline>
+<codeline><highlight class="normal">URL<sp/>newUrl<sp/>=<sp/>url<sp/>+<sp/>&quot;/page.html&quot;<sp/>//<sp/>http://server.org/page.html</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aUrlElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A path element </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="89" column="9" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a07e4a0573aa017fc782ed6712f3df3f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> &amp;</type>
+        <definition>URL &amp; ostk::io::URL::operator+=</definition>
+        <argsstring>(const String &amp;aUrlElement)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aUrlElement</declname>
+        </param>
+        <briefdescription>
+<para>Addition assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>                Append element to URL path
+</verbatim></para>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url(&quot;http&quot;,<sp/>&quot;server.org&quot;)<sp/>;<sp/>//<sp/>http://server.org</highlight></codeline>
+<codeline><highlight class="normal">url<sp/>+=<sp/>&quot;/page.html&quot;<sp/>//<sp/>http://server.org/page.html</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aUrlElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A path element </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="103" column="9" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="68" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1ae777a4a970e3c36af2ca1e22a72336de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::io::URL::isDefined</definition>
+        <argsstring>() const</argsstring>
+        <name>isDefined</name>
+        <briefdescription>
+<para>Check if <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> is defined. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://server.org&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.isDefined()<sp/>;<sp/>//<sp/>True</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>True if <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> is defined </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="127" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1ac807a165cb3da86a7b9cea5800754fa1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+        <definition>const String &amp; ostk::io::URL::accessScheme</definition>
+        <argsstring>() const</argsstring>
+        <name>accessScheme</name>
+        <briefdescription>
+<para>Get reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> scheme. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://server.org&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.accessScheme()<sp/>;<sp/>//<sp/>&amp;&quot;http&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> scheme </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="138" column="18" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a2faf73b2ba1fd2224a6f53a1883d8340" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+        <definition>const String &amp; ostk::io::URL::accessHost</definition>
+        <argsstring>() const</argsstring>
+        <name>accessHost</name>
+        <briefdescription>
+<para>Get reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> host. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://server.org&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.accessHost()<sp/>;<sp/>//<sp/>&amp;&quot;server.org&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> host </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="149" column="18" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a94b5966da7e3d32068f87c33ca78828e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+        <definition>const String &amp; ostk::io::URL::accessPath</definition>
+        <argsstring>() const</argsstring>
+        <name>accessPath</name>
+        <briefdescription>
+<para>Get reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://server.org/path/to/index.html&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.accessPath()<sp/>;<sp/>//<sp/>&amp;&quot;/path/to/index.html&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="160" column="18" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a143ce5446cddd58318ba77d425b4f7e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="namespaceostk_1_1io_1a4a52635c39246ec2c5fa925e7e25ccd3" kindref="member">Integer</ref> &amp;</type>
+        <definition>const Integer &amp; ostk::io::URL::accessPort</definition>
+        <argsstring>() const</argsstring>
+        <name>accessPort</name>
+        <briefdescription>
+<para>Get reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://server.org:80&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.accessPort()<sp/>;<sp/>//<sp/>&amp;80</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> port </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="171" column="19" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a793b078fb609dd5870a7c4bc9b13cf05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+        <definition>const String &amp; ostk::io::URL::accessUser</definition>
+        <argsstring>() const</argsstring>
+        <name>accessUser</name>
+        <briefdescription>
+<para>Get reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://user:password@server.org&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.accessUser()<sp/>;<sp/>//<sp/>&amp;&quot;user&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> user </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="182" column="18" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="123" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a7b61c488b9b1781cf1783cee04cd61e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+        <definition>const String &amp; ostk::io::URL::accessPassword</definition>
+        <argsstring>() const</argsstring>
+        <name>accessPassword</name>
+        <briefdescription>
+<para>Get reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> password. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://user:password@server.org&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.accessPassword()<sp/>;<sp/>//<sp/>&amp;&quot;password&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> password </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="193" column="18" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1ad10cb94dcbe3952e59d508ccc36323c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="namespaceostk_1_1io_1aeabc644ba5c25896df8014bd0271f970" kindref="member">Query</ref> &amp;</type>
+        <definition>const Query &amp; ostk::io::URL::accessQuery</definition>
+        <argsstring>() const</argsstring>
+        <name>accessQuery</name>
+        <briefdescription>
+<para>Get reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> query. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://server.org?key=value&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.accessQuery()<sp/>;<sp/>//<sp/>&amp;&quot;key=value&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> query </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="204" column="17" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1ad73236e116c77a5c92c518c8f23649ea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+        <definition>const String &amp; ostk::io::URL::accessFragment</definition>
+        <argsstring>() const</argsstring>
+        <name>accessFragment</name>
+        <briefdescription>
+<para>Get reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> fragment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://server.org#fragment&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.accessFragment()<sp/>;<sp/>//<sp/>&amp;&quot;fragment&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Reference to <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> fragment </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="215" column="18" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="138" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a28880731bc5e0a3eb216f436ff0caac6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
+        <definition>String ostk::io::URL::getScheme</definition>
+        <argsstring>() const</argsstring>
+        <name>getScheme</name>
+        <briefdescription>
+<para>Get <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> scheme. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://server.org&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.getScheme()<sp/>;<sp/>//<sp/>&quot;http&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> scheme </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="226" column="12" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="143" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a3b1dd5dd205854fc291a6c9a5438d7ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
+        <definition>String ostk::io::URL::getHost</definition>
+        <argsstring>() const</argsstring>
+        <name>getHost</name>
+        <briefdescription>
+<para>Get <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> host. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://server.org&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.getHost()<sp/>;<sp/>//<sp/>&quot;server.org&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> host </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="237" column="12" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="148" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1aba0a0da071c5ac9d7a79f24672b769ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
+        <definition>String ostk::io::URL::getPath</definition>
+        <argsstring>() const</argsstring>
+        <name>getPath</name>
+        <briefdescription>
+<para>Get <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://server.org/path/to/index.html&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.getPath()<sp/>;<sp/>//<sp/>&quot;/path/to/index.html&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="248" column="12" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="153" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a471a0b1cb0bd5ab83b2798e1dc71e2d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceostk_1_1io_1a4a52635c39246ec2c5fa925e7e25ccd3" kindref="member">Integer</ref></type>
+        <definition>Integer ostk::io::URL::getPort</definition>
+        <argsstring>() const</argsstring>
+        <name>getPort</name>
+        <briefdescription>
+<para>Get <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://server.org:80&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.getPort()<sp/>;<sp/>//<sp/>80</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> port </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="259" column="13" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="158" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1ab3aeffffa4a2c72173e7e075d15e06fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
+        <definition>String ostk::io::URL::getUser</definition>
+        <argsstring>() const</argsstring>
+        <name>getUser</name>
+        <briefdescription>
+<para>Get <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://user:password@server.org&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.getUser()<sp/>;<sp/>//<sp/>&quot;user&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> user </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="270" column="12" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="163" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1aa0a33984e00c87fa1f9c405bffea4c56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
+        <definition>String ostk::io::URL::getPassword</definition>
+        <argsstring>() const</argsstring>
+        <name>getPassword</name>
+        <briefdescription>
+<para>Get <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> password. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://user:password@server.org&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.getPassword()<sp/>;<sp/>//<sp/>&quot;password&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> password </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="281" column="12" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1ac6ddb4ae26ba6f2cd61f3c94483d7b0f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceostk_1_1io_1aeabc644ba5c25896df8014bd0271f970" kindref="member">Query</ref></type>
+        <definition>Query ostk::io::URL::getQuery</definition>
+        <argsstring>() const</argsstring>
+        <name>getQuery</name>
+        <briefdescription>
+<para>Get <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> query. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://server.org?key=value&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.getQuery()<sp/>;<sp/>//<sp/>&quot;key=value&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> query </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="292" column="11" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="173" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1ab4f89a76481899ca2ef35915cf5460b6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
+        <definition>String ostk::io::URL::getFragment</definition>
+        <argsstring>() const</argsstring>
+        <name>getFragment</name>
+        <briefdescription>
+<para>Get <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> fragment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;http://server.org#fragment&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.getFragment()<sp/>;<sp/>//<sp/>&quot;fragment&quot;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> fragment </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="303" column="12" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1af1b7bd5cffeda8dcbf7e469f68bc8f0f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
+        <definition>String ostk::io::URL::toString</definition>
+        <argsstring>(const bool doSanitize=false) const</argsstring>
+        <name>toString</name>
+        <param>
+          <type>const bool</type>
+          <declname>doSanitize</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Get serialized <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url(&quot;http&quot;,<sp/>&quot;server.org&quot;,<sp/>&quot;/path/to/page.html&quot;,<sp/>80)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.toString()<sp/>;<sp/>//<sp/>&quot;http://server.org:80/path/to/page.html&quot;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">optional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>doSanitize If true, sanitize <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Serialized <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="315" column="12" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="183" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1ac758bfb15653ebfcc7b4f1fee145024b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::io::URL::setScheme</definition>
+        <argsstring>(const String &amp;aScheme)</argsstring>
+        <name>setScheme</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aScheme</declname>
+        </param>
+        <briefdescription>
+<para>Set <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> scheme. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aScheme</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A scheme </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="321" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="231" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1accdfb1800b5e0d89e85bc27d302004a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::io::URL::setHost</definition>
+        <argsstring>(const String &amp;aHost)</argsstring>
+        <name>setHost</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aHost</declname>
+        </param>
+        <briefdescription>
+<para>Set <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> host. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aHost</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A host </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="327" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="236" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a9889bf7f7516b095adadebea4ba3ceae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::io::URL::setPath</definition>
+        <argsstring>(const String &amp;aPath)</argsstring>
+        <name>setPath</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aPath</declname>
+        </param>
+        <briefdescription>
+<para>Set <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="333" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="241" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a991fe376c996ad6457ebbd8b976c44ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::io::URL::setPort</definition>
+        <argsstring>(const Integer &amp;aPort)</argsstring>
+        <name>setPort</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1a4a52635c39246ec2c5fa925e7e25ccd3" kindref="member">Integer</ref> &amp;</type>
+          <declname>aPort</declname>
+        </param>
+        <briefdescription>
+<para>Set <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A port </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="339" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="246" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1ab12a067e5d0e37707db80d16bbdf7251" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::io::URL::setUser</definition>
+        <argsstring>(const String &amp;aUser)</argsstring>
+        <name>setUser</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aUser</declname>
+        </param>
+        <briefdescription>
+<para>Set <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aUser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A user </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="345" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="251" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a2d5ddc1fc8f2693c376d6f4794b1ed26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::io::URL::setPassword</definition>
+        <argsstring>(const String &amp;aPassword)</argsstring>
+        <name>setPassword</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aPassword</declname>
+        </param>
+        <briefdescription>
+<para>Set <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> password. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aPassword</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A password </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="351" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="256" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a948c7c671b2b36ff4a62534990aa86da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::io::URL::setQuery</definition>
+        <argsstring>(const Query &amp;aQuery)</argsstring>
+        <name>setQuery</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1aeabc644ba5c25896df8014bd0271f970" kindref="member">Query</ref> &amp;</type>
+          <declname>aQuery</declname>
+        </param>
+        <briefdescription>
+<para>Set <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> query. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aQuery</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A query </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="357" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="261" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a3e646332fa91ee14876c15782967a960" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::io::URL::setFragment</definition>
+        <argsstring>(const String &amp;aFragment)</argsstring>
+        <name>setFragment</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aFragment</declname>
+        </param>
+        <briefdescription>
+<para>Set <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> fragment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aFragment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A fragment </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="363" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="266" bodyend="269"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classostk_1_1io_1_1_u_r_l_1a98ed4737303253c4105846425180fc30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const URL &amp;aURL)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> &amp;</type>
+          <declname>aURL</declname>
+        </param>
+        <briefdescription>
+<para>Output stream operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url(&quot;http&quot;,<sp/>&quot;server.org&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">std::cout<sp/>&lt;&lt;<sp/>url<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aURL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="116" column="12" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="75" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a668bfbf59c42356063be619b5f39d613" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref></type>
+        <definition>URL ostk::io::URL::Undefined</definition>
+        <argsstring>()</argsstring>
+        <name>Undefined</name>
+        <briefdescription>
+<para>Constructs an undefined <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Undefined()<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">url.isDefined()<sp/>;<sp/>//<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Undefined <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="374" column="16" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="271" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a1cd7216bb1079f62386a218ba510958d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref></type>
+        <definition>URL ostk::io::URL::Parse</definition>
+        <argsstring>(const String &amp;aString)</argsstring>
+        <name>Parse</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aString</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> from a given string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url<sp/>=<sp/>URL::Parse(&quot;https://www.google.com&quot;)<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="385" column="16" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="284" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1aefa7a336010b16d6a658932953648481" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
+        <definition>static String ostk::io::URL::EncodeString</definition>
+        <argsstring>(const String &amp;aString)</argsstring>
+        <name>EncodeString</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aString</declname>
+        </param>
+        <briefdescription>
+<para>Encode string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String<sp/>encodedString<sp/>=<sp/>URL::EncodeString(&quot;key=a_b_c&quot;)<sp/>;<sp/>//<sp/>&quot;key%3Da_b_c&quot;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="396" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1ad0e89f0fc413fb05b83759b451b8f2b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
+        <definition>static String ostk::io::URL::DecodeString</definition>
+        <argsstring>(const String &amp;aString)</argsstring>
+        <name>DecodeString</name>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref> &amp;</type>
+          <declname>aString</declname>
+        </param>
+        <briefdescription>
+<para>Decode string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">String<sp/>decodedString<sp/>=<sp/>URL::DecodeString(&quot;key%3Da_b_c&quot;)<sp/>;<sp/>//<sp/>&quot;key=a_b_c&quot;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="407" column="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Uniform Resource Locator (<ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref>) </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ulink url="https://en.wikipedia.org/wiki/URL">https://en.wikipedia.org/wiki/URL</ulink> </para>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="25" column="1" bodyfile="include/OpenSpaceToolkit/IO/URL.hpp" bodystart="24" bodyend="418"/>
+    <listofallmembers>
+      <member refid="classostk_1_1io_1_1_u_r_l_1ad73236e116c77a5c92c518c8f23649ea" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>accessFragment</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a2faf73b2ba1fd2224a6f53a1883d8340" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>accessHost</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a7b61c488b9b1781cf1783cee04cd61e6" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>accessPassword</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a94b5966da7e3d32068f87c33ca78828e" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>accessPath</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a143ce5446cddd58318ba77d425b4f7e4" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>accessPort</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1ad10cb94dcbe3952e59d508ccc36323c0" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>accessQuery</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1ac807a165cb3da86a7b9cea5800754fa1" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>accessScheme</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a793b078fb609dd5870a7c4bc9b13cf05" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>accessUser</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1ad0e89f0fc413fb05b83759b451b8f2b7" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>DecodeString</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1aefa7a336010b16d6a658932953648481" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>EncodeString</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a4315924bbd45accebb194e7720123e26" prot="private" virt="non-virtual"><scope>ostk::io::URL</scope><name>fragment_</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1ab4f89a76481899ca2ef35915cf5460b6" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>getFragment</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a3b1dd5dd205854fc291a6c9a5438d7ec" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>getHost</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1aa0a33984e00c87fa1f9c405bffea4c56" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>getPassword</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1aba0a0da071c5ac9d7a79f24672b769ab" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>getPath</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a471a0b1cb0bd5ab83b2798e1dc71e2d1" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>getPort</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1ac6ddb4ae26ba6f2cd61f3c94483d7b0f" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>getQuery</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a28880731bc5e0a3eb216f436ff0caac6" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>getScheme</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1ab3aeffffa4a2c72173e7e075d15e06fd" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>getUser</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a25f7d8f7f941ce7c3b4d2fdc931a36be" prot="private" virt="non-virtual"><scope>ostk::io::URL</scope><name>host_</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1ae777a4a970e3c36af2ca1e22a72336de" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>isDefined</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1af0e7f1e614d4268332deb8255cfd042a" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>operator!=</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a6af6a4ec30e137242a80b51096ef09b2" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>operator+</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a07e4a0573aa017fc782ed6712f3df3f9" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>operator+=</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a98ed4737303253c4105846425180fc30" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a46fed221d83ea9a6985b079ee6d6f151" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>operator==</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a1cd7216bb1079f62386a218ba510958d" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>Parse</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a189ceb389c578ae226bba6ab04f07351" prot="private" virt="non-virtual"><scope>ostk::io::URL</scope><name>password_</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1ac0aab1d61d19abbb75b7c15a2d008d48" prot="private" virt="non-virtual"><scope>ostk::io::URL</scope><name>path_</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a672078bc4b9fdf4e236c68850792e683" prot="private" virt="non-virtual"><scope>ostk::io::URL</scope><name>port_</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a8283a6ec622234f32c302f3e12ae4c52" prot="private" virt="non-virtual"><scope>ostk::io::URL</scope><name>query_</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1ad385309f407fd6abe4bdc36d605f8df4" prot="private" virt="non-virtual"><scope>ostk::io::URL</scope><name>scheme_</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a3e646332fa91ee14876c15782967a960" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>setFragment</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1accdfb1800b5e0d89e85bc27d302004a7" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>setHost</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a2d5ddc1fc8f2693c376d6f4794b1ed26" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>setPassword</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a9889bf7f7516b095adadebea4ba3ceae" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>setPath</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a991fe376c996ad6457ebbd8b976c44ec" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>setPort</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a948c7c671b2b36ff4a62534990aa86da" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>setQuery</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1ac758bfb15653ebfcc7b4f1fee145024b" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>setScheme</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1ab12a067e5d0e37707db80d16bbdf7251" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>setUser</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1af1b7bd5cffeda8dcbf7e469f68bc8f0f" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>toString</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a668bfbf59c42356063be619b5f39d613" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>Undefined</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a2537e046cef4ac966cc295abb81279c2" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>URL</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a5a24386372bb8c71e9314c003058b22f" prot="public" virt="non-virtual"><scope>ostk::io::URL</scope><name>URL</name></member>
+      <member refid="classostk_1_1io_1_1_u_r_l_1a347ae01097125677f4e510d4c7fdc230" prot="private" virt="non-virtual"><scope>ostk::io::URL</scope><name>user_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

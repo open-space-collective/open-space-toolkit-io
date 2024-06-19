@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client" kind="class" language="C++" prot="public">
+    <compoundname>ostk::io::ip::tcp::http::Client</compoundname>
+    <includes refid="_h_t_t_p_2_client_8hpp" local="no">Client.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_1a2877f326d60fa80886a7b096aff767cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::io::ip::tcp::http::Client::Client</definition>
+        <argsstring>()=delete</argsstring>
+        <name>Client</name>
+        <briefdescription>
+<para>Default constructor (deleted) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="42" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_1ac641999a75f8abd53a7490e8f22a7189" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response" kindref="compound">Response</ref></type>
+        <definition>Response ostk::io::ip::tcp::http::Client::Send</definition>
+        <argsstring>(const Request &amp;aRequest)</argsstring>
+        <name>Send</name>
+        <param>
+          <type>const <ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" kindref="compound">Request</ref> &amp;</type>
+          <declname>aRequest</declname>
+        </param>
+        <briefdescription>
+<para>Send a HTTP request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aRequest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A HTTP request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A HTTP response </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="49" column="21" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="68" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_1a3a84e295e2fb2274a010f791edd8a9d6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response" kindref="compound">Response</ref></type>
+        <definition>Response ostk::io::ip::tcp::http::Client::Get</definition>
+        <argsstring>(const URL &amp;aUrl)</argsstring>
+        <name>Get</name>
+        <param>
+          <type>const <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> &amp;</type>
+          <declname>aUrl</declname>
+        </param>
+        <briefdescription>
+<para>Send a HTTP GET request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aUrl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A HTTP response </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="56" column="21" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="164" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_1add18d245335574a5dc0b6c09d82dd8da" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>File</type>
+        <definition>File ostk::io::ip::tcp::http::Client::Fetch</definition>
+        <argsstring>(const URL &amp;aUrl, const Directory &amp;aDirectory, const Size &amp;aFollowCount=0)</argsstring>
+        <name>Fetch</name>
+        <param>
+          <type>const <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> &amp;</type>
+          <declname>aUrl</declname>
+        </param>
+        <param>
+          <type>const Directory &amp;</type>
+          <declname>aDirectory</declname>
+        </param>
+        <param>
+          <type>const Size &amp;</type>
+          <declname>aFollowCount</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Fetch file over HTTP. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aUrl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aDirectory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A destination directory </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">(optional)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>aFollowCount Number of redirects to follow </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A file </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="65" column="17" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="169" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_1a4b02fb4cec2bb63499e38c1311fb45bb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ostk::io::ip::tcp::http::Client::List</definition>
+        <argsstring>(const URL &amp;aUrl, const File &amp;aFile, const bool showNamesOnly=false)</argsstring>
+        <name>List</name>
+        <param>
+          <type>const <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> &amp;</type>
+          <declname>aUrl</declname>
+        </param>
+        <param>
+          <type>const File &amp;</type>
+          <declname>aFile</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>showNamesOnly</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>List files. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aUrl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A destination file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">(optional)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>showNamesOnly If true, only show file names </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="73" column="17" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="275" bodyend="370"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Hypertext Transfer Protocol (HTTP) client. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ulink url="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol</ulink> </para>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="38" column="1" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" bodystart="37" bodyend="74"/>
+    <listofallmembers>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_1a2877f326d60fa80886a7b096aff767cd" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Client</scope><name>Client</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_1add18d245335574a5dc0b6c09d82dd8da" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Client</scope><name>Fetch</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_1a3a84e295e2fb2274a010f791edd8a9d6" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Client</scope><name>Get</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_1a4b02fb4cec2bb63499e38c1311fb45bb" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Client</scope><name>List</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_1ac641999a75f8abd53a7490e8f22a7189" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Client</scope><name>Send</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

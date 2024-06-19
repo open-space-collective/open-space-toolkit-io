@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Open Space Toolkit ▸ I/O</title>
+    <briefdescription>
+<para>Structure </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Structure<ulink url="https://github.com/open-space-collective/open-space-toolkit-io/actions/workflows/build-test.yml"><image type="html" name="badge.svg?branch=main" inline="yes"></image>
+</ulink> <ulink url="https://github.com/open-space-collective/open-space-toolkit-io/actions/workflows/release.yml"><image type="html" name="badge.svg" inline="yes"></image>
+</ulink> <ulink url="https://codecov.io/gh/open-space-collective/open-space-toolkit-io"><image type="html" name="badge.svg" inline="yes"></image>
+</ulink> <ulink url="https://open-space-collective.github.io/open-space-toolkit-io"><image type="html" name="stable.svg" inline="yes"></image>
+</ulink> <ulink url="https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-io"><image type="html" name="open-space-collective%2Fopen-space-toolkit-io.svg" inline="yes"></image>
+</ulink> <ulink url="https://badge.fury.io/py/open-space-toolkit-io"><image type="html" name="open-space-toolkit-io.svg" inline="yes"></image>
+</ulink> <ulink url="https://opensource.org/licenses/Apache-2.0"><image type="html" name="License-Apache%202.0-blue.svg" inline="yes"></image>
+</ulink></para>
+<para>Addressing, networking, database connectors.</para>
+<sect1 id="index_1autotoc_md1">
+<title>Getting Started</title>
+<para>Want to get started? This is the simplest and quickest way:</para>
+<para><ulink url="https://mybinder.org/v2/gh/open-space-collective/open-space-toolkit/main?urlpath=lab/tree/notebooks"><image type="html" name="badge_logo.svg" inline="yes"></image>
+</ulink></para>
+<para><emphasis>Nothing to download or install! This will automatically start a <ulink url="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</ulink> environment in your browser with Open Space Toolkit libraries and example notebooks ready to use.</emphasis></para>
+<sect2 id="index_1autotoc_md2">
+<title>Alternatives</title>
+<sect3 id="index_1autotoc_md3">
+<title>Docker Images</title>
+<para><ulink url="https://www.docker.com/">Docker</ulink> must be installed on your system.</para>
+<sect4 id="index_1autotoc_md4">
+<title>iPython</title>
+<para>The following command will start an <ulink url="https://ipython.org/">iPython</ulink> shell within a container where the OSTk components are already installed:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">docker<sp/>run<sp/>-it<sp/>openspacecollective/open-space-toolkit-io-development<sp/>python3.11<sp/>-m<sp/>IPython</highlight></codeline>
+</programlisting></para>
+<para>Once the shell is up and running, playing with it is easy:</para>
+<para><programlisting filename=".py"><codeline><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1io" kindref="compound">ostk.io</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>URL<sp/></highlight><highlight class="comment">#<sp/>URL<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http" kindref="compound">ostk.io.ip.tcp.http</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Client<sp/></highlight><highlight class="comment">#<sp/>HTTP<sp/>client<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">url<sp/>=<sp/>URL.parse(</highlight><highlight class="stringliteral">&quot;https://www.google.com&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">#<sp/>Construct<sp/>a<sp/>URL</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">response<sp/>=<sp/>Client.get(url)<sp/></highlight><highlight class="comment">#<sp/>Send<sp/>an<sp/>HTTP<sp/>GET<sp/>request<sp/>(over<sp/>HTTPS)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">response.get_status_code()<sp/></highlight><highlight class="comment">#<sp/>Display<sp/>the<sp/>status<sp/>code<sp/>of<sp/>the<sp/>HTTP<sp/>response</highlight></codeline>
+</programlisting></para>
+<para><emphasis>Tip: Use tab for auto-completion!</emphasis></para>
+</sect4>
+<sect4 id="index_1autotoc_md5">
+<title>JupyterLab</title>
+<para>The following command will start a <ulink url="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</ulink> server within a container where the OSTk components are already installed:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">docker<sp/>run<sp/>--publish=8888:8888<sp/>openspacecollective/open-space-toolkit-io-jupyter</highlight></codeline>
+</programlisting></para>
+<para>Once the container is running, access <ulink url="http://localhost:8888/lab">http://localhost:8888/lab</ulink> and create a Python 3 Notebook.</para>
+</sect4>
+</sect3>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md6">
+<title>Installation</title>
+<sect2 id="index_1autotoc_md7">
+<title>C++</title>
+<para>The binary packages are hosted using <ulink url="https://github.com/open-space-collective/open-space-toolkit-io/releases">GitHub Releases</ulink>:</para>
+<para><itemizedlist>
+<listitem><para>Runtime libraries: <computeroutput>open-space-toolkit-io-X.Y.Z-1.x86_64-runtime</computeroutput></para>
+</listitem><listitem><para>C++ headers: <computeroutput>open-space-toolkit-io-X.Y.Z-1.x86_64-devel</computeroutput></para>
+</listitem><listitem><para>Python bindings: <computeroutput>open-space-toolkit-io-X.Y.Z-1.x86_64-python</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+<sect3 id="index_1autotoc_md8">
+<title>Debian / Ubuntu</title>
+<para>After downloading the relevant <computeroutput>.deb</computeroutput> binary packages, install:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">apt<sp/>install<sp/>open-space-toolkit-io-*.deb</highlight></codeline>
+</programlisting></para>
+</sect3>
+</sect2>
+<sect2 id="index_1autotoc_md9">
+<title>Python</title>
+<para>Install from <ulink url="https://pypi.org/project/open-space-toolkit-io/">PyPI</ulink>:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">pip<sp/>install<sp/>open-space-toolkit-io</highlight></codeline>
+</programlisting></para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md10">
+<title>Documentation</title>
+<para>Documentation is available here:</para>
+<para><itemizedlist>
+<listitem><para><ulink url="https://open-space-collective.github.io/open-space-toolkit-io">C++</ulink></para>
+</listitem><listitem><para><ulink url="./bindings/python/docs">Python</ulink></para>
+</listitem></itemizedlist>
+</para>
+<para>&lt;details&gt;</para>
+<para>The library exhibits the following structure:</para>
+<para><programlisting filename=".txt"><codeline><highlight class="normal">├──<sp/>IP</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Address</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>TCP</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>├──<sp/>Client</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>├──<sp/>Server</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>└──<sp/>HTTP</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>├──<sp/>Client</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>└──<sp/>Server</highlight></codeline>
+<codeline><highlight class="normal">└──<sp/>URL</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>└──<sp/><ref refid="namespaceostk_1_1io_1aeabc644ba5c25896df8014bd0271f970" kindref="member">Query</ref></highlight></codeline>
+</programlisting></para>
+<para>&lt;/details&gt;</para>
+</sect1>
+<sect1 id="index_1autotoc_md11">
+<title>Tutorials</title>
+<para>Tutorials are available here:</para>
+<para><itemizedlist>
+<listitem><para><ulink url="./tutorials/cpp">C++</ulink></para>
+</listitem><listitem><para><ulink url="./tutorials/python">Python</ulink></para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md12">
+<title>Setup</title>
+<sect2 id="index_1autotoc_md13">
+<title>Development Environment</title>
+<para>Using <ulink url="https://www.docker.com">Docker</ulink> for development is recommended, to simplify the installation of the necessary build tools and dependencies. Instructions on how to install Docker are available <ulink url="https://docs.docker.com/install/">here</ulink>.</para>
+<para>To start the development environment:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">make<sp/>start-development</highlight></codeline>
+</programlisting></para>
+<para>This will:</para>
+<para><orderedlist>
+<listitem><para>Build the <computeroutput>openspacecollective/open-space-toolkit-io-development</computeroutput> Docker image.</para>
+</listitem><listitem><para>Create a development environment container with local source files and helper scripts mounted.</para>
+</listitem><listitem><para>Start a <computeroutput>bash</computeroutput> shell from the <computeroutput>./build</computeroutput> working directory.</para>
+</listitem></orderedlist>
+</para>
+<para>If installing Docker is not an option, you can manually install the development tools (GCC, CMake) and all required dependencies, by following a procedure similar to the one described in the <ulink url="./docker/development/Dockerfile">Development Dockerfile</ulink>.</para>
+</sect2>
+<sect2 id="index_1autotoc_md14">
+<title>Build</title>
+<para>From the <computeroutput>./build</computeroutput> directory:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">cmake<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">make</highlight></codeline>
+</programlisting></para>
+<para><emphasis>Tip: <computeroutput>ostk-build</computeroutput> simplifies building from within the development environment.</emphasis></para>
+</sect2>
+<sect2 id="index_1autotoc_md15">
+<title>Test</title>
+<para>To start a container to build and run the tests:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">make<sp/>test</highlight></codeline>
+</programlisting></para>
+<para>Or to run them manually:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">./bin/open-space-toolkit-io.test</highlight></codeline>
+</programlisting></para>
+<para><emphasis>Tip: <computeroutput>ostk-test</computeroutput> simplifies running tests from within the development environment.</emphasis></para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md16">
+<title>Dependencies</title>
+<para><table rows="4" cols="4"><row>
+<entry thead="yes"><para>Name </para>
+</entry><entry thead="yes"><para>Version </para>
+</entry><entry thead="yes"><para>License </para>
+</entry><entry thead="yes"><para>Link  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>Pybind11 </para>
+</entry><entry thead="no"><para><computeroutput>2.12.0</computeroutput> </para>
+</entry><entry thead="no"><para>BSD-3-Clause </para>
+</entry><entry thead="no"><para><ulink url="https://github.com/pybind/pybind11">github.com/pybind/pybind11</ulink>  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>{fmt} </para>
+</entry><entry thead="no"><para><computeroutput>5.2.0</computeroutput> </para>
+</entry><entry thead="no"><para>BSD-2-Clause </para>
+</entry><entry thead="no"><para><ulink url="https://github.com/fmtlib/fmt">github.com/fmtlib/fmt</ulink>  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>Core </para>
+</entry><entry thead="no"><para><computeroutput>main</computeroutput> </para>
+</entry><entry thead="no"><para>Apache License 2.0 </para>
+</entry><entry thead="no"><para><ulink url="https://github.com/open-space-collective/open-space-toolkit-core">github.com/open-space-collective/open-space-toolkit-core</ulink>  </para>
+</entry></row>
+</table>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md17">
+<title>Contribution</title>
+<para>Contributions are more than welcome!</para>
+<para>Please read our <ref refid="_c_o_n_t_r_i_b_u_t_i_n_g_8md" kindref="compound">contributing guide</ref> to learn about our development process, how to propose fixes and improvements, and how to build and test the code.</para>
+</sect1>
+<sect1 id="index_1autotoc_md18">
+<title>Special Thanks</title>
+<para><ulink url="https://www.loftorbital.com/"><image type="html" name="loft_orbital.png" inline="yes"></image>
+</ulink></para>
+</sect1>
+<sect1 id="index_1autotoc_md19">
+<title>License</title>
+<para>Apache License 2.0 </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

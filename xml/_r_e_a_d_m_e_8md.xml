@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Open<sp/>Space<sp/>Toolkit<sp/>▸<sp/>I/O</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![Build<sp/>and<sp/>Test](https://github.com/open-space-collective/open-space-toolkit-io/actions/workflows/build-test.yml/badge.svg?branch=main)](https://github.com/open-space-collective/open-space-toolkit-io/actions/workflows/build-test.yml)</highlight></codeline>
+<codeline><highlight class="normal">[![Release](https://github.com/open-space-collective/open-space-toolkit-io/actions/workflows/release.yml/badge.svg)](https://github.com/open-space-collective/open-space-toolkit-io/actions/workflows/release.yml)</highlight></codeline>
+<codeline><highlight class="normal">[![Code<sp/>Coverage](https://codecov.io/gh/open-space-collective/open-space-toolkit-io/branch/main/graph/badge.svg)](https://codecov.io/gh/open-space-collective/open-space-toolkit-io)</highlight></codeline>
+<codeline><highlight class="normal">[![Documentation](https://img.shields.io/readthedocs/pip/stable.svg)](https://open-space-collective.github.io/open-space-toolkit-io)</highlight></codeline>
+<codeline><highlight class="normal">[![GitHub<sp/>version](https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-io.svg)](https://badge.fury.io/gh/open-space-collective%2Fopen-space-toolkit-io)</highlight></codeline>
+<codeline><highlight class="normal">[![PyPI<sp/>version](https://badge.fury.io/py/open-space-toolkit-io.svg)](https://badge.fury.io/py/open-space-toolkit-io)</highlight></codeline>
+<codeline><highlight class="normal">[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Addressing,<sp/>networking,<sp/>database<sp/>connectors.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Getting<sp/>Started</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Want<sp/>to<sp/>get<sp/>started?<sp/>This<sp/>is<sp/>the<sp/>simplest<sp/>and<sp/>quickest<sp/>way:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/open-space-collective/open-space-toolkit/main?urlpath=lab/tree/notebooks)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*Nothing<sp/>to<sp/>download<sp/>or<sp/>install!<sp/>This<sp/>will<sp/>automatically<sp/>start<sp/>a<sp/>[JupyterLab](https://jupyterlab.readthedocs.io/en/stable/)<sp/>environment<sp/>in<sp/>your<sp/>browser<sp/>with<sp/>Open<sp/>Space<sp/>Toolkit<sp/>libraries<sp/>and<sp/>example<sp/>notebooks<sp/>ready<sp/>to<sp/>use.*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Alternatives</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Docker<sp/>Images</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Docker](https://www.docker.com/)<sp/>must<sp/>be<sp/>installed<sp/>on<sp/>your<sp/>system.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#####<sp/>iPython</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>following<sp/>command<sp/>will<sp/>start<sp/>an<sp/>[iPython](https://ipython.org/)<sp/>shell<sp/>within<sp/>a<sp/>container<sp/>where<sp/>the<sp/>OSTk<sp/>components<sp/>are<sp/>already<sp/>installed:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">docker<sp/>run<sp/>-it<sp/>openspacecollective/open-space-toolkit-io-development<sp/>python3.11<sp/>-m<sp/>IPython</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Once<sp/>the<sp/>shell<sp/>is<sp/>up<sp/>and<sp/>running,<sp/>playing<sp/>with<sp/>it<sp/>is<sp/>easy:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```py</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>ostk.io<sp/>import<sp/>URL<sp/>#<sp/>URL<sp/>class</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>ostk.io.ip.tcp.http<sp/>import<sp/>Client<sp/>#<sp/>HTTP<sp/>client<sp/>class</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">url<sp/>=<sp/>URL.parse(&quot;https://www.google.com&quot;)<sp/>#<sp/>Construct<sp/>a<sp/>URL</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">response<sp/>=<sp/>Client.get(url)<sp/>#<sp/>Send<sp/>an<sp/>HTTP<sp/>GET<sp/>request<sp/>(over<sp/>HTTPS)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">response.get_status_code()<sp/>#<sp/>Display<sp/>the<sp/>status<sp/>code<sp/>of<sp/>the<sp/>HTTP<sp/>response</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*Tip:<sp/>Use<sp/>tab<sp/>for<sp/>auto-completion!*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#####<sp/>JupyterLab</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>following<sp/>command<sp/>will<sp/>start<sp/>a<sp/>[JupyterLab](https://jupyterlab.readthedocs.io/en/stable/)<sp/>server<sp/>within<sp/>a<sp/>container<sp/>where<sp/>the<sp/>OSTk<sp/>components<sp/>are<sp/>already<sp/>installed:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">docker<sp/>run<sp/>--publish=8888:8888<sp/>openspacecollective/open-space-toolkit-io-jupyter</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Once<sp/>the<sp/>container<sp/>is<sp/>running,<sp/>access<sp/>[http://localhost:8888/lab](http://localhost:8888/lab)<sp/>and<sp/>create<sp/>a<sp/>Python<sp/>3<sp/>Notebook.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>C++</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>binary<sp/>packages<sp/>are<sp/>hosted<sp/>using<sp/>[GitHub<sp/>Releases](https://github.com/open-space-collective/open-space-toolkit-io/releases):</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Runtime<sp/>libraries:<sp/>`open-space-toolkit-io-X.Y.Z-1.x86_64-runtime`</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>C++<sp/>headers:<sp/>`open-space-toolkit-io-X.Y.Z-1.x86_64-devel`</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Python<sp/>bindings:<sp/>`open-space-toolkit-io-X.Y.Z-1.x86_64-python`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Debian<sp/>/<sp/>Ubuntu</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">After<sp/>downloading<sp/>the<sp/>relevant<sp/>`.deb`<sp/>binary<sp/>packages,<sp/>install:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">apt<sp/>install<sp/>open-space-toolkit-io-*.deb</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Python</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Install<sp/>from<sp/>[PyPI](https://pypi.org/project/open-space-toolkit-io/):</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>open-space-toolkit-io</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Documentation<sp/>is<sp/>available<sp/>here:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[C++](https://open-space-collective.github.io/open-space-toolkit-io)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Python](./bindings/python/docs)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;details&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;summary&gt;Structure&lt;/summary&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;p&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>library<sp/>exhibits<sp/>the<sp/>following<sp/>structure:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```txt</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>IP</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>Address</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>TCP</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>├──<sp/>Client</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>├──<sp/>Server</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>└──<sp/>HTTP</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>├──<sp/>Client</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>└──<sp/>Server</highlight></codeline>
+<codeline><highlight class="normal">└──<sp/>URL</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>└──<sp/>Query</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;/p&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;/details&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Tutorials</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Tutorials<sp/>are<sp/>available<sp/>here:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[C++](./tutorials/cpp)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Python](./tutorials/python)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Setup</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Development<sp/>Environment</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Using<sp/>[Docker](https://www.docker.com)<sp/>for<sp/>development<sp/>is<sp/>recommended,<sp/>to<sp/>simplify<sp/>the<sp/>installation<sp/>of<sp/>the<sp/>necessary<sp/>build<sp/>tools<sp/>and<sp/>dependencies.</highlight></codeline>
+<codeline><highlight class="normal">Instructions<sp/>on<sp/>how<sp/>to<sp/>install<sp/>Docker<sp/>are<sp/>available<sp/>[here](https://docs.docker.com/install/).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>start<sp/>the<sp/>development<sp/>environment:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">make<sp/>start-development</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>will:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Build<sp/>the<sp/>`openspacecollective/open-space-toolkit-io-development`<sp/>Docker<sp/>image.</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Create<sp/>a<sp/>development<sp/>environment<sp/>container<sp/>with<sp/>local<sp/>source<sp/>files<sp/>and<sp/>helper<sp/>scripts<sp/>mounted.</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Start<sp/>a<sp/>`bash`<sp/>shell<sp/>from<sp/>the<sp/>`./build`<sp/>working<sp/>directory.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>installing<sp/>Docker<sp/>is<sp/>not<sp/>an<sp/>option,<sp/>you<sp/>can<sp/>manually<sp/>install<sp/>the<sp/>development<sp/>tools<sp/>(GCC,<sp/>CMake)<sp/>and<sp/>all<sp/>required<sp/>dependencies,</highlight></codeline>
+<codeline><highlight class="normal">by<sp/>following<sp/>a<sp/>procedure<sp/>similar<sp/>to<sp/>the<sp/>one<sp/>described<sp/>in<sp/>the<sp/>[Development<sp/>Dockerfile](./docker/development/Dockerfile).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Build</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">From<sp/>the<sp/>`./build`<sp/>directory:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">make</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*Tip:<sp/>`ostk-build`<sp/>simplifies<sp/>building<sp/>from<sp/>within<sp/>the<sp/>development<sp/>environment.*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Test</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>start<sp/>a<sp/>container<sp/>to<sp/>build<sp/>and<sp/>run<sp/>the<sp/>tests:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">make<sp/>test</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Or<sp/>to<sp/>run<sp/>them<sp/>manually:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">./bin/open-space-toolkit-io.test</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*Tip:<sp/>`ostk-test`<sp/>simplifies<sp/>running<sp/>tests<sp/>from<sp/>within<sp/>the<sp/>development<sp/>environment.*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Dependencies</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Name<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Version<sp/><sp/>|<sp/>License<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Link<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-------------------<sp/>|<sp/>--------<sp/>|<sp/>------------------<sp/>|<sp/>----------------------------------------------------------------------------------------------------------------------------<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Pybind11<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>`2.12.0`<sp/>|<sp/>BSD-3-Clause<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>[github.com/pybind/pybind11](https://github.com/pybind/pybind11)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>{fmt}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>`5.2.0`<sp/><sp/>|<sp/>BSD-2-Clause<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>[github.com/fmtlib/fmt](https://github.com/fmtlib/fmt)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Core<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>`main`<sp/><sp/><sp/>|<sp/>Apache<sp/>License<sp/>2.0<sp/>|<sp/>[github.com/open-space-collective/open-space-toolkit-core](https://github.com/open-space-collective/open-space-toolkit-core)<sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Contribution</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Contributions<sp/>are<sp/>more<sp/>than<sp/>welcome!</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Please<sp/>read<sp/>our<sp/>[contributing<sp/>guide](CONTRIBUTING.md)<sp/>to<sp/>learn<sp/>about<sp/>our<sp/>development<sp/>process,<sp/>how<sp/>to<sp/>propose<sp/>fixes<sp/>and<sp/>improvements,<sp/>and<sp/>how<sp/>to<sp/>build<sp/>and<sp/>test<sp/>the<sp/>code.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Special<sp/>Thanks</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![Loft<sp/>Orbital](https://github.com/open-space-collective/open-space-toolkit/blob/main/assets/thanks/loft_orbital.png)](https://www.loftorbital.com/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>License</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Apache<sp/>License<sp/>2.0</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

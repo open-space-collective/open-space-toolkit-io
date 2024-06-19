@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_query_8hpp" kind="file" language="C++">
+    <compoundname>Query.hpp</compoundname>
+    <includes local="no">OpenSpaceToolkit/Core/Container/Array.hpp</includes>
+    <includes local="no">OpenSpaceToolkit/Core/Type/String.hpp</includes>
+    <includedby refid="_u_r_l_8hpp" local="no">include/OpenSpaceToolkit/IO/URL.hpp</includedby>
+    <includedby refid="_query_8cpp" local="no">src/OpenSpaceToolkit/IO/URL/Query.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>OpenSpaceToolkit/Core/Type/String.hpp</label>
+      </node>
+      <node id="2">
+        <label>OpenSpaceToolkit/Core/Container/Array.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/IO/URL/Query.hpp</label>
+        <link refid="_query_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/OpenSpaceToolkit/IO/URL.hpp</label>
+        <link refid="_u_r_l_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>src/OpenSpaceToolkit/IO/URL.cpp</label>
+        <link refid="_u_r_l_8cpp"/>
+      </node>
+      <node id="3">
+        <label>include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp</label>
+        <link refid="_h_t_t_p_2_client_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp</label>
+        <link refid="_request_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/OpenSpaceToolkit/IO/URL/Query.cpp</label>
+        <link refid="_query_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp</label>
+        <link refid="_client_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.cpp</label>
+        <link refid="_request_8cpp"/>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/IO/URL/Query.hpp</label>
+        <link refid="_query_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classostk_1_1io_1_1url_1_1_query" prot="public">ostk::io::url::Query</innerclass>
+    <innerclass refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter" prot="public">ostk::io::url::Query::Parameter</innerclass>
+    <innernamespace refid="namespaceostk">ostk</innernamespace>
+    <innernamespace refid="namespaceostk_1_1io">ostk::io</innernamespace>
+    <innernamespace refid="namespaceostk_1_1io_1_1url">ostk::io::url</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__OpenSpaceToolkit_IO_URL_Query__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__OpenSpaceToolkit_IO_URL_Query__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;OpenSpaceToolkit/Core/Container/Array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;OpenSpaceToolkit/Core/Type/String.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceostk" kindref="compound">ostk</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">io</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13" refid="namespaceostk_1_1io_1_1url" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">url</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1io_1_1ip_1ae2b249d594f3ad32fab94162e284875e" kindref="member">ostk::core::type::String</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>ostk::core::container::Array;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classostk_1_1io_1_1url_1_1_query" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1io_1_1url_1_1_query" kindref="compound">Query</ref></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter" kindref="compound">Parameter</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29" refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ad176899a3555e0d0efeb0c13f73a8a80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ad176899a3555e0d0efeb0c13f73a8a80" kindref="member">Name</ref>;</highlight></codeline>
+<codeline lineno="30" refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ada177e3a9d839a7900aae8a718207bbd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ada177e3a9d839a7900aae8a718207bbd" kindref="member">Value</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a0206a88a6546df8ec49219db4a8db3f3" kindref="member">Parameter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ad176899a3555e0d0efeb0c13f73a8a80" kindref="member">Parameter::Name</ref>&amp;<sp/>aName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ada177e3a9d839a7900aae8a718207bbd" kindref="member">Parameter::Value</ref>&amp;<sp/>aValue);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a2ff2a7edfc87748ab3fae225b4462a1d" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter" kindref="compound">Parameter</ref>&amp;<sp/>aParameter)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a0e272f97e1f7cefee01a2d8f1af76481" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter" kindref="compound">Parameter</ref>&amp;<sp/>aParameter)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ad4de58e0e1efbe7dd781caecf6b98163" kindref="member">isDefined</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ad176899a3555e0d0efeb0c13f73a8a80" kindref="member">Parameter::Name</ref>&amp;<sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a63d4ad35531e2ee58a6156951d323c76" kindref="member">accessName</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ada177e3a9d839a7900aae8a718207bbd" kindref="member">Parameter::Value</ref>&amp;<sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1aea51f7a0c4389c5729533a3068a39b74" kindref="member">accessValue</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ad176899a3555e0d0efeb0c13f73a8a80" kindref="member">Parameter::Name</ref><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a78bc96d90e5cab55b26d6c44a69ea3f6" kindref="member">getName</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ada177e3a9d839a7900aae8a718207bbd" kindref="member">Parameter::Value</ref><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1afe5091adccaa6bcf5840d1ca88b24f9c" kindref="member">getValue</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ad176899a3555e0d0efeb0c13f73a8a80" kindref="member">Parameter::Name</ref><sp/>name_;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ada177e3a9d839a7900aae8a718207bbd" kindref="member">Parameter::Value</ref><sp/>value_;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="classostk_1_1io_1_1url_1_1_query_1a64eb73f998c55a48d25b4ce116d66f1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>Array&lt;Query::Parameter&gt;::ConstIterator<sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1a64eb73f998c55a48d25b4ce116d66f1a" kindref="member">ConstIterator</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1a10299b6b445c39886d6b689c14364fe1" kindref="member">Query</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Array&lt;Query::Parameter&gt;&amp;<sp/>aParameterArray);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1a2e971d5f134f3229f136b62a5218a9cd" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query" kindref="compound">Query</ref>&amp;<sp/>aQuery)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1a13c472bd1b80a7ebccec0eeaae327154" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query" kindref="compound">Query</ref>&amp;<sp/>aQuery)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1aae898ea9a490fe19a500cf33e2fc9921" kindref="member">isDefined</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1a58d1738acbe0d1c2fa329245f7a75eb5" kindref="member">hasParameterWithName</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ad176899a3555e0d0efeb0c13f73a8a80" kindref="member">Query::Parameter::Name</ref>&amp;<sp/>aName)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1ac55b9803b0807160ea5aa42912b412b4" kindref="member">getParameterWithName</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ad176899a3555e0d0efeb0c13f73a8a80" kindref="member">Query::Parameter::Name</ref>&amp;<sp/>aName)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1aca282853530302e594b16700c83169d9" kindref="member">toString</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1a64eb73f998c55a48d25b4ce116d66f1a" kindref="member">Query::ConstIterator</ref><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1a6c40e85de4a1a42ec5c8ee268e074e6f" kindref="member">begin</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1a64eb73f998c55a48d25b4ce116d66f1a" kindref="member">Query::ConstIterator</ref><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1a94eb24357dcf96fb9926903019b057da" kindref="member">end</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1a9937aa1e0a99c2f2fd78ec9795f1f2df" kindref="member">addParameter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter" kindref="compound">Query::Parameter</ref>&amp;<sp/>aParameter);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query" kindref="compound">Query</ref><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1a25f41e04f41e40fd63519e377829323f" kindref="member">Undefined</ref>();</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1url_1_1_query" kindref="compound">Query</ref><sp/><ref refid="classostk_1_1io_1_1url_1_1_query_1aa61f25b072cbbe0973142fdf283bf499" kindref="member">Parse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref>&amp;<sp/>aString);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>Array&lt;Query::Parameter&gt;<sp/>parameters_;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>url</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>io</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp"/>
+  </compounddef>
+</doxygen>

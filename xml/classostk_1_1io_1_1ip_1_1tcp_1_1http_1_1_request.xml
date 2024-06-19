@@ -1,0 +1,409 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" kind="class" language="C++" prot="public">
+    <compoundname>ostk::io::ip::tcp::http::Request</compoundname>
+    <includes refid="_request_8hpp" local="no">Request.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Method</name>
+        <enumvalue id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3aec0fc0100c4fc1ce4eea230c3dc10360" prot="public">
+          <name>Undefined</name>
+          <briefdescription>
+<para>Undefined request method. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3ac55582518cba2c464f29f5bae1c68def" prot="public">
+          <name>Get</name>
+          <briefdescription>
+<para>Requests a representation of the specified resource. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3a98921133d10fbdb0fb6dbb7b2648befe" prot="public">
+          <name>Head</name>
+          <briefdescription>
+<para>Asks for a response identical to that of a GET request, but without the response body. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3a03d947a2158373c3b9d74325850cb8b9" prot="public">
+          <name>Post</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Requests that the server accept the entity enclosed in the request as a new subordinate of the web resource identified by the URI. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3ad0bf1810982e9728fcf3ac444a015373" prot="public">
+          <name>Put</name>
+          <briefdescription>
+<para>Requests that the enclosed entity be stored under the supplied URI. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3af2a6c498fb90ee345d997f888fce3b18" prot="public">
+          <name>Delete</name>
+          <briefdescription>
+<para>Deletes the specified resource. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3add4ec0ac4e58f7c32a01244ae91150b1" prot="public">
+          <name>Trace</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Echoes the received request so that a client can see what (if any) changes or additions have been made by intermediate servers. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3adae8ace18bdcbcc6ae5aece263e14fe8" prot="public">
+          <name>Options</name>
+          <briefdescription>
+<para>Returns the HTTP methods that the server supports for the specified <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref>. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3a49ab28040dfa07f53544970c6d147e1e" prot="public">
+          <name>Connect</name>
+          <briefdescription>
+<para>Converts the request connection to a transparent TCP/IP tunnel. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3a156e10596fdc76ee5300bab931d89c0f" prot="public">
+          <name>Patch</name>
+          <briefdescription>
+<para>Applies partial modifications to a resource. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" kindref="compound">Request</ref> method. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" line="35" column="1" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" bodystart="34" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a48c9913201776f9eb8cde5bbb44d8720" prot="private" static="no" mutable="no">
+        <type><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3" kindref="member">Request::Method</ref></type>
+        <definition>Request::Method ostk::io::ip::tcp::http::Request::method_</definition>
+        <argsstring></argsstring>
+        <name>method_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" line="113" column="21" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a36d2932511e395f3a37f4392829f5807" prot="private" static="no" mutable="no">
+        <type><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref></type>
+        <definition>URL ostk::io::ip::tcp::http::Request::url_</definition>
+        <argsstring></argsstring>
+        <name>url_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" line="114" column="9" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a397a4b01d826381695fb0e6508f6cceb" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref></type>
+        <definition>String ostk::io::ip::tcp::http::Request::body_</definition>
+        <argsstring></argsstring>
+        <name>body_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" line="115" column="12" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a7b67e5386b0aa2af737c74416c20f56b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ostk::io::ip::tcp::http::Request::Request</definition>
+        <argsstring>(const Request::Method &amp;aMethod, const URL &amp;aUrl, const String &amp;aBody)</argsstring>
+        <name>Request</name>
+        <param>
+          <type>const <ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3" kindref="member">Request::Method</ref> &amp;</type>
+          <declname>aMethod</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> &amp;</type>
+          <declname>aUrl</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref> &amp;</type>
+          <declname>aBody</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aMethod</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A method </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aUrl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aBody</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A body </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" line="58" column="5" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.cpp" bodystart="20" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1ac01119273b40874c0bb6a687fe7266b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ostk::io::ip::tcp::http::Request::isDefined</definition>
+        <argsstring>() const</argsstring>
+        <name>isDefined</name>
+        <briefdescription>
+<para>Check if request is defined. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if request is defined </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" line="72" column="10" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a8c31b842f3672488b2fb42a304873a94" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3" kindref="member">Request::Method</ref></type>
+        <definition>Request::Method ostk::io::ip::tcp::http::Request::getMethod</definition>
+        <argsstring>() const</argsstring>
+        <name>getMethod</name>
+        <briefdescription>
+<para>Get request method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" kindref="compound">Request</ref> method </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" line="78" column="21" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.cpp" bodystart="46" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a75e34ca54feb62159075147444ffa6ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref></type>
+        <definition>URL ostk::io::ip::tcp::http::Request::getUrl</definition>
+        <argsstring>() const</argsstring>
+        <name>getUrl</name>
+        <briefdescription>
+<para>Get request <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" kindref="compound">Request</ref> <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" line="84" column="9" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.cpp" bodystart="56" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a1aa99b1bc1fdd0b29e86a27331a2d6fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref></type>
+        <definition>String ostk::io::ip::tcp::http::Request::getBody</definition>
+        <argsstring>() const</argsstring>
+        <name>getBody</name>
+        <briefdescription>
+<para>Get request body. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" kindref="compound">Request</ref> body </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" line="90" column="12" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.cpp" bodystart="66" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a73dd714a92305cf3d0b7bdba904b3fc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Request &amp;aRequest)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" kindref="compound">Request</ref> &amp;</type>
+          <declname>aRequest</declname>
+        </param>
+        <briefdescription>
+<para>Output stream operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aRequest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" line="66" column="12" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.cpp" bodystart="27" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a6364c734464bdc1244ef9de16df1ee0c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" kindref="compound">Request</ref></type>
+        <definition>Request ostk::io::ip::tcp::http::Request::Undefined</definition>
+        <argsstring>()</argsstring>
+        <name>Undefined</name>
+        <briefdescription>
+<para>Constructs an undefined request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Undefined request </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" line="96" column="20" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.cpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1affd88441e083283d9baee02e44738f5f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" kindref="compound">Request</ref></type>
+        <definition>Request ostk::io::ip::tcp::http::Request::Get</definition>
+        <argsstring>(const URL &amp;aUrl)</argsstring>
+        <name>Get</name>
+        <param>
+          <type>const <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> &amp;</type>
+          <declname>aUrl</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a GET request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aUrl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>GET request </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" line="103" column="20" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.cpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1aebda9e8cb66ad693422238e5bad8b91a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref></type>
+        <definition>String ostk::io::ip::tcp::http::Request::StringFromMethod</definition>
+        <argsstring>(const Request::Method &amp;aMethod)</argsstring>
+        <name>StringFromMethod</name>
+        <param>
+          <type>const <ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3" kindref="member">Request::Method</ref> &amp;</type>
+          <declname>aMethod</declname>
+        </param>
+        <briefdescription>
+<para>Converts request method to string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aMethod</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A request method </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" kindref="compound">Request</ref> method string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" line="110" column="19" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.cpp" bodystart="86" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Hypertext Transfer Protocol (HTTP) request. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ulink url="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods">https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods</ulink> </para>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" line="30" column="1" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" bodystart="29" bodyend="116"/>
+    <listofallmembers>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a397a4b01d826381695fb0e6508f6cceb" prot="private" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Request</scope><name>body_</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1affd88441e083283d9baee02e44738f5f" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Request</scope><name>Get</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a1aa99b1bc1fdd0b29e86a27331a2d6fa" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Request</scope><name>getBody</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a8c31b842f3672488b2fb42a304873a94" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Request</scope><name>getMethod</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a75e34ca54feb62159075147444ffa6ec" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Request</scope><name>getUrl</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1ac01119273b40874c0bb6a687fe7266b7" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Request</scope><name>isDefined</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Request</scope><name>Method</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a48c9913201776f9eb8cde5bbb44d8720" prot="private" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Request</scope><name>method_</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a73dd714a92305cf3d0b7bdba904b3fc7" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Request</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a7b67e5386b0aa2af737c74416c20f56b" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Request</scope><name>Request</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1aebda9e8cb66ad693422238e5bad8b91a" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Request</scope><name>StringFromMethod</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a6364c734464bdc1244ef9de16df1ee0c" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Request</scope><name>Undefined</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a36d2932511e395f3a37f4392829f5807" prot="private" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Request</scope><name>url_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

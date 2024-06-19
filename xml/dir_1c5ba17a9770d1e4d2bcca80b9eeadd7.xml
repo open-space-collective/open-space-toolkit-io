@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_1c5ba17a9770d1e4d2bcca80b9eeadd7" kind="dir">
+    <compoundname>src/OpenSpaceToolkit/IO</compoundname>
+    <innerdir refid="dir_cdb3657857e0f4711140116371756870">src/OpenSpaceToolkit/IO/IP</innerdir>
+    <innerdir refid="dir_89fb6493688b5a6eeddb876aba95947c">src/OpenSpaceToolkit/IO/URL</innerdir>
+    <innerfile refid="_u_r_l_8cpp">URL.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/OpenSpaceToolkit/IO/"/>
+  </compounddef>
+</doxygen>

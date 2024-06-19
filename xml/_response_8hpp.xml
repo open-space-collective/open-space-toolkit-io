@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_response_8hpp" kind="file" language="C++">
+    <compoundname>Response.hpp</compoundname>
+    <includes local="no">OpenSpaceToolkit/Core/Type/String.hpp</includes>
+    <includedby refid="_h_t_t_p_2_client_8hpp" local="no">include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp</includedby>
+    <includedby refid="_response_8cpp" local="no">src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp</label>
+        <link refid="_response_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>OpenSpaceToolkit/Core/Type/String.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp</label>
+        <link refid="_h_t_t_p_2_client_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp</label>
+        <link refid="_response_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp</label>
+        <link refid="_response_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp</label>
+        <link refid="_client_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response" prot="public">ostk::io::ip::tcp::http::Response</innerclass>
+    <innernamespace refid="namespaceostk">ostk</innernamespace>
+    <innernamespace refid="namespaceostk_1_1io">ostk::io</innernamespace>
+    <innernamespace refid="namespaceostk_1_1io_1_1ip">ostk::io::ip</innernamespace>
+    <innernamespace refid="namespaceostk_1_1io_1_1ip_1_1tcp">ostk::io::ip::tcp</innernamespace>
+    <innernamespace refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http">ostk::io::ip::tcp::http</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__OpenSpaceToolkit_IO_IP_TCP_HTTP_Response__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__OpenSpaceToolkit_IO_IP_TCP_HTTP_Response__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;OpenSpaceToolkit/Core/Type/String.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceostk" kindref="compound">ostk</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">io</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ip</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">tcp</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">http</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1io_1_1ip_1ae2b249d594f3ad32fab94162e284875e" kindref="member">ostk::core::type::String</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response" kindref="compound">Response</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28" refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36" kindref="member">StatusCode</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36aec0fc0100c4fc1ce4eea230c3dc10360" kindref="member">Undefined</ref><sp/>=<sp/>0,<sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36aa0bfb8e59e6c13fc8d990781f77694fe" kindref="member">Continue</ref><sp/>=<sp/>100,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a548c5a637eddf65132b21411aeafc6a1" kindref="member">SwitchingProtocols</ref><sp/>=<sp/>101,<sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a643562a9ae7099c8aabfdc93478db117" kindref="member">Processing</ref><sp/>=<sp/>102,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a7ff9f49506fe347fab32eb5ff72feda9" kindref="member">EarlyHints</ref><sp/>=<sp/>103,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36aa60852f204ed8028c1c58808b746d115" kindref="member">Ok</ref><sp/>=<sp/>200,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a0eceeb45861f9585dd7a97a3e36f85c6" kindref="member">Created</ref><sp/>=<sp/>201,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a382ab522931673c11e398ead1b7b1678" kindref="member">Accepted</ref><sp/>=<sp/>202,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a2d0ea43e788b779c0aec92366b711c2f" kindref="member">NonAuthoritativeInformation</ref><sp/>=<sp/>203,<sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36acd447f1ec89f564ebac583d60087df12" kindref="member">NoContent</ref><sp/>=<sp/>204,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a4e9202c31896211f63be5b7345a897ed" kindref="member">ResetContent</ref><sp/>=<sp/>205,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a750de7eda10d780b3bbaefb57128c24b" kindref="member">PartialContent</ref><sp/>=<sp/>206,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a0790a60654c0b2939299af967571e59b" kindref="member">MultiStatus</ref><sp/>=<sp/>207,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36ac549fc73e09b412a8451b1648820acf2" kindref="member">AlreadyReported</ref><sp/>=<sp/>208,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36aa3abca599dedd534e63c999418d70f45" kindref="member">IMUsed</ref><sp/>=<sp/>226,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36aa589749d075c3423333bdc93e3b4e774" kindref="member">MultipleChoices</ref><sp/>=<sp/>300,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a32638c25f4c913fce6214c2c4afff9dc" kindref="member">MovedPermanently</ref><sp/>=<sp/>301,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a5d695cc28c6a7ea955162fbdd0ae42b9" kindref="member">Found</ref><sp/>=<sp/>302,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a7843649eb3841f496a79303fd815029e" kindref="member">SeeOther</ref><sp/>=<sp/>303,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36ac169e6d9a1b9442001384de8dcf49ab9" kindref="member">NotModified</ref><sp/>=<sp/>304,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a0a272f25fd5e8a06065ef8ee41a88bea" kindref="member">UseProxy</ref><sp/>=<sp/>305,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36aad21cfb3c3c37f21b76dfc3453e8b3f6" kindref="member">SwitchProxy</ref><sp/>=<sp/>306,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a1b73a351faf2b550d06fae9cc6e0a894" kindref="member">TemporaryRedirect</ref><sp/>=<sp/>307,<sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36ac13fb7996808b1abe56e3ae4da84fb4a" kindref="member">PermanentRedirect</ref><sp/>=<sp/>308,<sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a9edf8fbf00a57d95a0af4923c9a1ec6f" kindref="member">BadRequest</ref><sp/>=<sp/>400,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36ae06d1ba70f1331e9f9a113cc2f887d3f" kindref="member">Unauthorized</ref><sp/>=<sp/>401,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a4c99006c75b53fe48865cdfa0ac065ba" kindref="member">PaymentRequired</ref><sp/>=<sp/>402,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a722969577a96ca3953e84e3d949dee81" kindref="member">Forbidden</ref><sp/>=<sp/>403,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a38c300f4fc9ce8a77aad4a30de05cad8" kindref="member">NotFound</ref><sp/>=<sp/>404,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a8ba68fee5542f5fd071aed140c39bd8e" kindref="member">MethodNotAllowed</ref><sp/>=<sp/>405,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36af83a928e6a3f3b502ffadd2a414ce48c" kindref="member">NotAcceptable</ref><sp/>=<sp/>406,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a59a2898a8bf9da75a5855e76110f06f2" kindref="member">ProxyAuthenticationRequired</ref><sp/>=<sp/>407,<sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a3632c2e4e6225d4d9fcd2a6fd2c65048" kindref="member">RequestTimeout</ref><sp/>=<sp/>408,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36af1d4ac54357cc0932f385d56814ba7e4" kindref="member">Conflict</ref><sp/>=<sp/>409,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a0b497b33b1a05057bc1634e607170bf6" kindref="member">Gone</ref><sp/>=<sp/>410,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a8282fb93cb1cf45b135ea191668ca583" kindref="member">LengthRequired</ref><sp/>=<sp/>411,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a3542a02d18f11f46d53990d91752a6d4" kindref="member">PreconditionFailed</ref><sp/>=<sp/>412,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a0234a767e9c5c06cdaf290cc9b690b34" kindref="member">PayloadTooLarge</ref><sp/>=<sp/>413,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a49b33893beb20e48d9617f4934624adc" kindref="member">URITooLong</ref><sp/>=<sp/>414,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36aa3219a6843adbb23de79b4df9c307f5d" kindref="member">UnsupportedMediaType</ref><sp/>=<sp/>415,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a9283ef01c36e7e4793b3e1395d764dfe" kindref="member">RangeNotSatisfiable</ref><sp/>=<sp/>416,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a6af78095a2be4a230ba87f03dd131830" kindref="member">ExpectationFailed</ref><sp/>=<sp/>417,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a5ddbdcff68f084fdfef3c4988c92dbc0" kindref="member">ImATeapot</ref><sp/>=<sp/>418,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36ac110d06054539d0031cbefdf78d1fdd6" kindref="member">MisdirectedRequest</ref><sp/>=<sp/>421,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36abcc63308f9773c816911ce819b314e2c" kindref="member">UnprocessableEntity</ref><sp/>=<sp/>422,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36ad0f2e5376298c880665077b565ffd7dd" kindref="member">Locked</ref><sp/>=<sp/>423,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a3e30483e6f8d532c08ac164aebf039fd" kindref="member">FailedDependency</ref><sp/>=<sp/>424,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36ae0eaea96be1ec038b859e02cc5330827" kindref="member">UpgradeRequired</ref><sp/>=<sp/>426,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a4dd7ee1fe9fa9f29e190b416122146df" kindref="member">PreconditionRequired</ref><sp/>=<sp/>428,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36ab00b00233255c3551697fe613001265d" kindref="member">TooManyRequests</ref><sp/>=<sp/>429,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a01d50823ab04e988e893bc17c2d55f24" kindref="member">RequestHeaderFieldsTooLarge</ref><sp/>=<sp/>431,<sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36af7c925b24caa71cd7097be57c4de6130" kindref="member">UnavailableForLegalReasons</ref><sp/>=<sp/>451,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36aecbf01325f1c744e9d7bb586ac2eb5ed" kindref="member">InternalServerError</ref><sp/>=<sp/>500,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a997ca4ce119685f40f03a9a8a6c5346e" kindref="member">NotImplemented</ref><sp/>=<sp/>501,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a0e7c9ad08be0653518bf456c9994ace5" kindref="member">BadGateway</ref><sp/>=<sp/>502,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a2a4581043d849bcb0e4747970ef1489b" kindref="member">ServiceUnavailable</ref><sp/>=<sp/>503,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36ada405cbc74723dfdda615e3f679ef2be" kindref="member">GatewayTimeout</ref><sp/>=<sp/>504,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a036c4283fc4ecb1686f44462f75208e5" kindref="member">HTTPVersionNotSupported</ref><sp/>=<sp/>505,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a0af1f043b1bc6980b5cffce0d83f4736" kindref="member">VariantAlsoNegotiates</ref><sp/>=<sp/>506,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36aead0064570e2f25592cd76e0e69565a5" kindref="member">InsufficientStorage</ref><sp/>=<sp/>507,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36aa2d07eb3939ad55d4acd3ed81291c61a" kindref="member">LoopDetected</ref><sp/>=<sp/>508,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a8eff020959c41ba903e16d966855ce03" kindref="member">NotExtended</ref><sp/>=<sp/>510,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a68fc9ac4408e02db0d6f5c86728042ea" kindref="member">NetworkAuthenticationRequire</ref><sp/>=<sp/>511<sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a859b29979cfa8dbd7d8296e1211b76fc" kindref="member">Response</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36" kindref="member">Response::StatusCode</ref>&amp;<sp/>aStatusCode,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref>&amp;<sp/>aBody);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1ae3715558aef62c5b9c3c9971e307dd8e" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>anOutputStream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response" kindref="compound">Response</ref>&amp;<sp/>aResponse);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1afc78e507b0c295a20d9ef90748deb32b" kindref="member">isDefined</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a44768f02be45b9363a00a12c33aa112d" kindref="member">isOk</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36" kindref="member">Response::StatusCode</ref><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a180c8df8a6a7c0b97acd1e5d3a01e981" kindref="member">getStatusCode</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a86ef445eae9c71c35a00b24f31345a8c" kindref="member">getBody</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response" kindref="compound">Response</ref><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a0a3f62924ffb05edc9bb68351710bb23" kindref="member">Undefined</ref>();</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a4a593d62047c96eead840c751972ffd4" kindref="member">StringFromStatusCode</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36" kindref="member">Response::StatusCode</ref>&amp;<sp/>aStatusCode);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36" kindref="member">Response::StatusCode</ref><sp/>statusCode_;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref><sp/>body_;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>http</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>tcp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ip</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>io</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp"/>
+  </compounddef>
+</doxygen>

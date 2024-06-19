@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceostk_1_1io" kind="namespace" language="C++">
+    <compoundname>ostk::io</compoundname>
+    <innerclass refid="classostk_1_1io_1_1_u_r_l" prot="public">ostk::io::URL</innerclass>
+    <innernamespace refid="namespaceostk_1_1io_1_1ip">ostk::io::ip</innernamespace>
+    <innernamespace refid="namespaceostk_1_1io_1_1url">ostk::io::url</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceostk_1_1io_1a4a52635c39246ec2c5fa925e7e25ccd3" prot="public" static="no">
+        <type>ostk::core::type::Integer</type>
+        <definition>using ostk::io::Integer = typedef ostk::core::type::Integer</definition>
+        <argsstring></argsstring>
+        <name>Integer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="16" column="1" bodyfile="include/OpenSpaceToolkit/IO/URL.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" prot="public" static="no">
+        <type>ostk::core::type::String</type>
+        <definition>using ostk::io::String = typedef ostk::core::type::String</definition>
+        <argsstring></argsstring>
+        <name>String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="17" column="1" bodyfile="include/OpenSpaceToolkit/IO/URL.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceostk_1_1io_1aeabc644ba5c25896df8014bd0271f970" prot="public" static="no">
+        <type><ref refid="classostk_1_1io_1_1url_1_1_query" kindref="compound">ostk::io::url::Query</ref></type>
+        <definition>using ostk::io::Query = typedef ostk::io::url::Query</definition>
+        <argsstring></argsstring>
+        <name>Query</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="18" column="1" bodyfile="include/OpenSpaceToolkit/IO/URL.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceostk_1_1io_1a72e6c8096e4cae52cdd226a664f1b498" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; ostk::io::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const URL &amp;aURL)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> &amp;</type>
+          <declname>aURL</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">URL<sp/>url(&quot;http&quot;,<sp/>&quot;server.org&quot;)<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">std::cout<sp/>&lt;&lt;<sp/>url<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aURL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/IO/URL.cpp" line="75" column="1" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="75" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/IO/IP/Address.hpp" line="11" column="1"/>
+  </compounddef>
+</doxygen>

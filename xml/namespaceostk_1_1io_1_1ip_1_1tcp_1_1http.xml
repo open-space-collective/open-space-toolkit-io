@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http" kind="namespace" language="C++">
+    <compoundname>ostk::io::ip::tcp::http</compoundname>
+    <innerclass refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client" prot="public">ostk::io::ip::tcp::http::Client</innerclass>
+    <innerclass refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" prot="public">ostk::io::ip::tcp::http::Request</innerclass>
+    <innerclass refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response" prot="public">ostk::io::ip::tcp::http::Response</innerclass>
+    <innerclass refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_server" prot="public">ostk::io::ip::tcp::http::Server</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" prot="public" static="no">
+        <type>ostk::core::type::String</type>
+        <definition>using ostk::io::ip::tcp::http::String = typedef ostk::core::type::String</definition>
+        <argsstring></argsstring>
+        <name>String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Server.hpp" line="19" column="1" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Server.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a45138e3931d393948e0b441b0cc73cb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ostk::io::ip::tcp::http::debugHandler</definition>
+        <argsstring>(CURL *aCurlPtr, curl_infotype aType, char *aDataset, size_t aSize, void *aContext)</argsstring>
+        <name>debugHandler</name>
+        <param>
+          <type>CURL *</type>
+          <declname>aCurlPtr</declname>
+        </param>
+        <param>
+          <type>curl_infotype</type>
+          <declname>aType</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>aDataset</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>aContext</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" line="25" column="5" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="25" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1ad9796f0980e2843b959d6186f2baaba5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; ostk::io::ip::tcp::http::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Request &amp;aRequest)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" kindref="compound">Request</ref> &amp;</type>
+          <declname>aRequest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aRequest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.cpp" line="27" column="1" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.cpp" bodystart="27" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a5e4d8aeae482fb84af49be6ed094edf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; ostk::io::ip::tcp::http::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;anOutputStream, const Response &amp;aResponse)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>anOutputStream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response" kindref="compound">Response</ref> &amp;</type>
+          <declname>aResponse</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">anOutputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aResponse</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A response </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" line="26" column="1" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="26" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="23" column="1"/>
+  </compounddef>
+</doxygen>

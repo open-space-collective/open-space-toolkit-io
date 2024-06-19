@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_7f0220bafceb958fa620f4f52ed4cbe3" kind="dir">
+    <compoundname>include/OpenSpaceToolkit/IO/URL</compoundname>
+    <innerfile refid="_query_8hpp">Query.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/OpenSpaceToolkit/IO/URL/"/>
+  </compounddef>
+</doxygen>

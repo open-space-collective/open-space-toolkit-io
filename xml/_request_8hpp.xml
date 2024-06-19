@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_request_8hpp" kind="file" language="C++">
+    <compoundname>Request.hpp</compoundname>
+    <includes local="no">OpenSpaceToolkit/Core/Type/String.hpp</includes>
+    <includes refid="_u_r_l_8hpp" local="no">OpenSpaceToolkit/IO/URL.hpp</includes>
+    <includedby refid="_h_t_t_p_2_client_8hpp" local="no">include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp</includedby>
+    <includedby refid="_request_8cpp" local="no">src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>OpenSpaceToolkit/IO/URL.hpp</label>
+        <link refid="_u_r_l_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp</label>
+        <link refid="_request_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>OpenSpaceToolkit/Core/Type/String.hpp</label>
+      </node>
+      <node id="4">
+        <label>OpenSpaceToolkit/Core/Type/Integer.hpp</label>
+      </node>
+      <node id="6">
+        <label>OpenSpaceToolkit/Core/Container/Array.hpp</label>
+      </node>
+      <node id="5">
+        <label>OpenSpaceToolkit/IO/URL/Query.hpp</label>
+        <link refid="_query_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp</label>
+        <link refid="_h_t_t_p_2_client_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp</label>
+        <link refid="_request_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp</label>
+        <link refid="_client_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.cpp</label>
+        <link refid="_request_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" prot="public">ostk::io::ip::tcp::http::Request</innerclass>
+    <innernamespace refid="namespaceostk">ostk</innernamespace>
+    <innernamespace refid="namespaceostk_1_1io">ostk::io</innernamespace>
+    <innernamespace refid="namespaceostk_1_1io_1_1ip">ostk::io::ip</innernamespace>
+    <innernamespace refid="namespaceostk_1_1io_1_1ip_1_1tcp">ostk::io::ip::tcp</innernamespace>
+    <innernamespace refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http">ostk::io::ip::tcp::http</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__OpenSpaceToolkit_IO_IP_TCP_HTTP_Request__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__OpenSpaceToolkit_IO_IP_TCP_HTTP_Request__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;OpenSpaceToolkit/Core/Type/String.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_u_r_l_8hpp" kindref="compound">OpenSpaceToolkit/IO/URL.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceostk" kindref="compound">ostk</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">io</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ip</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">tcp</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">http</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1io_1_1ip_1ae2b249d594f3ad32fab94162e284875e" kindref="member">ostk::core::type::String</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">ostk::io::URL</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" kindref="compound">Request</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3" kindref="member">Method</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3aec0fc0100c4fc1ce4eea230c3dc10360" kindref="member">Undefined</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3ac55582518cba2c464f29f5bae1c68def" kindref="member">Get</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3a98921133d10fbdb0fb6dbb7b2648befe" kindref="member">Head</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3a03d947a2158373c3b9d74325850cb8b9" kindref="member">Post</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3ad0bf1810982e9728fcf3ac444a015373" kindref="member">Put</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3af2a6c498fb90ee345d997f888fce3b18" kindref="member">Delete</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3add4ec0ac4e58f7c32a01244ae91150b1" kindref="member">Trace</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3adae8ace18bdcbcc6ae5aece263e14fe8" kindref="member">Options</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3a49ab28040dfa07f53544970c6d147e1e" kindref="member">Connect</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3a156e10596fdc76ee5300bab931d89c0f" kindref="member">Patch</ref><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a7b67e5386b0aa2af737c74416c20f56b" kindref="member">Request</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3" kindref="member">Request::Method</ref>&amp;<sp/>aMethod,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref>&amp;<sp/>aUrl,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref>&amp;<sp/>aBody);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a73dd714a92305cf3d0b7bdba904b3fc7" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>anOutputStream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" kindref="compound">Request</ref>&amp;<sp/>aRequest);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1ac01119273b40874c0bb6a687fe7266b7" kindref="member">isDefined</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3" kindref="member">Request::Method</ref><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a8c31b842f3672488b2fb42a304873a94" kindref="member">getMethod</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a75e34ca54feb62159075147444ffa6ec" kindref="member">getUrl</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a1aa99b1bc1fdd0b29e86a27331a2d6fa" kindref="member">getBody</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" kindref="compound">Request</ref><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a6364c734464bdc1244ef9de16df1ee0c" kindref="member">Undefined</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" kindref="compound">Request</ref><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1affd88441e083283d9baee02e44738f5f" kindref="member">Get</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref>&amp;<sp/>aUrl);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1aebda9e8cb66ad693422238e5bad8b91a" kindref="member">StringFromMethod</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3" kindref="member">Request::Method</ref>&amp;<sp/>aMethod);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3" kindref="member">Request::Method</ref><sp/>method_;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref><sp/>url_;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref><sp/>body_;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>http</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>tcp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ip</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>io</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp"/>
+  </compounddef>
+</doxygen>
