@@ -116,9 +116,9 @@ ENDIF ()
 
 IF (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 
-    IF (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 4.8)
+    IF (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 13)
 
-        MESSAGE (FATAL_ERROR "GCC version must be at least 4.8")
+        MESSAGE (FATAL_ERROR "GCC version must be at least 13")
 
     ENDIF ()
 
@@ -126,9 +126,9 @@ IF (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 
 ENDIF ()
 
-### C++ 17 support
+### C++ 20 support
 
-SET (CMAKE_CXX_STANDARD 17)
+SET (CMAKE_CXX_STANDARD 20)
 SET (CMAKE_CXX_STANDARD_REQUIRED ON)
 SET (CMAKE_CXX_EXTENSIONS OFF)
 
@@ -238,9 +238,9 @@ IF (NOT Boost_FOUND)
     MESSAGE (SEND_ERROR "[Boost] not found.")
 ENDIF ()
 
-### Open Space Toolkit ▸ Core [3.x.y]
+### Open Space Toolkit ▸ Core [4.x.y]
 
-FIND_PACKAGE ("OpenSpaceToolkitCore" "3" REQUIRED)
+FIND_PACKAGE ("OpenSpaceToolkitCore" "4" REQUIRED)
 
 IF (NOT OpenSpaceToolkitCore_FOUND)
 
