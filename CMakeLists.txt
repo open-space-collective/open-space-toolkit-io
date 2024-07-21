@@ -238,9 +238,9 @@ IF (NOT Boost_FOUND)
     MESSAGE (SEND_ERROR "[Boost] not found.")
 ENDIF ()
 
-### Open Space Toolkit ▸ Core [3.x.y]
+### Open Space Toolkit ▸ Core [4.x.y]
 
-FIND_PACKAGE ("OpenSpaceToolkitCore" "3" REQUIRED)
+FIND_PACKAGE ("OpenSpaceToolkitCore" "4" REQUIRED)
 
 IF (NOT OpenSpaceToolkitCore_FOUND)
 
