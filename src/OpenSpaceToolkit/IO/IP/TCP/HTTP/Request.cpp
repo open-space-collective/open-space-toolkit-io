@@ -97,7 +97,8 @@ String Request::StringFromMethod(const Request::Method& aMethod)
          {Request::Method::Trace, "Trace"},
          {Request::Method::Options, "Options"},
          {Request::Method::Connect, "Connect"},
-         {Request::Method::Patch, "Patch"}}};
+         {Request::Method::Patch, "Patch"}}
+    };
 
     return methodStringMap.at(aMethod);
 }

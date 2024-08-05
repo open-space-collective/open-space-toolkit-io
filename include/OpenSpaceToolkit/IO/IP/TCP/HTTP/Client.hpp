@@ -22,13 +22,13 @@ namespace tcp
 namespace http
 {
 
-using ostk::core::type::Size;
-using ostk::core::filesystem::File;
 using ostk::core::filesystem::Directory;
+using ostk::core::filesystem::File;
+using ostk::core::type::Size;
 
-using ostk::io::URL;
 using ostk::io::ip::tcp::http::Request;
 using ostk::io::ip::tcp::http::Response;
+using ostk::io::URL;
 
 /// @brief                      Hypertext Transfer Protocol (HTTP) client
 ///

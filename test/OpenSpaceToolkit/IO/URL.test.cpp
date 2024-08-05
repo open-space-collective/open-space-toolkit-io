@@ -887,8 +887,8 @@ TEST(OpenSpaceToolkit_IO_URL, Undefined)
 
 TEST(OpenSpaceToolkit_IO_URL, Parse)
 {
-    using ostk::core::type::String;
     using ostk::core::container::Array;
+    using ostk::core::type::String;
 
     using ostk::io::URL;
 
