@@ -10,8 +10,8 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, Constructor)
 {
     using ostk::core::type::String;
 
-    using ostk::io::URL;
     using ostk::io::ip::tcp::http::Request;
+    using ostk::io::URL;
 
     {
         const Request::Method method = Request::Method::Get;
@@ -26,8 +26,8 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, StreamOperator)
 {
     using ostk::core::type::String;
 
-    using ostk::io::URL;
     using ostk::io::ip::tcp::http::Request;
+    using ostk::io::URL;
 
     {
         const Request::Method method = Request::Method::Get;
@@ -48,8 +48,8 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, IsDefined)
 {
     using ostk::core::type::String;
 
-    using ostk::io::URL;
     using ostk::io::ip::tcp::http::Request;
+    using ostk::io::URL;
 
     {
         const Request::Method method = Request::Method::Get;
@@ -70,8 +70,8 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetMethod)
 {
     using ostk::core::type::String;
 
-    using ostk::io::URL;
     using ostk::io::ip::tcp::http::Request;
+    using ostk::io::URL;
 
     {
         const Request::Method method = Request::Method::Get;
@@ -92,8 +92,8 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetUrl)
 {
     using ostk::core::type::String;
 
-    using ostk::io::URL;
     using ostk::io::ip::tcp::http::Request;
+    using ostk::io::URL;
 
     {
         const Request::Method method = Request::Method::Get;
@@ -114,8 +114,8 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetBody)
 {
     using ostk::core::type::String;
 
-    using ostk::io::URL;
     using ostk::io::ip::tcp::http::Request;
+    using ostk::io::URL;
 
     {
         const Request::Method method = Request::Method::Get;
@@ -144,8 +144,8 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, Undefined)
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, Get)
 {
-    using ostk::io::URL;
     using ostk::io::ip::tcp::http::Request;
+    using ostk::io::URL;
 
     {
         const URL url = URL::Parse("https://www.google.com");

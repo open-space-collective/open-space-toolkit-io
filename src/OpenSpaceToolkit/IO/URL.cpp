@@ -278,7 +278,8 @@ URL URL::Undefined()
         String::Empty(),
         String::Empty(),
         Query::Undefined(),
-        String::Empty()};
+        String::Empty()
+    };
 }
 
 URL URL::Parse(const String& aString)

@@ -13,8 +13,8 @@ namespace io
 namespace url
 {
 
-using ostk::core::type::String;
 using ostk::core::container::Array;
+using ostk::core::type::String;
 
 /// @brief                      Uniform Resource Locator (URL) query
 

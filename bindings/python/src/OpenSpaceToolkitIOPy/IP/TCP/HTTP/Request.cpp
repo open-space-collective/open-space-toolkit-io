@@ -7,8 +7,8 @@ inline void OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request(pybind11::module& aModule)
     using namespace pybind11;
     using ostk::core::type::String;
 
-    using ostk::io::URL;
     using ostk::io::ip::tcp::http::Request;
+    using ostk::io::URL;
 
     class_<Request> request(aModule, "Request");
 

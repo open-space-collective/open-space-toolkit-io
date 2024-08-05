@@ -146,7 +146,8 @@ String Response::StringFromStatusCode(const Response::StatusCode& aStatusCode)
          {Response::StatusCode::InsufficientStorage, "InsufficientStorage"},
          {Response::StatusCode::LoopDetected, "LoopDetected"},
          {Response::StatusCode::NotExtended, "NotExtended"},
-         {Response::StatusCode::NetworkAuthenticationRequire, "NetworkAuthenticationRequire"}}};
+         {Response::StatusCode::NetworkAuthenticationRequire, "NetworkAuthenticationRequire"}}
+    };
 
     return statusCodeStringMap.at(aStatusCode);
 }
