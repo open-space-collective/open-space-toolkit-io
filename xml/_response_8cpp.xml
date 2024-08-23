@@ -195,16 +195,17 @@
 <codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{Response::StatusCode::InsufficientStorage,<sp/></highlight><highlight class="stringliteral">&quot;InsufficientStorage&quot;</highlight><highlight class="normal">},</highlight></codeline>
 <codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{Response::StatusCode::LoopDetected,<sp/></highlight><highlight class="stringliteral">&quot;LoopDetected&quot;</highlight><highlight class="normal">},</highlight></codeline>
 <codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{Response::StatusCode::NotExtended,<sp/></highlight><highlight class="stringliteral">&quot;NotExtended&quot;</highlight><highlight class="normal">},</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{Response::StatusCode::NetworkAuthenticationRequire,<sp/></highlight><highlight class="stringliteral">&quot;NetworkAuthenticationRequire&quot;</highlight><highlight class="normal">}}};</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>statusCodeStringMap.at(aStatusCode);</highlight></codeline>
-<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"></highlight></codeline>
-<codeline lineno="154"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>http</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>tcp</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ip</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>io</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{Response::StatusCode::NetworkAuthenticationRequire,<sp/></highlight><highlight class="stringliteral">&quot;NetworkAuthenticationRequire&quot;</highlight><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>statusCodeStringMap.at(aStatusCode);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>http</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>tcp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ip</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>io</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ostk</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp"/>
   </compounddef>

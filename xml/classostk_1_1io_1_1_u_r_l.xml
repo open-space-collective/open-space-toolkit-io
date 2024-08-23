@@ -1043,7 +1043,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="374" column="16" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="271" bodyend="282"/>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="374" column="16" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="271" bodyend="283"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1a1cd7216bb1079f62386a218ba510958d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1io_1_1_u_r_l" kindref="compound">URL</ref></type>
@@ -1075,7 +1075,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="385" column="16" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="284" bodyend="315"/>
+        <location file="include/OpenSpaceToolkit/IO/URL.hpp" line="385" column="16" bodyfile="src/OpenSpaceToolkit/IO/URL.cpp" bodystart="285" bodyend="316"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1_u_r_l_1aefa7a336010b16d6a658932953648481" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>

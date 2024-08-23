@@ -811,7 +811,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="152" column="19" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="82" bodyend="152"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="152" column="19" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="82" bodyend="153"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

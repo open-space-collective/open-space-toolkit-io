@@ -380,7 +380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" line="110" column="19" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.cpp" bodystart="86" bodyend="103"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp" line="110" column="19" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.cpp" bodystart="86" bodyend="104"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
