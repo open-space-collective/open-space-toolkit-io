@@ -235,7 +235,7 @@ ENDFOREACH ()
 
 ## Dependencies
 
-### Boost [1.82.0]
+### Boost [1.87.0]
 
 IF (BUILD_WITH_BOOST_STATIC)
     SET (Boost_USE_STATIC_LIBS ON)
@@ -244,7 +244,7 @@ ELSE ()
 ENDIF ()
 
 IF (BUILD_WITH_BOOST_STACKTRACE)
-    FIND_PACKAGE ("Boost" "1.82" REQUIRED COMPONENTS "url" "system" "filesystem" "regex" "log")
+    FIND_PACKAGE ("Boost" "1.87" REQUIRED COMPONENTS "url" "system" "filesystem" "regex" "log")
 
     ## Stacktrace definitions
     # Detect system architecture
@@ -262,16 +262,16 @@ IF (BUILD_WITH_BOOST_STACKTRACE)
     ADD_DEFINITIONS(-DBOOST_STACKTRACE_USE_BACKTRACE)
     ADD_DEFINITIONS(-DBOOST_STACKTRACE_BACKTRACE_INCLUDE_FILE=<${BACKTRACE_INCLUDE}>)
 ELSE ()
-    FIND_PACKAGE ("Boost" "1.82" REQUIRED COMPONENTS "url" "system" "filesystem" "regex" "log" "stacktrace_basic")
+    FIND_PACKAGE ("Boost" "1.87" REQUIRED COMPONENTS "url" "system" "filesystem" "regex" "log" "stacktrace_basic")
 ENDIF()
 
 IF (NOT Boost_FOUND)
     MESSAGE (SEND_ERROR "[Boost] not found.")
 ENDIF ()
 
-### Open Space Toolkit ▸ Core [4.x.y]
+### Open Space Toolkit ▸ Core [5.x.y]
 
-FIND_PACKAGE ("OpenSpaceToolkitCore" "4" REQUIRED)
+FIND_PACKAGE ("OpenSpaceToolkitCore" "5" REQUIRED)
 
 IF (NOT OpenSpaceToolkitCore_FOUND)
 
