@@ -27,11 +27,12 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Response& aResponse
 {
     ostk::core::utils::Print::Header(anOutputStream, "Response");
 
-    ostk::core::utils::Print::Line(anOutputStream
-    ) << "Status code:"
-      << String::Format(
-             "{} - {}", static_cast<uint>(aResponse.statusCode_), Response::StringFromStatusCode(aResponse.statusCode_)
-         );
+    ostk::core::utils::Print::Line(anOutputStream) << "Status code:"
+                                                   << String::Format(
+                                                          "{} - {}",
+                                                          static_cast<uint>(aResponse.statusCode_),
+                                                          Response::StringFromStatusCode(aResponse.statusCode_)
+                                                      );
     ostk::core::utils::Print::Line(anOutputStream) << "Body:" << aResponse.body_;
 
     ostk::core::utils::Print::Footer(anOutputStream);

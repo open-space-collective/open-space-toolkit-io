@@ -206,9 +206,11 @@ File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Size& aFo
 
         // Set response data handler
 
-        file = File::Path(Path::Parse(
-            String::Format("{}/{}", aDirectory.getPath().toString(), Path::Parse(aUrl.getPath()).getLastElement())
-        ));
+        file = File::Path(
+            Path::Parse(
+                String::Format("{}/{}", aDirectory.getPath().toString(), Path::Parse(aUrl.getPath()).getLastElement())
+            )
+        );
 
         FILE* filePtr = fopen(file.getPath().toString().data(), "wb");
 
