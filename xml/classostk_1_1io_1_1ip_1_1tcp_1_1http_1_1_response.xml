@@ -667,7 +667,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="121" column="10" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="42" bodyend="45"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="121" column="10" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="43" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a44768f02be45b9363a00a12c33aa112d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -684,7 +684,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="127" column="10" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="47" bodyend="55"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="127" column="10" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="48" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a180c8df8a6a7c0b97acd1e5d3a01e981" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36" kindref="member">Response::StatusCode</ref></type>
@@ -701,7 +701,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="133" column="26" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="57" bodyend="65"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="133" column="26" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="58" bodyend="66"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a86ef445eae9c71c35a00b24f31345a8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref></type>
@@ -718,7 +718,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="139" column="12" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="67" bodyend="75"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="139" column="12" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="68" bodyend="76"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -762,7 +762,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="115" column="12" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="26" bodyend="40"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="115" column="12" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="26" bodyend="41"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -781,7 +781,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="145" column="21" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="77" bodyend="80"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="145" column="21" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="78" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a4a593d62047c96eead840c751972ffd4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref></type>
@@ -811,7 +811,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="152" column="19" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="82" bodyend="153"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="152" column="19" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="83" bodyend="154"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

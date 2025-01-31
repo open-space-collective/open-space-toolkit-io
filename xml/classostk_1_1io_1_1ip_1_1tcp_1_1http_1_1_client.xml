@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="65" column="17" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="169" bodyend="273"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="65" column="17" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="169" bodyend="275"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_1a4b02fb4cec2bb63499e38c1311fb45bb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="73" column="17" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="275" bodyend="370"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="73" column="17" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="277" bodyend="372"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

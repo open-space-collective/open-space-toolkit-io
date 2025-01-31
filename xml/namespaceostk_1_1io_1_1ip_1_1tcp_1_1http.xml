@@ -135,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" line="26" column="1" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="26" bodyend="40"/>
+        <location file="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" line="26" column="1" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="26" bodyend="41"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
