@@ -19,17 +19,15 @@ inline void OpenSpaceToolkitIOPy_URL(pybind11::module& aModule)
     class_<URL> url_class(aModule, "URL");
 
     url_class
-        .def(
-            init<
-                const String&,
-                const String&,
-                const String&,
-                const Integer&,
-                const String&,
-                const String&,
-                const Query&,
-                const String&>()
-        )
+        .def(init<
+             const String&,
+             const String&,
+             const String&,
+             const Integer&,
+             const String&,
+             const String&,
+             const Query&,
+             const String&>())
 
         .def(self == self)
         .def(self != self)
