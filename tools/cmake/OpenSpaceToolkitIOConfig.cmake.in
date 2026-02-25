@@ -2,8 +2,60 @@
 
 SET (OpenSpaceToolkitIO_ROOT_DIR ${OpenSpaceToolkitIO_ROOT_DIR} @CMAKE_INSTALL_PREFIX@)
 
-FIND_PATH (OpenSpaceToolkitIO_INCLUDE_DIR "OpenSpaceToolkit/IO/URL.hpp" PATHS ${OpenSpaceToolkitIO_ROOT_DIR} PATH_SUFFIXES "include" NO_DEFAULT_PATH)
-FIND_LIBRARY (OpenSpaceToolkitIO_LIBRARY NAMES "libopen-space-toolkit-io.so" PATHS ${OpenSpaceToolkitIO_ROOT_DIR} PATH_SUFFIXES "lib" NO_DEFAULT_PATH)
+FIND_PATH (
+    OpenSpaceToolkitIO_INCLUDE_DIR
+    NAMES
+        "OpenSpaceToolkit/IO/URL.hpp"
+        "URL.hpp"
+    PATHS
+        ${OpenSpaceToolkitIO_ROOT_DIR}
+    PATH_SUFFIXES
+        "include"
+        "include/OpenSpaceToolkit/IO"
+    NO_DEFAULT_PATH
+)
+
+IF (WIN32)
+
+    FIND_LIBRARY (
+        OpenSpaceToolkitIO_LIBRARY
+        NAMES
+            "open-space-toolkit-io"
+            "libopen-space-toolkit-io"
+        PATHS
+            ${OpenSpaceToolkitIO_ROOT_DIR}
+        PATH_SUFFIXES
+            "lib"
+        NO_DEFAULT_PATH
+    )
+
+    FIND_FILE (
+        OpenSpaceToolkitIO_RUNTIME_LIBRARY
+        NAMES
+            "open-space-toolkit-io.dll"
+        PATHS
+            ${OpenSpaceToolkitIO_ROOT_DIR}
+        PATH_SUFFIXES
+            "bin"
+            "lib"
+        NO_DEFAULT_PATH
+    )
+
+ELSE ()
+
+    FIND_LIBRARY (
+        OpenSpaceToolkitIO_LIBRARY
+        NAMES
+            "libopen-space-toolkit-io.so"
+            "open-space-toolkit-io"
+        PATHS
+            ${OpenSpaceToolkitIO_ROOT_DIR}
+        PATH_SUFFIXES
+            "lib"
+        NO_DEFAULT_PATH
+    )
+
+ENDIF ()
 
 # MESSAGE (STATUS "OpenSpaceToolkitIO_ROOT_DIR = ${OpenSpaceToolkitIO_ROOT_DIR}")
 # MESSAGE (STATUS "OpenSpaceToolkitIO_INCLUDE_DIR = ${OpenSpaceToolkitIO_INCLUDE_DIR}")
@@ -12,8 +64,18 @@ FIND_LIBRARY (OpenSpaceToolkitIO_LIBRARY NAMES "libopen-space-toolkit-io.so" PAT
 
 IF (OpenSpaceToolkitIO_INCLUDE_DIR)
 
-    SET (OpenSpaceToolkitIO_INCLUDE_DIRS ${OpenSpaceToolkitIO_INCLUDE_DIR} ${OpenSpaceToolkitIO_INCLUDE_DIR}/OpenSpaceToolkit/IO)
+    IF (EXISTS "${OpenSpaceToolkitIO_INCLUDE_DIR}/OpenSpaceToolkit/IO/URL.hpp")
+        SET (
+            OpenSpaceToolkitIO_INCLUDE_DIRS
+            ${OpenSpaceToolkitIO_INCLUDE_DIR}
+            ${OpenSpaceToolkitIO_INCLUDE_DIR}/OpenSpaceToolkit/IO
+        )
+    ELSE ()
+        SET (OpenSpaceToolkitIO_INCLUDE_DIRS ${OpenSpaceToolkitIO_INCLUDE_DIR})
+    ENDIF ()
+
     SET (OpenSpaceToolkitIO_LIBRARIES ${OpenSpaceToolkitIO_LIBRARY})
+    SET (OpenSpaceToolkitIO_RUNTIME_LIBRARIES ${OpenSpaceToolkitIO_RUNTIME_LIBRARY})
 
     SET (OpenSpaceToolkitIO_FOUND TRUE)
 

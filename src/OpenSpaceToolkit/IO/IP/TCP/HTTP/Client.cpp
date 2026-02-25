@@ -1,5 +1,6 @@
 /// Apache License 2.0
 
+#include <sstream>
 #include <boost/algorithm/string.hpp>
 #include <curl/curl.h>
 
@@ -152,7 +153,7 @@ Response Client::Send(const Request& aRequest)
 
         curl_easy_cleanup(curlPtr);
 
-        return {Response::StatusCode(responseCode), responseStream.str()};
+        return Response(Response::StatusCode(responseCode), responseStream.str());
     }
     catch (...)
     {

@@ -13,7 +13,8 @@ void set_array(const Array<Query::Parameter>& anArray)
 }
 
 // Taking a python class as input to mimic previous behavior with Boost. Can be refined later if needed
-inline void OpenSpaceToolkitIOPy_URL_Query(auto aClass)
+template <typename ClassType>
+inline void OpenSpaceToolkitIOPy_URL_Query(ClassType aClass)
 {
     using namespace pybind11;
 
