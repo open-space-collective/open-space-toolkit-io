@@ -6,12 +6,10 @@ FIND_PATH (
     OpenSpaceToolkitIO_INCLUDE_DIR
     NAMES
         "OpenSpaceToolkit/IO/URL.hpp"
-        "URL.hpp"
     PATHS
         ${OpenSpaceToolkitIO_ROOT_DIR}
     PATH_SUFFIXES
         "include"
-        "include/OpenSpaceToolkit/IO"
     NO_DEFAULT_PATH
 )
 
@@ -75,7 +73,9 @@ IF (OpenSpaceToolkitIO_INCLUDE_DIR)
     ENDIF ()
 
     SET (OpenSpaceToolkitIO_LIBRARIES ${OpenSpaceToolkitIO_LIBRARY})
-    SET (OpenSpaceToolkitIO_RUNTIME_LIBRARIES ${OpenSpaceToolkitIO_RUNTIME_LIBRARY})
+    IF (WIN32 AND OpenSpaceToolkitIO_RUNTIME_LIBRARY)
+        SET (OpenSpaceToolkitIO_RUNTIME_LIBRARIES ${OpenSpaceToolkitIO_RUNTIME_LIBRARY})
+    ENDIF ()
 
     SET (OpenSpaceToolkitIO_FOUND TRUE)
 
