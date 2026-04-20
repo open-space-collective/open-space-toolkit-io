@@ -30,7 +30,7 @@ OPTION (BUILD_WITHOUT_DEPRECATED_DECLARATION_WARNINGS "Build without deprecated 
 
 ### Compatibility Check
 
-CMAKE_MINIMUM_REQUIRED (VERSION "2.8.12" FATAL_ERROR)
+CMAKE_MINIMUM_REQUIRED (VERSION "3.5" FATAL_ERROR)
 
 ### Paths
 
@@ -39,6 +39,9 @@ LIST (APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/tools/cmake")
 ### Policies
 
 CMAKE_POLICY (SET "CMP0048" NEW)
+IF (POLICY CMP0167)
+    CMAKE_POLICY (SET "CMP0167" OLD)
+ENDIF ()
 
 ## Version
 
@@ -148,9 +151,17 @@ IF (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 
     SET (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic -Wshadow -Wno-deprecated")
 
-ELSE ()
+ELSEIF (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 
     SET (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic -Wshadow")
+
+ELSEIF (MSVC)
+
+    # MSVC warning flags
+    SET (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4 /utf-8 /FS")
+    # Windows compatibility
+    ADD_DEFINITIONS(-D_CRT_SECURE_NO_WARNINGS -DNOMINMAX -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES)
+    SET (CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
 ENDIF ()
 
@@ -197,7 +208,7 @@ IF (WIN32)
     SET (INSTALL_DATA "bin")                            # C:\Programme\<project>
     SET (INSTALL_BIN "bin")                             # C:\Programme\<project>
     SET (INSTALL_LIB "lib")                             # C:\Programme\<project>\lib
-    SET (INSTALL_INCLUDE "include")                     # C:\Programme\<project>\include
+    SET (INSTALL_INCLUDE "include/${PROJECT_PATH}")     # C:\Programme\<project>\include\<project>
     SET (INSTALL_DOC "doc")                             # C:\Programme\<project>\doc
     SET (INSTALL_SHORTCUTS ".")                         # Not available under Windows
     SET (INSTALL_ICONS ".")                             # Not available under Windows
@@ -257,19 +268,25 @@ IF (BUILD_WITH_BOOST_STACKTRACE)
 
     ## Stacktrace definitions
     # Detect system architecture
-    if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")
-        # Architecture-specific include for x86_64
-        set(BACKTRACE_INCLUDE "/usr/lib/gcc/x86_64-linux-gnu/9/include/backtrace.h")
+    if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64" OR CMAKE_SYSTEM_PROCESSOR MATCHES "AMD64")
+        # Architecture-specific include for x86_64/AMD64
+        if(WIN32)
+            # Windows doesn't use backtrace.h, skip this definition
+            message(STATUS "Windows AMD64 detected, skipping backtrace include")
+        else()
+            set(BACKTRACE_INCLUDE "/usr/lib/gcc/x86_64-linux-gnu/9/include/backtrace.h")
+            ADD_DEFINITIONS(-DBOOST_STACKTRACE_BACKTRACE_INCLUDE_FILE=<${BACKTRACE_INCLUDE}>)
+        endif()
     elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64")
         # Example path adjustment for aarch64, adjust the path as needed
         set(BACKTRACE_INCLUDE "/usr/lib/gcc/aarch64-linux-gnu/9/include/backtrace.h")
+        ADD_DEFINITIONS(-DBOOST_STACKTRACE_BACKTRACE_INCLUDE_FILE=<${BACKTRACE_INCLUDE}>)
     else()
         message(FATAL_ERROR "Unsupported architecture: ${CMAKE_SYSTEM_PROCESSOR}")
     endif()
 
-    # Add definitions with architecture-specific path
+    # Add definitions
     ADD_DEFINITIONS(-DBOOST_STACKTRACE_USE_BACKTRACE)
-    ADD_DEFINITIONS(-DBOOST_STACKTRACE_BACKTRACE_INCLUDE_FILE=<${BACKTRACE_INCLUDE}>)
 ELSE ()
     FIND_PACKAGE ("Boost" "1.82" REQUIRED COMPONENTS "url" "system" "filesystem" "regex" "log" "stacktrace_basic")
 ENDIF()
@@ -280,12 +297,19 @@ ENDIF ()
 
 ### Open Space Toolkit ▸ Core [5.x.y]
 
-FIND_PACKAGE ("OpenSpaceToolkitCore" "5" REQUIRED)
+FIND_PACKAGE ("OpenSpaceToolkitCore" REQUIRED)
 
 IF (NOT OpenSpaceToolkitCore_FOUND)
 
     MESSAGE (SEND_ERROR "[Open Space Toolkit ▸ Core] not found.")
 
+ENDIF ()
+
+### CURL and OpenSSL
+
+FIND_PACKAGE (CURL REQUIRED)
+IF (NOT WIN32)
+    FIND_PACKAGE (OpenSSL REQUIRED)
 ENDIF ()
 
 #####################################################################################3###########################################################################
@@ -318,12 +342,14 @@ IF (BUILD_SHARED_LIBRARY)
 
     TARGET_INCLUDE_DIRECTORIES (${SHARED_LIBRARY_TARGET} PUBLIC "${PROJECT_SOURCE_DIR}/include/")
     TARGET_INCLUDE_DIRECTORIES (${SHARED_LIBRARY_TARGET} PUBLIC "${PROJECT_SOURCE_DIR}/src/")
+    TARGET_INCLUDE_DIRECTORIES (${SHARED_LIBRARY_TARGET} PUBLIC ${OpenSpaceToolkitCore_INCLUDE_DIRS})
 
-    TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} "pthread")
-    TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} "crypto")
-    TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} "ssl")
-    TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} "curl")
-    TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} "dl")
+    IF (NOT WIN32)
+        TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} "pthread")
+        TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} "dl")
+        TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} OpenSSL::SSL OpenSSL::Crypto)
+    ENDIF ()
+    TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} CURL::libcurl)
     TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} "Boost::filesystem" "Boost::url")
     TARGET_LINK_LIBRARIES (${SHARED_LIBRARY_TARGET} ${OpenSpaceToolkitCore_LIBRARIES})
 
