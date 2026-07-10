@@ -1,3 +1,0 @@
-# Apache License 2.0
-
-open-space-toolkit-core~=5.0
