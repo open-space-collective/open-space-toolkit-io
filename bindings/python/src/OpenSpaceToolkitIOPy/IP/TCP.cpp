@@ -2,7 +2,7 @@
 
 #include <OpenSpaceToolkitIOPy/IP/TCP/HTTP.cpp>
 
-inline void OpenSpaceToolkitIOPy_IP_TCP(pybind11::module& aModule)
+inline void OpenSpaceToolkitIOPy_IP_TCP(nanobind::module_& aModule)
 {
     // Create "tcp" python submodule
     auto tcp = aModule.def_submodule("tcp");
