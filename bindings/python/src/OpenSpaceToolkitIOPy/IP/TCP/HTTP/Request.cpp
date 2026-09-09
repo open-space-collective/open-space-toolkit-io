@@ -2,9 +2,9 @@
 
 #include <OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp>
 
-inline void OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request(pybind11::module& aModule)
+inline void OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request(nanobind::module_& aModule)
 {
-    using namespace pybind11;
+    using namespace nanobind;
     using ostk::core::type::String;
 
     using ostk::io::ip::tcp::http::Request;
