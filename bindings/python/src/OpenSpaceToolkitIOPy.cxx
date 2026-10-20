@@ -1,13 +1,12 @@
 /// Apache License 2.0
 
 #include <OpenSpaceToolkitIOPy/Utilities/ShiftToString.hpp>
-#include <pybind11/operators.h>
-#include <pybind11/pybind11.h>
+#include <nanobind/nanobind.h>
 
 #include <OpenSpaceToolkitIOPy/IP.cpp>
 #include <OpenSpaceToolkitIOPy/URL.cpp>
 
-PYBIND11_MODULE(OpenSpaceToolkitIOPy, m)
+NB_MODULE(OpenSpaceToolkitIOPy, m)
 {
     // Add optional docstring for package OpenSpaceToolkitIOPy
     m.doc() = "Addressing, networking, database connectors for OpenSpaceToolkit.";

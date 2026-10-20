@@ -2,9 +2,9 @@
 
 #include <OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp>
 
-inline void OpenSpaceToolkitIOPy_IP_TCP_HTTP_Client(pybind11::module& aModule)
+inline void OpenSpaceToolkitIOPy_IP_TCP_HTTP_Client(nanobind::module_& aModule)
 {
-    using namespace pybind11;
+    using namespace nanobind;
 
     using ostk::io::ip::tcp::http::Client;
 

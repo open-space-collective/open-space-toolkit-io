@@ -4,7 +4,7 @@
 #include <OpenSpaceToolkitIOPy/IP/TCP/HTTP/Request.cpp>
 #include <OpenSpaceToolkitIOPy/IP/TCP/HTTP/Response.cpp>
 
-inline void OpenSpaceToolkitIOPy_IP_TCP_HTTP(pybind11::module& aModule)
+inline void OpenSpaceToolkitIOPy_IP_TCP_HTTP(nanobind::module_& aModule)
 {
     // Create "http" python submodule
     auto http = aModule.def_submodule("http");
