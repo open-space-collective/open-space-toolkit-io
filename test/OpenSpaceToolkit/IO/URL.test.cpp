@@ -6,7 +6,6 @@
 
 TEST(OpenSpaceToolkit_IO_URL, Constructor)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -22,7 +21,7 @@ TEST(OpenSpaceToolkit_IO_URL, Constructor)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -47,7 +46,6 @@ TEST(OpenSpaceToolkit_IO_URL, Constructor)
 
 TEST(OpenSpaceToolkit_IO_URL, EqualToOperator)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -63,7 +61,7 @@ TEST(OpenSpaceToolkit_IO_URL, EqualToOperator)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -79,7 +77,7 @@ TEST(OpenSpaceToolkit_IO_URL, EqualToOperator)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -100,7 +98,6 @@ TEST(OpenSpaceToolkit_IO_URL, EqualToOperator)
 
 TEST(OpenSpaceToolkit_IO_URL, NotEqualToOperator)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -116,7 +113,7 @@ TEST(OpenSpaceToolkit_IO_URL, NotEqualToOperator)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -132,7 +129,7 @@ TEST(OpenSpaceToolkit_IO_URL, NotEqualToOperator)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -177,7 +174,6 @@ TEST(OpenSpaceToolkit_IO_URL, AdditionAssignmentOperator)
 
 TEST(OpenSpaceToolkit_IO_URL, StreamOperator)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -186,7 +182,7 @@ TEST(OpenSpaceToolkit_IO_URL, StreamOperator)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -204,7 +200,6 @@ TEST(OpenSpaceToolkit_IO_URL, StreamOperator)
 
 TEST(OpenSpaceToolkit_IO_URL, AccessScheme)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -213,7 +208,7 @@ TEST(OpenSpaceToolkit_IO_URL, AccessScheme)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -227,7 +222,6 @@ TEST(OpenSpaceToolkit_IO_URL, AccessScheme)
 
 TEST(OpenSpaceToolkit_IO_URL, AccessHost)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -236,7 +230,7 @@ TEST(OpenSpaceToolkit_IO_URL, AccessHost)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -250,7 +244,6 @@ TEST(OpenSpaceToolkit_IO_URL, AccessHost)
 
 TEST(OpenSpaceToolkit_IO_URL, AccessPath)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -259,7 +252,7 @@ TEST(OpenSpaceToolkit_IO_URL, AccessPath)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -273,7 +266,6 @@ TEST(OpenSpaceToolkit_IO_URL, AccessPath)
 
 TEST(OpenSpaceToolkit_IO_URL, AccessPort)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -282,7 +274,7 @@ TEST(OpenSpaceToolkit_IO_URL, AccessPort)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -302,7 +294,6 @@ TEST(OpenSpaceToolkit_IO_URL, AccessPort)
 
 TEST(OpenSpaceToolkit_IO_URL, AccessUser)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -311,7 +302,7 @@ TEST(OpenSpaceToolkit_IO_URL, AccessUser)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -325,7 +316,6 @@ TEST(OpenSpaceToolkit_IO_URL, AccessUser)
 
 TEST(OpenSpaceToolkit_IO_URL, AccessPassword)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -334,7 +324,7 @@ TEST(OpenSpaceToolkit_IO_URL, AccessPassword)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -348,7 +338,6 @@ TEST(OpenSpaceToolkit_IO_URL, AccessPassword)
 
 TEST(OpenSpaceToolkit_IO_URL, AccessQuery)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -357,7 +346,7 @@ TEST(OpenSpaceToolkit_IO_URL, AccessQuery)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -377,7 +366,6 @@ TEST(OpenSpaceToolkit_IO_URL, AccessQuery)
 
 TEST(OpenSpaceToolkit_IO_URL, AccessFragment)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -386,7 +374,7 @@ TEST(OpenSpaceToolkit_IO_URL, AccessFragment)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -400,7 +388,6 @@ TEST(OpenSpaceToolkit_IO_URL, AccessFragment)
 
 TEST(OpenSpaceToolkit_IO_URL, GetScheme)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -409,7 +396,7 @@ TEST(OpenSpaceToolkit_IO_URL, GetScheme)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -423,7 +410,6 @@ TEST(OpenSpaceToolkit_IO_URL, GetScheme)
 
 TEST(OpenSpaceToolkit_IO_URL, GetHost)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -432,7 +418,7 @@ TEST(OpenSpaceToolkit_IO_URL, GetHost)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -446,7 +432,6 @@ TEST(OpenSpaceToolkit_IO_URL, GetHost)
 
 TEST(OpenSpaceToolkit_IO_URL, GetPath)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -455,7 +440,7 @@ TEST(OpenSpaceToolkit_IO_URL, GetPath)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -469,7 +454,6 @@ TEST(OpenSpaceToolkit_IO_URL, GetPath)
 
 TEST(OpenSpaceToolkit_IO_URL, GetPort)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -478,7 +462,7 @@ TEST(OpenSpaceToolkit_IO_URL, GetPort)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -498,7 +482,6 @@ TEST(OpenSpaceToolkit_IO_URL, GetPort)
 
 TEST(OpenSpaceToolkit_IO_URL, GetUser)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -507,7 +490,7 @@ TEST(OpenSpaceToolkit_IO_URL, GetUser)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -521,7 +504,6 @@ TEST(OpenSpaceToolkit_IO_URL, GetUser)
 
 TEST(OpenSpaceToolkit_IO_URL, GetPassword)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -530,7 +512,7 @@ TEST(OpenSpaceToolkit_IO_URL, GetPassword)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -544,7 +526,6 @@ TEST(OpenSpaceToolkit_IO_URL, GetPassword)
 
 TEST(OpenSpaceToolkit_IO_URL, GetQuery)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -553,7 +534,7 @@ TEST(OpenSpaceToolkit_IO_URL, GetQuery)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -573,7 +554,6 @@ TEST(OpenSpaceToolkit_IO_URL, GetQuery)
 
 TEST(OpenSpaceToolkit_IO_URL, GetFragment)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -582,7 +562,7 @@ TEST(OpenSpaceToolkit_IO_URL, GetFragment)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -596,7 +576,6 @@ TEST(OpenSpaceToolkit_IO_URL, GetFragment)
 
 TEST(OpenSpaceToolkit_IO_URL, ToString)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -605,7 +584,7 @@ TEST(OpenSpaceToolkit_IO_URL, ToString)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key_A", "value_1"}, {"key_B", "value_2"}}};
@@ -622,7 +601,7 @@ TEST(OpenSpaceToolkit_IO_URL, ToString)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key_A", "value 1"}, {"key_B", "value 2"}}};
@@ -639,7 +618,6 @@ TEST(OpenSpaceToolkit_IO_URL, ToString)
 
 TEST(OpenSpaceToolkit_IO_URL, SetScheme)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -648,7 +626,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetScheme)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -670,7 +648,6 @@ TEST(OpenSpaceToolkit_IO_URL, SetScheme)
 
 TEST(OpenSpaceToolkit_IO_URL, SetHost)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -679,7 +656,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetHost)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -701,7 +678,6 @@ TEST(OpenSpaceToolkit_IO_URL, SetHost)
 
 TEST(OpenSpaceToolkit_IO_URL, SetPath)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -710,7 +686,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetPath)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -730,7 +706,6 @@ TEST(OpenSpaceToolkit_IO_URL, SetPath)
 
 TEST(OpenSpaceToolkit_IO_URL, SetPort)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -739,7 +714,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetPort)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -749,7 +724,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetPort)
 
         EXPECT_EQ(port, url.getPort());
 
-        const Integer otherPort = 80;
+        const int otherPort = 80;
 
         url.setPort(otherPort);
 
@@ -763,7 +738,6 @@ TEST(OpenSpaceToolkit_IO_URL, SetPort)
 
 TEST(OpenSpaceToolkit_IO_URL, SetUser)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -772,7 +746,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetUser)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -792,7 +766,6 @@ TEST(OpenSpaceToolkit_IO_URL, SetUser)
 
 TEST(OpenSpaceToolkit_IO_URL, SetPassword)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -801,7 +774,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetPassword)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -821,7 +794,6 @@ TEST(OpenSpaceToolkit_IO_URL, SetPassword)
 
 TEST(OpenSpaceToolkit_IO_URL, SetQuery)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -830,7 +802,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetQuery)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -854,7 +826,6 @@ TEST(OpenSpaceToolkit_IO_URL, SetQuery)
 
 TEST(OpenSpaceToolkit_IO_URL, SetFragment)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -863,7 +834,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetFragment)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};

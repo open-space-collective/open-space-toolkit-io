@@ -12,7 +12,6 @@ inline void OpenSpaceToolkitIOPy_URL(pybind11::module& aModule)
 {
     using namespace pybind11;
 
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
 
     using ostk::io::URL;
@@ -25,7 +24,7 @@ inline void OpenSpaceToolkitIOPy_URL(pybind11::module& aModule)
              const String&,
              const String&,
              const String&,
-             const std::optional<Integer>&,
+             const std::optional<int>&,
              const String&,
              const String&,
              const std::optional<Query>&,

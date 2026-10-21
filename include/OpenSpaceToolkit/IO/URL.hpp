@@ -5,7 +5,6 @@
 
 #include <optional>
 
-#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 #include <OpenSpaceToolkit/IO/URL/Query.hpp>
@@ -15,7 +14,6 @@ namespace ostk
 namespace io
 {
 
-using Integer = ostk::core::type::Integer;
 using String = ostk::core::type::String;
 using Query = ostk::io::url::Query;
 
@@ -49,7 +47,7 @@ class URL
     URL(const String& aScheme,
         const String& aHost,
         const String& aPath = String::Empty(),
-        const std::optional<Integer>& aPort = std::nullopt,
+        const std::optional<int>& aPort = std::nullopt,
         const String& aUser = String::Empty(),
         const String& aPassword = String::Empty(),
         const std::optional<Query>& aQuery = std::nullopt,
@@ -160,7 +158,7 @@ class URL
     ///
     /// @return             Reference to URL port
 
-    const std::optional<Integer>& accessPort() const;
+    const std::optional<int>& accessPort() const;
 
     /// @brief              Get reference to URL user
     ///
@@ -248,7 +246,7 @@ class URL
     ///
     /// @return             URL port
 
-    std::optional<Integer> getPort() const;
+    std::optional<int> getPort() const;
 
     /// @brief              Get URL user
     ///
@@ -330,7 +328,7 @@ class URL
     ///
     /// @param              [in] aPort A port
 
-    void setPort(const std::optional<Integer>& aPort);
+    void setPort(const std::optional<int>& aPort);
 
     /// @brief              Set URL user
     ///
@@ -394,7 +392,7 @@ class URL
     String user_;
     String password_;
     String host_;
-    std::optional<Integer> port_;
+    std::optional<int> port_;
     String path_;
     std::optional<Query> query_;
     String fragment_;
