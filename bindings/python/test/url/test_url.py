@@ -17,14 +17,23 @@ def test_url_constructors():
     port = 443
     user = "user"
     password = "password"
-    query = URL.Query.undefined()
+    query = URL.Query([URL.Query.Parameter("key", "value")])
     fragment = "fragment"
     url = URL(scheme, host, path, port, user, password, query, fragment)
     assert isinstance(url, URL)
 
-    # undefined url constructor
-    url = URL.undefined()
+    # constructor without optional port and query
+    url = URL(scheme, host, path, None, user, password, None, fragment)
     assert isinstance(url, URL)
+    assert url.get_port() is None
+    assert url.get_query() is None
+
+    # empty scheme or host
+    with pytest.raises(RuntimeError):
+        URL("", host, path, port, user, password, query, fragment)
+
+    with pytest.raises(RuntimeError):
+        URL(scheme, "", path, port, user, password, query, fragment)
 
     # parsing url constructor
     url = URL.parse("https://www.google.com")
@@ -38,7 +47,7 @@ def test_url_getter_functions():
     port = 443
     user = "user"
     password = "password"
-    query = URL.Query.undefined()
+    query = URL.Query([URL.Query.Parameter("key", "value")])
     fragment = "fragment"
     url = URL(scheme, host, path, port, user, password, query, fragment)
 
@@ -61,7 +70,7 @@ def test_url_setter_functions():
     url.set_port(443)
     url.set_user("Bob")
     url.set_password("Sponge")
-    url.set_query(URL.Query.undefined())
+    url.set_query(URL.Query([URL.Query.Parameter("key", "value")]))
     url.set_fragment("frag")
 
     assert url.get_scheme() == "http"
@@ -70,8 +79,20 @@ def test_url_setter_functions():
     assert url.get_port() == 443
     assert url.get_user() == "Bob"
     assert url.get_password() == "Sponge"
-    assert url.get_query().is_defined() is False
+    assert url.get_query() == URL.Query([URL.Query.Parameter("key", "value")])
     assert url.get_fragment() == "frag"
+
+    url.set_port(None)
+    url.set_query(None)
+
+    assert url.get_port() is None
+    assert url.get_query() is None
+
+    with pytest.raises(RuntimeError):
+        url.set_scheme("")
+
+    with pytest.raises(RuntimeError):
+        url.set_host("")
 
 
 def test_url_comparators():
@@ -108,8 +129,12 @@ def test_url_query():
 
     assert parameter_1 == parameter_1
     assert parameter_1 != parameter_2
-    assert parameter_1.is_defined()
-    assert parameter_2.is_defined()
+
+    with pytest.raises(RuntimeError):
+        URL.Query.Parameter("", "value")
+
+    with pytest.raises(RuntimeError):
+        URL.Query.Parameter("name", "")
 
     assert parameter_1.get_name() == "name1"
     assert parameter_1.get_value() == "value1"
@@ -124,11 +149,6 @@ def test_url_query():
     assert isinstance(query_1, URL.Query)
     assert isinstance(query_2, URL.Query)
     assert isinstance(query_3, URL.Query)
-
-    assert query_1.is_defined()
-    assert query_2.is_defined()
-    assert query_3.is_defined()
-    assert URL.Query.undefined().is_defined() is False
 
     assert query_1.has_parameter_with_name("name1")
     assert query_1.has_parameter_with_name("name2")

@@ -37,6 +37,7 @@ class Query
         ///
         /// @param      [in] aName A name
         /// @param      [in] aValue A value
+        /// @throw      ostk::core::error::runtime::Undefined If the name or the value is empty
 
         Parameter(const Parameter::Name& aName, const Parameter::Value& aValue);
 
@@ -61,12 +62,6 @@ class Query
         /// @return     True if parameters are not equal
 
         bool operator!=(const Parameter& aParameter) const;
-
-        /// @brief      Return true is parameter is defined
-        ///
-        /// @return     True if parameter is defined
-
-        bool isDefined() const;
 
         /// @brief      Access parameter name
         ///
@@ -153,16 +148,6 @@ class Query
 
     bool operator!=(const Query& aQuery) const;
 
-    /// @brief              Check if query is defined
-    ///
-    /// @code
-    ///                     Query({{"Key A", "Value A"}, {"Key B", "Value B"}}).isDefined() ; // True
-    /// @endcode
-    ///
-    /// @return             True if query is defined
-
-    bool isDefined() const;
-
     /// @brief              Check if query has parameter with a given name
     ///
     /// @code
@@ -218,17 +203,6 @@ class Query
 
     void addParameter(const Query::Parameter& aParameter);
 
-    /// @brief              Constructs an undefined query
-    ///
-    /// @code
-    ///                     Query query = Query::Undefined() ;
-    ///                     query.isDefined() ; // False
-    /// @endcode
-    ///
-    /// @return             Undefined query
-
-    static Query Undefined();
-
     /// @brief              Constructs query from a given string
     ///
     /// @code
@@ -236,7 +210,7 @@ class Query
     /// @endcode
     ///
     /// @param              [in] aString A string
-    /// @return             Query
+    /// @return             Query (empty if the string is empty)
 
     static Query Parse(const String& aString);
 

@@ -47,14 +47,12 @@ inline void OpenSpaceToolkitIOPy_URL_Query(auto aClass)
             }
         )
 
-        .def("is_defined", &Query::isDefined)
         .def("has_parameter_with_name", &Query::hasParameterWithName)
 
         .def("get_parameter_with_name", &Query::getParameterWithName)
         .def("to_string", &Query::toString)
         .def("add_parameter", &Query::addParameter)
 
-        .def_static("undefined", &Query::Undefined)
         .def_static("parse", &Query::Parse)
 
         ;
@@ -66,8 +64,6 @@ inline void OpenSpaceToolkitIOPy_URL_Query(auto aClass)
 
         .def(self == self)
         .def(self != self)
-
-        .def("is_defined", &Query::Parameter::isDefined)
 
         .def("get_name", &Query::Parameter::getName)
         .def("get_value", &Query::Parameter::getValue)

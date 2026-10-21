@@ -39,44 +39,19 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Response& aResponse
     return anOutputStream;
 }
 
-bool Response::isDefined() const
-{
-    return statusCode_ != Response::StatusCode::Undefined;
-}
-
 bool Response::isOk() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Response");
-    }
-
     return statusCode_ == Response::StatusCode::Ok;
 }
 
 Response::StatusCode Response::getStatusCode() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Response");
-    }
-
     return statusCode_;
 }
 
 String Response::getBody() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Response");
-    }
-
     return body_;
-}
-
-Response Response::Undefined()
-{
-    return {Response::StatusCode::Undefined, String::Empty()};
 }
 
 String Response::StringFromStatusCode(const Response::StatusCode& aStatusCode)
@@ -84,8 +59,7 @@ String Response::StringFromStatusCode(const Response::StatusCode& aStatusCode)
     using ostk::core::container::Map;
 
     static const Map<Response::StatusCode, String> statusCodeStringMap = {
-        {{Response::StatusCode::Undefined, "Undefined"},
-         {Response::StatusCode::Continue, "Continue"},
+        {{Response::StatusCode::Continue, "Continue"},
          {Response::StatusCode::SwitchingProtocols, "SwitchingProtocols"},
          {Response::StatusCode::Processing, "Processing"},
          {Response::StatusCode::EarlyHints, "EarlyHints"},

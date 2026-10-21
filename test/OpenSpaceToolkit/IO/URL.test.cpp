@@ -30,6 +30,19 @@ TEST(OpenSpaceToolkit_IO_URL, Constructor)
 
         EXPECT_NO_THROW(URL(scheme, host, path, port, user, password, query, fragment));
     }
+
+    {
+        const URL url("https", "domain.org");
+
+        EXPECT_EQ(std::nullopt, url.getPort());
+        EXPECT_EQ(std::nullopt, url.getQuery());
+    }
+
+    {
+        EXPECT_ANY_THROW(URL("", "domain.org"));
+        EXPECT_ANY_THROW(URL("https", ""));
+        EXPECT_ANY_THROW(URL("", ""));
+    }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, EqualToOperator)
@@ -79,7 +92,9 @@ TEST(OpenSpaceToolkit_IO_URL, EqualToOperator)
     }
 
     {
-        EXPECT_FALSE(URL::Undefined() == URL::Undefined());
+        EXPECT_TRUE(URL("https", "domain.org") == URL("https", "domain.org"));
+        EXPECT_FALSE(URL("https", "domain.org") == URL("https", "domain.org", "", 443));
+        EXPECT_FALSE(URL("https", "domain.org", "", 443) == URL("https", "domain.org"));
     }
 }
 
@@ -130,7 +145,9 @@ TEST(OpenSpaceToolkit_IO_URL, NotEqualToOperator)
     }
 
     {
-        EXPECT_TRUE(URL::Undefined() != URL::Undefined());
+        EXPECT_FALSE(URL("https", "domain.org") != URL("https", "domain.org"));
+        EXPECT_TRUE(URL("https", "domain.org") != URL("https", "domain.org", "", 443));
+        EXPECT_TRUE(URL("https", "domain.org", "", 443) != URL("https", "domain.org"));
     }
 }
 
@@ -142,10 +159,6 @@ TEST(OpenSpaceToolkit_IO_URL, AdditionOperator)
         const URL url = URL::Parse("https://domain.com") + "/path/to/file";
 
         EXPECT_EQ("https://domain.com/path/to/file", url.toString());
-    }
-
-    {
-        EXPECT_ANY_THROW(URL::Undefined() + "/path/to/file");
     }
 }
 
@@ -159,10 +172,6 @@ TEST(OpenSpaceToolkit_IO_URL, AdditionAssignmentOperator)
         url += "/path/to/file";
 
         EXPECT_EQ("https://domain.com/path/to/file", url.toString());
-    }
-
-    {
-        EXPECT_ANY_THROW(URL::Undefined() += "/path/to/file");
     }
 }
 
@@ -190,38 +199,6 @@ TEST(OpenSpaceToolkit_IO_URL, StreamOperator)
         EXPECT_NO_THROW(std::cout << url << std::endl);
 
         EXPECT_FALSE(testing::internal::GetCapturedStdout().empty());
-    }
-}
-
-TEST(OpenSpaceToolkit_IO_URL, IsDefined)
-{
-    using ostk::core::type::Integer;
-    using ostk::core::type::String;
-    using ostk::io::URL;
-    using ostk::io::url::Query;
-
-    {
-        const String scheme = "https";
-        const String host = "domain.org";
-
-        EXPECT_TRUE(URL(scheme, host).isDefined());
-    }
-
-    {
-        const String scheme = "https";
-        const String host = "domain.org";
-        const String path = "/path/to/page";
-        const Integer port = 443;
-        const String user = "user";
-        const String password = "password";
-        const Query query = {{{"key", "value"}}};
-        const String fragment = "fragment";
-
-        EXPECT_TRUE(URL(scheme, host, path, port, user, password, query, fragment).isDefined());
-    }
-
-    {
-        EXPECT_FALSE(URL::Undefined().isDefined());
     }
 }
 
@@ -315,6 +292,12 @@ TEST(OpenSpaceToolkit_IO_URL, AccessPort)
 
         EXPECT_EQ(port, url.accessPort());
     }
+
+    {
+        const URL url = {"https", "domain.org"};
+
+        EXPECT_EQ(std::nullopt, url.accessPort());
+    }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, AccessUser)
@@ -383,6 +366,12 @@ TEST(OpenSpaceToolkit_IO_URL, AccessQuery)
         const URL url = {scheme, host, path, port, user, password, query, fragment};
 
         EXPECT_EQ(query, url.accessQuery());
+    }
+
+    {
+        const URL url = {"https", "domain.org"};
+
+        EXPECT_EQ(std::nullopt, url.accessQuery());
     }
 }
 
@@ -499,6 +488,12 @@ TEST(OpenSpaceToolkit_IO_URL, GetPort)
 
         EXPECT_EQ(port, url.getPort());
     }
+
+    {
+        const URL url = {"https", "domain.org"};
+
+        EXPECT_EQ(std::nullopt, url.getPort());
+    }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, GetUser)
@@ -568,6 +563,12 @@ TEST(OpenSpaceToolkit_IO_URL, GetQuery)
 
         EXPECT_EQ(query, url.getQuery());
     }
+
+    {
+        const URL url = {"https", "domain.org"};
+
+        EXPECT_EQ(std::nullopt, url.getQuery());
+    }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, GetFragment)
@@ -634,10 +635,6 @@ TEST(OpenSpaceToolkit_IO_URL, ToString)
             url.toString(true)
         ) << url.toString(true);
     }
-
-    {
-        EXPECT_ANY_THROW(URL::Undefined().toString());
-    }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, SetScheme)
@@ -666,6 +663,8 @@ TEST(OpenSpaceToolkit_IO_URL, SetScheme)
         url.setScheme(otherScheme);
 
         EXPECT_EQ(otherScheme, url.getScheme());
+
+        EXPECT_ANY_THROW(url.setScheme(""));
     }
 }
 
@@ -695,6 +694,8 @@ TEST(OpenSpaceToolkit_IO_URL, SetHost)
         url.setHost(otherHost);
 
         EXPECT_EQ(otherHost, url.getHost());
+
+        EXPECT_ANY_THROW(url.setHost(""));
     }
 }
 
@@ -753,6 +754,10 @@ TEST(OpenSpaceToolkit_IO_URL, SetPort)
         url.setPort(otherPort);
 
         EXPECT_EQ(otherPort, url.getPort());
+
+        url.setPort(std::nullopt);
+
+        EXPECT_EQ(std::nullopt, url.getPort());
     }
 }
 
@@ -840,6 +845,10 @@ TEST(OpenSpaceToolkit_IO_URL, SetQuery)
         url.setQuery(otherQuery);
 
         EXPECT_EQ(otherQuery, url.getQuery());
+
+        url.setQuery(std::nullopt);
+
+        EXPECT_EQ(std::nullopt, url.getQuery());
     }
 }
 
@@ -869,19 +878,6 @@ TEST(OpenSpaceToolkit_IO_URL, SetFragment)
         url.setFragment(otherFragment);
 
         EXPECT_EQ(otherFragment, url.getFragment());
-    }
-}
-
-TEST(OpenSpaceToolkit_IO_URL, Undefined)
-{
-    using ostk::io::URL;
-
-    {
-        EXPECT_NO_THROW(URL::Undefined());
-    }
-
-    {
-        EXPECT_FALSE(URL::Undefined().isDefined());
     }
 }
 
