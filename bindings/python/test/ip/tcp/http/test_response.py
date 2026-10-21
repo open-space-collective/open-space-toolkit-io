@@ -1,7 +1,5 @@
 # Apache License 2.0
 
-import pytest
-
 import ostk.io as io
 
 URL = io.URL
@@ -13,7 +11,6 @@ def test_http_response():
     enum_members = Response.StatusCode.__members__
 
     list_keys = [
-        "Undefined",
         "Continue",
         "SwitchingProtocols",
         "Processing",
@@ -79,7 +76,6 @@ def test_http_response():
     ]
 
     list_values = [
-        StatusCode.Undefined,
         StatusCode.Continue,
         StatusCode.SwitchingProtocols,
         StatusCode.Processing,
@@ -152,47 +148,27 @@ def test_http_response():
         statuscode = list_values[i]
         response = Response(statuscode, f"body{i}")
         assert isinstance(response, Response)
-        if i > 0:
-            assert response.is_defined()
         responses.append(response)
 
         assert Response.string_from_status_code(statuscode) == list_keys[i]
 
-    response_0 = responses[0]
+    response_1 = responses[1]
     response_2 = responses[2]
     response_3 = responses[3]
     response_4 = responses[4]
-    response_5 = responses[5]
 
-    assert response_0.is_defined() is False
-    assert response_2.is_defined() is True
-    assert response_3.is_defined() is True
-    assert response_4.is_defined() is True
-    assert isinstance(Response.undefined(), Response)
-    assert Response.undefined().is_defined() is False
-
-    with pytest.raises(RuntimeError):
-        response_0.get_body()
-
+    assert response_1.get_body() == "body1"
     assert response_2.get_body() == "body2"
     assert response_3.get_body() == "body3"
-    assert response_4.get_body() == "body4"
 
-    with pytest.raises(RuntimeError):
-        response_0.is_ok()
-
+    assert response_1.is_ok() is False
     assert response_2.is_ok() is False
     assert response_3.is_ok() is False
-    assert response_4.is_ok() is False
 
-    with pytest.raises(RuntimeError):
-        response_0.get_status_code()
+    assert response_1.get_status_code() == StatusCode.SwitchingProtocols
+    assert response_2.get_status_code() == StatusCode.Processing
+    assert response_3.get_status_code() == StatusCode.EarlyHints
 
-    assert response_2.get_status_code() == StatusCode.SwitchingProtocols
-    assert response_3.get_status_code() == StatusCode.Processing
-    assert response_4.get_status_code() == StatusCode.EarlyHints
-
-    assert response_5.is_defined() is True
-    assert response_5.is_ok() is True
-    assert response_5.get_status_code() == StatusCode.Ok
-    assert response_5.get_body() == "body5"
+    assert response_4.is_ok() is True
+    assert response_4.get_status_code() == StatusCode.Ok
+    assert response_4.get_body() == "body4"

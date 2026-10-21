@@ -34,9 +34,8 @@ class Request
     enum class Method
     {
 
-        Undefined,  ///< Undefined request method.
-        Get,        ///< Requests a representation of the specified resource.
-        Head,       ///< Asks for a response identical to that of a GET request, but without the response body.
+        Get,   ///< Requests a representation of the specified resource.
+        Head,  ///< Asks for a response identical to that of a GET request, but without the response body.
         Post,    ///< Requests that the server accept the entity enclosed in the request as a new subordinate of the web
                  ///< resource identified by the URI.
         Put,     ///< Requests that the enclosed entity be stored under the supplied URI.
@@ -65,12 +64,6 @@ class Request
 
     friend std::ostream& operator<<(std::ostream& anOutputStream, const Request& aRequest);
 
-    /// @brief              Check if request is defined
-    ///
-    /// @return             True if request is defined
-
-    bool isDefined() const;
-
     /// @brief              Get request method
     ///
     /// @return             Request method
@@ -88,12 +81,6 @@ class Request
     /// @return             Request body
 
     String getBody() const;
-
-    /// @brief              Constructs an undefined request
-    ///
-    /// @return             Undefined request
-
-    static Request Undefined();
 
     /// @brief              Constructs a GET request
     ///

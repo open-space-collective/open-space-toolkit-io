@@ -30,7 +30,7 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Request& aRequest)
 
     ostk::core::utils::Print::Line(anOutputStream) << "Method:" << Request::StringFromMethod(aRequest.method_);
     ostk::core::utils::Print::Line(anOutputStream)
-        << "URL:" << (aRequest.url_.isDefined() ? aRequest.url_.toString() : "Undefined");
+        << "URL:" << aRequest.url_.toString();
     ostk::core::utils::Print::Line(anOutputStream) << "Body:" << aRequest.body_;
 
     ostk::core::utils::Print::Footer(anOutputStream);
@@ -38,44 +38,19 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Request& aRequest)
     return anOutputStream;
 }
 
-bool Request::isDefined() const
-{
-    return (method_ != Request::Method::Undefined) && url_.isDefined();
-}
-
 Request::Method Request::getMethod() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Request");
-    }
-
     return method_;
 }
 
 URL Request::getUrl() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Request");
-    }
-
     return url_;
 }
 
 String Request::getBody() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Request");
-    }
-
     return body_;
-}
-
-Request Request::Undefined()
-{
-    return {Request::Method::Undefined, URL::Undefined(), String::Empty()};
 }
 
 Request Request::Get(const URL& aUrl)
@@ -88,8 +63,7 @@ String Request::StringFromMethod(const Request::Method& aMethod)
     using ostk::core::container::Map;
 
     static const Map<Request::Method, String> methodStringMap = {
-        {{Request::Method::Undefined, "Undefined"},
-         {Request::Method::Get, "Get"},
+        {{Request::Method::Get, "Get"},
          {Request::Method::Head, "Head"},
          {Request::Method::Post, "Post"},
          {Request::Method::Put, "Put"},

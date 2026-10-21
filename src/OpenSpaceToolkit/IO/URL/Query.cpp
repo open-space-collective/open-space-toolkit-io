@@ -16,6 +16,15 @@ Query::Parameter::Parameter(const Query::Parameter::Name& aName, const Query::Pa
     : name_(aName),
       value_(aValue)
 {
+    if (name_.isEmpty())
+    {
+        throw ostk::core::error::runtime::Undefined("Name");
+    }
+
+    if (value_.isEmpty())
+    {
+        throw ostk::core::error::runtime::Undefined("Value");
+    }
 }
 
 bool Query::Parameter::operator==(const Query::Parameter& aParameter) const
@@ -26,11 +35,6 @@ bool Query::Parameter::operator==(const Query::Parameter& aParameter) const
 bool Query::Parameter::operator!=(const Query::Parameter& aParameter) const
 {
     return (name_ != aParameter.name_) || (value_ != aParameter.value_);
-}
-
-bool Query::Parameter::isDefined() const
-{
-    return (!name_.isEmpty()) && (!value_.isEmpty());
 }
 
 const Query::Parameter::Name& Query::Parameter::accessName() const
@@ -66,11 +70,6 @@ bool Query::operator==(const Query& aQuery) const
 bool Query::operator!=(const Query& aQuery) const
 {
     return parameters_ != aQuery.parameters_;
-}
-
-bool Query::isDefined() const
-{
-    return !parameters_.isEmpty();
 }
 
 bool Query::hasParameterWithName(const Query::Parameter::Name& aName) const
@@ -140,24 +139,14 @@ Query::ConstIterator Query::end() const
 
 void Query::addParameter(const Query::Parameter& aParameter)
 {
-    if (!aParameter.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Parameter");
-    }
-
     parameters_.add(aParameter);
-}
-
-Query Query::Undefined()
-{
-    return {Array<Query::Parameter>::Empty()};
 }
 
 Query Query::Parse(const String& aString)
 {
     if (aString.isEmpty())
     {
-        return Query::Undefined();
+        return {Array<Query::Parameter>::Empty()};
     }
 
     throw ostk::core::error::runtime::ToBeImplemented("Query :: Parse");

@@ -15,6 +15,21 @@ TEST(OpenSpaceToolkit_IO_URL_Query, Constructor)
     }
 }
 
+TEST(OpenSpaceToolkit_IO_URL_Query_Parameter, Constructor)
+{
+    using ostk::io::url::Query;
+
+    {
+        EXPECT_NO_THROW(Query::Parameter("key", "value"));
+    }
+
+    {
+        EXPECT_ANY_THROW(Query::Parameter("", "value"));
+        EXPECT_ANY_THROW(Query::Parameter("key", ""));
+        EXPECT_ANY_THROW(Query::Parameter("", ""));
+    }
+}
+
 TEST(OpenSpaceToolkit_IO_URL_Query, EqualToOperator)
 {
     using ostk::io::url::Query;
@@ -49,10 +64,10 @@ TEST(OpenSpaceToolkit_IO_URL_Query, EqualToOperator)
     {
         const Query query = {{{"key", "value"}}};
 
-        EXPECT_FALSE(Query::Undefined() == query);
-        EXPECT_FALSE(query == Query::Undefined());
+        EXPECT_FALSE(Query::Parse("") == query);
+        EXPECT_FALSE(query == Query::Parse(""));
 
-        EXPECT_TRUE(Query::Undefined() == Query::Undefined());
+        EXPECT_TRUE(Query::Parse("") == Query::Parse(""));
     }
 }
 
@@ -90,25 +105,10 @@ TEST(OpenSpaceToolkit_IO_URL_Query, NotEqualToOperator)
     {
         const Query query = {{{"key", "value"}}};
 
-        EXPECT_TRUE(Query::Undefined() != query);
-        EXPECT_TRUE(query != Query::Undefined());
+        EXPECT_TRUE(Query::Parse("") != query);
+        EXPECT_TRUE(query != Query::Parse(""));
 
-        EXPECT_FALSE(Query::Undefined() != Query::Undefined());
-    }
-}
-
-TEST(OpenSpaceToolkit_IO_URL_Query, IsDefined)
-{
-    using ostk::io::url::Query;
-
-    {
-        const Query query = {{{"key", "value"}}};
-
-        EXPECT_TRUE(query.isDefined());
-    }
-
-    {
-        EXPECT_FALSE(Query::Undefined().isDefined());
+        EXPECT_FALSE(Query::Parse("") != Query::Parse(""));
     }
 }
 
@@ -124,11 +124,11 @@ TEST(OpenSpaceToolkit_IO_URL_Query, HasParameterWithName)
     }
 
     {
-        EXPECT_FALSE(Query::Undefined().hasParameterWithName("key"));
+        EXPECT_FALSE(Query::Parse("").hasParameterWithName("key"));
     }
 
     {
-        EXPECT_ANY_THROW(Query::Undefined().hasParameterWithName(""));
+        EXPECT_ANY_THROW(Query::Parse("").hasParameterWithName(""));
     }
 }
 
@@ -148,7 +148,7 @@ TEST(OpenSpaceToolkit_IO_URL_Query, GetParameterWithName)
         const Query query = {{{"key", "value"}}};
 
         EXPECT_ANY_THROW(query.getParameterWithName(""));
-        EXPECT_ANY_THROW(Query::Undefined().getParameterWithName("key"));
+        EXPECT_ANY_THROW(Query::Parse("").getParameterWithName("key"));
     }
 }
 
@@ -169,7 +169,7 @@ TEST(OpenSpaceToolkit_IO_URL_Query, ToString)
     }
 
     {
-        EXPECT_EQ("", Query::Undefined().toString());
+        EXPECT_EQ("", Query::Parse("").toString());
     }
 }
 
@@ -188,8 +188,6 @@ TEST(OpenSpaceToolkit_IO_URL_Query, ConstIterator)
         {
             EXPECT_TRUE(parameter == parameter);
             EXPECT_FALSE(parameter != parameter);
-
-            EXPECT_TRUE(parameter.isDefined());
 
             EXPECT_EQ("key", parameter.accessName().getHead(3));
             EXPECT_EQ("value", parameter.accessValue().getHead(5));
@@ -215,23 +213,17 @@ TEST(OpenSpaceToolkit_IO_URL_Query, AddParameter)
 
         EXPECT_EQ("value_2", query.getParameterWithName("key_B"));
 
-        EXPECT_ANY_THROW(query.addParameter(Query::Parameter("", "")));
-    }
-}
-
-TEST(OpenSpaceToolkit_IO_URL_Query, Undefined)
-{
-    using ostk::io::url::Query;
-
-    {
-        EXPECT_NO_THROW(Query::Undefined());
-        EXPECT_FALSE(Query::Undefined().isDefined());
     }
 }
 
 TEST(OpenSpaceToolkit_IO_URL_Query, Parse)
 {
     using ostk::io::url::Query;
+
+    {
+        EXPECT_NO_THROW(Query::Parse(""));
+        EXPECT_EQ(Query::Parse(""), Query(ostk::core::container::Array<Query::Parameter>::Empty()));
+    }
 
     {
         // [TBI]

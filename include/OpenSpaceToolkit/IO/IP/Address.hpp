@@ -24,7 +24,6 @@ class Address
     enum class Type
     {
 
-        Undefined,
         IPv4,
         IPv6
 
@@ -85,17 +84,6 @@ class Address
     /// @return             An output stream
 
     friend std::ostream& operator<<(std::ostream& anOutputStream, const Address& anAddress);
-
-    /// @brief              Check if address is defined
-    ///
-    /// @code
-    ///                     Address address = Address::Parse("0.0.0.0") ;
-    ///                     address.isDefined() ; // True
-    /// @endcode
-    ///
-    /// @return             True if address is defined
-
-    bool isDefined() const;
 
     /// @brief              Returns true if address is loopback
     ///
@@ -263,17 +251,6 @@ class Address
     /// @return             Address string representation
 
     String getString() const;
-
-    /// @brief              Constructs an undefined address
-    ///
-    /// @code
-    ///                     Address address = Address::Undefined() ;
-    ///                     address.isDefined() ; // False
-    /// @endcode
-    ///
-    /// @return             Undefined address
-
-    static Address Undefined();
 
     /// @brief              Constructs a loopback address
     ///

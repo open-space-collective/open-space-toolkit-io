@@ -28,8 +28,6 @@ class Response
     enum class StatusCode
     {
 
-        Undefined = 0,  ///< Undefined
-
         Continue = 100,            ///< 100 Continue
         SwitchingProtocols = 101,  ///< 101 Switching Protocols
         Processing = 102,          ///< 102 Processing (WebDAV; RFC 2518)
@@ -114,12 +112,6 @@ class Response
 
     friend std::ostream& operator<<(std::ostream& anOutputStream, const Response& aResponse);
 
-    /// @brief              Check if response is defined
-    ///
-    /// @return             True if response is defined
-
-    bool isDefined() const;
-
     /// @brief              Check if response status code is Ok
     ///
     /// @return             True if response status code is Ok
@@ -137,12 +129,6 @@ class Response
     /// @return             Response body
 
     String getBody() const;
-
-    /// @brief              Constructs an undefined response
-    ///
-    /// @return             Undefined response
-
-    static Response Undefined();
 
     /// @brief              Converts response status code to string
     ///
