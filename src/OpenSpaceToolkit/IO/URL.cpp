@@ -18,7 +18,7 @@ URL::URL(
     const String& aScheme,
     const String& aHost,
     const String& aPath,
-    const std::optional<Integer>& aPort,
+    const std::optional<int>& aPort,
     const String& aUser,
     const String& aPassword,
     const std::optional<Query>& aQuery,
@@ -79,7 +79,7 @@ std::ostream& operator<<(std::ostream& anOutputStream, const URL& aURL)
         << "Password" << (!aURL.password_.isEmpty() ? aURL.password_ : "Undefined");
     ostk::core::utils::Print::Line(anOutputStream) << "Host" << (!aURL.host_.isEmpty() ? aURL.host_ : "Undefined");
     ostk::core::utils::Print::Line(anOutputStream)
-        << "Port" << (aURL.port_.has_value() ? aURL.port_->toString() : "Undefined");
+        << "Port" << (aURL.port_.has_value() ? std::to_string(aURL.port_.value()) : "Undefined");
     ostk::core::utils::Print::Line(anOutputStream) << "Path" << (!aURL.path_.isEmpty() ? aURL.path_ : "Undefined");
     ostk::core::utils::Print::Line(anOutputStream)
         << "Query" << (aURL.query_.has_value() ? aURL.query_->toString() : "Undefined");
@@ -106,7 +106,7 @@ const String& URL::accessPath() const
     return path_;
 }
 
-const std::optional<Integer>& URL::accessPort() const
+const std::optional<int>& URL::accessPort() const
 {
     return port_;
 }
@@ -146,7 +146,7 @@ String URL::getPath() const
     return path_;
 }
 
-std::optional<Integer> URL::getPort() const
+std::optional<int> URL::getPort() const
 {
     return port_;
 }
@@ -188,7 +188,7 @@ String URL::toString(const bool doSanitize) const
 
     if (port_.has_value())
     {
-        urlString += String::Format(":{}", port_->toString());
+        urlString += String::Format(":{}", port_.value());
     }
 
     if (!path_.isEmpty())
@@ -239,7 +239,7 @@ void URL::setPath(const String& aPath)
     path_ = aPath;
 }
 
-void URL::setPort(const std::optional<Integer>& aPort)
+void URL::setPort(const std::optional<int>& aPort)
 {
     port_ = aPort;
 }
@@ -284,8 +284,7 @@ URL URL::Parse(const String& aString)
     const String user = url.user();
     const String password = url.password();
     const String host = url.host();
-    const std::optional<Integer> port =
-        (!url.port().empty()) ? std::optional<Integer>(Integer::Parse(std::string(url.port()))) : std::nullopt;
+    const std::optional<int> port = (!url.port().empty()) ? std::optional<int>(url.port_number()) : std::nullopt;
     const String path = url.path();
     const std::optional<Query> query =
         (!url.query().empty()) ? std::optional<Query>(Query::Parse(url.query())) : std::nullopt;
