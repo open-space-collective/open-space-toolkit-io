@@ -18,17 +18,8 @@ RUN apt-get update \
 
 ## fmt
 
-ARG FMT_VERSION="5.2.0"
-
-RUN cd /tmp \
-    && git clone --branch ${FMT_VERSION} --depth 1 https://github.com/fmtlib/fmt.git \
-    && cd fmt \
-    && mkdir build \
-    && cd build \
-    && cmake -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE .. \
-    && make --silent -j $(nproc) \
-    && make install \
-    && rm -rf /tmp/fmt
+COPY tools/dependencies /tmp/dependencies
+RUN /tmp/dependencies/install.sh && rm -rf /tmp/dependencies
 
 ## libcurl
 
