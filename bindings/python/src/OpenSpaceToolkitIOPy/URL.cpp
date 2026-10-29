@@ -4,11 +4,11 @@
 
 #include <OpenSpaceToolkitIOPy/URL/Query.cpp>
 
-// https://pybind11.readthedocs.io/en/stable/basics.html#default-args
+// https://nanobind.readthedocs.io/en/stable/basics.html#default-args
 
-inline void OpenSpaceToolkitIOPy_URL(pybind11::module& aModule)
+inline void OpenSpaceToolkitIOPy_URL(nanobind::module_& aModule)
 {
-    using namespace pybind11;
+    using namespace nanobind;
 
     using ostk::core::type::Integer;
     using ostk::core::type::String;
@@ -29,11 +29,41 @@ inline void OpenSpaceToolkitIOPy_URL(pybind11::module& aModule)
              const Query&,
              const String&>())
 
-        .def(self == self)
-        .def(self != self)
+        .def(
+            "__eq__",
+            [](const URL& self, const URL& other)
+            {
+                return self == other;
+            },
+            nanobind::is_operator()
+        )
+        .def(
+            "__ne__",
+            [](const URL& self, const URL& other)
+            {
+                return self != other;
+            },
+            nanobind::is_operator()
+        )
 
-        .def(self + String())
-        .def(self += String())
+        .def(
+            "__add__",
+            [](const URL& self, const String& other)
+            {
+                return self + other;
+            },
+            nanobind::is_operator()
+        )
+        .def(
+            "__iadd__",
+            [](URL& self, const String& other) -> URL&
+            {
+                self += other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator()
+        )
 
         .def("__str__", &(shiftToString<URL>))
         .def(
@@ -55,7 +85,7 @@ inline void OpenSpaceToolkitIOPy_URL(pybind11::module& aModule)
         .def("get_query", &URL::getQuery)
         .def("get_fragment", &URL::getFragment)
 
-        .def("to_string", &URL::toString, "doSanitize"_a = false)
+        .def("to_string", &URL::toString, arg("doSanitize") = false)
         .def("set_scheme", &URL::setScheme)
         .def("set_host", &URL::setHost)
         .def("set_path", &URL::setPath)
