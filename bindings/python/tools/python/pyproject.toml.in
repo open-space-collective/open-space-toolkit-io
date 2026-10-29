@@ -22,7 +22,7 @@ classifiers = [
 requires-python = ">=3.10"
 
 dependencies = [
-    "open-space-toolkit-core~=5.0"
+    "open-space-toolkit-core~=6.0"
 ] 
 
 [project.optional-dependencies]
