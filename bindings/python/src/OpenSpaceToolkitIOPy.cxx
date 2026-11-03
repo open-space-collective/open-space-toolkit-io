@@ -1,13 +1,14 @@
 /// Apache License 2.0
 
+#include <OpenSpaceToolkitIOPy/Utilities/ArrayCasting.hpp>
+#include <OpenSpaceToolkitIOPy/Utilities/Hash.hpp>
 #include <OpenSpaceToolkitIOPy/Utilities/ShiftToString.hpp>
-#include <pybind11/operators.h>
-#include <pybind11/pybind11.h>
+#include <nanobind/nanobind.h>
 
 #include <OpenSpaceToolkitIOPy/IP.cpp>
 #include <OpenSpaceToolkitIOPy/URL.cpp>
 
-PYBIND11_MODULE(OpenSpaceToolkitIOPy, m)
+NB_MODULE(OpenSpaceToolkitIOPy, m)
 {
     // Add optional docstring for package OpenSpaceToolkitIOPy
     m.doc() = "Addressing, networking, database connectors for OpenSpaceToolkit.";
@@ -25,4 +26,7 @@ PYBIND11_MODULE(OpenSpaceToolkitIOPy, m)
     // Add python submodules to OpenSpaceToolkitIOPy
     OpenSpaceToolkitIOPy_URL(m);
     OpenSpaceToolkitIOPy_IP(m);
+
+    // Restore pybind11's (and Python's) rule: a class that defines __eq__ without __hash__ is unhashable
+    disableHashOnEquality(m);
 }

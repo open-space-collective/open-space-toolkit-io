@@ -126,6 +126,25 @@ def test_url_operators():
     assert url_2.to_string() == "https://www.google.com/stuff"
     assert isinstance(url_2, URL)
 
+    # in-place addition returns the same object
+    url_3 = url_1
+    url_3 += "/more"
+
+    assert url_3 is url_1
+    assert url_1.to_string() == "https://www.google.com/more"
+
+
+def test_url_is_unhashable():
+    # URL, Query and Query.Parameter define __eq__ without __hash__
+    with pytest.raises(TypeError):
+        hash(URL.parse("https://www.google.com"))
+
+    with pytest.raises(TypeError):
+        hash(URL.Query.undefined())
+
+    with pytest.raises(TypeError):
+        hash(URL.Query.Parameter("name", "value"))
+
 
 def test_url_query():
     parameter_1 = URL.Query.Parameter("name1", "value1")
