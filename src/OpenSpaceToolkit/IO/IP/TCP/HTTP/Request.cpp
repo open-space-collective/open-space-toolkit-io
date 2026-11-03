@@ -1,7 +1,6 @@
 /// Apache License 2.0
 
 #include <OpenSpaceToolkit/Core/Container/Map.hpp>
-#include <OpenSpaceToolkit/Core/Error.hpp>
 #include <OpenSpaceToolkit/Core/Utility.hpp>
 
 #include <OpenSpaceToolkit/IO/IP/TCP/HTTP/Request.hpp>
@@ -38,44 +37,19 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Request& aRequest)
     return anOutputStream;
 }
 
-bool Request::isDefined() const
-{
-    return (method_ != Request::Method::Undefined) && url_.isDefined();
-}
-
 Request::Method Request::getMethod() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Request");
-    }
-
     return method_;
 }
 
 URL Request::getUrl() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Request");
-    }
-
     return url_;
 }
 
 String Request::getBody() const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Request");
-    }
-
     return body_;
-}
-
-Request Request::Undefined()
-{
-    return {Request::Method::Undefined, URL::Undefined(), String::Empty()};
 }
 
 Request Request::Get(const URL& aUrl)
@@ -88,8 +62,7 @@ String Request::StringFromMethod(const Request::Method& aMethod)
     using ostk::core::container::Map;
 
     static const Map<Request::Method, String> methodStringMap = {
-        {{Request::Method::Undefined, "Undefined"},
-         {Request::Method::Get, "Get"},
+        {{Request::Method::Get, "Get"},
          {Request::Method::Head, "Head"},
          {Request::Method::Post, "Post"},
          {Request::Method::Put, "Put"},

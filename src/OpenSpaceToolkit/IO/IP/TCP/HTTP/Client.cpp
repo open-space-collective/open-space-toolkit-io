@@ -67,11 +67,6 @@ int debugHandler(CURL* aCurlPtr, curl_infotype aType, char* aDataset, size_t aSi
 
 Response Client::Send(const Request& aRequest)
 {
-    if (!aRequest.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Request");
-    }
-
     // std::cout << "curl_global_init(CURL_GLOBAL_SSL)..." << std::endl ;
 
     // curl_global_init(CURL_GLOBAL_SSL) ;

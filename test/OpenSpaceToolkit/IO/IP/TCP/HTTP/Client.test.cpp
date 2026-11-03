@@ -19,10 +19,6 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Send)
         EXPECT_TRUE(response.isOk()) << response;
         EXPECT_FALSE(response.getBody().isEmpty());
     }
-
-    {
-        EXPECT_ANY_THROW(Client::Send(Request::Undefined()));
-    }
 }
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Get)

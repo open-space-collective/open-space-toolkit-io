@@ -18,12 +18,10 @@ inline void OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request(pybind11::module& aModule)
         .def("__str__", &(shiftToString<Request>))
         .def("__repr__", &(shiftToString<Request>))
 
-        .def("is_defined", &Request::isDefined)
         .def("get_method", &Request::getMethod)
         .def("get_url", &Request::getUrl)
         .def("get_body", &Request::getBody)
 
-        .def_static("undefined", &Request::Undefined)
         .def_static("get", &Request::Get)
         .def_static("string_from_method", &Request::StringFromMethod)
 
@@ -31,7 +29,6 @@ inline void OpenSpaceToolkitIOPy_IP_TCP_HTTP_Request(pybind11::module& aModule)
 
     enum_<Request::Method>(request, "Method")
 
-        .value("Undefined", Request::Method::Undefined)
         .value("Get", Request::Method::Get)
         .value("Head", Request::Method::Head)
         .value("Post", Request::Method::Post)
