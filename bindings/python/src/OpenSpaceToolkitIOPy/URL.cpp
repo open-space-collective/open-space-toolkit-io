@@ -43,8 +43,6 @@ inline void OpenSpaceToolkitIOPy_URL(pybind11::module& aModule)
             }
         )
 
-        .def("is_defined", &URL::isDefined)
-
         .def("get_scheme", &URL::getScheme)
         .def("get_host", &URL::getHost)
         .def("get_path", &URL::getPath)
@@ -64,7 +62,6 @@ inline void OpenSpaceToolkitIOPy_URL(pybind11::module& aModule)
         .def("set_query", &URL::setQuery)
         .def("set_fragment", &URL::setFragment)
 
-        .def_static("undefined", &URL::Undefined)
         .def_static("parse", &URL::Parse)
         // .def_static("encode_string", &URL::EncodeString)
         // .def_static("decode_string", &URL::DecodeString)

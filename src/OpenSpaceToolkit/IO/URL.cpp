@@ -54,15 +54,19 @@ URL::URL(
       query_(aQuery),
       fragment_(aFragment)
 {
+    if (scheme_.isEmpty())
+    {
+        throw ostk::core::error::runtime::Undefined("Scheme");
+    }
+
+    if (host_.isEmpty())
+    {
+        throw ostk::core::error::runtime::Undefined("Host");
+    }
 }
 
 bool URL::operator==(const URL& aURL) const
 {
-    if ((!this->isDefined()) || (!aURL.isDefined()))
-    {
-        return false;
-    }
-
     return (scheme_ == aURL.scheme_) && (user_ == aURL.user_) && (password_ == aURL.password_) &&
            (host_ == aURL.host_) && (port_ == aURL.port_) && (path_ == aURL.path_) && (query_ == aURL.query_) &&
            (fragment_ == aURL.fragment_);
@@ -70,11 +74,6 @@ bool URL::operator==(const URL& aURL) const
 
 bool URL::operator!=(const URL& aURL) const
 {
-    if ((!this->isDefined()) || (!aURL.isDefined()))
-    {
-        return true;
-    }
-
     return (scheme_ != aURL.scheme_) || (user_ != aURL.user_) || (password_ != aURL.password_) ||
            (host_ != aURL.host_) || (port_ != aURL.port_) || (path_ != aURL.path_) || (query_ != aURL.query_) ||
            (fragment_ != aURL.fragment_);
@@ -96,12 +95,11 @@ std::ostream& operator<<(std::ostream& anOutputStream, const URL& aURL)
 {
     ostk::core::utils::Print::Header(anOutputStream, "URL");
 
-    ostk::core::utils::Print::Line(anOutputStream)
-        << "Scheme" << (!aURL.scheme_.isEmpty() ? aURL.scheme_ : "Undefined");
+    ostk::core::utils::Print::Line(anOutputStream) << "Scheme" << aURL.scheme_;
     ostk::core::utils::Print::Line(anOutputStream) << "User" << (!aURL.user_.isEmpty() ? aURL.user_ : "Undefined");
     ostk::core::utils::Print::Line(anOutputStream)
         << "Password" << (!aURL.password_.isEmpty() ? aURL.password_ : "Undefined");
-    ostk::core::utils::Print::Line(anOutputStream) << "Host" << (!aURL.host_.isEmpty() ? aURL.host_ : "Undefined");
+    ostk::core::utils::Print::Line(anOutputStream) << "Host" << aURL.host_;
     ostk::core::utils::Print::Line(anOutputStream)
         << "Port" << (aURL.port_.has_value() ? std::to_string(aURL.port_.value()) : "Undefined");
     ostk::core::utils::Print::Line(anOutputStream) << "Path" << (!aURL.path_.isEmpty() ? aURL.path_ : "Undefined");
@@ -113,11 +111,6 @@ std::ostream& operator<<(std::ostream& anOutputStream, const URL& aURL)
     ostk::core::utils::Print::Footer(anOutputStream);
 
     return anOutputStream;
-}
-
-bool URL::isDefined() const
-{
-    return (!scheme_.isEmpty()) && (!host_.isEmpty());
 }
 
 const String& URL::accessScheme() const
@@ -202,11 +195,6 @@ String URL::getFragment() const
 
 String URL::toString(const bool doSanitize) const
 {
-    if (!this->isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("URL");
-    }
-
     String urlString = String::Format("{}://", scheme_);
 
     if ((!user_.isEmpty()) && (!password_.isEmpty()))
@@ -250,11 +238,21 @@ String URL::toString(const bool doSanitize) const
 
 void URL::setScheme(const String& aScheme)
 {
+    if (aScheme.isEmpty())
+    {
+        throw ostk::core::error::runtime::Undefined("Scheme");
+    }
+
     scheme_ = aScheme;
 }
 
 void URL::setHost(const String& aHost)
 {
+    if (aHost.isEmpty())
+    {
+        throw ostk::core::error::runtime::Undefined("Host");
+    }
+
     host_ = aHost;
 }
 
@@ -286,20 +284,6 @@ void URL::setQuery(const Query& aQuery)
 void URL::setFragment(const String& aFragment)
 {
     fragment_ = aFragment;
-}
-
-URL URL::Undefined()
-{
-    return {
-        String::Empty(),
-        String::Empty(),
-        String::Empty(),
-        std::nullopt,
-        String::Empty(),
-        String::Empty(),
-        Query::Undefined(),
-        String::Empty()
-    };
 }
 
 URL URL::Parse(const String& aString)

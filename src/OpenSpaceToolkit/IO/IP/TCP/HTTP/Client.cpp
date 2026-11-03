@@ -172,11 +172,6 @@ File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Size& aFo
 {
     using ostk::core::filesystem::Path;
 
-    if (!aUrl.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("URL");
-    }
-
     if (!aDirectory.isDefined())
     {
         throw ostk::core::error::runtime::Undefined("Directory");
@@ -277,11 +272,6 @@ File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Size& aFo
 void Client::List(const URL& aUrl, const File& aFile, const bool showNamesOnly)
 {
     using ostk::core::filesystem::Path;
-
-    if (!aUrl.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("URL");
-    }
 
     if (!aFile.isDefined())
     {

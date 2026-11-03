@@ -28,8 +28,7 @@ std::ostream& operator<<(std::ostream& anOutputStream, const Request& aRequest)
     ostk::core::utils::Print::Header(anOutputStream, "Request");
 
     ostk::core::utils::Print::Line(anOutputStream) << "Method:" << Request::StringFromMethod(aRequest.method_);
-    ostk::core::utils::Print::Line(anOutputStream)
-        << "URL:" << (aRequest.url_.isDefined() ? aRequest.url_.toString() : "Undefined");
+    ostk::core::utils::Print::Line(anOutputStream) << "URL:" << aRequest.url_.toString();
     ostk::core::utils::Print::Line(anOutputStream) << "Body:" << aRequest.body_;
 
     ostk::core::utils::Print::Footer(anOutputStream);

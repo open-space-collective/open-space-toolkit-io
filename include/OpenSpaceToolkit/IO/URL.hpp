@@ -30,12 +30,14 @@ class URL
 
     /// @brief              Constructor
     ///
+    ///                     Throws ostk::core::error::runtime::Undefined if the scheme or the host is empty.
+    ///
     /// @code
     ///                     URL url("http", "server.org", "/path/to/page.html", 80) ;
     /// @endcode
     ///
-    /// @param              [in] aScheme A scheme
-    /// @param              [in] aHost A host
+    /// @param              [in] aScheme A scheme (must not be empty)
+    /// @param              [in] aHost A host (must not be empty)
     /// @param              [in] aPath A path
     /// @param              [in] aPort A port (default: std::nullopt, which means no port)
     /// @param              [in] aUser A user
@@ -114,17 +116,6 @@ class URL
     /// @return             An output stream
 
     friend std::ostream& operator<<(std::ostream& anOutputStream, const URL& aURL);
-
-    /// @brief              Check if URL is defined
-    ///
-    /// @code
-    ///                     URL url = URL::Parse("http://server.org") ;
-    ///                     url.isDefined() ; // True
-    /// @endcode
-    ///
-    /// @return             True if URL is defined
-
-    bool isDefined() const;
 
     /// @brief              Get reference to URL scheme
     ///
@@ -316,13 +307,17 @@ class URL
 
     /// @brief              Set URL scheme
     ///
-    /// @param              [in] aScheme A scheme
+    ///                     Throws ostk::core::error::runtime::Undefined if the scheme is empty.
+    ///
+    /// @param              [in] aScheme A scheme (must not be empty)
 
     void setScheme(const String& aScheme);
 
     /// @brief              Set URL host
     ///
-    /// @param              [in] aHost A host
+    ///                     Throws ostk::core::error::runtime::Undefined if the host is empty.
+    ///
+    /// @param              [in] aHost A host (must not be empty)
 
     void setHost(const String& aHost);
 
@@ -361,17 +356,6 @@ class URL
     /// @param              [in] aFragment A fragment
 
     void setFragment(const String& aFragment);
-
-    /// @brief              Constructs an undefined URL
-    ///
-    /// @code
-    ///                     URL url = URL::Undefined() ;
-    ///                     url.isDefined() ; // False
-    /// @endcode
-    ///
-    /// @return             Undefined URL
-
-    static URL Undefined();
 
     /// @brief              Constructs a URL from a given string
     ///
