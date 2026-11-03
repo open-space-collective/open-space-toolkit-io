@@ -33,22 +33,12 @@ bool Query::Parameter::isDefined() const
     return (!name_.isEmpty()) && (!value_.isEmpty());
 }
 
-const Query::Parameter::Name& Query::Parameter::accessName() const
+const Query::Parameter::Name& Query::Parameter::getName() const
 {
     return name_;
 }
 
-const Query::Parameter::Value& Query::Parameter::accessValue() const
-{
-    return value_;
-}
-
-Query::Parameter::Name Query::Parameter::getName() const
-{
-    return name_;
-}
-
-Query::Parameter::Value Query::Parameter::getValue() const
+const Query::Parameter::Value& Query::Parameter::getValue() const
 {
     return value_;
 }
@@ -82,7 +72,7 @@ bool Query::hasParameterWithName(const Query::Parameter::Name& aName) const
 
     for (const auto& parameter : parameters_)
     {
-        if (parameter.accessName() == aName)
+        if (parameter.getName() == aName)
         {
             return true;
         }
@@ -100,9 +90,9 @@ String Query::getParameterWithName(const Query::Parameter::Name& aName) const
 
     for (const auto& parameter : parameters_)
     {
-        if (parameter.accessName() == aName)
+        if (parameter.getName() == aName)
         {
-            return parameter.accessValue();
+            return parameter.getValue();
         }
     }
 
@@ -122,7 +112,7 @@ String Query::toString() const
             queryString += "&";
         }
 
-        queryString += String::Format("{}={}", parameter.accessName(), parameter.accessValue());
+        queryString += String::Format("{}={}", parameter.getName(), parameter.getValue());
     }
 
     return queryString;

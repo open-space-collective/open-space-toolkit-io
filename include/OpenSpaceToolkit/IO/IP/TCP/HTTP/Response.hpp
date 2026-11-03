@@ -126,9 +126,24 @@ class Response
 
     /// @brief              Get response body
     ///
-    /// @return             Response body
+    /// @code
+    ///                     const Response response = Client::Get(URL::Parse("https://www.google.com")) ;
+    ///                     const String& body = response.getBody() ;
+    /// @endcode
+    ///
+    /// @return             Const reference to response body
 
-    String getBody() const;
+    const String& getBody() const&;
+
+    /// @brief              Get response body of a temporary response
+    ///
+    /// @code
+    ///                     const String body = Client::Get(URL::Parse("https://www.google.com")).getBody() ;
+    /// @endcode
+    ///
+    /// @return             Response body (copy, so that it does not dangle)
+
+    String getBody() &&;
 
     /// @brief              Converts response status code to string
     ///

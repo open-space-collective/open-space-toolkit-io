@@ -20,7 +20,13 @@ inline void OpenSpaceToolkitIOPy_IP_TCP_HTTP_Response(pybind11::module& aModule)
 
         .def("is_ok", &Response::isOk)
         .def("get_status_code", &Response::getStatusCode)
-        .def("get_body", &Response::getBody)
+        .def(
+            "get_body",
+            [](const Response& self) -> String
+            {
+                return self.getBody();
+            }
+        )
 
         .def_static("string_from_status_code", &Response::StringFromStatusCode)
 

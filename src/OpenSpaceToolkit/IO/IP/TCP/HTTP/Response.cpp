@@ -48,9 +48,14 @@ Response::StatusCode Response::getStatusCode() const
     return statusCode_;
 }
 
-String Response::getBody() const
+const String& Response::getBody() const&
 {
     return body_;
+}
+
+String Response::getBody() &&
+{
+    return this->getBody();
 }
 
 String Response::StringFromStatusCode(const Response::StatusCode& aStatusCode)

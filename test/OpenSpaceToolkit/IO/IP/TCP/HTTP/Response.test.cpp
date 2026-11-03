@@ -92,6 +92,16 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, GetBody)
         const Response response = {statusCode, body};
 
         EXPECT_EQ(body, response.getBody());
+        EXPECT_EQ(&response.getBody(), &response.getBody());
+    }
+
+    {
+        const Response::StatusCode statusCode = Response::StatusCode::Ok;
+        const String body = "Hello World!";
+
+        const String responseBody = Response(statusCode, body).getBody();
+
+        EXPECT_EQ(body, responseBody);
     }
 }
 

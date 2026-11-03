@@ -77,6 +77,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetUrl)
         const Request request = {method, url, body};
 
         EXPECT_EQ(url, request.getUrl());
+        EXPECT_EQ(&request.getUrl(), &request.getUrl());
     }
 }
 
@@ -95,6 +96,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetBody)
         const Request request = {method, url, body};
 
         EXPECT_EQ(body, request.getBody());
+        EXPECT_EQ(&request.getBody(), &request.getBody());
     }
 }
 
