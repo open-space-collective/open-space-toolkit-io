@@ -143,6 +143,13 @@ Response Client::Send(const Request& aRequest)
 
         curl_easy_getinfo(curlPtr, CURLINFO_RESPONSE_CODE, &responseCode);
 
+        // cURL reports 0 when no status code was received, which used to yield an undefined response
+
+        if (responseCode == 0)
+        {
+            throw ostk::core::error::runtime::Undefined("Response");
+        }
+
         // Cleanup
 
         curl_easy_cleanup(curlPtr);

@@ -19,6 +19,14 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Send)
         EXPECT_TRUE(response.isOk()) << response;
         EXPECT_FALSE(response.getBody().isEmpty());
     }
+
+    {
+        // cURL reports no status code for file:// transfers. This used to return an undefined response.
+
+        const URL url = {"file", "localhost", "/etc/passwd"};
+
+        EXPECT_THROW(Client::Send(Request::Get(url)), ostk::core::error::runtime::Undefined);
+    }
 }
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Get)
