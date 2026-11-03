@@ -172,13 +172,6 @@ File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Size& aFo
 {
     using ostk::core::filesystem::Path;
 
-    if (!aDirectory.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Directory");
-    }
-
-    File file = File::Undefined();
-
     // Setup
 
     CURL* curlPtr = curl_easy_init();
@@ -203,7 +196,7 @@ File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Size& aFo
 
         // Set response data handler
 
-        file = File::Path(Path::Parse(
+        File file = File::Path(Path::Parse(
             String::Format("{}/{}", aDirectory.getPath().toString(), Path::Parse(aUrl.getPath()).getLastElement())
         ));
 
@@ -272,11 +265,6 @@ File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Size& aFo
 void Client::List(const URL& aUrl, const File& aFile, const bool showNamesOnly)
 {
     using ostk::core::filesystem::Path;
-
-    if (!aFile.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("File");
-    }
 
     if (aFile.exists())
     {
