@@ -41,12 +41,12 @@ Request::Method Request::getMethod() const
     return method_;
 }
 
-URL Request::getUrl() const
+const URL& Request::getUrl() const
 {
     return url_;
 }
 
-String Request::getBody() const
+const String& Request::getBody() const
 {
     return body_;
 }

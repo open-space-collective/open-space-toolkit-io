@@ -68,28 +68,6 @@ class Query
 
         bool isDefined() const;
 
-        /// @brief      Access parameter name
-        ///
-        /// @code
-        ///             Parameter parameter({"Key", "Value"}) ;
-        ///             parameter.accessName() ; // &"Key"
-        /// @endcode
-        ///
-        /// @return     Reference to parameter name
-
-        const Parameter::Name& accessName() const;
-
-        /// @brief      Access parameter value
-        ///
-        /// @code
-        ///             Parameter parameter({"Key", "Value"}) ;
-        ///             parameter.accessValue() ; // &"Value"
-        /// @endcode
-        ///
-        /// @return     Reference to parameter value
-
-        const Parameter::Value& accessValue() const;
-
         /// @brief      Get parameter name
         ///
         /// @code
@@ -99,7 +77,7 @@ class Query
         ///
         /// @return     Parameter name
 
-        Parameter::Name getName() const;
+        const Parameter::Name& getName() const;
 
         /// @brief      Get parameter value
         ///
@@ -110,7 +88,7 @@ class Query
         ///
         /// @return     Parameter value
 
-        Parameter::Value getValue() const;
+        const Parameter::Value& getValue() const;
 
        private:
         Parameter::Name name_;

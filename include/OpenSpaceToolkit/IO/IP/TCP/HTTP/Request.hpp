@@ -74,13 +74,13 @@ class Request
     ///
     /// @return             Request URL
 
-    URL getUrl() const;
+    const URL& getUrl() const;
 
     /// @brief              Get request body
     ///
     /// @return             Request body
 
-    String getBody() const;
+    const String& getBody() const;
 
     /// @brief              Constructs a GET request
     ///

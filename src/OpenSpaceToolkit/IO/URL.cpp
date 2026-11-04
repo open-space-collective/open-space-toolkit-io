@@ -113,82 +113,42 @@ std::ostream& operator<<(std::ostream& anOutputStream, const URL& aURL)
     return anOutputStream;
 }
 
-const String& URL::accessScheme() const
+const String& URL::getScheme() const
 {
     return scheme_;
 }
 
-const String& URL::accessHost() const
+const String& URL::getHost() const
 {
     return host_;
 }
 
-const String& URL::accessPath() const
+const String& URL::getPath() const
 {
     return path_;
 }
 
-const std::optional<int>& URL::accessPort() const
+const std::optional<int>& URL::getPort() const
 {
     return port_;
 }
 
-const String& URL::accessUser() const
+const String& URL::getUser() const
 {
     return user_;
 }
 
-const String& URL::accessPassword() const
+const String& URL::getPassword() const
 {
     return password_;
 }
 
-const Query& URL::accessQuery() const
+const Query& URL::getQuery() const
 {
     return query_;
 }
 
-const String& URL::accessFragment() const
-{
-    return fragment_;
-}
-
-String URL::getScheme() const
-{
-    return scheme_;
-}
-
-String URL::getHost() const
-{
-    return host_;
-}
-
-String URL::getPath() const
-{
-    return path_;
-}
-
-std::optional<int> URL::getPort() const
-{
-    return port_;
-}
-
-String URL::getUser() const
-{
-    return user_;
-}
-
-String URL::getPassword() const
-{
-    return password_;
-}
-
-Query URL::getQuery() const
-{
-    return query_;
-}
-
-String URL::getFragment() const
+const String& URL::getFragment() const
 {
     return fragment_;
 }
