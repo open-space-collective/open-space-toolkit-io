@@ -22,6 +22,11 @@ def test_url_constructors():
     url = URL(scheme, host, path, port, user, password, query, fragment)
     assert isinstance(url, URL)
 
+    # constructor without port
+    url = URL(scheme, host, path, None, user, password, query, fragment)
+    assert isinstance(url, URL)
+    assert url.get_port() is None
+
     # undefined url constructor
     url = URL.undefined()
     assert isinstance(url, URL)
@@ -46,6 +51,7 @@ def test_url_getter_functions():
     assert url.get_host() == host
     assert url.get_path() == path
     assert url.get_port() == port
+    assert isinstance(url.get_port(), int)
     assert url.get_user() == user
     assert url.get_password() == password
     assert url.get_query() == query
@@ -54,6 +60,8 @@ def test_url_getter_functions():
 
 def test_url_setter_functions():
     url = URL.parse("https://www.google.com")
+
+    assert url.get_port() is None
 
     url.set_scheme("http")
     url.set_host("youtube.com")
@@ -72,6 +80,11 @@ def test_url_setter_functions():
     assert url.get_password() == "Sponge"
     assert url.get_query().is_defined() is False
     assert url.get_fragment() == "frag"
+
+    url.set_port(None)
+
+    assert url.get_port() is None
+    assert url.to_string() == "http://Bob:Sponge@youtube.com/path/to/page#frag"
 
 
 def test_url_comparators():

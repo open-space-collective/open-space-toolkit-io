@@ -3,7 +3,8 @@
 #ifndef __OpenSpaceToolkit_IO_URL__
 #define __OpenSpaceToolkit_IO_URL__
 
-#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
+#include <optional>
+
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 #include <OpenSpaceToolkit/IO/URL/Query.hpp>
@@ -13,7 +14,6 @@ namespace ostk
 namespace io
 {
 
-using Integer = ostk::core::type::Integer;
 using String = ostk::core::type::String;
 using Query = ostk::io::url::Query;
 
@@ -37,7 +37,7 @@ class URL
     /// @param              [in] aScheme A scheme
     /// @param              [in] aHost A host
     /// @param              [in] aPath A path
-    /// @param              [in] aPort A port
+    /// @param              [in] aPort A port (default: std::nullopt, which means no port)
     /// @param              [in] aUser A user
     /// @param              [in] aPassword A password
     /// @param              [in] aQuery A query
@@ -46,7 +46,7 @@ class URL
     URL(const String& aScheme,
         const String& aHost,
         const String& aPath = String::Empty(),
-        const Integer& aPort = Integer::Undefined(),
+        const std::optional<int>& aPort = std::nullopt,
         const String& aUser = String::Empty(),
         const String& aPassword = String::Empty(),
         const Query& aQuery = Query::Undefined(),
@@ -166,9 +166,9 @@ class URL
     ///                     url.accessPort() ; // &80
     /// @endcode
     ///
-    /// @return             Reference to URL port
+    /// @return             Reference to URL port (std::nullopt if the URL has no port)
 
-    const Integer& accessPort() const;
+    const std::optional<int>& accessPort() const;
 
     /// @brief              Get reference to URL user
     ///
@@ -254,9 +254,9 @@ class URL
     ///                     url.getPort() ; // 80
     /// @endcode
     ///
-    /// @return             URL port
+    /// @return             URL port (std::nullopt if the URL has no port)
 
-    Integer getPort() const;
+    std::optional<int> getPort() const;
 
     /// @brief              Get URL user
     ///
@@ -334,9 +334,9 @@ class URL
 
     /// @brief              Set URL port
     ///
-    /// @param              [in] aPort A port
+    /// @param              [in] aPort A port (std::nullopt removes the port)
 
-    void setPort(const Integer& aPort);
+    void setPort(const std::optional<int>& aPort);
 
     /// @brief              Set URL user
     ///
@@ -411,7 +411,7 @@ class URL
     String user_;
     String password_;
     String host_;
-    Integer port_;
+    std::optional<int> port_;
     String path_;
     Query query_;
     String fragment_;
