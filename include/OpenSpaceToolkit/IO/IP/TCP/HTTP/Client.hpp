@@ -43,6 +43,8 @@ class Client
 
     /// @brief              Send a HTTP request
     ///
+    ///                     Throws ostk::core::error::runtime::Undefined if no status code is received.
+    ///
     /// @param              [in] aRequest A HTTP request
     /// @return             A HTTP response
 

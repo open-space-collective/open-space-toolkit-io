@@ -18,19 +18,16 @@ inline void OpenSpaceToolkitIOPy_IP_TCP_HTTP_Response(pybind11::module& aModule)
         .def("__str__", &(shiftToString<Response>))
         .def("__repr__", &(shiftToString<Response>))
 
-        .def("is_defined", &Response::isDefined)
         .def("is_ok", &Response::isOk)
         .def("get_status_code", &Response::getStatusCode)
         .def("get_body", &Response::getBody)
 
-        .def_static("undefined", &Response::Undefined)
         .def_static("string_from_status_code", &Response::StringFromStatusCode)
 
         ;
 
     enum_<Response::StatusCode>(response, "StatusCode")
 
-        .value("Undefined", Response::StatusCode::Undefined)
         .value("Continue", Response::StatusCode::Continue)
         .value("SwitchingProtocols", Response::StatusCode::SwitchingProtocols)
         .value("Processing", Response::StatusCode::Processing)

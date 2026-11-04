@@ -17,7 +17,6 @@ def test_http_client_get_success():
     response = Client.get(url)
 
     assert response is not None
-    assert response.is_defined() is True
     assert response.is_ok() is True
     assert response.get_status_code() == Response.StatusCode.Ok
 
@@ -29,7 +28,6 @@ def test_http_client_send_success():
     response = Client.send(request)
 
     assert response is not None
-    assert response.is_defined() is True
     assert response.is_ok() is True
     assert response.get_status_code() == Response.StatusCode.Ok
 
@@ -55,6 +53,5 @@ def test_http_client_fetch_success():
 # response = Client.list(url, file_input, 3)
 
 # assert response is not None
-# assert response.is_defined() is True
 # assert response.is_ok() is True
 # assert response.get_status_code() == Response.StatusCode.Ok

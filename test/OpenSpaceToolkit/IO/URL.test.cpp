@@ -29,6 +29,12 @@ TEST(OpenSpaceToolkit_IO_URL, Constructor)
 
         EXPECT_NO_THROW(URL(scheme, host, path, port, user, password, query, fragment));
     }
+
+    {
+        EXPECT_THROW(URL("", "domain.org"), ostk::core::error::runtime::Undefined);
+        EXPECT_THROW(URL("https", ""), ostk::core::error::runtime::Undefined);
+        EXPECT_THROW(URL("", ""), ostk::core::error::runtime::Undefined);
+    }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, EqualToOperator)
@@ -79,10 +85,6 @@ TEST(OpenSpaceToolkit_IO_URL, EqualToOperator)
     {
         EXPECT_TRUE(URL::Parse("https://domain.org") == URL::Parse("https://domain.org"));
         EXPECT_FALSE(URL::Parse("https://domain.org:443") == URL::Parse("https://domain.org"));
-    }
-
-    {
-        EXPECT_FALSE(URL::Undefined() == URL::Undefined());
     }
 }
 
@@ -135,10 +137,6 @@ TEST(OpenSpaceToolkit_IO_URL, NotEqualToOperator)
         EXPECT_FALSE(URL::Parse("https://domain.org") != URL::Parse("https://domain.org"));
         EXPECT_TRUE(URL::Parse("https://domain.org:443") != URL::Parse("https://domain.org"));
     }
-
-    {
-        EXPECT_TRUE(URL::Undefined() != URL::Undefined());
-    }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, AdditionOperator)
@@ -149,10 +147,6 @@ TEST(OpenSpaceToolkit_IO_URL, AdditionOperator)
         const URL url = URL::Parse("https://domain.com") + "/path/to/file";
 
         EXPECT_EQ("https://domain.com/path/to/file", url.toString());
-    }
-
-    {
-        EXPECT_ANY_THROW(URL::Undefined() + "/path/to/file");
     }
 }
 
@@ -166,10 +160,6 @@ TEST(OpenSpaceToolkit_IO_URL, AdditionAssignmentOperator)
         url += "/path/to/file";
 
         EXPECT_EQ("https://domain.com/path/to/file", url.toString());
-    }
-
-    {
-        EXPECT_ANY_THROW(URL::Undefined() += "/path/to/file");
     }
 }
 
@@ -196,37 +186,6 @@ TEST(OpenSpaceToolkit_IO_URL, StreamOperator)
         EXPECT_NO_THROW(std::cout << url << std::endl);
 
         EXPECT_FALSE(testing::internal::GetCapturedStdout().empty());
-    }
-}
-
-TEST(OpenSpaceToolkit_IO_URL, IsDefined)
-{
-    using ostk::core::type::String;
-    using ostk::io::URL;
-    using ostk::io::url::Query;
-
-    {
-        const String scheme = "https";
-        const String host = "domain.org";
-
-        EXPECT_TRUE(URL(scheme, host).isDefined());
-    }
-
-    {
-        const String scheme = "https";
-        const String host = "domain.org";
-        const String path = "/path/to/page";
-        const int port = 443;
-        const String user = "user";
-        const String password = "password";
-        const Query query = {{{"key", "value"}}};
-        const String fragment = "fragment";
-
-        EXPECT_TRUE(URL(scheme, host, path, port, user, password, query, fragment).isDefined());
-    }
-
-    {
-        EXPECT_FALSE(URL::Undefined().isDefined());
     }
 }
 
@@ -634,10 +593,6 @@ TEST(OpenSpaceToolkit_IO_URL, ToString)
             url.toString(true)
         ) << url.toString(true);
     }
-
-    {
-        EXPECT_ANY_THROW(URL::Undefined().toString());
-    }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, SetScheme)
@@ -663,6 +618,10 @@ TEST(OpenSpaceToolkit_IO_URL, SetScheme)
         const String otherScheme = "http";
 
         url.setScheme(otherScheme);
+
+        EXPECT_EQ(otherScheme, url.getScheme());
+
+        EXPECT_THROW(url.setScheme(""), ostk::core::error::runtime::Undefined);
 
         EXPECT_EQ(otherScheme, url.getScheme());
     }
@@ -691,6 +650,10 @@ TEST(OpenSpaceToolkit_IO_URL, SetHost)
         const String otherHost = "other-domain.org";
 
         url.setHost(otherHost);
+
+        EXPECT_EQ(otherHost, url.getHost());
+
+        EXPECT_THROW(url.setHost(""), ostk::core::error::runtime::Undefined);
 
         EXPECT_EQ(otherHost, url.getHost());
     }
@@ -866,19 +829,6 @@ TEST(OpenSpaceToolkit_IO_URL, SetFragment)
         url.setFragment(otherFragment);
 
         EXPECT_EQ(otherFragment, url.getFragment());
-    }
-}
-
-TEST(OpenSpaceToolkit_IO_URL, Undefined)
-{
-    using ostk::io::URL;
-
-    {
-        EXPECT_NO_THROW(URL::Undefined());
-    }
-
-    {
-        EXPECT_FALSE(URL::Undefined().isDefined());
     }
 }
 

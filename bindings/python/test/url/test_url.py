@@ -27,9 +27,15 @@ def test_url_constructors():
     assert isinstance(url, URL)
     assert url.get_port() is None
 
-    # undefined url constructor
-    url = URL.undefined()
-    assert isinstance(url, URL)
+    # empty scheme or host
+    with pytest.raises(RuntimeError):
+        URL("", host, path, port, user, password, query, fragment)
+
+    with pytest.raises(RuntimeError):
+        URL(scheme, "", path, port, user, password, query, fragment)
+
+    assert not hasattr(URL, "undefined")
+    assert not hasattr(URL, "is_defined")
 
     # parsing url constructor
     url = URL.parse("https://www.google.com")
@@ -85,6 +91,15 @@ def test_url_setter_functions():
 
     assert url.get_port() is None
     assert url.to_string() == "http://Bob:Sponge@youtube.com/path/to/page#frag"
+
+    with pytest.raises(RuntimeError):
+        url.set_scheme("")
+
+    with pytest.raises(RuntimeError):
+        url.set_host("")
+
+    assert url.get_scheme() == "http"
+    assert url.get_host() == "youtube.com"
 
 
 def test_url_comparators():
