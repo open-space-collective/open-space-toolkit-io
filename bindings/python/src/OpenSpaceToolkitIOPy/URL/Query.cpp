@@ -1,7 +1,5 @@
 /// Apache License 2.0
 
-#include <OpenSpaceToolkitIOPy/Utilities/ArrayCasting.hpp>
-
 #include <OpenSpaceToolkit/IO/URL/Query.hpp>
 
 using ostk::core::container::Array;
@@ -15,7 +13,7 @@ void set_array(const Array<Query::Parameter>& anArray)
 // Taking a python class as input to mimic previous behavior with Boost. Can be refined later if needed
 inline void OpenSpaceToolkitIOPy_URL_Query(auto aClass)
 {
-    using namespace pybind11;
+    using namespace nanobind;
 
     using ostk::core::container::Array;
 
@@ -26,8 +24,22 @@ inline void OpenSpaceToolkitIOPy_URL_Query(auto aClass)
     query
         .def(init<const Array<Query::Parameter>&>())
 
-        .def(self == self)
-        .def(self != self)
+        .def(
+            "__eq__",
+            [](const Query& self, const Query& other)
+            {
+                return self == other;
+            },
+            nanobind::is_operator()
+        )
+        .def(
+            "__ne__",
+            [](const Query& self, const Query& other)
+            {
+                return self != other;
+            },
+            nanobind::is_operator()
+        )
 
         // Operator definition needed to use template
         // .def("__str__", &(shiftToString<Query>))
@@ -64,8 +76,22 @@ inline void OpenSpaceToolkitIOPy_URL_Query(auto aClass)
     param
         .def(init<const Query::Parameter::Name&, const Query::Parameter::Value&>())
 
-        .def(self == self)
-        .def(self != self)
+        .def(
+            "__eq__",
+            [](const Query::Parameter& self, const Query::Parameter& other)
+            {
+                return self == other;
+            },
+            nanobind::is_operator()
+        )
+        .def(
+            "__ne__",
+            [](const Query::Parameter& self, const Query::Parameter& other)
+            {
+                return self != other;
+            },
+            nanobind::is_operator()
+        )
 
         .def("is_defined", &Query::Parameter::isDefined)
 
