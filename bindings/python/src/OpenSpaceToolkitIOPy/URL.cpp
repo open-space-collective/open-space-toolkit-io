@@ -4,13 +4,11 @@
 
 #include <OpenSpaceToolkitIOPy/URL/Query.cpp>
 
-// https://pybind11.readthedocs.io/en/stable/basics.html#default-args
-
-inline void OpenSpaceToolkitIOPy_URL(pybind11::module& aModule)
+inline void OpenSpaceToolkitIOPy_URL(nanobind::module_& aModule)
 {
-    using namespace pybind11;
+    using namespace nanobind;
+    using namespace nanobind::literals;
 
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
 
     using ostk::io::URL;
@@ -23,17 +21,47 @@ inline void OpenSpaceToolkitIOPy_URL(pybind11::module& aModule)
              const String&,
              const String&,
              const String&,
-             const Integer&,
+             const std::optional<int>&,
              const String&,
              const String&,
              const Query&,
              const String&>())
 
-        .def(self == self)
-        .def(self != self)
+        .def(
+            "__eq__",
+            [](const URL& self, const URL& other)
+            {
+                return self == other;
+            },
+            nanobind::is_operator()
+        )
+        .def(
+            "__ne__",
+            [](const URL& self, const URL& other)
+            {
+                return self != other;
+            },
+            nanobind::is_operator()
+        )
 
-        .def(self + String())
-        .def(self += String())
+        .def(
+            "__add__",
+            [](const URL& self, const String& other)
+            {
+                return self + other;
+            },
+            nanobind::is_operator()
+        )
+        .def(
+            "__iadd__",
+            [](URL& self, const String& other) -> URL&
+            {
+                self += other;
+                return self;
+            },
+            nanobind::rv_policy::none,
+            nanobind::is_operator()
+        )
 
         .def("__str__", &(shiftToString<URL>))
         .def(
@@ -43,8 +71,6 @@ inline void OpenSpaceToolkitIOPy_URL(pybind11::module& aModule)
                 return aUrl.toString();
             }
         )
-
-        .def("is_defined", &URL::isDefined)
 
         .def("get_scheme", &URL::getScheme)
         .def("get_host", &URL::getHost)
@@ -65,7 +91,6 @@ inline void OpenSpaceToolkitIOPy_URL(pybind11::module& aModule)
         .def("set_query", &URL::setQuery)
         .def("set_fragment", &URL::setFragment)
 
-        .def_static("undefined", &URL::Undefined)
         .def_static("parse", &URL::Parse)
         // .def_static("encode_string", &URL::EncodeString)
         // .def_static("decode_string", &URL::DecodeString)

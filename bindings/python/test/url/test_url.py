@@ -22,9 +22,20 @@ def test_url_constructors():
     url = URL(scheme, host, path, port, user, password, query, fragment)
     assert isinstance(url, URL)
 
-    # undefined url constructor
-    url = URL.undefined()
+    # constructor without port
+    url = URL(scheme, host, path, None, user, password, query, fragment)
     assert isinstance(url, URL)
+    assert url.get_port() is None
+
+    # empty scheme or host
+    with pytest.raises(RuntimeError):
+        URL("", host, path, port, user, password, query, fragment)
+
+    with pytest.raises(RuntimeError):
+        URL(scheme, "", path, port, user, password, query, fragment)
+
+    assert not hasattr(URL, "undefined")
+    assert not hasattr(URL, "is_defined")
 
     # parsing url constructor
     url = URL.parse("https://www.google.com")
@@ -46,6 +57,7 @@ def test_url_getter_functions():
     assert url.get_host() == host
     assert url.get_path() == path
     assert url.get_port() == port
+    assert isinstance(url.get_port(), int)
     assert url.get_user() == user
     assert url.get_password() == password
     assert url.get_query() == query
@@ -54,6 +66,8 @@ def test_url_getter_functions():
 
 def test_url_setter_functions():
     url = URL.parse("https://www.google.com")
+
+    assert url.get_port() is None
 
     url.set_scheme("http")
     url.set_host("youtube.com")
@@ -72,6 +86,20 @@ def test_url_setter_functions():
     assert url.get_password() == "Sponge"
     assert url.get_query().is_defined() is False
     assert url.get_fragment() == "frag"
+
+    url.set_port(None)
+
+    assert url.get_port() is None
+    assert url.to_string() == "http://Bob:Sponge@youtube.com/path/to/page#frag"
+
+    with pytest.raises(RuntimeError):
+        url.set_scheme("")
+
+    with pytest.raises(RuntimeError):
+        url.set_host("")
+
+    assert url.get_scheme() == "http"
+    assert url.get_host() == "youtube.com"
 
 
 def test_url_comparators():
@@ -97,6 +125,25 @@ def test_url_operators():
 
     assert url_2.to_string() == "https://www.google.com/stuff"
     assert isinstance(url_2, URL)
+
+    # in-place addition returns the same object
+    url_3 = url_1
+    url_3 += "/more"
+
+    assert url_3 is url_1
+    assert url_1.to_string() == "https://www.google.com/more"
+
+
+def test_url_is_unhashable():
+    # URL, Query and Query.Parameter define __eq__ without __hash__
+    with pytest.raises(TypeError):
+        hash(URL.parse("https://www.google.com"))
+
+    with pytest.raises(TypeError):
+        hash(URL.Query.undefined())
+
+    with pytest.raises(TypeError):
+        hash(URL.Query.Parameter("name", "value"))
 
 
 def test_url_query():

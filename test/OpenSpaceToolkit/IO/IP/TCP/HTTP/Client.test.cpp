@@ -21,7 +21,11 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Send)
     }
 
     {
-        EXPECT_ANY_THROW(Client::Send(Request::Undefined()));
+        // cURL reports no status code for file:// transfers. This used to return an undefined response.
+
+        const URL url = {"file", "localhost", "/etc/passwd"};
+
+        EXPECT_THROW(Client::Send(Request::Get(url)), ostk::core::error::runtime::Undefined);
     }
 }
 
@@ -68,10 +72,6 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Get)
 
         EXPECT_ANY_THROW(Client::Get(url));
     }
-
-    {
-        EXPECT_ANY_THROW(Client::Get(URL::Undefined()));
-    }
 }
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Fetch)
@@ -103,20 +103,6 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Fetch)
 
         const Directory directory = Directory::Path(Path::Parse("/tmp"));
 
-        EXPECT_ANY_THROW(Client::Fetch(url, Directory::Undefined()));
-        EXPECT_ANY_THROW(Client::Fetch(URL::Undefined(), directory));
-        EXPECT_ANY_THROW(Client::Fetch(URL::Undefined(), Directory::Undefined()));
-    }
-
-    {
-        const URL url =
-            URL::Parse("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png");
-
-        const Directory directory = Directory::Path(Path::Parse("/tmp"));
-
-        EXPECT_ANY_THROW(Client::Fetch(url, Directory::Undefined()));
-        EXPECT_ANY_THROW(Client::Fetch(URL::Undefined(), directory));
-        EXPECT_ANY_THROW(Client::Fetch(URL::Undefined(), Directory::Undefined()));
         EXPECT_NO_THROW(Client::Fetch(url, directory, -1));  // Converted to max unsigned int
         EXPECT_NO_THROW(Client::Fetch(url, directory, 5));
     }
@@ -154,18 +140,6 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Client, Fetch)
 //         EXPECT_FALSE(file.getContents().isEmpty()) ;
 
 //         file.remove() ;
-
-//     }
-
-//     {
-
-//         const URL url = URL::Parse("ftp://naif.jpl.nasa.gov/pub/naif/generic_kernels/") ;
-
-//         File file = File::Path(Path::Parse("/tmp/listing.txt")) ;
-
-//         EXPECT_ANY_THROW(Client::List(url, File::Undefined())) ;
-//         EXPECT_ANY_THROW(Client::List(URL::Undefined(), file)) ;
-//         EXPECT_ANY_THROW(Client::List(URL::Undefined(), File::Undefined())) ;
 
 //     }
 

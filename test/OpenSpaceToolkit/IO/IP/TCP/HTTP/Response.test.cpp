@@ -38,26 +38,6 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, StreamOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, IsDefined)
-{
-    using ostk::core::type::String;
-
-    using ostk::io::ip::tcp::http::Response;
-
-    {
-        const Response::StatusCode statusCode = Response::StatusCode::Ok;
-        const String body = "Hello World!";
-
-        const Response response = {statusCode, body};
-
-        EXPECT_TRUE(response.isDefined());
-    }
-
-    {
-        EXPECT_FALSE(Response::Undefined().isDefined());
-    }
-}
-
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, IsOk)
 {
     using ostk::core::type::String;
@@ -81,10 +61,6 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, IsOk)
 
         EXPECT_FALSE(response.isOk());
     }
-
-    {
-        EXPECT_ANY_THROW(Response::Undefined().isOk());
-    }
 }
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, GetStatusCode)
@@ -101,10 +77,6 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, GetStatusCode)
 
         EXPECT_EQ(statusCode, response.getStatusCode());
     }
-
-    {
-        EXPECT_ANY_THROW(Response::Undefined().getStatusCode());
-    }
 }
 
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, GetBody)
@@ -120,20 +92,16 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, GetBody)
         const Response response = {statusCode, body};
 
         EXPECT_EQ(body, response.getBody());
+        EXPECT_EQ(&response.getBody(), &response.getBody());
     }
 
     {
-        EXPECT_ANY_THROW(Response::Undefined().getBody());
-    }
-}
+        const Response::StatusCode statusCode = Response::StatusCode::Ok;
+        const String body = "Hello World!";
 
-TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, Undefined)
-{
-    using ostk::io::ip::tcp::http::Response;
+        const String responseBody = Response(statusCode, body).getBody();
 
-    {
-        EXPECT_NO_THROW(Response::Undefined());
-        EXPECT_FALSE(Response::Undefined().isDefined());
+        EXPECT_EQ(body, responseBody);
     }
 }
 
@@ -142,7 +110,6 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Response, StringFromStatusCode)
     using ostk::io::ip::tcp::http::Response;
 
     {
-        EXPECT_EQ("Undefined", Response::StringFromStatusCode(Response::StatusCode::Undefined));
         EXPECT_EQ("Continue", Response::StringFromStatusCode(Response::StatusCode::Continue));
         EXPECT_EQ("SwitchingProtocols", Response::StringFromStatusCode(Response::StatusCode::SwitchingProtocols));
         EXPECT_EQ("Processing", Response::StringFromStatusCode(Response::StatusCode::Processing));

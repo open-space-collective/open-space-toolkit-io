@@ -172,7 +172,7 @@ Or to run them manually:
 
 | Name                | Version  | License            | Link                                                                                                                         |
 | ------------------- | -------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| Pybind11            | `2.12.0` | BSD-3-Clause       | [github.com/pybind/pybind11](https://github.com/pybind/pybind11)                                                             |
+| nanobind            | `3.1.0`  | BSD-3-Clause       | [github.com/wjakob/nanobind](https://github.com/wjakob/nanobind)                                                             |
 | {fmt}               | `5.2.0`  | BSD-2-Clause       | [github.com/fmtlib/fmt](https://github.com/fmtlib/fmt)                                                                       |
 | Core                | `main`   | Apache License 2.0 | [github.com/open-space-collective/open-space-toolkit-core](https://github.com/open-space-collective/open-space-toolkit-core) |
 

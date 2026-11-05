@@ -6,7 +6,6 @@
 
 TEST(OpenSpaceToolkit_IO_URL, Constructor)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -22,7 +21,7 @@ TEST(OpenSpaceToolkit_IO_URL, Constructor)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -30,11 +29,16 @@ TEST(OpenSpaceToolkit_IO_URL, Constructor)
 
         EXPECT_NO_THROW(URL(scheme, host, path, port, user, password, query, fragment));
     }
+
+    {
+        EXPECT_THROW(URL("", "domain.org"), ostk::core::error::runtime::Undefined);
+        EXPECT_THROW(URL("https", ""), ostk::core::error::runtime::Undefined);
+        EXPECT_THROW(URL("", ""), ostk::core::error::runtime::Undefined);
+    }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, EqualToOperator)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -50,7 +54,7 @@ TEST(OpenSpaceToolkit_IO_URL, EqualToOperator)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -66,7 +70,7 @@ TEST(OpenSpaceToolkit_IO_URL, EqualToOperator)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -79,13 +83,13 @@ TEST(OpenSpaceToolkit_IO_URL, EqualToOperator)
     }
 
     {
-        EXPECT_FALSE(URL::Undefined() == URL::Undefined());
+        EXPECT_TRUE(URL::Parse("https://domain.org") == URL::Parse("https://domain.org"));
+        EXPECT_FALSE(URL::Parse("https://domain.org:443") == URL::Parse("https://domain.org"));
     }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, NotEqualToOperator)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -101,7 +105,7 @@ TEST(OpenSpaceToolkit_IO_URL, NotEqualToOperator)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -117,7 +121,7 @@ TEST(OpenSpaceToolkit_IO_URL, NotEqualToOperator)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -130,7 +134,8 @@ TEST(OpenSpaceToolkit_IO_URL, NotEqualToOperator)
     }
 
     {
-        EXPECT_TRUE(URL::Undefined() != URL::Undefined());
+        EXPECT_FALSE(URL::Parse("https://domain.org") != URL::Parse("https://domain.org"));
+        EXPECT_TRUE(URL::Parse("https://domain.org:443") != URL::Parse("https://domain.org"));
     }
 }
 
@@ -142,10 +147,6 @@ TEST(OpenSpaceToolkit_IO_URL, AdditionOperator)
         const URL url = URL::Parse("https://domain.com") + "/path/to/file";
 
         EXPECT_EQ("https://domain.com/path/to/file", url.toString());
-    }
-
-    {
-        EXPECT_ANY_THROW(URL::Undefined() + "/path/to/file");
     }
 }
 
@@ -160,15 +161,10 @@ TEST(OpenSpaceToolkit_IO_URL, AdditionAssignmentOperator)
 
         EXPECT_EQ("https://domain.com/path/to/file", url.toString());
     }
-
-    {
-        EXPECT_ANY_THROW(URL::Undefined() += "/path/to/file");
-    }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, StreamOperator)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -177,7 +173,7 @@ TEST(OpenSpaceToolkit_IO_URL, StreamOperator)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -193,225 +189,8 @@ TEST(OpenSpaceToolkit_IO_URL, StreamOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_IO_URL, IsDefined)
-{
-    using ostk::core::type::Integer;
-    using ostk::core::type::String;
-    using ostk::io::URL;
-    using ostk::io::url::Query;
-
-    {
-        const String scheme = "https";
-        const String host = "domain.org";
-
-        EXPECT_TRUE(URL(scheme, host).isDefined());
-    }
-
-    {
-        const String scheme = "https";
-        const String host = "domain.org";
-        const String path = "/path/to/page";
-        const Integer port = 443;
-        const String user = "user";
-        const String password = "password";
-        const Query query = {{{"key", "value"}}};
-        const String fragment = "fragment";
-
-        EXPECT_TRUE(URL(scheme, host, path, port, user, password, query, fragment).isDefined());
-    }
-
-    {
-        EXPECT_FALSE(URL::Undefined().isDefined());
-    }
-}
-
-TEST(OpenSpaceToolkit_IO_URL, AccessScheme)
-{
-    using ostk::core::type::Integer;
-    using ostk::core::type::String;
-    using ostk::io::URL;
-    using ostk::io::url::Query;
-
-    {
-        const String scheme = "https";
-        const String host = "domain.org";
-        const String path = "/path/to/page";
-        const Integer port = 443;
-        const String user = "user";
-        const String password = "password";
-        const Query query = {{{"key", "value"}}};
-        const String fragment = "fragment";
-
-        const URL url = {scheme, host, path, port, user, password, query, fragment};
-
-        EXPECT_EQ(scheme, url.accessScheme());
-    }
-}
-
-TEST(OpenSpaceToolkit_IO_URL, AccessHost)
-{
-    using ostk::core::type::Integer;
-    using ostk::core::type::String;
-    using ostk::io::URL;
-    using ostk::io::url::Query;
-
-    {
-        const String scheme = "https";
-        const String host = "domain.org";
-        const String path = "/path/to/page";
-        const Integer port = 443;
-        const String user = "user";
-        const String password = "password";
-        const Query query = {{{"key", "value"}}};
-        const String fragment = "fragment";
-
-        const URL url = {scheme, host, path, port, user, password, query, fragment};
-
-        EXPECT_EQ(host, url.accessHost());
-    }
-}
-
-TEST(OpenSpaceToolkit_IO_URL, AccessPath)
-{
-    using ostk::core::type::Integer;
-    using ostk::core::type::String;
-    using ostk::io::URL;
-    using ostk::io::url::Query;
-
-    {
-        const String scheme = "https";
-        const String host = "domain.org";
-        const String path = "/path/to/page";
-        const Integer port = 443;
-        const String user = "user";
-        const String password = "password";
-        const Query query = {{{"key", "value"}}};
-        const String fragment = "fragment";
-
-        const URL url = {scheme, host, path, port, user, password, query, fragment};
-
-        EXPECT_EQ(path, url.accessPath());
-    }
-}
-
-TEST(OpenSpaceToolkit_IO_URL, AccessPort)
-{
-    using ostk::core::type::Integer;
-    using ostk::core::type::String;
-    using ostk::io::URL;
-    using ostk::io::url::Query;
-
-    {
-        const String scheme = "https";
-        const String host = "domain.org";
-        const String path = "/path/to/page";
-        const Integer port = 443;
-        const String user = "user";
-        const String password = "password";
-        const Query query = {{{"key", "value"}}};
-        const String fragment = "fragment";
-
-        const URL url = {scheme, host, path, port, user, password, query, fragment};
-
-        EXPECT_EQ(port, url.accessPort());
-    }
-}
-
-TEST(OpenSpaceToolkit_IO_URL, AccessUser)
-{
-    using ostk::core::type::Integer;
-    using ostk::core::type::String;
-    using ostk::io::URL;
-    using ostk::io::url::Query;
-
-    {
-        const String scheme = "https";
-        const String host = "domain.org";
-        const String path = "/path/to/page";
-        const Integer port = 443;
-        const String user = "user";
-        const String password = "password";
-        const Query query = {{{"key", "value"}}};
-        const String fragment = "fragment";
-
-        const URL url = {scheme, host, path, port, user, password, query, fragment};
-
-        EXPECT_EQ(user, url.accessUser());
-    }
-}
-
-TEST(OpenSpaceToolkit_IO_URL, AccessPassword)
-{
-    using ostk::core::type::Integer;
-    using ostk::core::type::String;
-    using ostk::io::URL;
-    using ostk::io::url::Query;
-
-    {
-        const String scheme = "https";
-        const String host = "domain.org";
-        const String path = "/path/to/page";
-        const Integer port = 443;
-        const String user = "user";
-        const String password = "password";
-        const Query query = {{{"key", "value"}}};
-        const String fragment = "fragment";
-
-        const URL url = {scheme, host, path, port, user, password, query, fragment};
-
-        EXPECT_EQ(password, url.accessPassword());
-    }
-}
-
-TEST(OpenSpaceToolkit_IO_URL, AccessQuery)
-{
-    using ostk::core::type::Integer;
-    using ostk::core::type::String;
-    using ostk::io::URL;
-    using ostk::io::url::Query;
-
-    {
-        const String scheme = "https";
-        const String host = "domain.org";
-        const String path = "/path/to/page";
-        const Integer port = 443;
-        const String user = "user";
-        const String password = "password";
-        const Query query = {{{"key", "value"}}};
-        const String fragment = "fragment";
-
-        const URL url = {scheme, host, path, port, user, password, query, fragment};
-
-        EXPECT_EQ(query, url.accessQuery());
-    }
-}
-
-TEST(OpenSpaceToolkit_IO_URL, AccessFragment)
-{
-    using ostk::core::type::Integer;
-    using ostk::core::type::String;
-    using ostk::io::URL;
-    using ostk::io::url::Query;
-
-    {
-        const String scheme = "https";
-        const String host = "domain.org";
-        const String path = "/path/to/page";
-        const Integer port = 443;
-        const String user = "user";
-        const String password = "password";
-        const Query query = {{{"key", "value"}}};
-        const String fragment = "fragment";
-
-        const URL url = {scheme, host, path, port, user, password, query, fragment};
-
-        EXPECT_EQ(fragment, url.accessFragment());
-    }
-}
-
 TEST(OpenSpaceToolkit_IO_URL, GetScheme)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -420,7 +199,7 @@ TEST(OpenSpaceToolkit_IO_URL, GetScheme)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -429,12 +208,12 @@ TEST(OpenSpaceToolkit_IO_URL, GetScheme)
         const URL url = {scheme, host, path, port, user, password, query, fragment};
 
         EXPECT_EQ(scheme, url.getScheme());
+        EXPECT_EQ(&url.getScheme(), &url.getScheme());
     }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, GetHost)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -443,7 +222,7 @@ TEST(OpenSpaceToolkit_IO_URL, GetHost)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -452,12 +231,12 @@ TEST(OpenSpaceToolkit_IO_URL, GetHost)
         const URL url = {scheme, host, path, port, user, password, query, fragment};
 
         EXPECT_EQ(host, url.getHost());
+        EXPECT_EQ(&url.getHost(), &url.getHost());
     }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, GetPath)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -466,7 +245,7 @@ TEST(OpenSpaceToolkit_IO_URL, GetPath)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -475,12 +254,12 @@ TEST(OpenSpaceToolkit_IO_URL, GetPath)
         const URL url = {scheme, host, path, port, user, password, query, fragment};
 
         EXPECT_EQ(path, url.getPath());
+        EXPECT_EQ(&url.getPath(), &url.getPath());
     }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, GetPort)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -489,7 +268,7 @@ TEST(OpenSpaceToolkit_IO_URL, GetPort)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -498,12 +277,18 @@ TEST(OpenSpaceToolkit_IO_URL, GetPort)
         const URL url = {scheme, host, path, port, user, password, query, fragment};
 
         EXPECT_EQ(port, url.getPort());
+        EXPECT_EQ(&url.getPort(), &url.getPort());
+    }
+
+    {
+        const URL url = URL::Parse("https://domain.org/path/to/page");
+
+        EXPECT_EQ(std::nullopt, url.getPort());
     }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, GetUser)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -512,7 +297,7 @@ TEST(OpenSpaceToolkit_IO_URL, GetUser)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -521,12 +306,12 @@ TEST(OpenSpaceToolkit_IO_URL, GetUser)
         const URL url = {scheme, host, path, port, user, password, query, fragment};
 
         EXPECT_EQ(user, url.getUser());
+        EXPECT_EQ(&url.getUser(), &url.getUser());
     }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, GetPassword)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -535,7 +320,7 @@ TEST(OpenSpaceToolkit_IO_URL, GetPassword)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -544,12 +329,12 @@ TEST(OpenSpaceToolkit_IO_URL, GetPassword)
         const URL url = {scheme, host, path, port, user, password, query, fragment};
 
         EXPECT_EQ(password, url.getPassword());
+        EXPECT_EQ(&url.getPassword(), &url.getPassword());
     }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, GetQuery)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -558,7 +343,7 @@ TEST(OpenSpaceToolkit_IO_URL, GetQuery)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -567,12 +352,12 @@ TEST(OpenSpaceToolkit_IO_URL, GetQuery)
         const URL url = {scheme, host, path, port, user, password, query, fragment};
 
         EXPECT_EQ(query, url.getQuery());
+        EXPECT_EQ(&url.getQuery(), &url.getQuery());
     }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, GetFragment)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -581,7 +366,7 @@ TEST(OpenSpaceToolkit_IO_URL, GetFragment)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -590,12 +375,12 @@ TEST(OpenSpaceToolkit_IO_URL, GetFragment)
         const URL url = {scheme, host, path, port, user, password, query, fragment};
 
         EXPECT_EQ(fragment, url.getFragment());
+        EXPECT_EQ(&url.getFragment(), &url.getFragment());
     }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, ToString)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -604,7 +389,7 @@ TEST(OpenSpaceToolkit_IO_URL, ToString)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key_A", "value_1"}, {"key_B", "value_2"}}};
@@ -621,7 +406,7 @@ TEST(OpenSpaceToolkit_IO_URL, ToString)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key_A", "value 1"}, {"key_B", "value 2"}}};
@@ -634,15 +419,10 @@ TEST(OpenSpaceToolkit_IO_URL, ToString)
             url.toString(true)
         ) << url.toString(true);
     }
-
-    {
-        EXPECT_ANY_THROW(URL::Undefined().toString());
-    }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, SetScheme)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -651,7 +431,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetScheme)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -666,12 +446,15 @@ TEST(OpenSpaceToolkit_IO_URL, SetScheme)
         url.setScheme(otherScheme);
 
         EXPECT_EQ(otherScheme, url.getScheme());
+
+        EXPECT_THROW(url.setScheme(""), ostk::core::error::runtime::Undefined);
+
+        EXPECT_EQ(otherScheme, url.getScheme());
     }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, SetHost)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -680,7 +463,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetHost)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -695,12 +478,15 @@ TEST(OpenSpaceToolkit_IO_URL, SetHost)
         url.setHost(otherHost);
 
         EXPECT_EQ(otherHost, url.getHost());
+
+        EXPECT_THROW(url.setHost(""), ostk::core::error::runtime::Undefined);
+
+        EXPECT_EQ(otherHost, url.getHost());
     }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, SetPath)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -709,7 +495,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetPath)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -729,7 +515,6 @@ TEST(OpenSpaceToolkit_IO_URL, SetPath)
 
 TEST(OpenSpaceToolkit_IO_URL, SetPort)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -738,7 +523,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetPort)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -748,17 +533,21 @@ TEST(OpenSpaceToolkit_IO_URL, SetPort)
 
         EXPECT_EQ(port, url.getPort());
 
-        const Integer otherPort = 80;
+        const int otherPort = 80;
 
         url.setPort(otherPort);
 
         EXPECT_EQ(otherPort, url.getPort());
+
+        url.setPort(std::nullopt);
+
+        EXPECT_EQ(std::nullopt, url.getPort());
+        EXPECT_EQ("https://user:password@domain.org/path/to/page?key=value#fragment", url.toString());
     }
 }
 
 TEST(OpenSpaceToolkit_IO_URL, SetUser)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -767,7 +556,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetUser)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -787,7 +576,6 @@ TEST(OpenSpaceToolkit_IO_URL, SetUser)
 
 TEST(OpenSpaceToolkit_IO_URL, SetPassword)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -796,7 +584,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetPassword)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -816,7 +604,6 @@ TEST(OpenSpaceToolkit_IO_URL, SetPassword)
 
 TEST(OpenSpaceToolkit_IO_URL, SetQuery)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -825,7 +612,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetQuery)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -845,7 +632,6 @@ TEST(OpenSpaceToolkit_IO_URL, SetQuery)
 
 TEST(OpenSpaceToolkit_IO_URL, SetFragment)
 {
-    using ostk::core::type::Integer;
     using ostk::core::type::String;
     using ostk::io::URL;
     using ostk::io::url::Query;
@@ -854,7 +640,7 @@ TEST(OpenSpaceToolkit_IO_URL, SetFragment)
         const String scheme = "https";
         const String host = "domain.org";
         const String path = "/path/to/page";
-        const Integer port = 443;
+        const int port = 443;
         const String user = "user";
         const String password = "password";
         const Query query = {{{"key", "value"}}};
@@ -869,19 +655,6 @@ TEST(OpenSpaceToolkit_IO_URL, SetFragment)
         url.setFragment(otherFragment);
 
         EXPECT_EQ(otherFragment, url.getFragment());
-    }
-}
-
-TEST(OpenSpaceToolkit_IO_URL, Undefined)
-{
-    using ostk::io::URL;
-
-    {
-        EXPECT_NO_THROW(URL::Undefined());
-    }
-
-    {
-        EXPECT_FALSE(URL::Undefined().isDefined());
     }
 }
 
@@ -936,6 +709,15 @@ TEST(OpenSpaceToolkit_IO_URL, Parse)
         {
             EXPECT_ANY_THROW(URL::Parse(urlString)) << urlString;
         }
+    }
+
+    {
+        EXPECT_EQ(443, URL::Parse("https://domain.com:443").getPort());
+        EXPECT_EQ(std::nullopt, URL::Parse("https://domain.com").getPort());
+    }
+
+    {
+        EXPECT_ANY_THROW(URL::Parse("https://domain.com:99999999999"));
     }
 }
 

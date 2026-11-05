@@ -67,11 +67,6 @@ int debugHandler(CURL* aCurlPtr, curl_infotype aType, char* aDataset, size_t aSi
 
 Response Client::Send(const Request& aRequest)
 {
-    if (!aRequest.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Request");
-    }
-
     // std::cout << "curl_global_init(CURL_GLOBAL_SSL)..." << std::endl ;
 
     // curl_global_init(CURL_GLOBAL_SSL) ;
@@ -148,6 +143,13 @@ Response Client::Send(const Request& aRequest)
 
         curl_easy_getinfo(curlPtr, CURLINFO_RESPONSE_CODE, &responseCode);
 
+        // cURL reports 0 when no status code was received, which used to yield an undefined response
+
+        if (responseCode == 0)
+        {
+            throw ostk::core::error::runtime::Undefined("Response");
+        }
+
         // Cleanup
 
         curl_easy_cleanup(curlPtr);
@@ -169,18 +171,6 @@ Response Client::Get(const URL& aUrl)
 File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Size& aFollowCount)
 {
     using ostk::core::filesystem::Path;
-
-    if (!aUrl.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("URL");
-    }
-
-    if (!aDirectory.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("Directory");
-    }
-
-    File file = File::Undefined();
 
     // Setup
 
@@ -206,7 +196,7 @@ File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Size& aFo
 
         // Set response data handler
 
-        file = File::Path(Path::Parse(
+        File file = File::Path(Path::Parse(
             String::Format("{}/{}", aDirectory.getPath().toString(), Path::Parse(aUrl.getPath()).getLastElement())
         ));
 
@@ -275,16 +265,6 @@ File Client::Fetch(const URL& aUrl, const Directory& aDirectory, const Size& aFo
 void Client::List(const URL& aUrl, const File& aFile, const bool showNamesOnly)
 {
     using ostk::core::filesystem::Path;
-
-    if (!aUrl.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("URL");
-    }
-
-    if (!aFile.isDefined())
-    {
-        throw ostk::core::error::runtime::Undefined("File");
-    }
 
     if (aFile.exists())
     {

@@ -3,7 +3,8 @@
 #ifndef __OpenSpaceToolkit_IO_URL__
 #define __OpenSpaceToolkit_IO_URL__
 
-#include <OpenSpaceToolkit/Core/Type/Integer.hpp>
+#include <optional>
+
 #include <OpenSpaceToolkit/Core/Type/String.hpp>
 
 #include <OpenSpaceToolkit/IO/URL/Query.hpp>
@@ -13,7 +14,6 @@ namespace ostk
 namespace io
 {
 
-using Integer = ostk::core::type::Integer;
 using String = ostk::core::type::String;
 using Query = ostk::io::url::Query;
 
@@ -30,14 +30,16 @@ class URL
 
     /// @brief              Constructor
     ///
+    ///                     Throws ostk::core::error::runtime::Undefined if the scheme or the host is empty.
+    ///
     /// @code
     ///                     URL url("http", "server.org", "/path/to/page.html", 80) ;
     /// @endcode
     ///
-    /// @param              [in] aScheme A scheme
-    /// @param              [in] aHost A host
+    /// @param              [in] aScheme A scheme (must not be empty)
+    /// @param              [in] aHost A host (must not be empty)
     /// @param              [in] aPath A path
-    /// @param              [in] aPort A port
+    /// @param              [in] aPort A port (default: std::nullopt, which means no port)
     /// @param              [in] aUser A user
     /// @param              [in] aPassword A password
     /// @param              [in] aQuery A query
@@ -46,7 +48,7 @@ class URL
     URL(const String& aScheme,
         const String& aHost,
         const String& aPath = String::Empty(),
-        const Integer& aPort = Integer::Undefined(),
+        const std::optional<int>& aPort = std::nullopt,
         const String& aUser = String::Empty(),
         const String& aPassword = String::Empty(),
         const Query& aQuery = Query::Undefined(),
@@ -115,105 +117,6 @@ class URL
 
     friend std::ostream& operator<<(std::ostream& anOutputStream, const URL& aURL);
 
-    /// @brief              Check if URL is defined
-    ///
-    /// @code
-    ///                     URL url = URL::Parse("http://server.org") ;
-    ///                     url.isDefined() ; // True
-    /// @endcode
-    ///
-    /// @return             True if URL is defined
-
-    bool isDefined() const;
-
-    /// @brief              Get reference to URL scheme
-    ///
-    /// @code
-    ///                     URL url = URL::Parse("http://server.org") ;
-    ///                     url.accessScheme() ; // &"http"
-    /// @endcode
-    ///
-    /// @return             Reference to URL scheme
-
-    const String& accessScheme() const;
-
-    /// @brief              Get reference to URL host
-    ///
-    /// @code
-    ///                     URL url = URL::Parse("http://server.org") ;
-    ///                     url.accessHost() ; // &"server.org"
-    /// @endcode
-    ///
-    /// @return             Reference to URL host
-
-    const String& accessHost() const;
-
-    /// @brief              Get reference to URL path
-    ///
-    /// @code
-    ///                     URL url = URL::Parse("http://server.org/path/to/index.html") ;
-    ///                     url.accessPath() ; // &"/path/to/index.html"
-    /// @endcode
-    ///
-    /// @return             Reference to URL path
-
-    const String& accessPath() const;
-
-    /// @brief              Get reference to URL port
-    ///
-    /// @code
-    ///                     URL url = URL::Parse("http://server.org:80") ;
-    ///                     url.accessPort() ; // &80
-    /// @endcode
-    ///
-    /// @return             Reference to URL port
-
-    const Integer& accessPort() const;
-
-    /// @brief              Get reference to URL user
-    ///
-    /// @code
-    ///                     URL url = URL::Parse("http://user:password@server.org") ;
-    ///                     url.accessUser() ; // &"user"
-    /// @endcode
-    ///
-    /// @return             Reference to URL user
-
-    const String& accessUser() const;
-
-    /// @brief              Get reference to URL password
-    ///
-    /// @code
-    ///                     URL url = URL::Parse("http://user:password@server.org") ;
-    ///                     url.accessPassword() ; // &"password"
-    /// @endcode
-    ///
-    /// @return             Reference to URL password
-
-    const String& accessPassword() const;
-
-    /// @brief              Get reference to URL query
-    ///
-    /// @code
-    ///                     URL url = URL::Parse("http://server.org?key=value") ;
-    ///                     url.accessQuery() ; // &"key=value"
-    /// @endcode
-    ///
-    /// @return             Reference to URL query
-
-    const Query& accessQuery() const;
-
-    /// @brief              Get reference to URL fragment
-    ///
-    /// @code
-    ///                     URL url = URL::Parse("http://server.org#fragment") ;
-    ///                     url.accessFragment() ; // &"fragment"
-    /// @endcode
-    ///
-    /// @return             Reference to URL fragment
-
-    const String& accessFragment() const;
-
     /// @brief              Get URL scheme
     ///
     /// @code
@@ -223,7 +126,7 @@ class URL
     ///
     /// @return             URL scheme
 
-    String getScheme() const;
+    const String& getScheme() const;
 
     /// @brief              Get URL host
     ///
@@ -234,7 +137,7 @@ class URL
     ///
     /// @return             URL host
 
-    String getHost() const;
+    const String& getHost() const;
 
     /// @brief              Get URL path
     ///
@@ -245,7 +148,7 @@ class URL
     ///
     /// @return             URL path
 
-    String getPath() const;
+    const String& getPath() const;
 
     /// @brief              Get URL port
     ///
@@ -254,9 +157,9 @@ class URL
     ///                     url.getPort() ; // 80
     /// @endcode
     ///
-    /// @return             URL port
+    /// @return             URL port (std::nullopt if the URL has no port)
 
-    Integer getPort() const;
+    const std::optional<int>& getPort() const;
 
     /// @brief              Get URL user
     ///
@@ -267,7 +170,7 @@ class URL
     ///
     /// @return             URL user
 
-    String getUser() const;
+    const String& getUser() const;
 
     /// @brief              Get URL password
     ///
@@ -278,7 +181,7 @@ class URL
     ///
     /// @return             URL password
 
-    String getPassword() const;
+    const String& getPassword() const;
 
     /// @brief              Get URL query
     ///
@@ -289,7 +192,7 @@ class URL
     ///
     /// @return             URL query
 
-    Query getQuery() const;
+    const Query& getQuery() const;
 
     /// @brief              Get URL fragment
     ///
@@ -300,7 +203,7 @@ class URL
     ///
     /// @return             URL fragment
 
-    String getFragment() const;
+    const String& getFragment() const;
 
     /// @brief              Get serialized URL
     ///
@@ -316,13 +219,17 @@ class URL
 
     /// @brief              Set URL scheme
     ///
-    /// @param              [in] aScheme A scheme
+    ///                     Throws ostk::core::error::runtime::Undefined if the scheme is empty.
+    ///
+    /// @param              [in] aScheme A scheme (must not be empty)
 
     void setScheme(const String& aScheme);
 
     /// @brief              Set URL host
     ///
-    /// @param              [in] aHost A host
+    ///                     Throws ostk::core::error::runtime::Undefined if the host is empty.
+    ///
+    /// @param              [in] aHost A host (must not be empty)
 
     void setHost(const String& aHost);
 
@@ -334,9 +241,9 @@ class URL
 
     /// @brief              Set URL port
     ///
-    /// @param              [in] aPort A port
+    /// @param              [in] aPort A port (std::nullopt removes the port)
 
-    void setPort(const Integer& aPort);
+    void setPort(const std::optional<int>& aPort);
 
     /// @brief              Set URL user
     ///
@@ -361,17 +268,6 @@ class URL
     /// @param              [in] aFragment A fragment
 
     void setFragment(const String& aFragment);
-
-    /// @brief              Constructs an undefined URL
-    ///
-    /// @code
-    ///                     URL url = URL::Undefined() ;
-    ///                     url.isDefined() ; // False
-    /// @endcode
-    ///
-    /// @return             Undefined URL
-
-    static URL Undefined();
 
     /// @brief              Constructs a URL from a given string
     ///
@@ -411,7 +307,7 @@ class URL
     String user_;
     String password_;
     String host_;
-    Integer port_;
+    std::optional<int> port_;
     String path_;
     Query query_;
     String fragment_;

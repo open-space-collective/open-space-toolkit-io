@@ -191,11 +191,11 @@ TEST(OpenSpaceToolkit_IO_URL_Query, ConstIterator)
 
             EXPECT_TRUE(parameter.isDefined());
 
-            EXPECT_EQ("key", parameter.accessName().getHead(3));
-            EXPECT_EQ("value", parameter.accessValue().getHead(5));
-
             EXPECT_EQ("key", parameter.getName().getHead(3));
             EXPECT_EQ("value", parameter.getValue().getHead(5));
+
+            EXPECT_EQ(&parameter.getName(), &parameter.getName());
+            EXPECT_EQ(&parameter.getValue(), &parameter.getValue());
 
             index++;
         }

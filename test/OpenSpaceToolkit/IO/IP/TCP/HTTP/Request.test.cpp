@@ -44,28 +44,6 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, StreamOperator)
     }
 }
 
-TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, IsDefined)
-{
-    using ostk::core::type::String;
-
-    using ostk::io::ip::tcp::http::Request;
-    using ostk::io::URL;
-
-    {
-        const Request::Method method = Request::Method::Get;
-        const URL url = URL::Parse("https://www.google.com");
-        const String body = "body";
-
-        const Request request = {method, url, body};
-
-        EXPECT_TRUE(request.isDefined());
-    }
-
-    {
-        EXPECT_FALSE(Request::Undefined().isDefined());
-    }
-}
-
 TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetMethod)
 {
     using ostk::core::type::String;
@@ -81,10 +59,6 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetMethod)
         const Request request = {method, url, body};
 
         EXPECT_EQ(method, request.getMethod());
-    }
-
-    {
-        EXPECT_ANY_THROW(Request::Undefined().getMethod());
     }
 }
 
@@ -103,10 +77,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetUrl)
         const Request request = {method, url, body};
 
         EXPECT_EQ(url, request.getUrl());
-    }
-
-    {
-        EXPECT_ANY_THROW(Request::Undefined().getUrl());
+        EXPECT_EQ(&request.getUrl(), &request.getUrl());
     }
 }
 
@@ -125,20 +96,7 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, GetBody)
         const Request request = {method, url, body};
 
         EXPECT_EQ(body, request.getBody());
-    }
-
-    {
-        EXPECT_ANY_THROW(Request::Undefined().getBody());
-    }
-}
-
-TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, Undefined)
-{
-    using ostk::io::ip::tcp::http::Request;
-
-    {
-        EXPECT_NO_THROW(Request::Undefined());
-        EXPECT_FALSE(Request::Undefined().isDefined());
+        EXPECT_EQ(&request.getBody(), &request.getBody());
     }
 }
 
@@ -165,7 +123,6 @@ TEST(OpenSpaceToolkit_IO_IP_TCP_HTTP_Request, StringFromMethod)
     using ostk::io::ip::tcp::http::Request;
 
     {
-        EXPECT_EQ("Undefined", Request::StringFromMethod(Request::Method::Undefined));
         EXPECT_EQ("Get", Request::StringFromMethod(Request::Method::Get));
         EXPECT_EQ("Head", Request::StringFromMethod(Request::Method::Head));
         EXPECT_EQ("Post", Request::StringFromMethod(Request::Method::Post));
