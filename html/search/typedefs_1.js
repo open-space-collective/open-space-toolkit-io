@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['integer_310',['Integer',['../namespaceostk_1_1io.html#a4a52635c39246ec2c5fa925e7e25ccd3',1,'ostk::io']]]
+  ['name_289',['Name',['../classostk_1_1io_1_1url_1_1_query_1_1_parameter.html#ad176899a3555e0d0efeb0c13f73a8a80',1,'ostk::io::url::Query::Parameter']]]
 ];

@@ -2,7 +2,6 @@
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
   <compound refid="classostk_1_1io_1_1ip_1_1_address" kind="class"><name>ostk::io::ip::Address</name>
     <member refid="classostk_1_1io_1_1ip_1_1_address_1a03b78ae8f7ddbb893d7396e6a1baf695" kind="enum"><name>Type</name></member>
-    <member refid="classostk_1_1io_1_1ip_1_1_address_1a03b78ae8f7ddbb893d7396e6a1baf695aec0fc0100c4fc1ce4eea230c3dc10360" kind="enumvalue"><name>Undefined</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1_address_1a03b78ae8f7ddbb893d7396e6a1baf695a42a9137a05a60eb752dcdf982e717626" kind="enumvalue"><name>IPv4</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1_address_1a03b78ae8f7ddbb893d7396e6a1baf695afdb7cb8f657426e7c409bfd6d1a36ce4" kind="enumvalue"><name>IPv6</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1_address_1a4118f42388b11fb003c9fb782f4ca04f" kind="function"><name>Address</name></member>
@@ -11,7 +10,6 @@
     <member refid="classostk_1_1io_1_1ip_1_1_address_1a2154bcedb7622c8e1813e45efcdaaa95" kind="function"><name>operator=</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1_address_1ad5133a34558d6e70356d635429e2529b" kind="function"><name>operator==</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1_address_1ae9cde5193e1957664d3c51b77d38f3f3" kind="function"><name>operator!=</name></member>
-    <member refid="classostk_1_1io_1_1ip_1_1_address_1a04478bd4c7c226c0fe7043ef63ec48d1" kind="function"><name>isDefined</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1_address_1aed5c82ceb025f23bcf17b5a76f1c4758" kind="function"><name>isLoopback</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1_address_1ae099697de04ec30bac8f9d371ec02e14" kind="function"><name>isWildcard</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1_address_1a8e4414026c04ae1143f3a388d025de53" kind="function"><name>isLinkLocal</name></member>
@@ -30,7 +28,6 @@
     <member refid="classostk_1_1io_1_1ip_1_1_address_1ab1e396075b2db78542e9312479c9a9a5" kind="function"><name>getType</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1_address_1a3dde4b2601d3c2be6a6ab6af3663fa1a" kind="function"><name>getString</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1_address_1acb0766764bb037acde8e0acdfdecadd0" kind="friend"><name>operator&lt;&lt;</name></member>
-    <member refid="classostk_1_1io_1_1ip_1_1_address_1a3e429f06ca69746fb73c155a8a4857b7" kind="function"><name>Undefined</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1_address_1af632da7f131b2a6649d2927ebb6ba60c" kind="function"><name>Loopback</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1_address_1a03652b01913b86e80d8a2a363626849a" kind="function"><name>Broadcast</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1_address_1a495956892a4815139c94377c0267125d" kind="function"><name>IPv4</name></member>
@@ -56,10 +53,8 @@
     <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a2ff2a7edfc87748ab3fae225b4462a1d" kind="function"><name>operator==</name></member>
     <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a0e272f97e1f7cefee01a2d8f1af76481" kind="function"><name>operator!=</name></member>
     <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ad4de58e0e1efbe7dd781caecf6b98163" kind="function"><name>isDefined</name></member>
-    <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a63d4ad35531e2ee58a6156951d323c76" kind="function"><name>accessName</name></member>
-    <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1aea51f7a0c4389c5729533a3068a39b74" kind="function"><name>accessValue</name></member>
-    <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a78bc96d90e5cab55b26d6c44a69ea3f6" kind="function"><name>getName</name></member>
-    <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1afe5091adccaa6bcf5840d1ca88b24f9c" kind="function"><name>getValue</name></member>
+    <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a14b0aaf467aaff6b211af05c1fbbf8bb" kind="function"><name>getName</name></member>
+    <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1afd216cdd7a00a92d61ca477ab49a39cf" kind="function"><name>getValue</name></member>
   </compound>
   <compound refid="classostk_1_1io_1_1url_1_1_query" kind="class"><name>ostk::io::url::Query</name>
     <member refid="classostk_1_1io_1_1url_1_1_query_1a64eb73f998c55a48d25b4ce116d66f1a" kind="typedef"><name>ConstIterator</name></member>
@@ -79,7 +74,6 @@
   </compound>
   <compound refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request" kind="class"><name>ostk::io::ip::tcp::http::Request</name>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3" kind="enum"><name>Method</name></member>
-    <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3aec0fc0100c4fc1ce4eea230c3dc10360" kind="enumvalue"><name>Undefined</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3ac55582518cba2c464f29f5bae1c68def" kind="enumvalue"><name>Get</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3a98921133d10fbdb0fb6dbb7b2648befe" kind="enumvalue"><name>Head</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a07a40d81f4a6fb8443c80afc11571dd3a03d947a2158373c3b9d74325850cb8b9" kind="enumvalue"><name>Post</name></member>
@@ -93,18 +87,15 @@
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a36d2932511e395f3a37f4392829f5807" kind="variable"><name>url_</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a397a4b01d826381695fb0e6508f6cceb" kind="variable"><name>body_</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a7b67e5386b0aa2af737c74416c20f56b" kind="function"><name>Request</name></member>
-    <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1ac01119273b40874c0bb6a687fe7266b7" kind="function"><name>isDefined</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a8c31b842f3672488b2fb42a304873a94" kind="function"><name>getMethod</name></member>
-    <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a75e34ca54feb62159075147444ffa6ec" kind="function"><name>getUrl</name></member>
-    <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a1aa99b1bc1fdd0b29e86a27331a2d6fa" kind="function"><name>getBody</name></member>
+    <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a16fcb88bdb256b93183f84708dc188f1" kind="function"><name>getUrl</name></member>
+    <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a1ed812165e5e6a3ee096f7d0f4063edd" kind="function"><name>getBody</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a73dd714a92305cf3d0b7bdba904b3fc7" kind="friend"><name>operator&lt;&lt;</name></member>
-    <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1a6364c734464bdc1244ef9de16df1ee0c" kind="function"><name>Undefined</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1affd88441e083283d9baee02e44738f5f" kind="function"><name>Get</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_request_1aebda9e8cb66ad693422238e5bad8b91a" kind="function"><name>StringFromMethod</name></member>
   </compound>
   <compound refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response" kind="class"><name>ostk::io::ip::tcp::http::Response</name>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36" kind="enum"><name>StatusCode</name></member>
-    <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36aec0fc0100c4fc1ce4eea230c3dc10360" kind="enumvalue"><name>Undefined</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36aa0bfb8e59e6c13fc8d990781f77694fe" kind="enumvalue"><name>Continue</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a548c5a637eddf65132b21411aeafc6a1" kind="enumvalue"><name>SwitchingProtocols</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36a643562a9ae7099c8aabfdc93478db117" kind="enumvalue"><name>Processing</name></member>
@@ -170,12 +161,11 @@
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a5a54ac3acbcb9ca9e4f86e3a432e87d2" kind="variable"><name>statusCode_</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1ad8b0df485bce5c0e8c2f7374d810707a" kind="variable"><name>body_</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a859b29979cfa8dbd7d8296e1211b76fc" kind="function"><name>Response</name></member>
-    <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1afc78e507b0c295a20d9ef90748deb32b" kind="function"><name>isDefined</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a44768f02be45b9363a00a12c33aa112d" kind="function"><name>isOk</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a180c8df8a6a7c0b97acd1e5d3a01e981" kind="function"><name>getStatusCode</name></member>
-    <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a86ef445eae9c71c35a00b24f31345a8c" kind="function"><name>getBody</name></member>
+    <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a003ee0571dbc32a9b6427792eb5c9b3c" kind="function"><name>getBody</name></member>
+    <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a9525668fd0bf3ba5ef990e3c8fb86d37" kind="function"><name>getBody</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1ae3715558aef62c5b9c3c9971e307dd8e" kind="friend"><name>operator&lt;&lt;</name></member>
-    <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a0a3f62924ffb05edc9bb68351710bb23" kind="function"><name>Undefined</name></member>
     <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a4a593d62047c96eead840c751972ffd4" kind="function"><name>StringFromStatusCode</name></member>
   </compound>
   <compound refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_server" kind="class"><name>ostk::io::ip::tcp::http::Server</name>
@@ -187,44 +177,34 @@
     <member refid="classostk_1_1io_1_1_u_r_l_1a347ae01097125677f4e510d4c7fdc230" kind="variable"><name>user_</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1a189ceb389c578ae226bba6ab04f07351" kind="variable"><name>password_</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1a25f7d8f7f941ce7c3b4d2fdc931a36be" kind="variable"><name>host_</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1a672078bc4b9fdf4e236c68850792e683" kind="variable"><name>port_</name></member>
+    <member refid="classostk_1_1io_1_1_u_r_l_1ae665e9adcb92857e3f45c4767cdb9943" kind="variable"><name>port_</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1ac0aab1d61d19abbb75b7c15a2d008d48" kind="variable"><name>path_</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1a8283a6ec622234f32c302f3e12ae4c52" kind="variable"><name>query_</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1a4315924bbd45accebb194e7720123e26" kind="variable"><name>fragment_</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1a2537e046cef4ac966cc295abb81279c2" kind="function"><name>URL</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1a5a24386372bb8c71e9314c003058b22f" kind="function"><name>URL</name></member>
+    <member refid="classostk_1_1io_1_1_u_r_l_1a33cf68441cb4947bf4b4441082b8c5ee" kind="function"><name>URL</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1a46fed221d83ea9a6985b079ee6d6f151" kind="function"><name>operator==</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1af0e7f1e614d4268332deb8255cfd042a" kind="function"><name>operator!=</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1a6af6a4ec30e137242a80b51096ef09b2" kind="function"><name>operator+</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1a07e4a0573aa017fc782ed6712f3df3f9" kind="function"><name>operator+=</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1ae777a4a970e3c36af2ca1e22a72336de" kind="function"><name>isDefined</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1ac807a165cb3da86a7b9cea5800754fa1" kind="function"><name>accessScheme</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1a2faf73b2ba1fd2224a6f53a1883d8340" kind="function"><name>accessHost</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1a94b5966da7e3d32068f87c33ca78828e" kind="function"><name>accessPath</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1a143ce5446cddd58318ba77d425b4f7e4" kind="function"><name>accessPort</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1a793b078fb609dd5870a7c4bc9b13cf05" kind="function"><name>accessUser</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1a7b61c488b9b1781cf1783cee04cd61e6" kind="function"><name>accessPassword</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1ad10cb94dcbe3952e59d508ccc36323c0" kind="function"><name>accessQuery</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1ad73236e116c77a5c92c518c8f23649ea" kind="function"><name>accessFragment</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1a28880731bc5e0a3eb216f436ff0caac6" kind="function"><name>getScheme</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1a3b1dd5dd205854fc291a6c9a5438d7ec" kind="function"><name>getHost</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1aba0a0da071c5ac9d7a79f24672b769ab" kind="function"><name>getPath</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1a471a0b1cb0bd5ab83b2798e1dc71e2d1" kind="function"><name>getPort</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1ab3aeffffa4a2c72173e7e075d15e06fd" kind="function"><name>getUser</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1aa0a33984e00c87fa1f9c405bffea4c56" kind="function"><name>getPassword</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1ac6ddb4ae26ba6f2cd61f3c94483d7b0f" kind="function"><name>getQuery</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1ab4f89a76481899ca2ef35915cf5460b6" kind="function"><name>getFragment</name></member>
+    <member refid="classostk_1_1io_1_1_u_r_l_1a1fe4430ea89372d29fdbd3d38817864c" kind="function"><name>getScheme</name></member>
+    <member refid="classostk_1_1io_1_1_u_r_l_1ab86ee707433b36a236f35bfdf0dbf6cc" kind="function"><name>getHost</name></member>
+    <member refid="classostk_1_1io_1_1_u_r_l_1a65f6ea3315da3bd6d4b9582641d259bf" kind="function"><name>getPath</name></member>
+    <member refid="classostk_1_1io_1_1_u_r_l_1a3409ab4b2ecc299762506c48d9de8ae4" kind="function"><name>getPort</name></member>
+    <member refid="classostk_1_1io_1_1_u_r_l_1a948c013236ef42f6d195d0647aea5e29" kind="function"><name>getUser</name></member>
+    <member refid="classostk_1_1io_1_1_u_r_l_1afb0298639dafaad3f65243b74fccba98" kind="function"><name>getPassword</name></member>
+    <member refid="classostk_1_1io_1_1_u_r_l_1af5ddccfed1166dcd9eee3cf6861920b3" kind="function"><name>getQuery</name></member>
+    <member refid="classostk_1_1io_1_1_u_r_l_1a3208068309e8fb75982b0adb603bc2cb" kind="function"><name>getFragment</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1af1b7bd5cffeda8dcbf7e469f68bc8f0f" kind="function"><name>toString</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1ac758bfb15653ebfcc7b4f1fee145024b" kind="function"><name>setScheme</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1accdfb1800b5e0d89e85bc27d302004a7" kind="function"><name>setHost</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1a9889bf7f7516b095adadebea4ba3ceae" kind="function"><name>setPath</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1a991fe376c996ad6457ebbd8b976c44ec" kind="function"><name>setPort</name></member>
+    <member refid="classostk_1_1io_1_1_u_r_l_1a3de9e5a16ece8390d13530f4411daa8a" kind="function"><name>setPort</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1ab12a067e5d0e37707db80d16bbdf7251" kind="function"><name>setUser</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1a2d5ddc1fc8f2693c376d6f4794b1ed26" kind="function"><name>setPassword</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1a948c7c671b2b36ff4a62534990aa86da" kind="function"><name>setQuery</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1a3e646332fa91ee14876c15782967a960" kind="function"><name>setFragment</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1a98ed4737303253c4105846425180fc30" kind="friend"><name>operator&lt;&lt;</name></member>
-    <member refid="classostk_1_1io_1_1_u_r_l_1a668bfbf59c42356063be619b5f39d613" kind="function"><name>Undefined</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1a1cd7216bb1079f62386a218ba510958d" kind="function"><name>Parse</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1aefa7a336010b16d6a658932953648481" kind="function"><name>EncodeString</name></member>
     <member refid="classostk_1_1io_1_1_u_r_l_1ad0e89f0fc413fb05b83759b451b8f2b7" kind="function"><name>DecodeString</name></member>
@@ -232,10 +212,11 @@
   <compound refid="namespaceostk" kind="namespace"><name>ostk</name>
   </compound>
   <compound refid="namespaceostk_1_1io" kind="namespace"><name>ostk::io</name>
-    <member refid="namespaceostk_1_1io_1a4a52635c39246ec2c5fa925e7e25ccd3" kind="typedef"><name>Integer</name></member>
     <member refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kind="typedef"><name>String</name></member>
     <member refid="namespaceostk_1_1io_1aeabc644ba5c25896df8014bd0271f970" kind="typedef"><name>Query</name></member>
     <member refid="namespaceostk_1_1io_1a72e6c8096e4cae52cdd226a664f1b498" kind="function"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="namespaceostk_1_1io_1_1_0d14" kind="namespace"><name>ostk::io::@14</name>
   </compound>
   <compound refid="namespaceostk_1_1io_1_1ip" kind="namespace"><name>ostk::io::ip</name>
     <member refid="namespaceostk_1_1io_1_1ip_1ae2b249d594f3ad32fab94162e284875e" kind="typedef"><name>String</name></member>

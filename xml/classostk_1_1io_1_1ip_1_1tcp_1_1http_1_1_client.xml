@@ -33,6 +33,8 @@
 <para>Send a HTTP request. </para>
         </briefdescription>
         <detaileddescription>
+<para><verbatim>                Throws ostk::core::error::runtime::Undefined if no status code is received.
+</verbatim></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="in">aRequest</parametername>
@@ -48,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="49" column="21" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="68" bodyend="162"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="51" column="21" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="68" bodyend="164"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_1a3a84e295e2fb2274a010f791edd8a9d6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response" kindref="compound">Response</ref></type>
@@ -78,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="56" column="21" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="164" bodyend="167"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="58" column="21" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="166" bodyend="169"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_1add18d245335574a5dc0b6c09d82dd8da" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>File</type>
@@ -133,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="65" column="17" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="169" bodyend="273"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="67" column="17" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="171" bodyend="263"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_1a4b02fb4cec2bb63499e38c1311fb45bb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -186,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="73" column="17" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="275" bodyend="370"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="75" column="17" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.cpp" bodystart="265" bodyend="350"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -195,7 +197,7 @@
     <detaileddescription>
 <para><ulink url="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol</ulink> </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="38" column="1" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" bodystart="37" bodyend="74"/>
+    <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" line="38" column="1" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Client.hpp" bodystart="37" bodyend="76"/>
     <listofallmembers>
       <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_1a2877f326d60fa80886a7b096aff767cd" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Client</scope><name>Client</name></member>
       <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_client_1add18d245335574a5dc0b6c09d82dd8da" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Client</scope><name>Fetch</name></member>

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="120" column="35" bodyfile="include/OpenSpaceToolkit/IO/URL/Query.hpp" bodystart="120" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="98" column="35" bodyfile="include/OpenSpaceToolkit/IO/URL/Query.hpp" bodystart="98" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="244" column="11" bodyfile="include/OpenSpaceToolkit/IO/URL/Query.hpp" bodystart="244" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="222" column="11" bodyfile="include/OpenSpaceToolkit/IO/URL/Query.hpp" bodystart="222" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="130" column="5" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="56" bodyend="59"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="108" column="5" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="46" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1url_1_1_query_1a2e971d5f134f3229f136b62a5218a9cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="142" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="61" bodyend="64"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="120" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="51" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1url_1_1_query_1a13c472bd1b80a7ebccec0eeaae327154" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="154" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="66" bodyend="69"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="132" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="56" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1url_1_1_query_1aae898ea9a490fe19a500cf33e2fc9921" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -148,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="164" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="71" bodyend="74"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="142" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="61" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1url_1_1_query_1a58d1738acbe0d1c2fa329245f7a75eb5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="175" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="76" bodyend="92"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="153" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="66" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1url_1_1_query_1ac55b9803b0807160ea5aa42912b412b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
@@ -212,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="186" column="12" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="94" bodyend="112"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="164" column="12" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="84" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1url_1_1_query_1aca282853530302e594b16700c83169d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespaceostk_1_1io_1af6dc4ebd6d726ecbeeea63247160b8c0" kindref="member">String</ref></type>
@@ -231,7 +231,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="196" column="12" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="114" bodyend="129"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="174" column="12" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="104" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1url_1_1_query_1a6c40e85de4a1a42ec5c8ee268e074e6f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1io_1_1url_1_1_query_1a64eb73f998c55a48d25b4ce116d66f1a" kindref="member">Query::ConstIterator</ref></type>
@@ -248,7 +248,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="202" column="26" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="131" bodyend="134"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="180" column="26" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="121" bodyend="124"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1url_1_1_query_1a94eb24357dcf96fb9926903019b057da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1io_1_1url_1_1_query_1a64eb73f998c55a48d25b4ce116d66f1a" kindref="member">Query::ConstIterator</ref></type>
@@ -265,7 +265,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="208" column="26" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="136" bodyend="139"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="186" column="26" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="126" bodyend="129"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1url_1_1_query_1a9937aa1e0a99c2f2fd78ec9795f1f2df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -296,7 +296,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="219" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="141" bodyend="149"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="197" column="10" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="131" bodyend="139"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -318,7 +318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="230" column="18" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="151" bodyend="154"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="208" column="18" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="141" bodyend="144"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1url_1_1_query_1aa61f25b072cbbe0973142fdf283bf499" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1io_1_1url_1_1_query" kindref="compound">Query</ref></type>
@@ -350,7 +350,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="241" column="18" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="156" bodyend="164"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="219" column="18" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="146" bodyend="154"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -358,7 +358,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="22" column="1" bodyfile="include/OpenSpaceToolkit/IO/URL/Query.hpp" bodystart="21" bodyend="245"/>
+    <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="22" column="1" bodyfile="include/OpenSpaceToolkit/IO/URL/Query.hpp" bodystart="21" bodyend="223"/>
     <listofallmembers>
       <member refid="classostk_1_1io_1_1url_1_1_query_1a9937aa1e0a99c2f2fd78ec9795f1f2df" prot="public" virt="non-virtual"><scope>ostk::io::url::Query</scope><name>addParameter</name></member>
       <member refid="classostk_1_1io_1_1url_1_1_query_1a6c40e85de4a1a42ec5c8ee268e074e6f" prot="public" virt="non-virtual"><scope>ostk::io::url::Query</scope><name>begin</name></member>

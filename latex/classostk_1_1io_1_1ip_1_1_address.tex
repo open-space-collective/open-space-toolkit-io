@@ -12,8 +12,7 @@ Internet Protocol (IP) address.
 \doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_a03b78ae8f7ddbb893d7396e6a1baf695}{Type}} \{ \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_a03b78ae8f7ddbb893d7396e6a1baf695aec0fc0100c4fc1ce4eea230c3dc10360}{Type\+::\+Undefined}}, 
-\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_a03b78ae8f7ddbb893d7396e6a1baf695a42a9137a05a60eb752dcdf982e717626}{Type\+::\+I\+Pv4}}, 
+enum \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_a03b78ae8f7ddbb893d7396e6a1baf695}{Type}} \{ \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_a03b78ae8f7ddbb893d7396e6a1baf695a42a9137a05a60eb752dcdf982e717626}{Type\+::\+I\+Pv4}}, 
 \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_a03b78ae8f7ddbb893d7396e6a1baf695afdb7cb8f657426e7c409bfd6d1a36ce4}{Type\+::\+I\+Pv6}}
  \}
 \end{DoxyCompactItemize}
@@ -32,8 +31,6 @@ bool \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_ad5133a34558d6e70356d635
 \begin{DoxyCompactList}\small\item\em Equal to operator. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_ae9cde5193e1957664d3c51b77d38f3f3}{operator!=}} (const \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address}{Address}} \&an\+Address) const
 \begin{DoxyCompactList}\small\item\em Not equal to operator. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_a04478bd4c7c226c0fe7043ef63ec48d1}{is\+Defined}} () const
-\begin{DoxyCompactList}\small\item\em Check if address is defined. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_aed5c82ceb025f23bcf17b5a76f1c4758}{is\+Loopback}} () const
 \begin{DoxyCompactList}\small\item\em Returns true if address is loopback. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_ae099697de04ec30bac8f9d371ec02e14}{is\+Wildcard}} () const
@@ -71,8 +68,6 @@ bool \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_a3967d2bd177d2d14d8245e7
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address}{Address}} \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_a3e429f06ca69746fb73c155a8a4857b7}{Undefined}} ()
-\begin{DoxyCompactList}\small\item\em Constructs an undefined address. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address}{Address}} \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_af632da7f131b2a6649d2927ebb6ba60c}{Loopback}} (const \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_a03b78ae8f7ddbb893d7396e6a1baf695}{Address\+::\+Type}} \&a\+Type)
 \begin{DoxyCompactList}\small\item\em Constructs a loopback address. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address}{Address}} \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_a03652b01913b86e80d8a2a363626849a}{Broadcast}} ()
@@ -105,10 +100,6 @@ Internet Protocol (IP) address.
 {\footnotesize\ttfamily enum \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_a03b78ae8f7ddbb893d7396e6a1baf695}{ostk\+::io\+::ip\+::\+Address\+::\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
 
 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Undefined@{Undefined}!ostk::io::ip::Address@{ostk::io::ip::Address}}\index{ostk::io::ip::Address@{ostk::io::ip::Address}!Undefined@{Undefined}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1_address_a03b78ae8f7ddbb893d7396e6a1baf695aec0fc0100c4fc1ce4eea230c3dc10360}\label{classostk_1_1io_1_1ip_1_1_address_a03b78ae8f7ddbb893d7396e6a1baf695aec0fc0100c4fc1ce4eea230c3dc10360}} 
-Undefined&\\
-\hline
-
 \raisebox{\heightof{T}}[0pt][0pt]{\index{IPv4@{IPv4}!ostk::io::ip::Address@{ostk::io::ip::Address}}\index{ostk::io::ip::Address@{ostk::io::ip::Address}!IPv4@{IPv4}}}\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1_address_a03b78ae8f7ddbb893d7396e6a1baf695a42a9137a05a60eb752dcdf982e717626}\label{classostk_1_1io_1_1ip_1_1_address_a03b78ae8f7ddbb893d7396e6a1baf695a42a9137a05a60eb752dcdf982e717626}} 
 I\+Pv4&\\
 \hline
@@ -303,26 +294,6 @@ Returns true if IP address is broadcast.
 
 \begin{DoxyReturn}{Returns}
 True if address is broadcast 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1_address_a04478bd4c7c226c0fe7043ef63ec48d1}\label{classostk_1_1io_1_1ip_1_1_address_a04478bd4c7c226c0fe7043ef63ec48d1}} 
-\index{ostk::io::ip::Address@{ostk::io::ip::Address}!isDefined@{isDefined}}
-\index{isDefined@{isDefined}!ostk::io::ip::Address@{ostk::io::ip::Address}}
-\doxysubsubsection{\texorpdfstring{isDefined()}{isDefined()}}
-{\footnotesize\ttfamily bool ostk\+::io\+::ip\+::\+Address\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Check if address is defined. 
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_a4118f42388b11fb003c9fb782f4ca04f}{Address}} address = \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_a3d60e44d816e30f17db36f9bb7ac6307}{Address::Parse}}(\textcolor{stringliteral}{"0.0.0.0"}) ;}
-\DoxyCodeLine{address.isDefined() ; \textcolor{comment}{// True}}
-\end{DoxyCode}
-
-
-\begin{DoxyReturn}{Returns}
-True if address is defined 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1_address_a86687f373b37c64f4692465de5e96f26}\label{classostk_1_1io_1_1ip_1_1_address_a86687f373b37c64f4692465de5e96f26}} 
 \index{ostk::io::ip::Address@{ostk::io::ip::Address}!isGlobalMulticast@{isGlobalMulticast}}
@@ -691,26 +662,6 @@ Constructs an address from a given string.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address}{Address}} 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classostk_1_1io_1_1ip_1_1_address_a3e429f06ca69746fb73c155a8a4857b7}\label{classostk_1_1io_1_1ip_1_1_address_a3e429f06ca69746fb73c155a8a4857b7}} 
-\index{ostk::io::ip::Address@{ostk::io::ip::Address}!Undefined@{Undefined}}
-\index{Undefined@{Undefined}!ostk::io::ip::Address@{ostk::io::ip::Address}}
-\doxysubsubsection{\texorpdfstring{Undefined()}{Undefined()}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address}{Address}} ostk\+::io\+::ip\+::\+Address\+::\+Undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Constructs an undefined address. 
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_a4118f42388b11fb003c9fb782f4ca04f}{Address}} address = \mbox{\hyperlink{classostk_1_1io_1_1ip_1_1_address_a3e429f06ca69746fb73c155a8a4857b7}{Address::Undefined}}() ;}
-\DoxyCodeLine{address.isDefined() ; \textcolor{comment}{// False}}
-\end{DoxyCode}
-
-
-\begin{DoxyReturn}{Returns}
-Undefined address 
 \end{DoxyReturn}
 
 

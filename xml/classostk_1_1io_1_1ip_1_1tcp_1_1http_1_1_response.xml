@@ -7,15 +7,6 @@
       <memberdef kind="enum" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36" prot="public" static="no" strong="yes">
         <type></type>
         <name>StatusCode</name>
-        <enumvalue id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36aec0fc0100c4fc1ce4eea230c3dc10360" prot="public">
-          <name>Undefined</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-<para>Undefined. </para>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
         <enumvalue id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36aa0bfb8e59e6c13fc8d990781f77694fe" prot="public">
           <name>Continue</name>
           <initializer>= 100</initializer>
@@ -580,7 +571,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="29" column="1" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" bodystart="28" bodyend="100"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="29" column="1" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" bodystart="28" bodyend="98"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -595,7 +586,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="155" column="26" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" bodystart="155" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="156" column="26" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" bodystart="156" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1ad8b0df485bce5c0e8c2f7374d810707a" prot="private" static="no" mutable="no">
         <type><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref></type>
@@ -608,7 +599,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="156" column="12" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" bodystart="156" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="157" column="12" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" bodystart="157" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -650,24 +641,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="107" column="5" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="20" bodyend="24"/>
-      </memberdef>
-      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1afc78e507b0c295a20d9ef90748deb32b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool ostk::io::ip::tcp::http::Response::isDefined</definition>
-        <argsstring>() const</argsstring>
-        <name>isDefined</name>
-        <briefdescription>
-<para>Check if response is defined. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>True if response is defined </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="121" column="10" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="42" bodyend="45"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="105" column="5" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="19" bodyend="23"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a44768f02be45b9363a00a12c33aa112d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -684,7 +658,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="127" column="10" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="47" bodyend="55"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="119" column="10" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="41" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a180c8df8a6a7c0b97acd1e5d3a01e981" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36" kindref="member">Response::StatusCode</ref></type>
@@ -701,24 +675,46 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="133" column="26" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="57" bodyend="65"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="125" column="26" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="46" bodyend="49"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a86ef445eae9c71c35a00b24f31345a8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref></type>
+      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a003ee0571dbc32a9b6427792eb5c9b3c" prot="public" static="no" const="yes" explicit="no" inline="no" refqual="lvalue" virt="non-virtual">
+        <type>const <ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref> &amp;</type>
         <definition>String ostk::io::ip::tcp::http::Response::getBody</definition>
-        <argsstring>() const</argsstring>
+        <argsstring>() const &amp;</argsstring>
         <name>getBody</name>
         <briefdescription>
 <para>Get response body. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response" kindref="compound">Response</ref> body </para>
+<para><programlisting><codeline><highlight class="normal">const<sp/>Response<sp/>response<sp/>=<sp/>Client::Get(URL::Parse(&quot;https://www.google.com&quot;))<sp/>;</highlight></codeline>
+<codeline><highlight class="normal">const<sp/>String&amp;<sp/>body<sp/>=<sp/>response.getBody()<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>Const reference to response body </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="139" column="12" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="67" bodyend="75"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="136" column="18" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a9525668fd0bf3ba5ef990e3c8fb86d37" prot="public" static="no" const="no" explicit="no" inline="no" refqual="rvalue" virt="non-virtual">
+        <type><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref></type>
+        <definition>String ostk::io::ip::tcp::http::Response::getBody</definition>
+        <argsstring>() &amp;&amp;</argsstring>
+        <name>getBody</name>
+        <briefdescription>
+<para>Get response body of a temporary response. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">const<sp/>String<sp/>body<sp/>=<sp/>Client::Get(URL::Parse(&quot;https://www.google.com&quot;)).getBody()<sp/>;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response" kindref="compound">Response</ref> body (copy, so that it does not dangle) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="146" column="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -762,27 +758,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="115" column="12" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="26" bodyend="40"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="113" column="12" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="25" bodyend="39"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a0a3f62924ffb05edc9bb68351710bb23" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response" kindref="compound">Response</ref></type>
-        <definition>Response ostk::io::ip::tcp::http::Response::Undefined</definition>
-        <argsstring>()</argsstring>
-        <name>Undefined</name>
-        <briefdescription>
-<para>Constructs an undefined response. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>Undefined response </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="145" column="21" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="77" bodyend="80"/>
-      </memberdef>
       <memberdef kind="function" id="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a4a593d62047c96eead840c751972ffd4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespaceostk_1_1io_1_1ip_1_1tcp_1_1http_1a3b3e6959c3c8d3fc26fc3dce060ad39e" kindref="member">String</ref></type>
         <definition>String ostk::io::ip::tcp::http::Response::StringFromStatusCode</definition>
@@ -811,7 +790,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="152" column="19" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="82" bodyend="153"/>
+        <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="153" column="19" bodyfile="src/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.cpp" bodystart="61" bodyend="131"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -820,19 +799,18 @@
     <detaileddescription>
 <para><ulink url="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">https://en.wikipedia.org/wiki/List_of_HTTP_status_codes</ulink> </para>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="26" column="1" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" bodystart="25" bodyend="157"/>
+    <location file="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" line="26" column="1" bodyfile="include/OpenSpaceToolkit/IO/IP/TCP/HTTP/Response.hpp" bodystart="25" bodyend="158"/>
     <listofallmembers>
       <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1ad8b0df485bce5c0e8c2f7374d810707a" prot="private" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Response</scope><name>body_</name></member>
-      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a86ef445eae9c71c35a00b24f31345a8c" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Response</scope><name>getBody</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a003ee0571dbc32a9b6427792eb5c9b3c" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Response</scope><name>getBody</name></member>
+      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a9525668fd0bf3ba5ef990e3c8fb86d37" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Response</scope><name>getBody</name></member>
       <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a180c8df8a6a7c0b97acd1e5d3a01e981" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Response</scope><name>getStatusCode</name></member>
-      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1afc78e507b0c295a20d9ef90748deb32b" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Response</scope><name>isDefined</name></member>
       <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a44768f02be45b9363a00a12c33aa112d" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Response</scope><name>isOk</name></member>
       <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1ae3715558aef62c5b9c3c9971e307dd8e" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Response</scope><name>operator&lt;&lt;</name></member>
       <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a859b29979cfa8dbd7d8296e1211b76fc" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Response</scope><name>Response</name></member>
       <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1af537657bbf13ea832203957144230c36" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Response</scope><name>StatusCode</name></member>
       <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a5a54ac3acbcb9ca9e4f86e3a432e87d2" prot="private" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Response</scope><name>statusCode_</name></member>
       <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a4a593d62047c96eead840c751972ffd4" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Response</scope><name>StringFromStatusCode</name></member>
-      <member refid="classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response_1a0a3f62924ffb05edc9bb68351710bb23" prot="public" virt="non-virtual"><scope>ostk::io::ip::tcp::http::Response</scope><name>Undefined</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

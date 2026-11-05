@@ -11,10 +11,13 @@ ostk.io.URL
 
    
    
-   .. rubric:: Methods
+   
+
+   
+   
+   .. rubric:: Attributes
 
    .. autosummary::
-      :nosignatures:
    
       ~URL.get_fragment
       ~URL.get_host
@@ -24,7 +27,6 @@ ostk.io.URL
       ~URL.get_query
       ~URL.get_scheme
       ~URL.get_user
-      ~URL.is_defined
       ~URL.parse
       ~URL.set_array
       ~URL.set_fragment
@@ -36,10 +38,5 @@ ostk.io.URL
       ~URL.set_scheme
       ~URL.set_user
       ~URL.to_string
-      ~URL.undefined
-   
-   
-
-   
    
    

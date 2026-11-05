@@ -11,21 +11,18 @@ ostk.io.ip.tcp.http.Request
 
    
    
-   .. rubric:: Methods
+   
+
+   
+   
+   .. rubric:: Attributes
 
    .. autosummary::
-      :nosignatures:
    
       ~Request.get
       ~Request.get_body
       ~Request.get_method
       ~Request.get_url
-      ~Request.is_defined
       ~Request.string_from_method
-      ~Request.undefined
-   
-   
-
-   
    
    

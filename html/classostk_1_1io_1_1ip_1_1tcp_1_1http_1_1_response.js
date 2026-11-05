@@ -1,7 +1,6 @@
 var classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response =
 [
     [ "StatusCode", "classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html#af537657bbf13ea832203957144230c36", [
-      [ "Undefined", "classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html#af537657bbf13ea832203957144230c36aec0fc0100c4fc1ce4eea230c3dc10360", null ],
       [ "Continue", "classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html#af537657bbf13ea832203957144230c36aa0bfb8e59e6c13fc8d990781f77694fe", null ],
       [ "SwitchingProtocols", "classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html#af537657bbf13ea832203957144230c36a548c5a637eddf65132b21411aeafc6a1", null ],
       [ "Processing", "classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html#af537657bbf13ea832203957144230c36a643562a9ae7099c8aabfdc93478db117", null ],
@@ -66,9 +65,9 @@ var classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response =
       [ "NetworkAuthenticationRequire", "classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html#af537657bbf13ea832203957144230c36a68fc9ac4408e02db0d6f5c86728042ea", null ]
     ] ],
     [ "Response", "classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html#a859b29979cfa8dbd7d8296e1211b76fc", null ],
-    [ "getBody", "classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html#a86ef445eae9c71c35a00b24f31345a8c", null ],
+    [ "getBody", "classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html#a9525668fd0bf3ba5ef990e3c8fb86d37", null ],
+    [ "getBody", "classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html#a003ee0571dbc32a9b6427792eb5c9b3c", null ],
     [ "getStatusCode", "classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html#a180c8df8a6a7c0b97acd1e5d3a01e981", null ],
-    [ "isDefined", "classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html#afc78e507b0c295a20d9ef90748deb32b", null ],
     [ "isOk", "classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html#a44768f02be45b9363a00a12c33aa112d", null ],
     [ "operator<<", "classostk_1_1io_1_1ip_1_1tcp_1_1http_1_1_response.html#ae3715558aef62c5b9c3c9971e307dd8e", null ]
 ];

@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="116" column="25" bodyfile="include/OpenSpaceToolkit/IO/URL/Query.hpp" bodystart="116" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="94" column="25" bodyfile="include/OpenSpaceToolkit/IO/URL/Query.hpp" bodystart="94" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a8b65cbd4fffb700beb1503c69b7d3078" prot="private" static="no" mutable="no">
         <type><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ada177e3a9d839a7900aae8a718207bbd" kindref="member">Parameter::Value</ref></type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="117" column="26" bodyfile="include/OpenSpaceToolkit/IO/URL/Query.hpp" bodystart="117" bodyend="-1"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="95" column="26" bodyfile="include/OpenSpaceToolkit/IO/URL/Query.hpp" bodystart="95" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -183,49 +183,9 @@
         </inbodydescription>
         <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="69" column="14" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="31" bodyend="34"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a63d4ad35531e2ee58a6156951d323c76" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a14b0aaf467aaff6b211af05c1fbbf8bb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ad176899a3555e0d0efeb0c13f73a8a80" kindref="member">Parameter::Name</ref> &amp;</type>
-        <definition>const Query::Parameter::Name &amp; ostk::io::url::Query::Parameter::accessName</definition>
-        <argsstring>() const</argsstring>
-        <name>accessName</name>
-        <briefdescription>
-<para>Access parameter name. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Parameter<sp/>parameter({&quot;Key&quot;,<sp/>&quot;Value&quot;})<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">parameter.accessName()<sp/>;<sp/>//<sp/>&amp;&quot;Key&quot;</highlight></codeline>
-</programlisting></para>
-<para><simplesect kind="return"><para>Reference to parameter name </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="80" column="31" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="36" bodyend="39"/>
-      </memberdef>
-      <memberdef kind="function" id="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1aea51f7a0c4389c5729533a3068a39b74" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>const <ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ada177e3a9d839a7900aae8a718207bbd" kindref="member">Parameter::Value</ref> &amp;</type>
-        <definition>const Query::Parameter::Value &amp; ostk::io::url::Query::Parameter::accessValue</definition>
-        <argsstring>() const</argsstring>
-        <name>accessValue</name>
-        <briefdescription>
-<para>Access parameter value. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">Parameter<sp/>parameter({&quot;Key&quot;,<sp/>&quot;Value&quot;})<sp/>;</highlight></codeline>
-<codeline><highlight class="normal">parameter.accessValue()<sp/>;<sp/>//<sp/>&amp;&quot;Value&quot;</highlight></codeline>
-</programlisting></para>
-<para><simplesect kind="return"><para>Reference to parameter value </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="91" column="32" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="41" bodyend="44"/>
-      </memberdef>
-      <memberdef kind="function" id="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a78bc96d90e5cab55b26d6c44a69ea3f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ad176899a3555e0d0efeb0c13f73a8a80" kindref="member">Parameter::Name</ref></type>
-        <definition>Query::Parameter::Name ostk::io::url::Query::Parameter::getName</definition>
+        <definition>const Query::Parameter::Name &amp; ostk::io::url::Query::Parameter::getName</definition>
         <argsstring>() const</argsstring>
         <name>getName</name>
         <briefdescription>
@@ -241,11 +201,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="102" column="25" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="46" bodyend="49"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="80" column="31" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="36" bodyend="39"/>
       </memberdef>
-      <memberdef kind="function" id="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1afe5091adccaa6bcf5840d1ca88b24f9c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ada177e3a9d839a7900aae8a718207bbd" kindref="member">Parameter::Value</ref></type>
-        <definition>Query::Parameter::Value ostk::io::url::Query::Parameter::getValue</definition>
+      <memberdef kind="function" id="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1afd216cdd7a00a92d61ca477ab49a39cf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ada177e3a9d839a7900aae8a718207bbd" kindref="member">Parameter::Value</ref> &amp;</type>
+        <definition>const Query::Parameter::Value &amp; ostk::io::url::Query::Parameter::getValue</definition>
         <argsstring>() const</argsstring>
         <name>getValue</name>
         <briefdescription>
@@ -261,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="113" column="26" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="51" bodyend="54"/>
+        <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="91" column="32" bodyfile="src/OpenSpaceToolkit/IO/URL/Query.cpp" bodystart="41" bodyend="44"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -269,12 +229,10 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="27" column="1" bodyfile="include/OpenSpaceToolkit/IO/URL/Query.hpp" bodystart="26" bodyend="118"/>
+    <location file="include/OpenSpaceToolkit/IO/URL/Query.hpp" line="27" column="1" bodyfile="include/OpenSpaceToolkit/IO/URL/Query.hpp" bodystart="26" bodyend="96"/>
     <listofallmembers>
-      <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a63d4ad35531e2ee58a6156951d323c76" prot="public" virt="non-virtual"><scope>ostk::io::url::Query::Parameter</scope><name>accessName</name></member>
-      <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1aea51f7a0c4389c5729533a3068a39b74" prot="public" virt="non-virtual"><scope>ostk::io::url::Query::Parameter</scope><name>accessValue</name></member>
-      <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a78bc96d90e5cab55b26d6c44a69ea3f6" prot="public" virt="non-virtual"><scope>ostk::io::url::Query::Parameter</scope><name>getName</name></member>
-      <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1afe5091adccaa6bcf5840d1ca88b24f9c" prot="public" virt="non-virtual"><scope>ostk::io::url::Query::Parameter</scope><name>getValue</name></member>
+      <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a14b0aaf467aaff6b211af05c1fbbf8bb" prot="public" virt="non-virtual"><scope>ostk::io::url::Query::Parameter</scope><name>getName</name></member>
+      <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1afd216cdd7a00a92d61ca477ab49a39cf" prot="public" virt="non-virtual"><scope>ostk::io::url::Query::Parameter</scope><name>getValue</name></member>
       <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ad4de58e0e1efbe7dd781caecf6b98163" prot="public" virt="non-virtual"><scope>ostk::io::url::Query::Parameter</scope><name>isDefined</name></member>
       <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1ad176899a3555e0d0efeb0c13f73a8a80" prot="public" virt="non-virtual"><scope>ostk::io::url::Query::Parameter</scope><name>Name</name></member>
       <member refid="classostk_1_1io_1_1url_1_1_query_1_1_parameter_1a9ab347cf46bfe098802c7909fb9f3286" prot="private" virt="non-virtual"><scope>ostk::io::url::Query::Parameter</scope><name>name_</name></member>

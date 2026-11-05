@@ -11,20 +11,17 @@ ostk.io.ip.tcp.http.Response
 
    
    
-   .. rubric:: Methods
+   
+
+   
+   
+   .. rubric:: Attributes
 
    .. autosummary::
-      :nosignatures:
    
       ~Response.get_body
       ~Response.get_status_code
-      ~Response.is_defined
       ~Response.is_ok
       ~Response.string_from_status_code
-      ~Response.undefined
-   
-   
-
-   
    
    

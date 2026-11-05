@@ -83,7 +83,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_address_8cpp.html",
-"index.html#autotoc_md2"
+"namespaceostk.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,7 +1,6 @@
 var classostk_1_1io_1_1ip_1_1_address =
 [
     [ "Type", "classostk_1_1io_1_1ip_1_1_address.html#a03b78ae8f7ddbb893d7396e6a1baf695", [
-      [ "Undefined", "classostk_1_1io_1_1ip_1_1_address.html#a03b78ae8f7ddbb893d7396e6a1baf695aec0fc0100c4fc1ce4eea230c3dc10360", null ],
       [ "IPv4", "classostk_1_1io_1_1ip_1_1_address.html#a03b78ae8f7ddbb893d7396e6a1baf695a42a9137a05a60eb752dcdf982e717626", null ],
       [ "IPv6", "classostk_1_1io_1_1ip_1_1_address.html#a03b78ae8f7ddbb893d7396e6a1baf695afdb7cb8f657426e7c409bfd6d1a36ce4", null ]
     ] ],
@@ -11,7 +10,6 @@ var classostk_1_1io_1_1ip_1_1_address =
     [ "getString", "classostk_1_1io_1_1ip_1_1_address.html#a3dde4b2601d3c2be6a6ab6af3663fa1a", null ],
     [ "getType", "classostk_1_1io_1_1ip_1_1_address.html#ab1e396075b2db78542e9312479c9a9a5", null ],
     [ "isBroadcast", "classostk_1_1io_1_1ip_1_1_address.html#a90251b4663992d0e64d3708da55006a9", null ],
-    [ "isDefined", "classostk_1_1io_1_1ip_1_1_address.html#a04478bd4c7c226c0fe7043ef63ec48d1", null ],
     [ "isGlobalMulticast", "classostk_1_1io_1_1ip_1_1_address.html#a86687f373b37c64f4692465de5e96f26", null ],
     [ "isIPv4Compatible", "classostk_1_1io_1_1ip_1_1_address.html#a3a555f0509c7ec00ed45fbd09f993414", null ],
     [ "isIPv4Mapped", "classostk_1_1io_1_1ip_1_1_address.html#a3967d2bd177d2d14d8245e714af328da", null ],

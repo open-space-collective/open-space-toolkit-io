@@ -16,13 +16,18 @@ ostk.io.ip.tcp.http.Client
    .. autosummary::
       :nosignatures:
    
-      ~Client.fetch
-      ~Client.get
-      ~Client.list
-      ~Client.send
    
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Client.fetch
+      ~Client.get
+      ~Client.list
+      ~Client.send
    
    
